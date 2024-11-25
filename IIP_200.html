@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <title>울산광역시 평생교육이용원</title>
+</head>
+<body>
+    <div> 
+        <!-- 헤더 -->
+        <header>
+            <div class="logo-area">
+            <!--a href="#"><img src="./assets/images/header_logo_1.png" alt="울산광역시"></a--><!-- 2024-11-12 삭제//-->
+            <a href="#"><img src="./assets/images/header_logo_2.png" alt="평생교육이용권" /></a>
+            </div>
+            <!-- 2024-11-18 삭제
+        <div class="link-area">
+        <a href="#" target="_blank" title="새 창 알림"><img src="./assets/images/header_link_1.png" alt="교육부"></a>
+        <a href="#" target="_blank" title="새 창 알림"><img src="./assets/images/header_link_2.png" alt="국가평생교육진흥원" /></a>
+        </div>
+        -->
+            <!-- 2024-11-19 gnb 수정 -->
+            <div class="menu-area">
+            <button class="open-btn">
+                <span class="blind">메뉴 열기</span>
+            </button>
+            <div class="menu-box">
+                <!-- 로그인 전 일시
+            <ul class="link-group">
+            <li>
+                <span class="tit">사업안내</span>
+                <div class="link-item">
+                <a href="#" class="on">평생교육이용권이란?</a>
+                <a href="#">평생교육이용권 사용하기</a>
+                </div>
+            </li>
+            <li>
+                <span class="tit">사용안내</span>
+                <div class="link-item">
+                <a href="#">사용처안내</a>
+                </div>
+            </li>
+            <li>
+                <span class="tit">평생교육이용권</span>
+                <div class="link-item">
+                <a href="LAP_100.html">이용권 신청</a>
+                <a href="#">이의제기신청</a>
+                <a href="#">선정 취소 신청</a>
+                <a href="#">수기 공모 신청</a>
+                </div>
+            </li>
+            <li>
+                <span class="tit">이용권 사용기관</span>
+                <div class="link-item">
+                <a href="#">이용권 사용기관 신청</a>
+                </div>
+            </li>
+            <li>
+                <span class="tit">게시판</span>
+                <div class="link-item">
+                <a href="#">공지사항</a>
+                <a href="#">자료실</a>
+                <a href="#">자주하는질문</a>
+                <a href="#">이용자 문의사항</a>
+                <a href="#">부정사용신고</a>
+                </div>
+            </li>
+            </ul>
+            로그인 전 일시 -->
+                <ul class="link-group login"><!-- 로그인 후 일시 login 클래스 추가// -->
+                <li>
+                    <span class="tit">사업안내</span>
+                    <div class="link-item">
+                    <a href="#" class="on">평생교육이용권이란?</a>
+                    <a href="#">평생교육이용권 사용하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="tit">사용안내</span>
+                    <div class="link-item">
+                    <a href="#">사용처안내</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="tit">우수이용자 신청</span>
+                    <div class="link-item">
+                    <a href="#">우수이용자 신청</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="tit">평생교육이용권</span>
+                    <div class="link-item">
+                    <a href="LAP_100.html">이용권 신청</a>
+                    <a href="#">이의제기신청</a>
+                    <a href="#">선정 취소 신청</a>
+                    <a href="#">수기 공모 신청</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="tit">이용권 사용기관</span>
+                    <div class="link-item">
+                    <a href="#">이용권 사용기관 신청</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="tit">게시판</span>
+                    <div class="link-item">
+                    <a href="#">공지사항</a>
+                    <a href="#">자료실</a>
+                    <a href="#">자주하는질문</a>
+                    <a href="#">이용자 문의사항</a>
+                    <a href="#">부정사용신고</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="tit">마이페이지</span>
+                    <div class="link-item">
+                    <a href="#">개인정보수정</a>
+                    <a href="#">이용권 신청내역</a>
+                    <a href="#">이용권 이용내역</a>
+                    <a href="#">교육이수정보</a>
+                    <a href="#">이용자 이벤트</a>
+                    </div>
+                </li>
+                </ul>
+                <button class="close-btn"><span class="blind">메뉴 닫기</span></button>
+            </div>
+            </div>
+            <!-- //2024-11-19 gnb 수정 -->
+        </header>
+        <!-- location info -->
+        <div style="background: #d8d8d8;">
+            <div class="top-location-area wrap">
+            <span class="home"><span class="blind">홈</span></span>
+            <div class="location-box">
+                <span class="arrow">이용권 사용기관</span>
+                <span class="arrow">교육과정 정보</span>
+            </div>
+            </div>
+        </div>
+        <!-- .// location -->
+        <div class="container wrap">
+            <!-- sub tit-area -->
+            <div class="tit-area" style="text-align: center;">
+                <h2>교육과정 정보</h2>
+                <p>교육과정 정보에 대한 설명입니다.</p>
+            </div>
+            <!-- .// sub tit-area --> 
+            <!-- 검색 영역 -->
+            <div class="b" title="전체 부모">
+                <div title="감싸는 영역">
+                    <div>
+                        <label for="a">강좌명</label>
+                        <input type="text" id="a">
+                        <label for="b">구분</label>
+                        <input type="text" id="b">
+                    </div>
+                    <div>
+                        <label>승인기간</label>
+                        <div>
+                            <input type="date">~
+                            <input type="date">
+                            <button type="button">2024</button>
+                            <button type="button">2023</button>
+                            <span>
+                                <input type="checkbox" id="chk-1">
+                                <label for="chk-1">(체크시 올해 자동입력)</label>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <label>자주쓰는 강좌</label>
+                        <span>
+                            <input type="checkbox" id="chk-2">
+                            <label for="chk-2">(체크시 자주쓰는 강좌 검색)</label>
+                        </span>
+                        <label>출결미등록</label>
+                        <span>
+                            <input type="checkbox" id="chk-3">
+                            <label for="chk-3">(체크시 자주쓰는 강좌 검색)</label>
+                        </span>
+                    </div>
+                    <div>
+                        <label>추천강좌</label>
+                        <span>
+                            <input type="checkbox" id="chk-4">
+                            <label for="chk-4">(체크시 이용자추천 강좌 검색)</label>
+                        </span>
+                    </div>
+                    <div class="txt-c">
+                        <button type="button">검색</button>
+                    </div>
+                </div>
+            </div>
+            <!-- .// 검색 영역 -->
+            <!-- table-box -->
+            <div class="table-box">
+                <div class="top-info-group">
+                    <p>총<span>6,234건</span></p>
+                    <div>
+                        <button type="button" class="sample-pop-btn" onclick="$('[data-pop=pop-1]').show();">일괄 업로드</button>
+                        <button type="button">등록</button>
+                        <button type="button">엑셀 다운로드</button>
+                    </div>
+                </div>
+                <!-- vertical table -->
+                <div class="com-view-table">
+                    <table summary="">
+                        <caption></caption>
+                        <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>강좌명</th>
+                                <th>분반</th>
+                                <th>교육방법</th>
+                                <th>교육일수/시간/회차</th>
+                                <th>강좌시작일</th>
+                                <th>강좌종료일</th>
+                                <th>수강료</th>
+                                <th>학습자인원</th>
+                                <th>출결등록인원</th>
+                                <th>추천수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>평생교육강좌</td>
+                                <td>1</td>
+                                <td>온라인</td>
+                                <td>1일</td>
+                                <td>2023.09.01</td>
+                                <td>2023.09.23</td>
+                                <td>100,000원</td>
+                                <td>30명</td>
+                                <td>0명</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- .// vertical table -->
+                <!-- pagination -->
+                <div class="com-paging">
+                    <button class="prev">이전</button>
+                    <button class="on">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <span class="empty">...</span>
+                    <button>120</button>
+                    <button class="next">다음</button>
+                </div>
+                <!-- .// pagination -->
+            </div>
+            <!-- .// table-box -->
+            </div>
+            <!-- footer -->
+            <footer class="wrap">
+                <div class="fixed-banner-content">
+                <div class="banner-area">
+                    <!-- 지사 로그인 전 -->
+                    <a href="#" class="guide">발급안내</a>
+                    <a href="#" class="edu">국가평생교육<br />진흥원</a>
+                    <!--
+                <a href="#" class="blog">공식<br />블로그</a>
+                <a href="#" class="report">부정사용<br />신고</a>
+                -->
+                </div>
+                </div>
+                <!-- 2024-11-20 삭제
+            <div class="favorite-content">
+            <div class="link-area">
+                <button class="open-btn">관련사이트</button>
+            </div>
+            <div class="link-area">
+                <button class="open-btn">지역바우처</button>
+            </div>
+            </div>
+            -->
+                <!-- 2024-11-20 수정 -->
+                <div class="info-content">
+                <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
+                <address>
+                    <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
+                    <span class="tel"><span>대표전화</span><span>1600-3005 (평일 09시~18시)</span></span>
+                </address>
+                <select class="ui-select" title="관련 사이트 선택">
+                    <option value="#">관련 사이트</option>
+                </select>
+                <div class="link-area">
+                    <div class="link-box">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="on">개인정보처리방침</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">이메일무단수집거부</a>
+                    </div>
+                    <span class="copy">COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
+                    RESERVED.</span>
+                    <div class="support-box">
+                    <img src="./assets/images/footer_link_1.png" alt="교육부" />
+                    <img src="./assets/images/footer_link_2.png" alt="국가평생교육진흥원" />
+                    <img src="./assets/images/footer_link_3.png" alt="wa" />
+                    <img src="./assets/images/footer_link_4.png" alt="청렴세상" />
+                    </div>
+                </div>
+                </div>
+                <!-- //2024-11-20 수정 -->
+            </footer>
+            <!-- .// footer area -->
+
+            <!-- modal 영역 -->
+            <div class="layer-pop" data-pop="pop-1">
+                <div class="layer-content" style="--max-width: 840px">
+                <div class="layer-scroll">
+                    <span class="title">평생교육이용권 신청을 위한 개인정보 수집 · 이용 동의(선택)</span>
+                    <div class="info-area">
+                        <div class="text-box">
+                        <p class="txt">평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집.유출.오용.남용으로부터 사생활의 비밀 등을 보호하도록 한 개인정보보호법 규정에 따라 다음과 같이 수집·이용 됩니다.</p>
+                        <div class="table-group">
+                            <span class="tit">개인정보 수집 · 이용 동의</span>
+                            <table summary="개인정보 수집 · 이용 동의에 관한 테이블">
+                            <caption>개인정보 수집 · 이용 동의에 관한 테이블이며 항목, 수집이용 목적, 보유기간 등으로 구성되어 있음</caption>
+                            <colgroup>
+                                <col style="width:218px;">
+                                <col style="width:291px;">
+                                <col style="width:159px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                <th>항목</th>
+                                <th>수집 · 이용 목적</th>
+                                <th>보유기간</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>회원 계정정보(ID, 비밀번호), 암호화된 이용자 확인 값(CI), 회원가입동의여부, 평생학습계좌번호</td>
+                                <td>- 평생학습계좌제 학습계좌 발급 및 학습이력관리<br>- 평생교육이용권 홈페이지 회원관리</td>
+                                <td class="center">5년, 회원탈퇴 시까지</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <p class="txt">※ 위의 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시 평생교육이용권 신청 · 선정 · 지급에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</p>
+                        </div>
+                        <div class="btn-box">
+                        <button onclick="$('[data-pop=pop-1]').hide();">확인</button>
+                        </div>
+                    </div>
+                    <button class="close-btn" onclick="$('[data-pop=pop-1]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <!-- .// modal 영역 -->
+</body>
+</html>

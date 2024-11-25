@@ -1,0 +1,217 @@
+/****************************************************
+	파일명	: reset.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-11-23
+	-------------------------------------------------
+	Dec. 기본 스타일 초기화 관련 스타일
+	-------------------------------------------------
+	속성순서: 레이아웃 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+*****************************************************/
+
+/* WEB FONT */
+/* reset font */
+@font-face {
+font-family: KoPubDotum;
+font-weight: 300;
+src: url("../font/KoPubWorld Dotum Light.ttf") format("truetype");
+}
+@font-face {
+font-family: KoPubDotum;
+font-weight: 500;
+src: url("../font/KoPubWorld Dotum Medium.ttf") format("truetype");
+}
+@font-face {
+font-family: KoPubDotum;
+font-weight: 700;
+src: url("../font/KoPubWorld Dotum Bold.ttf") format("truetype");
+}
+@font-face {
+font-family: KoPubBatang;
+font-weight: 300;
+src: url("../font/KoPubWorld Batang Light.ttf") format("truetype");
+}
+@font-face {
+font-family: KoPubBatang;
+font-weight: 500;
+src: url("../font/KoPubWorld Batang Medium.ttf") format("truetype");
+}
+@font-face {
+font-family: KoPubBatang;
+font-weight: 700;
+src: url("../font/KoPubWorld Batang Bold.ttf") format("truetype");
+}
+
+body {overflow-x: hidden;}
+
+
+* {-webkit-text-size-adjust: none; box-sizing: border-box;}
+*::before, *::after {box-sizing: border-box;}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	font-style: inherit;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	font-size: inherit;
+}
+
+ul,ol,li {list-style: none;}
+fieldset,img {border: 0;}
+
+br {letter-spacing: normal;}
+
+address,caption,em,var {
+	padding: 0;
+	margin: 0;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* a style */
+a {text-decoration: none; color: #000;}
+a[href^=tel] { font-style: normal;}
+
+ /* input */
+input[type=number], input[type=file], input[type=date], 
+input[type=tel], input[type="text"], input[type="password"], 
+input[type="search"], input[type="email"], textarea {
+	height: 56px;
+	border-radius: 10px;
+	background: #fff;
+	border: 1px solid var(--gray-30-d8);
+	padding: 0 16px;
+	font-size: inherit;
+}
+
+select { 
+	height: 56px;
+	min-width: 100px;
+	-webkit-appearance: none;
+	-moz-appearance: none; 
+	appearance: none; 
+	padding: 0 16px; 
+	border-radius: 10px;
+	background: #fff url('../images/ic_arrow_down.png') 
+	no-repeat right 16px center; border: 1px solid var(--gray-30-d8); 
+	font-size: inherit;
+}
+
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+	outline: 2px solid #000;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button,
+textarea::-webkit-outer-spin-button,
+textarea::-webkit-inner-spin-button,
+select::-webkit-outer-spin-button,
+select::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+textarea {
+	width: 100%;
+	border-radius: 12px;
+	border: 1px solid #ddd;
+	padding: 10px 15px;
+}
+
+
+input[type=text]:disabled, input[type=text]:read-only, input[type=number]:disabled, input[type=number]:read-only {
+	background: #F8F8F8;
+}
+
+
+input[type=text].full, input[type=number].full {
+	width: 100%;
+}
+input[type=date] {
+	width: 200px;
+	height: 44px;
+	padding-left: 10px;
+	border-radius: 8px;
+	border: 1px solid #DDDDDD;
+	background: url(../images/ic_calendar.png) no-repeat right 12px center;
+	font-size: 16px;
+	font-family: "KoPubDotum", sans-serif;
+}
+input[type=date]:disabled, input[type=date]:read-only {
+	background: #F8F8F8;
+}
+input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-calendar-picker-indicator {
+	position: relative;
+	left: -11px;
+	opacity: 0;
+	-webkit-appearance: none;
+}
+img {border: 0; vertical-align: top; max-width: 100%;} 
+legend,
+caption {
+	position: absolute;
+	left: -1000%;
+	top: 0;
+	width: 1px;
+	height: 1px;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+}
+table {
+	width: 100%;
+	border: 0;
+	border-spacing: 0;
+	table-layout: fixed;
+}
+/* button reset */
+button {
+	background: transparent;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+button:focus {
+	outline: #000;
+}
+button:focus-visible {
+	outline: 2px solid #000;
+}
+
+.blind,
+legend {
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	top: -1000em;
+	left: 0;
+}
+
+html {
+	font-family: "KoPubDotum", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--black-90-1d);
+}
+
+html input {
+	font-weight: 300;
+	outline: none;
+}
+html a, html button {
+	font-weight: 300;
+}
