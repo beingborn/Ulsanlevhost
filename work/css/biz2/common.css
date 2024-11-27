@@ -13,6 +13,7 @@
 	/* color */
 	--primary-color : #27C2CB;
 	--secondary-color : #F2FBFC;
+	--navy-12 : #124D83;
 	--white : #fff;
 	/* gray scale */
 	--gray-05-f8 : #f8f8f8; /* bg */
@@ -23,28 +24,39 @@
 	--gray-70-55 : #555555; /* Text-body */
 	--gray-80-2d : #2d2d2d;
 	--black-90-1d: #111111; /* Text-title  */
-
 	/* point-color */
 	--point-color-f7 : #F76767;
 	--point-color-73 : #73D75A;
-
 	/* txt size */
 	--txt-lv1 : 50px;
 	--txt-lv2 : 38px;
 	--txt-lv5 : 20px;
 }
 
-
-
-
 /* txt align */
-.txt-c {text-align: center;}
-.txt-l {text-align: left;}
-.txt-r {text-align: right;}
+.txt-c {text-align: center!important;}
+.txt-l {text-align: left!important;}
+.txt-r {text-align: right!important;}
+/* txt color */
+.txt-gray55 {color: var(--gray-70-55);}
 
-/* margin style */
+
+
 /* margin - top */
 .mt-80 {margin-top: 80px;}
+/* margin vertical */
+.my-80 {margin-top: 80px; margin-bottom: 80px;}
+/* margin left */
+.ml-10 {margin-left: 10px;}
+/* margin right */
+.mr-10 {margin-right: 10px;}
+
+/* width style */
+.w-100 {width: 100%;}
+
+/* height */
+.mh-set {min-height: var(--mh, auto);}
+
 
 /* border */
 .b {border: 1px solid black; border-radius: 12px;}
@@ -52,6 +64,7 @@
 /* display */
 .flex {display: flex;}
 .flex-ac { display: flex; align-items: center;}
+.flex-acjs {display: flex; align-items: center; justify-content: space-between;}
 
 /* flex-grow */
 .flex-grow-1 {flex-grow: 1;}
@@ -59,5 +72,13 @@
 /* gap */
 .gap-20 {gap: 20px;}
 
+/* bg */
+.bg-primary {background: var(--primary-color);}
+
+/* table */
+table {font-size: 20px;}
+
+/* responsive w-set */
+.res-wSet {width: var(--width, auto);}
 
 
