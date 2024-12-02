@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css js inject -->
+    <link rel="stylesheet" href="../css/biz2/reset.css">
+    <link rel="stylesheet" href="../css/biz2/common.css">
+    <link rel="stylesheet" href="../css/biz2/layout.css">
+    <link rel="stylesheet" href="../css/biz2/main.css">
+    <link rel="stylesheet" href="../css/biz2/style.css">
+    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css" />
+    <script src="../js/biz2/jquery-3.7.1.min.js"></script>
+    <script src="../js/biz2/swiper-bundle.min.js"></script>
+    <script src="../js/biz2/script.js"></script>
+    <title>울산광역시 평생교육이용원</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="#">
+                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+            </a>
+        </div>
+        <div class="menu-area">
+            <button class="open-btn">
+                <span class="blind">메뉴 열기</span>
+            </button>
+            <div class="menu-box">
+                <ul class="link-group login">
+                    <li>
+                        <span class="tit">사업안내</span>
+                        <div class="link-item">
+                            <a href="#" class="on">평생교육이용권이란?</a>
+                            <a href="#">평생교육이용권 사용하기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">사용안내</span>
+                        <div class="link-item">
+                            <a href="#">사용처안내</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">이용권 사용기관</span>
+                        <div class="link-item">
+                            <a href="#">사용처 안내</a>
+                            <a href="#">사용기관 신청 현황</a>
+                            <a href="#">이용권 사용내역</a>
+                            <a href="#">교육과정 정보</a>
+                            <a href="#">학습자 정보</a>
+                            <a href="#">기관 정보 수정</a>
+                            <a href="#">사용기관 연수</a>
+                            <a href="#">서약서 동의</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">게시판</span>
+                        <div class="link-item">
+                            <a href="#">공지사항</a>
+                            <a href="#">자료실</a>
+                            <a href="#">자주하는질문</a>
+                            <a href="#">문의사항</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="close-btn">
+                    <span class="blind">메뉴 닫기</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="top-location">
+        <div class="top-location-area wrap">
+            <span class="home"><span class="blind">홈</span></span>
+            <div class="location-box">
+                <span class="arrow">이용권사용기관</span>
+                <span class="arrow">공지사항(사용기관)</span>
+            </div>
+        </div>
+    </div>
+    <div class="container wrap">
+        <button onclick="$('[data-pop=pop-1]').show();">평생교육프로그램6대별 분류</button>    
+    </div>
+    <div class="layer-pop" data-pop="pop-1">
+        <div class="layer-content" style="--max-width: 840px">
+            <div class="layer-scroll">
+                <span class="title">평생교육프로그램 6대 영역별 분류</span>
+                <div class="info-area">
+                    <div class="table-box mg-0">
+                        <div class="com-view-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">중분류</th>
+                                        <th colspan="2">대분류</th>
+                                        <th rowspan="2">프로그램 예시</th>
+                                    </tr>
+                                    <tr>
+                                        <th>6대영역</th>
+                                        <th>정의</th>
+                                        <th>하위영역</th>
+                                        <th class="border-d8-r">정의</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="3">기초문해교육<br>(언어적 기초와 활용)</td>
+                                        <td rowspan="3">한글을 읽고, 쓸 수 있도록 하는 문자해독능력과 생활속에서 직면한 문제를 해결하고 주어진 과업을 수행할 수 있는 문해활용능력을 개발하는 평생교육</td>
+                                        <td>내국인 한글문해 프로그램</td>
+                                        <td>비문해자가 한글을 읽고, 쓸 수 있는 문자해독능력을 도울 체계적으로 지도하는 프로그램</td>
+                                        <td>어르신한글교실, 찾아가는한글교실, 한글교실(초급·중급) 등</td>
+                                    </tr>
+                                    <tr>
+                                        <td>다문화 한글문해 프로그램</td>
+                                        <td>다문화 외국인이 한글을 읽고, 쓸 수 있는 문자해독능력을 갖도록 체계적으로 지도하는 프로그램</td>
+                                        <td>외국인 한글교실, 다문화가족문해교실, 귀화인한국어교육과정 등</td>
+                                    </tr>
+                                    <tr>
+                                        <td>한글생활문해 프로그램</td>
+                                        <td>문자해독 후 한글을 응용하여 직면한 문제를 해결하고 주어진 과업을 수행할 수 있는 기초생활 교육을 지원하는 프로그램</td>
+                                        <td>한글 응용교육, 문해학습자 기초컴퓨터 활용교육, 기초영어교육, 한글인증시험 준비교육과정 등</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-1]').hide();">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

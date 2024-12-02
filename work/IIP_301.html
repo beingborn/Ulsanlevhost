@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css js inject -->
+    <link rel="stylesheet" href="../css/biz2/reset.css">
+    <link rel="stylesheet" href="../css/biz2/common.css">
+    <link rel="stylesheet" href="../css/biz2/layout.css">
+    <link rel="stylesheet" href="../css/biz2/main.css">
+    <link rel="stylesheet" href="../css/biz2/style.css">
+    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
+    <script src="../js/biz2/jquery-3.7.1.min.js"></script>
+    <script src="../js/biz2/swiper-bundle.min.js"></script>
+    <script src="../js/biz2/script.js"></script>
+    <title>울산광역시 평생교육이용원</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="#">
+                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+            </a>
+        </div>
+        <div class="menu-area">
+            <button class="open-btn">
+                <span class="blind">메뉴 열기</span>
+            </button>
+            <div class="menu-box">
+                <ul class="link-group login">
+                    <li>
+                        <span class="tit">사업안내</span>
+                        <div class="link-item">
+                            <a href="#" class="on">평생교육이용권이란?</a>
+                            <a href="#">평생교육이용권 사용하기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">사용안내</span>
+                        <div class="link-item">
+                            <a href="#">사용처안내</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">이용권 사용기관</span>
+                        <div class="link-item">
+                            <a href="#">사용처 안내</a>
+                            <a href="#">사용기관 신청 현황</a>
+                            <a href="#">이용권 사용내역</a>
+                            <a href="#">교육과정 정보</a>
+                            <a href="#">학습자 정보</a>
+                            <a href="#">기관 정보 수정</a>
+                            <a href="#">사용기관 연수</a>
+                            <a href="#">서약서 동의</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">게시판</span>
+                        <div class="link-item">
+                            <a href="#">공지사항</a>
+                            <a href="#">자료실</a>
+                            <a href="#">자주하는질문</a>
+                            <a href="#">문의사항</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="close-btn">
+                    <span class="blind">메뉴 닫기</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="top-location">
+        <div class="top-location-area wrap">
+            <span class="home"><span class="blind">홈</span></span>
+            <div class="location-box">
+                <span class="arrow">이용권 사용기관</span>
+                <span class="arrow">이용권 사용내역</span>
+            </div>
+        </div>
+    </div>
+    <div class="container wrap">
+        <div class="page-header">
+            <h2 class="page-header-tit">학습자 정보</h2>
+        </div>            
+        <div class="contents">
+            <div class="top-info-group">
+                <h3>학습자 정보</h3>
+            </div>
+            <div class="com-write-table">
+                <table>
+                    <caption>학습자 정보 테이블</caption>
+                    <colgroup>
+                        <col style="width: 200px;">
+                        <col>
+                        <col style="width: 200px;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th class="txt-l">추천 교육 노출</th>
+                            <td>홍길*</td>
+                            <th class="txt-l">추천수</th>
+                            <td>21.07.**</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="top-info-group">
+                <h3>학습자 정보</h3>
+                <div class="flex-ae">
+                    <small><em class="color-red">*</em> 승인내역중 부분취소는 <em class="color-blue">파란색</em>, 전체취소는 <em class="color-red">빨간색</em>으로 화면에 출력됩니다.</small>   
+                    <label for="select-view" class="blind">노출 조건 선택</label>
+                    <select id="select-view">
+                        <option value="1">10건 보기</option>
+                        <option value="2">20건 보기</option>
+                        <option value="3">30건 보기</option>
+                    </select>                    
+                </div>                    
+            </div>      
+            <div class="com-view-table">
+                <table>
+                    <caption>학습자정보 상세 테이블</caption>
+                    <colgroup>
+                        <col style="width:8%;">
+                        <col style="width:12%;">
+                        <col style="width:6%;">                            
+                        <col style="width:20%;">                                
+                        <col style="width:10%;">
+                        <col style="width:9%;">
+                        <col style="width:11%;">
+                        <col style="width:8%;">
+                        <col>
+                        <col style="width:8%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">사업년도</th>
+                            <th rowspan="2">강좌명</th>
+                            <th rowspan="2">분반</th>
+                            <th rowspan="2">강좌기간</th>
+                            <th rowspan="2">출석일수/<br>시가/회차</th>
+                            <th rowspan="2">이수여부</th>
+                            <th rowspan="2">이용권구분</th>
+                            <th scope="row" colspan="3">사용자정보</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">승인번호</th>
+                            <th scope="col">사용일자</th>
+                            <th scope="col">사용금액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024</td>
+                            <td>한국어음운론</td>
+                            <td>2</td>
+                            <td>2024.01.01~2024.12.12</td>
+                            <td>13일</td>
+                            <td>이수중</td>
+                            <td>서울시 광진구</td>
+                            <td>29320000</td>
+                            <td>2024.08.12</td>
+                            <td>300,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btns-bottom">
+                    <button type="button" class="btns">목록</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <footer class="wrap">
+        <div class="info-content">
+            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
+            <address>
+                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
+                <span class="tel"><span>대표전화</span><span>1600-3005 (평일 09시~18시)</span></span>
+            </address>
+            <select class="ui-select" title="관련 사이트 선택">
+                <option value="#">관련 사이트</option>
+            </select>
+            <div class="link-area">
+                <div class="link-box">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="on">개인정보처리방침</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">이메일무단수집거부</a>
+                </div>
+                <span class="copy">
+                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
+                    RESERVED.
+                </span>
+                <div class="support-box">
+                    <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                    <img src="../images/biz2/footer_link_2.png" alt="국가평생교육진흥원">
+                    <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="layer-pop" data-pop="pop-1"> 
+        <div class="layer-content" style="--max-width: 840px">
+            <div class="layer-scroll">
+                <span class="title">평생교육이용권 신청을 위한 개인정보 수집 · 이용 동의(선택)</span>
+                <div class="info-area">
+                    <div class="text-box">
+                        <p class="txt">평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집.유출.오용.남용으로부터 사생활의 비밀 등을 보호하도록 한 개인정보보호법 규정에 따라 다음과 같이 수집·이용 됩니다.</p>
+                        <div class="table-group">
+                            <span class="tit">개인정보 수집 · 이용 동의</span>
+                            <table>
+                                <caption>개인정보 수집 · 이용 동의에 관한 테이블이며 항목, 수집이용 목적, 보유기간 등으로 구성되어 있음</caption>
+                                <colgroup>
+                                    <col style="width:218px;">
+                                    <col style="width:291px;">
+                                    <col style="width:159px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>항목</th>
+                                        <th>수집 · 이용 목적</th>
+                                        <th>보유기간</th>
+                                    </tr>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td>회원 계정정보(ID, 비밀번호), 암호화된 이용자 확인 값(CI), 회원가입동의여부, 평생학습계좌번호</td>
+                                    <td>- 평생학습계좌제 학습계좌 발급 및 학습이력관리<br>- 평생교육이용권 홈페이지 회원관리</td>
+                                    <td class="center">5년, 회원탈퇴 시까지</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <p class="txt">※ 위의 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시 평생교육이용권 신청 · 선정 · 지급에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</p>
+                    </div>
+                    <div class="btn-box">
+                        <button onclick="$('[data-pop=pop-1]').hide();">확인</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=pop-1]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
