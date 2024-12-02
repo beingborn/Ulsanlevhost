@@ -38,21 +38,15 @@
                         </div>
                     </li>
                     <li>
-                        <span class="tit">사용안내</span>
-                        <div class="link-item">
-                            <a href="#">사용처안내</a>
-                        </div>
-                    </li>
-                    <li>
                         <span class="tit">이용권 사용기관</span>
                         <div class="link-item">
                             <a href="#">사용처 안내</a>
                             <a href="#">사용기관 신청 현황</a>
-                            <a href="#">이용권 사용내역</a>
-                            <a href="#">교육과정 정보</a>
-                            <a href="#">학습자 정보</a>
+                            <a href="#" class="hidden">이용권 사용내역</a>
+                            <a href="#" class="hidden">교육과정 정보</a>
+                            <a href="#" class="hidden">학습자 정보</a>
                             <a href="#">기관 정보 수정</a>
-                            <a href="#">사용기관 연수</a>
+                            <a href="#" class="hidden">사용기관 연수</a>
                             <a href="#">서약서 동의</a>
                         </div>
                     </li>
@@ -62,7 +56,7 @@
                             <a href="#">공지사항</a>
                             <a href="#">자료실</a>
                             <a href="#">자주하는질문</a>
-                            <a href="#">문의사항</a>
+                            <a href="#">질의응답</a>
                         </div>
                     </li>
                 </ul>
@@ -145,7 +139,7 @@
                 <div class="top-info-group">
                     <p class="top-info-group-data">총 <strong>2</strong>건</p>
                     <div class="btn-wrap">
-                        <button type="button" class="btns bg-blue">일괄 업로드</button>
+                        <button type="button" class="btns bg-blue" onclick="$('[data-pop=pop-1]').show();">일괄 업로드</button>
                         <button type="button" class="btns bg-blue">등록</button>
                         <button type="button" class="btns bg-blue">엑셀 다운로드</button>
                     </div>
@@ -251,5 +245,26 @@
             </div>
         </div>
     </footer>
+    <div class="layer-pop" data-pop="pop-1">
+        <div class="layer-content" style="--max-width: 840px">
+            <div class="layer-scroll">
+                <span class="title">교육과정 및 학습자 일괄 업로드</span>
+                <div class="info-area">
+                    <div class="search-box">
+                        <input type="text" id="name">
+                        <button class="btns">파일첨부</button>
+                        <button class="btns">양식다운로드</button>
+                    </div>
+                    <ul class="add-notice">
+                        <li>* 엑셀 데이터 형식이 <em class="color-red">텍스트</em>가 아니면 업로드할 엑셀에 표기된 값과 상이할 수 있습니다.</li>
+                        <li>* 항목별 입력이 가능한 범위를 넘어서면 업로드 검증이 불가합니다.</li>
+                    </ul>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-1]').hide();">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

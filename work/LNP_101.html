@@ -2,20 +2,21 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
     <link rel="stylesheet" href="../css/biz2/reset.css">
     <link rel="stylesheet" href="../css/biz2/common.css">
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
+    <link rel="stylesheet" href="../css/biz2/style.css">
     <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css" />
     <script src="../js/biz2/jquery-3.7.1.min.js"></script>
-    <script src="../js/biz2/js/swiper-bundle.min.js"></script>
-    <script src="../js/biz2/js/script.js"></script>
+    <script src="../js/biz2/swiper-bundle.min.js"></script>
+    <script src="../js/biz2/script.js"></script>
     <title>울산광역시 평생교육이용원</title>
 </head>
+
 <body>
     <header>
         <div class="logo-area">
@@ -69,84 +70,77 @@
         <div class="top-location-area wrap">
             <span class="home"><span class="blind">홈</span></span>
             <div class="location-box">
-                <span class="arrow">이용권사용기관</span>
-                <span class="arrow">서약서 동의</span>
+                <span class="arrow">게시판</span>
+                <span class="arrow">자료실</span>
+                <span class="arrow">자료실 상세</span>
             </div>
         </div>
     </div>
     <div class="container wrap">
         <div class="page-header">
-            <h2 class="page-header-tit">페이지 제목 (임시)</h2>
+            <h2 class="page-header-tit">자료실</h2>
         </div>
-        <div class="top-info-group">
-            <h3>서약서 첨부</h3>
-        </div>
-        <div class="table-box">
+        <div class="contents">
             <div class="com-write-table">
                 <table>
-                    <caption></caption>
+                    <caption>자료실 상세</caption>
                     <colgroup>
-                        <col style="width: 300px;">
+                        <col style="width: 200px;">
                         <col>
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th class="txt-l">
-                                <label class="must-type">동의방식</label>   
-                            </th>
+                            <th scope="row" class="txt-l">제목</th>
+                            <td>2024년 평생교육이용권 우수 이용자 재충전 신청 매뉴얼</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="txt-l">작성일</th>
+                            <td>2024-09-24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="txt-l">글내용</th>
                             <td>
-                                <input type="checkbox" id="a">
-                                <label for="a">전자서명</label>
+                                안녕하세요. 평생교육이용권입니다.<br><br>
+
+                                2024년 평생교육이용권 우수 이용자를 대상으로 한 재충전 신청 방법을 붙임과 같이 안내드립니다.<br><br>
+                                
+                                &lt;우수 이용자 재충전 신청&gt;<br><br>
+                                
+                                1. 신청기간: 2024년 8월 1일 오전 10시 ~ 2024년 8월 9일 오후 6시 까지<br><br>
+                                
+                                2. 신청 방법: 기간 내 평생교육 이용권 누리집에서 직접 신청<br><br>
+                                
+                                    ※ 첨부파일의 매뉴얼 2종(컴퓨터,휴대폰) 참조하시기 바라며, 두 경우 모두 크롬 브라우저 사용을 권장합니다.<br><br>
+                                
+                                    ※ 본 매뉴얼은 이용자의 도움을 위해 작성되었으므로, 참고용으로 확인해주시기 바랍니다.<br>
+                                <br><br>
+                                
+                                3. 신청 조건: 2024년 평생교육이용권 우수 이용자<br><br>
+
+                                4. 선정 결과: 선정자 발표 및 통지는 2024년 8월 말 예정<br><br>
+
+                                5. 그 외 우수 이용자 재충전 신청 접수와 관련해서는 공지사항 201 [2024년 평생교육이용권 우수 이용자 신청 접수 공고(8.1~8.9.)]확인<br><br>
+
+                                감사합니다.
                             </td>
                         </tr>
                         <tr>
-                            <th class="txt-l">
-                                <label for="b" class="must-type">사용기관명</label>   
-                            </th>
-                            <td>
-                                <input type="text" id="b">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l">
-                                <label for="c" class="must-type">대표자명</label>   
-                            </th>
-                            <td>
-                                <input type="text" id="c">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l">
-                                <label class="must-type">서약서 전송 방식</label>   
-                            </th>
-                            <td>
-                                <input type="checkbox" id="d">
-                                <label for="d">핸드폰번호</label>
-                                <input type="checkbox" id="e">
-                                <label for="e">이메일</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l">
-                                <label class="must-type">이메일</label>
-                            </th>
-                            <td>
-                                <input type="email">
-                                @
-                                <input type="email">
-                                <select>
-                                    <option value="none">직접입력</option>
-                                    <option value="naver">naver.com</option>
-                                    <option value="google">google.com</option>
-                                </select>
+                            <th scope="row" class="txt-l">첨부</th>
+                            <td class="add-file">
+                                <!--파일첨부-->
+                                <!-- <label for="avatar">
+                                    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+                                </label> -->
+                                <!--첨부된 파일-->
+                                <div class="attached-file">
+                                    <img src="../images/biz2/ico/ico_pdf.svg" alt="PDF이미지" class="ico-pdf">
+                                    2024년 우수 이용자 재충전 신청 매뉴얼_휴대폰.pdf [2273050 byte] 
+                                </div>   
+                                <button type="button" class="btns ico btn-download">다운로드</button>    
                             </td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            <p>* 대표자의 핸드폰 번호 또는 이메일은 전자서명을 위해서만 사용하고, 저장하지 않습니다.</p>
-            <div class="txt-c">
-                <a href="#">전송하기</a>
             </div>
         </div>
     </div>
@@ -181,4 +175,5 @@
         </div>
     </footer>
 </body>
+
 </html>

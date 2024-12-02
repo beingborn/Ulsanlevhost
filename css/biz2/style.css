@@ -164,6 +164,7 @@ table{word-break:break-all}
 
 /* IIP_400 기관 정보 수정 */
 .com-write-table td .btn-search{position:relative;top:-4px;width:20px;height:20px;margin:6px;background-size:100%}
+.mail-agree .ico::before {background:url(../../images/biz2/icon_checkbox.svg) no-repeat center; width: 22px; height: 22px;}
 
 /* IIP_401 기관 정보 수정 상세 */
 .division .flex-ac{gap:30px}
@@ -205,6 +206,49 @@ table{word-break:break-all}
 .quiz-area dd .flex-ac{padding:20px 40px;gap:20px}
 .quiz-area dd .flex-ac .btns{width:100px;height:110px;padding:0;font-size:20px;font-weight:500}
 .quiz-area dd .flex-ac .btns::before{content:"";display:block;width:60px;height:60px;margin:0 auto;background:url(../../images/biz2/ico/ico_o.svg) no-repeat 0 0}
+.quiz-area dd .flex-ac .btns.no-sign::before {background: url(../../images/biz2/ico/ico_x.svg) no-repeat 0 0;}
+
+/* LNP_201 자주하는질문 상세 */
+.qna .top-info-group {align-items: end;} 
+.qna .top-info-group > span {color: #666666; font-size: 20px;}
+.qna .top-info-group h3.ico::before {background: url(../../images/biz2/ico/ico_question.svg) no-repeat center; width: 60px; height: 60px; margin-right: 16px;}
+.qna .qna-answer {font-size: 38px; margin-bottom: 30px;}
+.qna .qna-answer.ico::before {background: url(../../images/biz2/ico/ico_answer.svg) no-repeat center; background-size: cover; width: 46px; height: 46px; margin-right: 16px;}
+.qna-attached {display: block; font-weight: 700;}
+.qna-answer-details {padding-top: 30px; padding-bottom: 30px; color: #666666; border-bottom: 1px solid var(--gray-30-d8); font-size: 18px;}
+.qna-table thead th {text-align: left; padding-left: 40px;}
+.qna-table tbody td {padding: 40px 40px 0 40px}
+.qna-table tbody tr:last-of-type td {padding-bottom: 40px; padding-top: 30px;}
+.qna-table tbody tr:not(:last-of-type) td {border-bottom: 0;}
+.qna .add-file {height: 76px;}
+.qna .add-file .attached-file img {padding-left: 24px;}
+
+/* LCP_001 본인인증 */
+.agree-box {padding: 60px 40px; border: 1px solid var(--gray-30-d8); border-radius: 20px; }
+.agree-box .agree {display: flex; flex-direction: column; gap: 28px;}
+.agree-box .agree:not(:last-of-type) {padding-bottom: 28px;}
+.agree-box .agree + .agree {padding-top: 46px; border-top: 1px solid #e8e8e8;}
+.agree-box .agree-radio {padding: 26px 20px; background: var(--gray-05-f8); border-radius: 16px; display: flex; justify-content: space-between;}
+.agree-box .agree-radio > span {color: #797979; font-size: 18px;}
+.agree-box .radio-box label { flex: auto;}
+.agree-box .radio-box label:not(:last-of-type) {margin-right: 16px;}
+.agree-box .agree-tit {font-size: 22px;}
+.agree-box .agree-btn {border: 1px solid var(--gray-30-d8); color: #666666; border-radius: 8px; max-width: 84px; height: 44px;}
+/* IGP_001 평생교육이용권이란? */
+.edu-area{gap:48px}
+.edu-area img{width: 440px;}
+.edu-area .edu-desc{display: table;table-layout: fixed;}
+.edu-area .edu-desc dl{display: table-cell;text-align: center;font-size: 20px;font-weight: 500;word-break: keep-all;}
+.edu-area .edu-desc dl+dl{padding-left: 4px;}
+.edu-area .edu-desc .list01{width: 16%;}
+.edu-area .edu-desc .list02{width: 15%;}
+.edu-area .edu-desc .list03{width: 17%;}
+.edu-area .edu-desc .list04{width: auto;}
+.edu-area .edu-desc .list05{width: 19%;}
+.edu-area .edu-desc dl dt,
+.edu-area .edu-desc dl dd{padding:11px 16px;border-radius: 12px;}
+.edu-area .edu-desc dl dt{background-color: #E2E7F0; }
+.edu-area .edu-desc dl dd{height:122px;background-color: #F7F9FC;color:#333}
 
 
 /* full page layout (로그인 및 메인 사용)*/
@@ -246,7 +290,7 @@ table{word-break:break-all}
 .layer-pop .search-box.list .flex-ac {gap: 20px; width: 100%;}
 
 /* 탭 공통 (임시) */
-.tab-list {display: flex; align-items: center; gap: 4px; font-size: 24px;}
+.tab-list {display: flex; align-items: center; gap: 4px; font-size: 24px; margin-bottom: 60px; border-bottom: 1px solid var(--gray-30-d8);}
 .tab-list > li {width: var(--wSet ,25%); text-align: center;}
-.tab-list > li > a {display: block;	height: 100%; line-height: 76px; border-radius: 20px 20px 0 0; border: 1px solid var(--gray-30-d8); background: var(--gray-05-f8);}
+.tab-list > li > a {display: block;	height: 100%; line-height: 76px; border-radius: 20px 20px 0 0; border: 1px solid var(--gray-30-d8); border-bottom: none; background: var(--gray-05-f8);}
 .tab-list > li > a.show {background: var(--primary-color-600); color: #fff; border: none;} 

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
-    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css" />
     <script src="../js/biz2/jquery-3.7.1.min.js"></script>
     <script src="../js/biz2/swiper-bundle.min.js"></script>
     <script src="../js/biz2/script.js"></script>
@@ -38,15 +38,21 @@
                         </div>
                     </li>
                     <li>
+                        <span class="tit">사용안내</span>
+                        <div class="link-item">
+                            <a href="#">사용처안내</a>
+                        </div>
+                    </li>
+                    <li>
                         <span class="tit">이용권 사용기관</span>
                         <div class="link-item">
                             <a href="#">사용처 안내</a>
                             <a href="#">사용기관 신청 현황</a>
-                            <a href="#" class="hidden">이용권 사용내역</a>
-                            <a href="#" class="hidden">교육과정 정보</a>
-                            <a href="#" class="hidden">학습자 정보</a>
+                            <a href="#">이용권 사용내역</a>
+                            <a href="#">교육과정 정보</a>
+                            <a href="#">학습자 정보</a>
                             <a href="#">기관 정보 수정</a>
-                            <a href="#" class="hidden">사용기관 연수</a>
+                            <a href="#">사용기관 연수</a>
                             <a href="#">서약서 동의</a>
                         </div>
                     </li>
@@ -56,7 +62,7 @@
                             <a href="#">공지사항</a>
                             <a href="#">자료실</a>
                             <a href="#">자주하는질문</a>
-                            <a href="#">질의응답</a>
+                            <a href="#">문의사항</a>
                         </div>
                     </li>
                 </ul>
@@ -70,86 +76,68 @@
         <div class="top-location-area wrap">
             <span class="home"><span class="blind">홈</span></span>
             <div class="location-box">
-                <span class="arrow">이용권 사용기관</span>
-                <span class="arrow">공지사항(사용기관)</span>
+                <span class="arrow">사업안내</span>
+                <span class="arrow">평생교육이용권이란?</span>
             </div>
         </div>
     </div>
     <div class="container wrap">
-        <div class="page-header">
-            <h2 class="page-header-tit">공지사항(사용기관)</h2>
-        </div>        
-        <div class="contents">
-            <div class="search-area">
-                <div class="flex-ac">
-                    <label for="select-box" class="blind">검색조건 선택</label>
-                    <select id="select-box" class="ui-select">
-                        <option value="1">전체</option>
-                        <option value="1">제목</option>
-                        <option value="1">내용</option>
-                    </select>
-                    <div class="search-input">
-                        <label for="search-bar" class="blind"> 공지사항 검색어 입력</label>
-                        <input type="text" id="search-bar">
-                        <button type="button" class="btn-search">검색</button>
+        <div class="tab-area">
+            <ul class="tab-list">
+                <li role="tab" aria-selected="true" aria-controls="tab-1" data-tab="tab-1">
+                    <a href="#tab-1">평생교육이용권이란?</a>
+                </li>
+                <li role="tab" aria-selected="false" aria-controls="tab-2" data-tab="tab-2">
+                    <a href="#tab-2">평생교육이용권 사용하기</a>
+                </li>
+            </ul>
+            <div class="tab-conts-wrap">
+                <div id="tab-1" role="tab-panel" class="tab-cont show">
+                    <div class="page-header">
+                        <h2 class="page-header-tit">평생교육이용권이란?</h2>
+                        <p class="page-header-desc">평생교육이용권에서는 신청 자격에 따라 디지털 이용권, 노인이용권, 지자체 이용권 3개의 이용권을 제공하고 있습니다.</p>
+                    </div>
+                    <div class="edu-area flex-ac">
+                        <img src="./../images/biz2/img/img_graph.png" alt="평생교육이용권 1인당 연간  35만원 (우수이용자 70만원) 지원 그래프">
+                        <div class="edu-desc">
+                            <dl class="list01">
+                                <dt>이용권 구분</dt>
+                                <dd>지역특화 (저소득층) 이용권</dd>
+                                <dd>디지털 이용권</dd>
+                                <dd>노인 이용권</dd>
+                            </dl>
+                            <dl class="list02">
+                                <dt>지원 인원</dt>
+                                <dd>102명</dd>
+                                <dd>102명</dd>
+                                <dd>102명</dd>
+                            </dl>
+                            <dl class="list03">
+                                <dt>지원 금액</dt>
+                                <dd>1인당 35만원</dd>
+                                <dd>1인당 35만원</dd>
+                                <dd>1인당 35만원</dd>
+                            </dl>
+                            <dl class="list04">
+                                <dt>사용처</dt>
+                                <dd class="txt-l">평생교육이용권 사용기관으로 등록된 기관의 수강료, 해당 강좌의 교재비</dd>
+                                <dd class="txt-l">평생교육이용권 사용기관으로 등록된 기관의 수강료, 해당 강좌의 교재비</dd>
+                                <dd class="txt-l">평생교육이용권 사용기관으로 등록된 기관의 수강료, 해당 강좌의 교재비</dd>
+                            </dl>
+                            <dl class="list05">
+                                <dt>신청자격 확인</dt>
+                                <dd>30대 이상 성인</dd>
+                                <dd>30대 이상 성인</dd>
+                                <dd>30대 이상 성인</dd>
+                            </dl>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="top-info-group">
-                <p class="top-info-group-data">총 <strong>6,234</strong>건</p>
-                <label for="select-view" class="blind">노출 조건 선택</label>
-                <select id="select-view">
-                    <option value="1">10건 보기</option>
-                    <option value="2">20건 보기</option>
-                    <option value="3">30건 보기</option>
-                </select>
-            </div>
-            <div class="com-view-table">
-                <table>
-                    <caption>공지사항 안내 테이블</caption>
-                    <colgroup>
-                        <col style="width: 102px;">
-                        <col>
-                        <col style="width: 172px;">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>번호</th>
-                            <th>제목</th>
-                            <th>작성일</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td class="txt-l">
-                                <a href="#" class="com-view-title"><span class="table-label">공지</span> 지자체 평생교육이용권 시스템 일시중단 안내</a>
-                            </td>
-                            <td>2024-10-02</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="txt-l"><a href="#" class="com-view-title">지자체 평생교육이용권 시스템 일시 중단 안내</a></td>
-                            <td>2024-10-02</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="txt-l"><a href="#" class="com-view-title">지자체 평생교육이용권 시스템 일시 중단 안내</a></td>
-                            <td>2024-10-02</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="com-paging">
-                <button class="prev">이전</button>
-                <button class="on">1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                <span class="empty">...</span>
-                <button>120</button>
-                <button class="next">다음</button>
+                <div id="tab-2" role="tab-panel" class="tab-cont">
+                    <div class="page-header">
+                        <h2 class="page-header-tit">이용권 사용방법</h2>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -184,4 +172,5 @@
         </div>
     </footer>
 </body>
+
 </html>

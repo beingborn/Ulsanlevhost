@@ -38,21 +38,15 @@
                         </div>
                     </li>
                     <li>
-                        <span class="tit">사용안내</span>
-                        <div class="link-item">
-                            <a href="#">사용처안내</a>
-                        </div>
-                    </li>
-                    <li>
                         <span class="tit">이용권 사용기관</span>
                         <div class="link-item">
                             <a href="#">사용처 안내</a>
                             <a href="#">사용기관 신청 현황</a>
-                            <a href="#">이용권 사용내역</a>
-                            <a href="#">교육과정 정보</a>
-                            <a href="#">학습자 정보</a>
+                            <a href="#" class="hidden">이용권 사용내역</a>
+                            <a href="#" class="hidden">교육과정 정보</a>
+                            <a href="#" class="hidden">학습자 정보</a>
                             <a href="#">기관 정보 수정</a>
-                            <a href="#">사용기관 연수</a>
+                            <a href="#" class="hidden">사용기관 연수</a>
                             <a href="#">서약서 동의</a>
                         </div>
                     </li>
@@ -62,7 +56,7 @@
                             <a href="#">공지사항</a>
                             <a href="#">자료실</a>
                             <a href="#">자주하는질문</a>
-                            <a href="#">문의사항</a>
+                            <a href="#">질의응답</a>
                         </div>
                     </li>
                 </ul>
@@ -114,7 +108,7 @@
                             <td colspan="3">
                                 <div class="input-wrap">
                                     <input type="text" id="a" placeholder="평생교육강좌">
-                                    <button type="button" class="btns">학점은행제 평가인정 강좌 조회</button>
+                                    <button type="button" class="btns" onclick="$('[data-pop=pop-1]').show();">학점은행제 평가인정 강좌 조회</button>
                                 </div>
                             </td>
                         </tr>
@@ -171,9 +165,9 @@
                                 /* 해당 요소 선택 시 popup show */
                                 $('#chk-2').change(function(){
                                     if($(this).is(":checked")){
-                                        $('[data-pop=pop-1]').show();
+                                        $('[data-pop=pop-3]').show();
                                     } else {
-                                        $('[data-pop=pop-1]').hide();
+                                        $('[data-pop=pop-3]').hide();
                                     }
                                 })
                             </script>
@@ -300,8 +294,8 @@
                     </tbody>
                 </table>
                 <div class="btns-bottom">
-                    <button type="button" class="btns">저장</button>
                     <button type="button" class="btn-bd">취소</button>
+                    <button type="button" class="btns">저장</button>
                 </div>
             </div>                    
         </div>
@@ -339,128 +333,247 @@
     <div class="layer-pop" data-pop="pop-1">
         <div class="layer-content" style="--max-width: 840px">
             <div class="layer-scroll">
-                <span class="title">팝업1</span>
+                <span class="title">학점은행제 강좌 조회</span>
                 <div class="info-area">
-                    <div class="text-box">
-                        <p class="txt">평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집.유출.오용.남용으로부터 사생활의 비밀 등을 보호하도록 한 개인정보보호법 규정에 따라 다음과 같이 수집·이용 됩니다.</p>
-                        <div class="table-group">
-                            <span class="tit">개인정보 수집 · 이용 동의</span>
-                            <table>
-                                <caption>개인정보 수집 · 이용 동의에 관한 테이블이며 항목, 수집이용 목적, 보유기간 등으로 구성되어 있음</caption>
-                                <colgroup>
-                                    <col style="width:218px;">
-                                    <col style="width:291px;">
-                                    <col style="width:159px;">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>항목</th>
-                                        <th>수집 · 이용 목적</th>
-                                        <th>보유기간</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>회원 계정정보(ID, 비밀번호), 암호화된 이용자 확인 값(CI), 회원가입동의여부, 평생학습계좌번호</td>
-                                        <td>- 평생학습계좌제 학습계좌 발급 및 학습이력관리<br>- 평생교육이용권 홈페이지 회원관리</td>
-                                        <td class="center">5년, 회원탈퇴 시까지</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="search-box list">
+                        <div class="flex-ac">
+                            <label for="1">강좌명</label>
+                            <input type="text" id="1">
                         </div>
-                        <p class="txt">※ 위의 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시 평생교육이용권 신청 · 선정 · 지급에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</p>
+                        <div class="flex-ac">
+                            <label for="2">강좌시작일</label>
+                            <input type="text" id="2">
+                            <label for="3">분반</label>
+                            <input type="text" id="3">
+                            <button class="btns">검색</button>
+                        </div>
                     </div>
-                    <div class="btn-box">
-                        <button onclick="$('[data-pop=pop-1]').hide();">확인</button>
+                    <div class="top-info-group">
+                        <p class="top-info-group-data">총 <strong>4</strong>건</p>
                     </div>
-                </div>
-                <button class="close-btn" onclick="$('[data-pop=pop-1]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
-            </div>
-        </div>
-    </div>
-    <div class="layer-pop" data-pop="pop-2">
-        <div class="layer-content" style="--max-width: 840px">
-            <div class="layer-scroll">
-                <span class="title">팝업2</span>
-                <div class="info-area">
-                    <div class="text-box">
-                    <p class="txt">평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집.유출.오용.남용으로부터 사생활의 비밀 등을 보호하도록 한 개인정보보호법 규정에 따라 다음과 같이 수집·이용 됩니다.</p>
-                    <div class="table-group">
-                        <span class="tit">개인정보 수집 · 이용 동의</span>
-                        <table>
-                            <caption>개인정보 수집 · 이용 동의에 관한 테이블이며 항목, 수집이용 목적, 보유기간 등으로 구성되어 있음</caption>
+                    <div class="com-view-table">
+                        <table class="mg-0">
+                            <caption>
+                                학점은행제 강좌 조회 테이블
+                            </caption>
                             <colgroup>
-                                <col style="width:218px;">
-                                <col style="width:291px;">
-                                <col style="width:159px;">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th>항목</th>
-                                    <th>수집 · 이용 목적</th>
-                                    <th>보유기간</th>
+                                    <th>강좌명</th>
+                                    <th>분반</th>
+                                    <th>교육시작일자</th>
+                                    <th>교육종로일자</th>
+                                    <th>강사명</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>회원 계정정보(ID, 비밀번호), 암호화된 이용자 확인 값(CI), 회원가입동의여부, 평생학습계좌번호</td>
-                                    <td>- 평생학습계좌제 학습계좌 발급 및 학습이력관리<br>- 평생교육이용권 홈페이지 회원관리</td>
-                                    <td class="center">5년, 회원탈퇴 시까지</td>
+                                    <td>평생교육강좌</td>
+                                    <td>1</td>
+                                    <td>2022.12.12</td>
+                                    <td>2022.12.21</td>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <td>평생교육강좌</td>
+                                    <td>1</td>
+                                    <td>2022.12.12</td>
+                                    <td>2022.12.21</td>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <td>평생교육강좌</td>
+                                    <td>1</td>
+                                    <td>2022.12.12</td>
+                                    <td>2022.12.21</td>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <td>평생교육강좌</td>
+                                    <td>1</td>
+                                    <td>2022.12.12</td>
+                                    <td>2022.12.21</td>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <td>평생교육강좌</td>
+                                    <td>1</td>
+                                    <td>2022.12.12</td>
+                                    <td>2022.12.21</td>
+                                    <td>홍길동</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="txt">※ 위의 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시 평생교육이용권 신청 · 선정 · 지급에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</p>
+                    <div class="com-paging">
+                        <button class="prev">이전</button>
+                        <button class="on">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <span class="empty">...</span>
+                        <button>120</button>
+                        <button class="next">다음</button>
                     </div>
-                    <div class="btn-box">
-                        <button onclick="$('[data-pop=pop-2]').hide();">확인</button>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-1]').hide();">닫기</button>
                     </div>
                 </div>
-                <button class="close-btn" onclick="$('[data-pop=pop-2]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
             </div>
         </div>
     </div>
-    <div class="layer-pop" data-pop="pop-3">
-        <div class="layer-content" style="--max-width: 840px">
+    <div class="layer-pop" data-pop="pop-2">
+        <div class="layer-content" style="--max-width: 1200px">
             <div class="layer-scroll">
-                <span class="title">팝업3</span>
+                <span class="title">평생교육프로그램 6대 영역별 분류</span>
                 <div class="info-area">
-                    <div class="text-box">
-                        <p class="txt">평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집.유출.오용.남용으로부터 사생활의 비밀 등을 보호하도록 한 개인정보보호법 규정에 따라 다음과 같이 수집·이용 됩니다.</p>
-                        <div class="table-group">
-                            <span class="tit">개인정보 수집 · 이용 동의</span>
+                    <div class="table-box mg-0">
+                        <div class="com-view-table">
                             <table>
-                                <caption>개인정보 수집 · 이용 동의에 관한 테이블이며 항목, 수집이용 목적, 보유기간 등으로 구성되어 있음</caption>
-                                <colgroup>
-                                    <col style="width:218px;">
-                                    <col style="width:291px;">
-                                    <col style="width:159px;">
-                                </colgroup>
                                 <thead>
                                     <tr>
-                                    <th>항목</th>
-                                    <th>수집 · 이용 목적</th>
-                                    <th>보유기간</th>
+                                        <th colspan="2">중분류</th>
+                                        <th colspan="2">대분류</th>
+                                        <th rowspan="2">프로그램 예시</th>
+                                    </tr>
+                                    <tr>
+                                        <th>6대영역</th>
+                                        <th>정의</th>
+                                        <th>하위영역</th>
+                                        <th class="border-d8-r">정의</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                    <td>회원 계정정보(ID, 비밀번호), 암호화된 이용자 확인 값(CI), 회원가입동의여부, 평생학습계좌번호</td>
-                                    <td>- 평생학습계좌제 학습계좌 발급 및 학습이력관리<br>- 평생교육이용권 홈페이지 회원관리</td>
-                                    <td class="center">5년, 회원탈퇴 시까지</td>
+                                        <td rowspan="3">기초문해교육<br>(언어적 기초와 활용)</td>
+                                        <td rowspan="3">한글을 읽고, 쓸 수 있도록 하는 문자해독능력과 생활속에서 직면한 문제를 해결하고 주어진 과업을 수행할 수 있는 문해활용능력을 개발하는 평생교육</td>
+                                        <td>내국인 한글문해 프로그램</td>
+                                        <td>비문해자가 한글을 읽고, 쓸 수 있는 문자해독능력을 도울 체계적으로 지도하는 프로그램</td>
+                                        <td>어르신한글교실, 찾아가는한글교실, 한글교실(초급·중급) 등</td>
+                                    </tr>
+                                    <tr>
+                                        <td>다문화 한글문해 프로그램</td>
+                                        <td>다문화 외국인이 한글을 읽고, 쓸 수 있는 문자해독능력을 갖도록 체계적으로 지도하는 프로그램</td>
+                                        <td>외국인 한글교실, 다문화가족문해교실, 귀화인한국어교육과정 등</td>
+                                    </tr>
+                                    <tr>
+                                        <td>한글생활문해 프로그램</td>
+                                        <td>문자해독 후 한글을 응용하여 직면한 문제를 해결하고 주어진 과업을 수행할 수 있는 기초생활 교육을 지원하는 프로그램</td>
+                                        <td>한글 응용교육, 문해학습자 기초컴퓨터 활용교육, 기초영어교육, 한글인증시험 준비교육과정 등</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <p class="txt">※ 위의 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시 평생교육이용권 신청 · 선정 · 지급에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</p>
                     </div>
-                    <div class="btn-box">
-                        <button onclick="$('[data-pop=pop-3]').hide();">확인</button>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-2]').hide();">닫기</button>
                     </div>
                 </div>
-                <button class="close-btn" onclick="$('[data-pop=pop-3]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
             </div>
         </div>
     </div>
+    <div class="layer-pop" data-pop="pop-3">
+        <div class="layer-content" style="--max-width: 1200px">
+            <div class="layer-scroll">
+                <span class="title">자주쓰는 강좌</span>
+                <div class="info-area">
+                    <div class="table-box">
+                        <div class="com-write-table">
+                            <table>
+                                <caption>자주쓰는 강좌 안내 테이블</caption>
+                                <colgroup>
+                                    <col style="width: 150px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>구분</th>
+                                        <td>
+                                            <div class="radio-box">
+                                                <input type="radio" id="chk-ex" name="confirmation" value="yes">
+                                                <label for="chk-ex">자주쓰는 강좌</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="com-view-table">
+                            <table>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>강좌명</th>
+                                        <th>강좌분류</th>
+                                        <th>교육방법</th>
+                                        <th>
+                                            총교육일수
+                                            <br>
+                                            (총 교육시간)
+                                        </th>
+                                        <th>
+                                            교육시간<br>
+                                            (회당)
+                                        </th>
+                                        <th>수강료</th>
+                                        <th>교재비</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>유럽바리스타 자격증</td>
+                                        <td>시민참여교육</td>
+                                        <td>온라인</td>
+                                        <td>11일</td>
+                                        <td>2</td>
+                                        <td>100,000원</td>
+                                        <td>50,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>유럽바리스타 자격증</td>
+                                        <td>시민참여교육</td>
+                                        <td>온라인</td>
+                                        <td>11일</td>
+                                        <td>2</td>
+                                        <td>100,000원</td>
+                                        <td>50,000원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="com-paging">
+                        <button class="prev">이전</button>
+                        <button class="on">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <span class="empty">...</span>
+                        <button>120</button>
+                        <button class="next">다음</button>
+                    </div>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-3]').hide();">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
 </body>
 </html>
