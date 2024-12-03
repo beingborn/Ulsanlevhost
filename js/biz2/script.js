@@ -28,6 +28,20 @@ $(document).ready(function () {
   }).filter(':eq(0)').click();
 
 
+  /* layer pop 형성 시 */
+  $('.layer-btn').on('click',function(){
+    $('body').css('overflow', 'hidden')
+  })
+  /* layer pop 삭제 시 */
+  $('.layer-pop .layer-close').on('click',function(){
+    $('body').css('overflow', '')
+  })
+
+  $('.auth-area button').click(function(){
+    $('.auth-area button').not($(this)).removeClass('is-active')
+    $(this).addClass('is-active')
+  }).filter(':eq(0)').click();
+
 });
 
 /* 페이지 min-height 증가 */
@@ -45,5 +59,4 @@ $(function(){
 $(window).on('resize', function(){
   adjustContainerHeight()
 })
-
 

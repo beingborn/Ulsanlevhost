@@ -14,7 +14,7 @@
 /* page-header */
 .page-header {text-align: center; margin-bottom: 80px;}
 .page-header-tit {font-size: var(--txt-lv1); font-weight: 700;}
-.page-header-desc {font-size: var(--txt-lv5); color: var(--gray-70-55); margin-top: 8px;}
+.page-header-desc {font-size: var(--txt-lv5); color: #333333 ; margin-top: 8px;}
 
 /* 상단 브레드크럼브 */
 /* top location */
@@ -86,7 +86,7 @@
 .layer-pop.simple-type .layer-content .layer-scroll { padding: 60px 118px; background: #fff; }
 .layer-pop .layer-content { overflow: hidden; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); max-width: var(--max-width, 100%); width: 100%;}
 .layer-pop .layer-content .layer-scroll { overflow-y: auto; position: relative; max-height: calc(100vh - 40px); padding: 60px; background: #FFF; border-radius: 20px;}
-.layer-pop .layer-content .layer-scroll > .title { display: block; position: relative; font-size: 24px; text-align: center; color: #191919; }
+.layer-pop .layer-content .layer-scroll > .title { display: block; position: relative; font-size: 24px; text-align: center; font-weight: 700;}
 .layer-pop .layer-content .layer-scroll > .title .ic-edu { position: absolute; left: 0; top: 0; width: 176px; height: 34px; background: url(../../images/biz2/ic_pop_edu.png) no-repeat 0 0; }
 .layer-pop .layer-content .layer-scroll .close-btn { position: absolute; right: 38px; top: 15px; width: 32px; height: 32px; background: url(../../images/biz2/ic_pop_close.png) no-repeat center center; }
 .layer-pop .layer-content .layer-scroll .send-input-area { margin-top: 32px; }
