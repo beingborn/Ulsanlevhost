@@ -21,9 +21,14 @@ header { display: flex; align-items: center; justify-content: space-between; pos
 	max-width: 1280px; margin: 0px auto; 
 }
 header::after { content: ""; position: absolute; left: -9999px; right: -9999px; bottom: 0; height: 1px; background: #d8d8d8; }
-header .logo-area { display: flex; column-gap: 10px; }
+header .logo-area { display: flex;}
+/* 로고가 여러개일 경우 */
+header .multi-logo-area a:nth-child(1){position: relative; padding-right: 20px;}
+header .multi-logo-area a + a {padding-left: 20px;}
+header .multi-logo-area a:nth-child(1):after {content: ''; display: inline-block; width: 1px; height: 26px; background: var(--gray-30-d8); position: absolute; right: 0; top: 50%; transform: translateY(-50%);}
 header .link-area { display: flex; column-gap: 30px; margin-left: auto; }
-header .menu-area { margin-left: 60px; }
+header .menu-area { display: flex; column-gap: 16px; align-items: center; margin-left: 60px; }
+header .menu-area .home-btn  { display: inline-block; width: 52px; height: 52px; background: url(../../images/biz2/ico/ico_home.svg) no-repeat 0 0; background-size: contain; }
 header .menu-area .open-btn { width: 34px; height: 28px; background: url(../../images/biz2/header_menu.png) no-repeat 0 0; }
 header .menu-area .open-btn.on { display: none; }
 header .menu-area .open-btn.on ~ .menu-box { display: block; }
@@ -33,7 +38,8 @@ header .menu-area .menu-box > .close-btn { position: absolute; right: 3px; top: 
 header .menu-area .menu-box .link-group { display: flex; position: relative; z-index: 10; justify-content: space-between;}
 header .menu-area .menu-box .link-group:not(.login) { justify-content: space-between; }
 header .menu-area .menu-box .link-group:not(.login) li {width: 200px;}
-
+header .menu-area .log-info {display: flex; align-items: center; gap: 8px; font-size: 14px;}
+header .menu-area .log-info-txt {font-weight: 500;}
 header .menu-area .menu-box .link-group li { display: flex; flex-direction: column; width: 100%; max-width: 200px;}
 
 header .menu-area .menu-box .link-group li > .tit { display: block; font-size: 24px; line-height: 27px; font-weight: bold; color: #000; }

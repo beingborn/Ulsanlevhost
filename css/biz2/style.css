@@ -22,21 +22,24 @@ select{color:#8e8e8e;font-size:18px;font-weight:500}
 .txt{font-size:20px;font-weight:500;color:#333}
 
 /* color 공통 */
+.color-primary {color: var(--primary-color-600);}
 .color-red{color:#F54141}
 .color-blue{color:#218CEF}
 .bg-blue{background-color:#4C85BA !important}
 .bg-gray{background-color:#586377 !important}
+.bg-primary-600 {background-color: var(--primary-color-600)!important;}
 
 /* icon 공통 */
 .ico::before, 
 .ico::after{content:"";display:inline-block;vertical-align:middle}
 
 /* button 공통 */
-.btns{display:inline-block;height:56px;padding:11px 20px 8px;border-radius:8px;background-color:#27c2cb;color:#fff;font-size:22px}
+.btns{display:inline-block;height:56px;padding:11px 20px 8px;border-radius:8px;background-color: var(--primary-color-600); color:#fff;font-size:22px}
 .btn-bd{display:inline-block;height:56px;padding:11px 20px 8px;border:1px solid #555;border-radius:8px;background-color:#fff;font-size:22px}
 .btn-search{display:inline-block;width:24px;height:24px;background:url(../../images/biz2/ico/ico_search.svg) no-repeat center;font-size:0}
 .btn-download{max-width:147px}
 .btn-download::after{width:20px;height:20px;margin-left:10px;background:url(../../images/biz2/ico/ico_download.svg) no-repeat 0 0}
+.btn-list {max-width: 140px;}
 
 .btns-bottom{display:flex;justify-content:center;max-width:512px;margin:80px auto 0;gap:16px}
 .btns-bottom a,
@@ -357,3 +360,16 @@ table td {color: var(--text-sub-33);}
 .tab-list > li {width:var(--wSet ,25%);text-align:center}
 .tab-list > li > a {display:block;	height:100%;line-height:76px;border-radius:20px 20px 0 0;border:1px solid var(--gray-30-d8);border-bottom:none;background:var(--gray-05-f8)}
 .tab-list > li > a.show {background:var(--primary-color-600);color:#fff;border:none} 
+
+/* container temp (메인 시안용) 나중 삭제 */
+.container.temp {padding: 0!important; min-height: auto; display: flex; justify-content: center; position: relative;}
+.container.temp::before {content: ''; width: 100%; height: 660px; position: absolute; left: 0; top: 0; background: #27C2CB; display: inline-block; z-index: -1;}
+.container.temp > img {border: 1px solid blue;}
+
+
+.temp-cont.lgp-1 {width: 1920px; height: 1676px; background: url(../../images/biz2/LMP_001\(임시\).jpg);}
+.temp-cont.lgp-2 {width: 1920px; height: 1676px; background: url(../../images/biz2/LMP_002\(임시\).jpg);}
+.temp-cont.pmp-1 {width: 1920px; height: 1676px; background: url(../../images/biz2/PMP_001\(임시\).jpg);}
+
+.temp-links-wrap {max-width: 1280px; margin: 0px auto; padding-top: 40px; display: flex; flex-direction: column; gap: 20px; align-items: end;}
+.temp-links-wrap > a {width: 300px; height: 130px; background: transparent; display: inline-block; border-radius: 15px; }

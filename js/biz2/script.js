@@ -2,9 +2,11 @@ $(document).ready(function () {
   //gnb 메뉴
   $("header .menu-area .open-btn").on("click", function () {
     $(this).toggleClass("on");
+    $('.log-info').hide();
   });
   $("header .menu-box .close-btn").on("click", function () {
     $("header .open-btn").removeClass("on");
+    $('.log-info').show();
   });
 
   //메인 공지사항 배너
