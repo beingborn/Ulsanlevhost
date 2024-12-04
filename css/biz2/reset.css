@@ -13,23 +13,23 @@
 @font-face {
 font-family: KoPubDotum;
 font-weight: 300;
-	src: url("../../font/biz2/KoPubWorld-Dotum-Light.woff2") format("woff2");
-	src: url("../../font/biz2/KoPubWorld-Dotum-Light.woff") format("woff");
-	src: url("../../font/biz2/KoPubWorld Dotum Light.ttf") format("truetype");
+	src: url("../../font/biz2/KoPubWorld-Dotum-Light.woff2") format("woff2"),
+		url("../../font/biz2/KoPubWorld-Dotum-Light.woff") format("woff"),
+		url("../../font/biz2/KoPubWorld Dotum Light.ttf") format("truetype");
 }
 @font-face {
 font-family: KoPubDotum;
 font-weight: 500;
-	src: url("../../font/biz2/KoPubWorld-Dotum-Medium.woff2") format("woff2");
-	src: url("../../font/biz2/KoPubWorld-Dotum-Medium.woff") format("woff");
-	src: url("../../font/biz2/KoPubWorld Dotum Medium.woff") format("truetype");
+	src: url("../../font/biz2/KoPubWorld-Dotum-Medium.woff2") format("woff2"),
+		url("../../font/biz2/KoPubWorld-Dotum-Medium.woff") format("woff"),
+		url("../../font/biz2/KoPubWorld Dotum Medium.woff") format("truetype");
 }
 @font-face {
 font-family: KoPubDotum;
 font-weight: 700;
-	src: url("../../font/biz2/KoPubWorld-Dotum-Bold.woff2") format("woff2");
-	src: url("../../font/biz2/KoPubWorld-Dotum-Bold.woff") format("woff");
-	src: url("../../font/biz2/KoPubWorld Dotum Bold.ttf") format("truetype");
+	src: url("../../font/biz2/KoPubWorld-Dotum-Bold.woff2") format("woff2"),
+		url("../../font/biz2/KoPubWorld-Dotum-Bold.woff") format("woff"),
+		url("../../font/biz2/KoPubWorld Dotum Bold.ttf") format("truetype");
 }
 
 * {

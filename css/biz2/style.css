@@ -80,10 +80,11 @@ table td {color: var(--text-sub-33);}
 .blue-box{padding:40px 38px;border-radius:40px;background-color:#F7F9FC}
 
 /* paging 공통 */
+.com-paging button {display: flex; align-items: center; justify-content: center; line-height: 34px;}
 .com-paging button.prev,
 .com-paging button.next{width:64px;padding:0;line-height:0;background:none;letter-spacing:0}
-.com-paging button.prev::before{content:"";display:inline-block;width:20px;height:20px;margin-top:-3px;vertical-align:middle;background:url(../../images/biz2/ico/paging_arrow.svg) no-repeat center}
-.com-paging button.next::after{content:"";display:inline-block;width:20px;height:20px;margin-top:-3px;vertical-align:middle;background:url(../../images/biz2/ico/paging_arrow.svg) no-repeat center;transform:rotate(180deg)}
+.com-paging button.prev::before{content:"";display:inline-block;width:20px;height:20px;vertical-align:middle;background:url(../../images/biz2/ico/paging_arrow.svg) no-repeat center; margin-top: -2px;}
+.com-paging button.next::after{content:"";display:inline-block;width:20px;height:20px;vertical-align:middle;background:url(../../images/biz2/ico/paging_arrow.svg) no-repeat center;transform:rotate(180deg); margin-top: -2px;}
 
 /* sub */
 /* IIP_001 사용기관 공지사항 */
@@ -105,6 +106,8 @@ table td {color: var(--text-sub-33);}
 /* IIP_100 이용권 사용내역 */
 .top-info-group{margin-top:80px;font-size:18px}
 .top-info-group h3{font-size:var(--txt-lv2)}
+.top-info-group-data {color: var(--gray-70-55);}
+.top-info-group-data strong {color: var(--text-primary-00);}
 .mapping-area .mapping{margin-top:30px}
 .mapping-area .mapping dl{width:100%;padding:40px;border:2px solid #1c8a90;border-radius:20px;text-align:center;font-size:24px}
 .mapping-area .mapping dl+dl{margin-left:30px}
