@@ -195,6 +195,10 @@
     table.file_lst tr.done {
       background: rgb(241, 252, 255);
     }
+
+    table.file_lst tr.done.main {
+      background: rgb(255, 225, 230);
+    }
     
 
     table.file_lst thead th {
@@ -306,8 +310,9 @@
 
 <body>
   <div class="cont">
-    <h2>울산광역시 평생교육이용원 <span style="color: #999!important; font-size: 13px!important;">사용기관 (PC만 제작 반응형 X)</span></h2>
-    <p style="margin-top: 10px; color: blue;">* 색상이 칠해진 행은 완료된 페이지입니다.</p>
+    <h2>울산광역시 평생교육이용원 <span style="color: #999!important; font-size: 18px!important;">사용기관 (PC만 제작 반응형 X)</span></h2>
+    <p style="margin-top: 24px; color: blue; font-size: 15px;">* 색상이 칠해진 행은 완료된 페이지입니다.</p>
+    <p style="margin-top: 10px; background-color: rgb(255, 225, 230); font-size: 15px; display: inline-block;">* 분홍색 행은 메인 페이지입니다.</p>
     <span class="count-info">
       <span class="page">페이지 : <span></span></span>
       <span>/</span>
@@ -376,7 +381,7 @@
           <td>
           </td>
         </tr>
-        <tr class="line done">
+        <tr class="line done main">
           <th>평생교육이용권</th>
           <td>사용기관 메인</td>
           <td>page</td>
@@ -384,7 +389,7 @@
           <td class="ac">O</td>
           <td></td>
         </tr>
-        <tr class="line done">
+        <tr class="line done main">
           <th>평생교육이용권</th>
           <td>지자체 메인 로그인 전</td>
           <td>page</td>
@@ -392,7 +397,7 @@
           <td class="ac">O</td>
           <td></td>
         </tr>
-        <tr class="line done">
+        <tr class="line done main">
           <th>평생교육이용권</th>
           <td>지자체 메인 로그인 후</td>
           <td>page</td>
@@ -400,7 +405,7 @@
           <td class="ac">O</td>
           <td></td>
         </tr>
-        <tr class="line done">
+        <tr class="line done main">
           <th>평생교육이용권</th>
           <td>포털 메인</td>
           <td>page</td>
