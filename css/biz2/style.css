@@ -371,5 +371,7 @@ table td {color: var(--text-sub-33);}
 .temp-cont.lgp-2 {width: 1920px; height: 1676px; background: url(../../images/biz2/LMP_002\(임시\).jpg);}
 .temp-cont.pmp-1 {width: 1920px; height: 1676px; background: url(../../images/biz2/PMP_001\(임시\).jpg);}
 
-.temp-links-wrap {max-width: 1280px; margin: 0px auto; padding-top: 40px; display: flex; flex-direction: column; gap: 20px; align-items: end;}
+.temp-links-wrap {max-width: 1280px; margin: 0px auto; padding-top: 40px; display: flex; flex-direction: column; gap: 20px; align-items: end; position: relative;}
 .temp-links-wrap > a {width: 300px; height: 130px; background: transparent; display: inline-block; border-radius: 15px; }
+
+.temp-links-special {width: 280px!important; height: 580px!important; display: inline-block; border-radius: 15px; position: absolute; left: 0;}
