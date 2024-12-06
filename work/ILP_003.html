@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css js inject -->
+    <link rel="stylesheet" href="../css/biz2/reset.css">
+    <link rel="stylesheet" href="../css/biz2/common.css">
+    <link rel="stylesheet" href="../css/biz2/layout.css">
+    <link rel="stylesheet" href="../css/biz2/main.css">
+    <link rel="stylesheet" href="../css/biz2/style.css">
+    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
+    <script src="../js/biz2/jquery.1.8.2.min.js"></script>
+    <script src="../js/biz2/swiper-bundle.min.js"></script>
+    <script src="../js/biz2/script.js"></script>
+    <title>울산광역시 평생교육이용원</title>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="#">
+                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+            </a>
+        </div>
+        <div class="menu-area">
+            <button class="open-btn">
+                <span class="blind">메뉴 열기</span>
+            </button>
+            <div class="menu-box">
+                <ul class="link-group login">
+                    <li>
+                        <span class="tit">사업안내</span>
+                        <div class="link-item">
+                            <a href="#" class="on">평생교육이용권이란?</a>
+                            <a href="#">평생교육이용권 사용하기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">이용권 사용기관</span>
+                        <div class="link-item">
+                            <a href="#">사용처 안내</a>
+                            <a href="#">사용기관 신청 현황</a>
+                            <a href="#" class="hidden">이용권 사용내역</a>
+                            <a href="#" class="hidden">교육과정 정보</a>
+                            <a href="#" class="hidden">학습자 정보</a>
+                            <a href="#">기관 정보 수정</a>
+                            <a href="#" class="hidden">사용기관 연수</a>
+                            <a href="#">서약서 동의</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">게시판</span>
+                        <div class="link-item">
+                            <a href="#">공지사항</a>
+                            <a href="#">자료실</a>
+                            <a href="#">자주하는질문</a>
+                            <a href="#">질의응답</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="close-btn">
+                    <span class="blind">메뉴 닫기</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="top-location">
+        <div class="top-location-area wrap">
+            <span class="home"><span class="blind">홈</span></span>
+            <div class="location-box">
+                <span class="arrow">이용권 사용기관</span>
+                <span class="arrow">이용권 사용기관 신청</span>
+            </div>
+        </div>
+    </div>
+    <div class="container wrap">
+        <div class="page-header">
+            <h2 class="page-header-tit">이용권 사용기관 신청</h2>
+            <p class="page-header-desc">평생교육이용권 이용을 위한 사용기관 신청 화면입니다.</p>
+        </div>
+
+        <ul class="steps flex-ac">
+            <li>
+                <span class="step01">1단계</span>
+                <strong>약관동의</strong>
+            </li>
+            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li>
+                <span class="step02">2단계</span>
+                <strong>본인인증</strong>
+            </li>
+            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="active">
+                <span class="step03">3단계</span>
+                <strong>신청서 작성</strong>
+            </li>
+            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step04">4단계</span>
+                <strong>담당자 등록</strong>
+            </li>
+            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step05">5단계</span>
+                <strong>첨부</strong>
+            </li>
+            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step06">6단계</span>
+                <strong>작성완료</strong>
+            </li>
+        </ul>
+
+        <hr>
+
+        <div class="top-info-group">
+            <h3>신청정보</h3>
+        </div>
+        <div class="com-write-table">
+            <table>
+                <caption>신청정보 입력란</caption>
+                <colgroup>
+                    <col style="width: 200px;">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th class="txt-l">사업 신청 지역</th>
+                        <td>
+                            <div class="radio-wrap">
+                                <div class="radio-box">
+                                    <input type="radio" id="chk-yes" name="confirmation" value="yes">
+                                    <label for="chk-yes">일반</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" id="chk-no" name="confirmation" value="no">
+                                    <label for="chk-no">디지털</label>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l">사없 신청 지역</th>
+                        <td>서울시</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="top-info-group">
+            <h3>기관 기본 정보</h3>
+        </div>
+        <div class="com-write-table">
+            <table>
+                <caption>기관 기본 정보 입력란</caption>
+                <colgroup>
+                    <col style="width: 200px;">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th class="txt-l must-type">
+                            <label for="a">기관명</label>
+                        </th>
+                        <td class="input-group">
+                            <div class="flex-ac">
+                                <input type="text" id="a" class="ins-name">                                                            
+                                <button type="button" class="btns bg-blue">기관조회</button>
+                                <button type="button" class="btns bg-blue">초기화</button>
+                            </div>
+                            <p class="txt-ss">기관조회되지 않는 경우 기관명을 직접 작성 바랍니다.(학점은행제 평가인정기관만 [기관조회] 바랍니다.)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l">
+                            <label for="b">사업자등록번호</label>
+                        </th>
+                        <td class="input-group">
+                            <div class="flex-ac">
+                                <div class="business-num">
+                                    <input type="text" title="사업자등록번호 첫번째자리">
+                                    -
+                                    <input type="text" title="사업자등록번호 중간자리">
+                                    -
+                                    <input type="text" title="사업자등록번호 끝자리">
+                                </div>
+                                <button type="button" class="btns bg-blue">초기화</button>
+                            </div>
+                            <p class="txt-ss">사업자인증 실패 시 나이스(niceid.co.kr 또는 1600-1522)로 문의하시기 바랍니다.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btns-bottom">
+            <a href="javascript:;" class="btn-bd green">이전</a>
+            <a href="javascript:;" class="btns">인증</a>
+        </div>
+    </div>
+    <footer class="wrap">
+        <div class="info-content">
+            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
+            <address>
+                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
+                <span class="tel"><span>대표전화</span><span>1600-3005 (평일 09시~18시)</span></span>
+            </address>
+            <select class="ui-select" title="관련 사이트 선택">
+                <option value="#">관련 사이트</option>
+            </select>
+            <div class="link-area">
+                <div class="link-box">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="on">개인정보처리방침</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">이메일무단수집거부</a>
+                </div>
+                <span class="copy">
+                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
+                    RESERVED.
+                </span>
+                <div class="support-box">
+                    <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                    <img src="../images/biz2/footer_link_2.png" alt="국가평생교육진흥원">
+                    <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
