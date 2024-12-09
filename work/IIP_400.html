@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
     <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
-    <script src="../js/biz2/jquery-3.7.1.min.js"></script>
+    <script src="../js/biz2/jquery.1.8.2.min.js"></script>
     <script src="../js/biz2/swiper-bundle.min.js"></script>
     <script src="../js/biz2/script.js"></script>
-    <title>울산광역시 평생교육이용원</title>
+    <title>울산광역시 평생교육이용권</title>
 </head>
 
 <body>
@@ -103,7 +103,7 @@
                         <tr>
                             <th class="txt-l must-type">추가 기관명</th>
                             <td colspan="5">평생교육강좌
-                                <p class="txt-ss">이 기관명대로 사용처 안내 메뉴에서 검색됩니다.</p>
+                                <p class="add-note">이 기관명대로 사용처 안내 메뉴에서 검색됩니다.</p>
                             </td>  
                         </tr>
                         <tr>
@@ -163,8 +163,11 @@
                             </th>
                             <td colspan="5">
                                 <p>qwer1234@*****.gmail.com</p> 
-                                <p class="mail-agree">전자우편 수신동의
-                                    <span class="ico"></span>
+                                <p>
+                                    전자우편 수신동의
+                                    <span class="mail-yes"></span>
+                                    <!-- N일 시  -->
+                                    <!-- <span class="mail-no"></span> -->
                                 </p>                       
                             </td>                                    
                         </tr>
@@ -227,7 +230,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th class="txt-l must-type">기관 운영강좌 유형</th>
+                            <th class="txt-l">기관 운영강좌 유형</th>
                             <td colspan="5" class="type-wrap">
                                 <div class="row-gap">
                                     <div class="chk-box">
@@ -258,8 +261,15 @@
                             </td>
                         </tr>
                         <tr>
-                            <th class="txt-l">검색 키워드</th>
-                            <td colspan="5"></td>
+                            <th class="txt-l"><label for="aa">검색 키워드</label></th>
+                            <td class="input-group" colspan="5">
+                                <div class="flex-ac">
+                                    <input type="text" id="aa" class="fixed-width">
+                                    <input type="text" class="fixed-width">
+                                    <input type="text" class="fixed-width">
+                                </div>
+                                <p class="bullet">최대 10자까지 입력가능하며, 비속어 등 입력 시, 이용이 제한됩니다.</p>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -327,7 +337,7 @@
                         <tr>
                             <th class="txt-l">부정사용 처리기준 및 절차 동의</th>
                             <td>동의</td>
-                            <td>2024-05-12</td>
+                            <td class="txt-c">2024-05-12</td>
                         </tr>
                     </tbody>
                 </table>
@@ -380,7 +390,7 @@
                 </table>
             </div> 
             <div class="top-info-group">
-                <h3>평생교육 프로그램 운영계획서</h3>
+                <h3>평생교육프로그램 운영과정</h3>
             </div>    
             <div class="com-write-table">
                 <table>
@@ -420,31 +430,43 @@
                     <tbody>
                         <tr>
                             <th class="txt-l">사업자등록증/고유번호증</th>
-                            <td>이미지 2. jpg[114615 byte]
-                                <button type="button" class="btn-search">검색</button>
+                            <td>
+                                <div class="flex-ac">
+                                    이미지 2. jpg[114615 byte]
+                                    <button type="button" class="btn-search">검색</button>
+                                </div>
                             </td>
-                            <td>2024.03.15</td>
+                            <td class="txt-c">2024.03.15</td>
                         </tr>
                         <tr>
                             <th class="txt-l">평생교육기관 증빙서류</th>
-                            <td>이미지 2. jpg[114615 byte]
-                                <button type="button" class="btn-search">검색</button>
+                            <td>
+                                <div class="flex-ac">
+                                    이미지 2. jpg[114615 byte]
+                                    <button type="button" class="btn-search">검색</button>
+                                </div>
                             </td>
-                            <td>2024.03.15</td>
+                            <td class="txt-c">2024.03.15</td>
                         </tr>
                         <tr>
                             <th class="txt-l">2024년 평생교육강좌<br>운영 계획서</th>
-                            <td>이미지 2. jpg[114615 byte]
-                                <button type="button" class="btn-search">검색</button>
+                            <td>
+                                <div class="flex-ac">
+                                    이미지 2. jpg[114615 byte]
+                                    <button type="button" class="btn-search">검색</button>
+                                </div>
                             </td>
-                            <td>2024.03.15</td>
+                            <td class="txt-c">2024.03.15</td>
                         </tr>
                         <tr>
                             <th class="txt-l">운영계획 증빙자료<br>(교육청 신고내역, 기관정관 등)</th>
-                            <td>이미지 2. jpg[114615 byte]
-                                <button type="button" class="btn-search">검색</button>
+                            <td>
+                                <div class="flex-ac">
+                                    이미지 2. jpg[114615 byte]
+                                    <button type="button" class="btn-search">검색</button>
+                                </div>
                             </td>
-                            <td>2024.03.15</td>
+                            <td class="txt-c">2024.03.15</td>
                         </tr>
                     </tbody>
                 </table>

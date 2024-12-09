@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
     <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
-    <script src="../js/biz2/jquery-3.7.1.min.js"></script>
+    <script src="../js/biz2/jquery.1.8.2.min.js"></script>
     <script src="../js/biz2/swiper-bundle.min.js"></script>
     <script src="../js/biz2/script.js"></script>
-    <title>울산광역시 평생교육이용원</title>
+    <title>울산광역시 평생교육이용권</title>
 </head>
 
 <body>
@@ -124,8 +124,12 @@
                             <th class="txt-l">
                                 <label class="must-type">강좌 시작일/<br>종료일</label>
                             </th>
-                            <td class="period flex-ac">
-                                <input type="date" id="srch03" class="date"> <span class="dash">~</span> <input type="date" class="date">
+                            <td class="period">
+                                <div class="flex-ac">
+                                    <input type="date" id="srch03" class="date"> 
+                                    <span class="dash">~</span> 
+                                    <input type="date" class="date">
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -232,14 +236,14 @@
                                         <option value="4">4</option>
                                     </select>
                                 </div>                                      
-                                <p class="txt-ss example">예시(일) : 30/30.5</p>                                    
+                                <p class="add-note">예시(일) : 30/30.5</p>                                    
                             </td>
                             <th class="txt-l">
                                 <label for="h" class="must-type">교육시간(회당)</label>
                             </th>
                             <td>
                                 <input type="text" id="h">
-                                <p class="txt-ss example">(예시(시간) :1/0.5)</p>
+                                <p class="add-note">(예시(시간) :1/0.5)</p>
                             </td>
                         </tr>
                         <tr>
@@ -280,9 +284,44 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="top-info-group">
+                    <h3>학습자 정보</h3>
+                </div>
+                <div class="com-view-table">
+                    <table>
+                        <caption>학습자 정보 테이블</caption>
+                        <colgroup>
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>학습자명</th>
+                                <th>생년월일</th>
+                                <th>출석일수</th>
+                                <th>이수여부</th>
+                                <th>
+                                    <button type="button" class="sample-pop-btn btns bg-blue" onclick="$('[data-pop=pop-3]').show();">추가</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="btns-bottom">
-                    <button type="button" class="btn-bd">취소</button>
-                    <button type="button" class="btns">저장</button>
+                    <button type="button" class="btn-bd">목록</button>
+                    <button type="button" class="btns">등록</button>
                 </div>
             </div>                    
         </div>

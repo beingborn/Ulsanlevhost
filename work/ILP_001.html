@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +13,8 @@
     <script src="../js/biz2/jquery.1.8.2.min.js"></script>
     <script src="../js/biz2/swiper-bundle.min.js"></script>
     <script src="../js/biz2/script.js"></script>
-    <title>울산광역시 평생교육이용권</title>
+    <title>울산광역시 평생교육이용원</title>
 </head>
-
 <body>
     <header>
         <div class="logo-area">
@@ -66,14 +64,53 @@
             </div>
         </div>
     </header>
+    <div class="top-location">
+        <div class="top-location-area wrap">
+            <span class="home"><span class="blind">홈</span></span>
+            <div class="location-box">
+                <span class="arrow">이용권 사용기관</span>
+                <span class="arrow">이용권 사용기관 신청</span>
+            </div>
+        </div>
+    </div>
     <div class="container wrap">
         <div class="page-header">
-            <h2 class="page-header-tit">본인인증</h2>
-            <p class="page-header-desc">최초 사업을 신청하는 이용자일 경우 개인정보 수집동의와 이용약관 동의가 필요합니다.</p>
+            <h2 class="page-header-tit">이용권 사용기관 신청</h2>
+            <p class="page-header-desc">평생교육이용권 이용을 위한 사용기관 신청 화면입니다.</p>
         </div>
-        <div class="top-info-group">
-            <h3>약관동의</h3>
-        </div>
+
+        <ul class="steps flex-ac">
+            <li class="active">
+                <span class="step01">1단계</span>
+                <strong>약관동의</strong>
+            </li>
+            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step02">2단계</span>
+                <strong>본인인증</strong>
+            </li>
+            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step03">3단계</span>
+                <strong>신청서 작성</strong>
+            </li>
+            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step04">4단계</span>
+                <strong>담당자 등록</strong>
+            </li>
+            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step05">5단계</span>
+                <strong>첨부</strong>
+            </li>
+            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step06">6단계</span>
+                <strong>작성완료</strong>
+            </li>
+        </ul>
+
         <div class="agree-box">
             <div class="agree">
                 <h5 class="agree-tit">[필수] 이용약관</h5>
@@ -98,6 +135,19 @@
                         <label for="agree3">동의안함</label>
                         <input type="radio" id="agree4" name="agree2" value="yes">
                         <label for="agree4">동의함</label>
+                    </div>
+                </div>
+            </div>
+            <div class="agree">
+                <h5 class="agree-tit">[선택] 개인정보 수집 · 이용 내역</h5>
+                <button class="agree-btn" onclick="$('[data-pop=pop-3]').show();">내용보기</button>
+                <div class="agree-radio">
+                    <span>이용약관에 대한 안내 사항을 읽고 동의합니다.</span>
+                    <div class="radio-box">
+                        <input type="radio" id="agree5" name="agree3" value="no">
+                        <label for="agree5">동의안함</label>
+                        <input type="radio" id="agree6" name="agree3" value="yes">
+                        <label for="agree6">동의함</label>
                     </div>
                 </div>
             </div>
@@ -207,16 +257,16 @@
         </div>
     </div>
     <div class="layer-pop" data-pop="pop-2">
-        <div class="layer-content" style="--max-width: 900px">
+        <div class="layer-content" style="--max-width: 840px">
             <div class="layer-scroll">
-                <span class="title">평생교육이용권 신청을 위한 개인정보 수집 · 이용 동의(필수)</span>
+                <span class="title">평생교육이용권 사용기관 신청을 위한 개인정보 수집 · 이용 동의(필수)</span>
                 <div class="info-area">
                     <p class="desc">
                         평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집,유출,오용,남용으로부터 사생활의 비밀 등을 보호하도록 한 
                         개인정보보호법 규정에 따라 다음과 같이 수집·이용·제공됩니다.
                     </p>
                     <div class="top-info-group">
-                        <h3>개인정보 수집 · 이용 동의</h3>
+                        <h3>평생교육이용권 사용기관 업무담당자 개인정보 수집 · 이용 동의</h3>
                     </div>
                     <div class="com-view-table">
                         <table class="mg-0">
@@ -224,30 +274,34 @@
                             <colgroup>
                                 <col>
                                 <col>
-                                <col>
+                                <col style="width: 27.5%;">
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th>강좌명</th>
-                                    <th>강좌분류</th>
-                                    <th>수강료</th>
+                                    <th>항목</th>
+                                    <th>수집·이용 목적</th>
+                                    <th>보유기간</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>회원(이름, 주민등록번호), 평생학습계좌번호, 회원가입동의여부</td>
-                                    <td class="txt-l">
-                                        - 평생학습계좌제 이력관리<br>
-                                        - 평생교육이용권 홈페이지 회원관리<br>
-                                        - 연구 및 설문조사 관리
+                                    <td>성명, 회원아이디, 비밀번호, 생년월일, 휴대전화번호, 전자우편주소</td>
+                                    <td rowspan="2">
+                                        평생교육이용권 사용기관 <br>
+                                        업무담당자 정보 관리
                                     </td>
-                                    <td>5년, 회원탈퇴 시까지</td>
+                                    <td rowspan="2">3년, 회원탈퇴 시까지</td>
+                                </tr>
+                                <tr>
+                                    <td class="border-d8-r">문자서비스 수신동의, 전자우편 수신동의</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <ul class="bottom-info-group">
-                        <li> ※ 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있습니다. 선택 항목의 동의를 거부하셔도 평생교육이용권 신청 · 선정 · 지급에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</li>
+                        <li>
+                            ※ 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있습니다. 그러나 필수 항목의 동의를 거부할 경우 평생교육이용권 사용기관 업무처리에 제한을 받을 수 있습니다.
+                        </li>
                     </ul>
                     <div class="layer-btn-wrap">
                         <button class="btns" onclick="$('[data-pop=pop-2]').hide();">확인</button>
@@ -257,8 +311,55 @@
             </div>
         </div>
     </div>
-
+    <div class="layer-pop" data-pop="pop-3">
+        <div class="layer-content" style="--max-width: 840px">
+            <div class="layer-scroll">
+                <span class="title">평생교육이용권 사용기관 신청을 위한 개인정보 수집 · 이용 동의서(선택)</span>
+                <div class="info-area">
+                    <p class="desc">
+                        평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집,유출,오용,남용으로부터 사생활의 비밀 등을 보호하도록 한 
+                        개인정보보호법 규정에 따라 다음과 같이 수집·이용·제공됩니다.
+                    </p>
+                    <div class="top-info-group">
+                        <h3>평생교육이용권 사용기관 업무담당자 개인정보 수집 · 이용 동의</h3>
+                    </div>
+                    <div class="com-view-table">
+                        <table class="mg-0">
+                            <caption>개인정보 수집 동의 세부 분류</caption>
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col style="width: 27.5%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>항목</th>
+                                    <th>수집·이용 목적</th>
+                                    <th>보유기간</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt-l">문자서비스 수신동의, 전자우편 수신동의</td>
+                                    <td>
+                                        평생교육이용권 사용기관 <br>
+                                        업무담당자 정보 관리
+                                    </td>
+                                    <td>3년, 회원탈퇴 시까지</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="bottom-info-group">
+                        <li> ※ 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있습니다. 선택 항목의 동의를 거부하셔도 평생교육이용권 사용기관 업무처리에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</li>
+                    </ul>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-3]').hide();">확인</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=pop-3]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
 </body>
-
-
 </html>

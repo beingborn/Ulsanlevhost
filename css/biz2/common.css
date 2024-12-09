@@ -81,6 +81,8 @@
 .flex {display: flex;}
 .flex-ac { display: flex; align-items: center;}
 .flex-acjs {display: flex; align-items: center; justify-content: space-between;}
+.il-flex-ac {display: inline-flex; align-items: center;}
+.flex-je {display: flex; justify-content: end;}
 
 .hidden {display: none;}
 
