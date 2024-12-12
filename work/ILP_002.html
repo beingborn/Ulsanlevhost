@@ -18,11 +18,16 @@
 <body>
     <header>
         <div class="logo-area">
-            <a href="#">
+            <a href="IMP_002.html">
                 <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
             </a>
         </div>
         <div class="menu-area">
+            <!-- 로그인 시 -->
+            <a href="#" class="log-info">
+                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
+                <span class="log-info-txt">로그아웃</span>
+            </a>
             <button class="open-btn">
                 <span class="blind">메뉴 열기</span>
             </button>
@@ -31,30 +36,30 @@
                     <li>
                         <span class="tit">사업안내</span>
                         <div class="link-item">
-                            <a href="#" class="on">평생교육이용권이란?</a>
-                            <a href="#">평생교육이용권 사용하기</a>
+                            <a href="IGP_001.html">평생교육이용권이란?</a>
+                            <a href="IGP_001.html">평생교육이용권 사용하기</a>
                         </div>
                     </li>
                     <li>
                         <span class="tit">이용권 사용기관</span>
                         <div class="link-item">
-                            <a href="#">사용처 안내</a>
-                            <a href="#">사용기관 신청 현황</a>
-                            <a href="#" class="hidden">이용권 사용내역</a>
-                            <a href="#" class="hidden">교육과정 정보</a>
-                            <a href="#" class="hidden">학습자 정보</a>
-                            <a href="#">기관 정보 수정</a>
-                            <a href="#" class="hidden">사용기관 연수</a>
-                            <a href="#">서약서 동의</a>
+                            <a href="ILP_001.html">사용기관 신청</a>
+                            <a href="IIP_800.html">사용기관 신청 현황</a>
+                            <a class="hidden" href="#">이용권 사용내역</a>
+                            <a href="#">교육결과 관리</a>
+                            <a class="hidden" href="#">교육과정 정보</a>
+                            <a class="hidden" href="#">학습자 정보</a>
+                            <a href="IIP_400.html">기관 정보 수정</a>
+                            <a class="hidden" href="#">사용기관 연수</a>
                         </div>
                     </li>
                     <li>
                         <span class="tit">게시판</span>
                         <div class="link-item">
-                            <a href="#">공지사항</a>
-                            <a href="#">자료실</a>
-                            <a href="#">자주하는질문</a>
-                            <a href="#">질의응답</a>
+                            <a href="IIP_001.html">공지사항</a>
+                            <a href="INP_100.html">자료실</a>
+                            <a href="INP_200.html">자주하는질문</a>
+                            <a href="INP_200.html">질의응답</a>
                         </div>
                     </li>
                 </ul>
@@ -110,54 +115,89 @@
                 <strong>작성완료</strong>
             </li>
         </ul>
-
         <hr>
-
         <div class="top-info-group">
             <h3>인증 구분</h3>
         </div>
-        <div class="auth-area">
-            <div class="auth-area-in flex-ac">
-                <button class="ico simple">간편인증</button>
-                <button class="ico joint">공동인증서</button>
-                <button class="ico mo-auth">휴대폰인증</button>
-                <button class="ico i-pin">아이핀(i-pin)</button>
+            <div class="auth-area">
+                <div class="auth-area-in flex-ac">
+                    <button class="ico simple">간편인증</button>
+                    <button class="ico joint">공동인증서</button>
+                    <button class="ico mo-auth">휴대폰인증</button>
+                    <button class="ico i-pin">아이핀(i-pin)</button>
+                </div>
             </div>
-        </div>
-        <div class="top-info-group">
-            <h3>신청정보</h3>
-        </div>
-        <div class="com-write-table">
-            <table>
-                <caption>신청정보 입력란</caption>
-                <colgroup>
-                    <col style="width: 200px;">
-                    <col>
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th class="txt-l">
-                            <label for="a">이름</label>
-                        </th>
-                        <td>
-                            <input type="text" id="a" class="mw-set">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">
-                            <label for="b">주민등록번호</label>
-                        </th>
-                        <td>
-                            <div class="flex-ac gap-10 mw-set">
-                                <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                                -
-                                <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="top-info-group">
+                <h3>신청정보</h3>
+            </div>
+            <div class="com-write-table resident-chk">
+                <table>
+                    <caption>신청정보 입력란</caption>
+                    <colgroup>
+                        <col style="width: 200px;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th class="txt-l">
+                                <label for="a">이름</label>
+                            </th>
+                            <td>
+                                <input type="text" id="a" class="mw-set">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="txt-l">
+                                <label for="b">주민등록번호</label>
+                            </th>
+                            <td>
+                                <div class="flex-ac gap-10 mw-set">
+                                    <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                    -
+                                    <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 휴대폰 인증, 아이핀 클릭 시 -->
+            <div class="com-write-table birth-chk">
+                <table>
+                    <caption>신청정보 입력란</caption>
+                    <colgroup>
+                        <col style="width: 200px;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th class="txt-l">
+                                <label for="c">이름</label>
+                            </th>
+                            <td>
+                                <input type="text" id="c" class="mw-set" style="--mw-set: 560px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="txt-l">
+                                <label for="d">생년월일</label>
+                            </th>
+                            <td>
+                                <div class="flex-ac gap-10 mw-set" style="--mw-set: 560px">
+                                    <div>
+                                        <input type="number" id="d" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                    </div>
+                                    -
+                                    <div class="flex-ac">
+                                        <input type="password" id="e" maxlength="1" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                        <span id="secure-value"></span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         <div class="btns-bottom">
             <a href="javascript:;" class="btn-bd green">이전</a>
             <a href="javascript:;" class="btns">인증</a>

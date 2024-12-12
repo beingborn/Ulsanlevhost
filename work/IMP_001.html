@@ -20,7 +20,7 @@
 <body>
     <header>
         <div class="logo-area">
-            <a href="#"><img src="../images/biz2/header_logo_2.png" alt="울산광역시"></a>
+            <a href="IMP_002.html"><img src="../images/biz2/header_logo_2.png" alt="울산광역시"></a>
         </div>
         <div class="menu-area">
             <a href="IMP_002.html" class="home-btn"></a>
@@ -36,8 +36,8 @@
                     <li>
                         <span class="tit">이용권 사용기관</span>
                         <div class="link-item">
-                            <a href="#">사용기관 신청</a>
-                            <a href="#">사용기관 신청 현황</a>
+                            <a href="ILP_001.html">사용기관 신청</a>
+                            <a href="IIP_800.html">사용기관 신청 현황</a>
                             <a class="hidden" href="#">이용권 사용내역</a>
                             <a href="#">교육결과 관리</a>
                             <a class="hidden" href="#">교육과정 정보</a>
@@ -50,9 +50,9 @@
                         <span class="tit">게시판</span>
                         <div class="link-item">
                             <a href="IIP_001.html">공지사항</a>
-                            <a href="LNP_100.html">자료실</a>
-                            <a href="LNP_200.html">자주하는질문</a>
-                            <a href="IIP_500.html">질의응답</a>
+                            <a href="INP_100.html">자료실</a>
+                            <a href="INP_200.html">자주하는질문</a>
+                            <a href="INP_200.html">질의응답</a>
                         </div>
                     </li>
                 </ul>
@@ -74,9 +74,9 @@
                     <label for="pw">비밀번호</label>
                     <input type="password" id="pw" placeholder="비밀번호를 입력하세요.">
                 </div>
-                <button type="button" class="btns">로그인</button>   
+                <button type="button" class="btns layer-btn" onclick="$('[data-pop=pop-1]').show();">로그인</button>   
             </div>
-            <a href="#" class="register-btn g">
+            <a href="#" class="register-btn g layer-btn" onclick="$('[data-pop=pop-2]').show();">
                 <img src="../images/biz2/ic_register.svg" alt="사용기관 등록 이미지">
                 <h2 class="register-btn-txt txt-c">사용기관 등록</h2>
             </a>
@@ -112,5 +112,120 @@
             </div>
         </div>
     </footer>
+    <div class="layer-pop" data-pop="pop-1">
+        <div class="layer-content" style="--max-width: 640px">
+            <div class="layer-scroll">
+                <span class="title">인증번호</span>
+                <div class="certi-num-area info-area">
+                    <div class="certi-num">
+                        <div class="radio-box">
+                            <input type="radio" id="agree-a" name="agree6" value="yes" selected>
+                            <label for="agree-a">알림톡(SMS)</label>
+                            <input type="radio" id="agree-b" name="agree6" value="no">
+                            <label for="agree-b">이메일</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="certi-num-send">
+                            <select class="ui-select">
+                                <option value="010-****-1111">010-****-1111</option>
+                                <option value="010-****-1112">010-****-1112</option>
+                                <option value="010-****-1113">010-****-1113</option>
+                            </select>
+                            <button class="btns">전송</button>
+                        </div>
+                        <div class="certi-num-receive">
+                            <input type="text" maxlength="6">
+                            <button class="btns">확인</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=pop-1]').hide();"> <span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="layer-pop" data-pop="pop-2">
+        <div class="layer-content" style="--max-width: 1200px;">
+            <div class="layer-scroll">
+                <span class="title">사용기관 지역 선택</span>
+                <div class="info-area">
+                    <div class="region border-box">
+                        <div class="radio-box">
+                            <input type="radio" id="agree-c" name="agree7" value="1">
+                            <label for="agree-c">서울</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-d" name="agree7" value="2">
+                            <label for="agree-d">경기</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-e" name="agree7" value="3">
+                            <label for="agree-e">인천</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-f" name="agree7" value="4">
+                            <label for="agree-e">강원</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-g" name="agree7" value="5">
+                            <label for="agree-g">충북</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-h" name="agree7" value="5">
+                            <label for="agree-h">충남</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-i" name="agree7" value="5">
+                            <label for="agree-i">세종</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-j" name="agree7" value="5">
+                            <label for="agree-j">대전</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-k" name="agree7" value="5">
+                            <label for="agree-k">대구</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-l" name="agree7" value="5">
+                            <label for="agree-l">광주</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-m" name="agree7" value="5">
+                            <label for="agree-m">울산</label>
+                        </div>
+                        <div class="radio-box">    
+                            <input type="radio" id="agree-n" name="agree7" value="5">
+                            <label for="agree-n">전북</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-o" name="agree7" value="5">
+                            <label for="agree-o">전남</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-p" name="agree7" value="5">
+                            <label for="agree-p">경북</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-q" name="agree7" value="5">
+                            <label for="agree-q">경남</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-r" name="agree7" value="5">
+                            <label for="agree-r">부산</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" id="agree-s" name="agree7" value="5">
+                            <label for="agree-s">제주</label>
+                        </div>
+                    </div>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-2]').hide();">확인</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=pop-2]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

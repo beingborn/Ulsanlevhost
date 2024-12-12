@@ -215,16 +215,10 @@ html a, html button {
 }
 
 /* Scrollbar Design */
-
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-button:start {size: 0;}
-::-webkit-scrollbar-button:end {size: 0;}
-::-webkit-scrollbar-track-piece {
-	background-color: white; /*스크롤 바 배경 색상*/
-}
-::-webkit-scrollbar-thumb {
-	border-radius: 20px;
-	background-color: #D9D9D9; /*스크롤 바 색상*/
-}
+.agree-box::-webkit-scrollbar { width: 10px; }
+.agree-box::-webkit-scrollbar-button:start {size: 0;}
+.agree-box::-webkit-scrollbar-button:end {size: 0;}
+.agree-box::-webkit-scrollbar-track-piece { background-color: white; /*스크롤 바 배경 색상*/}
+.agree-box::-webkit-scrollbar-thumb { border-radius: 20px; background-color: #D9D9D9; /*스크롤 바 색상*/}
 
 

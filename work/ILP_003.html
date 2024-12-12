@@ -18,11 +18,16 @@
 <body>
     <header>
         <div class="logo-area">
-            <a href="#">
+            <a href="IMP_002.html">
                 <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
             </a>
         </div>
         <div class="menu-area">
+            <!-- 로그인 시 -->
+            <a href="#" class="log-info">
+                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
+                <span class="log-info-txt">로그아웃</span>
+            </a>
             <button class="open-btn">
                 <span class="blind">메뉴 열기</span>
             </button>
@@ -31,30 +36,30 @@
                     <li>
                         <span class="tit">사업안내</span>
                         <div class="link-item">
-                            <a href="#" class="on">평생교육이용권이란?</a>
-                            <a href="#">평생교육이용권 사용하기</a>
+                            <a href="IGP_001.html">평생교육이용권이란?</a>
+                            <a href="IGP_001.html">평생교육이용권 사용하기</a>
                         </div>
                     </li>
                     <li>
                         <span class="tit">이용권 사용기관</span>
                         <div class="link-item">
-                            <a href="#">사용처 안내</a>
-                            <a href="#">사용기관 신청 현황</a>
-                            <a href="#" class="hidden">이용권 사용내역</a>
-                            <a href="#" class="hidden">교육과정 정보</a>
-                            <a href="#" class="hidden">학습자 정보</a>
-                            <a href="#">기관 정보 수정</a>
-                            <a href="#" class="hidden">사용기관 연수</a>
-                            <a href="#">서약서 동의</a>
+                            <a href="ILP_001.html">사용기관 신청</a>
+                            <a href="IIP_800.html">사용기관 신청 현황</a>
+                            <a class="hidden" href="#">이용권 사용내역</a>
+                            <a href="#">교육결과 관리</a>
+                            <a class="hidden" href="#">교육과정 정보</a>
+                            <a class="hidden" href="#">학습자 정보</a>
+                            <a href="IIP_400.html">기관 정보 수정</a>
+                            <a class="hidden" href="#">사용기관 연수</a>
                         </div>
                     </li>
                     <li>
                         <span class="tit">게시판</span>
                         <div class="link-item">
-                            <a href="#">공지사항</a>
-                            <a href="#">자료실</a>
-                            <a href="#">자주하는질문</a>
-                            <a href="#">질의응답</a>
+                            <a href="IIP_001.html">공지사항</a>
+                            <a href="INP_100.html">자료실</a>
+                            <a href="INP_200.html">자주하는질문</a>
+                            <a href="INP_200.html">질의응답</a>
                         </div>
                     </li>
                 </ul>
@@ -148,6 +153,7 @@
         </div>
         <div class="top-info-group">
             <h3>기관 기본 정보</h3>
+            <small><em class="color-red">*</em> 는 필수사항입니다.</small> 
         </div>
         <div class="com-write-table">
             <table class="basic-info">
@@ -162,7 +168,7 @@
                         <td class="input-group">
                             <div class="flex-ac">
                                 <input type="text" id="a" class="fixed-value">                                                            
-                                <button type="button" class="btns bg-blue" onclick="$('[data-pop=pop-1]').show();">기관조회</button>
+                                <button type="button" class="btns bg-blue layer-btn" onclick="$('[data-pop=pop-1]').show();">기관조회</button>
                                 <button type="button" class="btns bg-blue">초기화</button>
                             </div>
                             <p class="bullet">기관조회되지 않는 경우 기관명을 직접 작성 바랍니다.(학점은행제 평가인정기관만 [기관조회] 바랍니다.)</p>
@@ -321,10 +327,10 @@
                         <th class="txt-l">
                             <label for="num01" class="must-type">가맹점 번호</label>
                             <small>(최대 10개 등록 가능)</small> 
-                            <button type="button" class="btn-bd blue">가맹점 번호 추가</button>
+                            <button type="button" class="btn-bd blue small">가맹점 번호 추가</button>
                         </th>
                         <td class="input-group">
-                            <button type="button" class="btn-bd blue">가맹점 번호 추가</button>
+                            <button type="button" class="btn-bd blue small">가맹점 번호 조회</button>
                             <div class="flex-ac">
                                 <input type="text" id="num01" class="fixed-value">                                                            
                                 <p class="chk-box">
@@ -340,9 +346,10 @@
                                 </p>
                                 <button type="button" class="btns bg-blue">삭제</button>
                             </div>
-                            <div class="flex-ac">
-                                <input type="text" id="num01" class="fixed-value">                                                            
-                                <button type="button" class="btns bg-blue">파일첨부</button>
+                            <div class="filebox flex-ac">
+                                <input class="upload-name fixed-value">
+                                <label for="file01" class="btns bg-blue">파일첨부</label> 
+                                <input type="file" id="file01" class="file">
                             </div>
                             <ul class="bullet-list">
                                 <li>평생교육이용권 카드 사용을 위해서는 반드시 BC카드 가맹점 등록 후 정확한 가맹점 번호 제공 바랍니다.</li>
@@ -472,11 +479,14 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th class="txt-l must-type"><label for="x">평생교육프로그램<br>운영과정</label></th>
+                        <th class="txt-l must-type">평생교육프로그램<br>운영과정</th>
                         <td colspan="3" class="input-group">
                             <div class="flex-ac">
-                                <input type="text" id="x" class="mw-set">
-                                <button type="button" class="btns bg-blue">파일첨부</button>
+                                <div class="filebox">
+                                    <input class="upload-name fixed-width">
+                                    <label for="file02" class="btns bg-blue">파일첨부</label> 
+                                    <input type="file" id="file02" class="file">
+                                </div>
                                 <button type="button" class="btns bg-blue">업로드</button>
                                 <button type="button" class="btns bg-blue btn-download">양식 다운로드</button>
                             </div>

@@ -20,11 +20,16 @@
 <body>
     <header>
         <div class="logo-area">
-            <a href="#">
+            <a href="IMP_002.html">
                 <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
             </a>
         </div>
         <div class="menu-area">
+            <!-- 로그인 시 -->
+            <a href="#" class="log-info">
+                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
+                <span class="log-info-txt">로그아웃</span>
+            </a>
             <button class="open-btn">
                 <span class="blind">메뉴 열기</span>
             </button>
@@ -33,30 +38,30 @@
                     <li>
                         <span class="tit">사업안내</span>
                         <div class="link-item">
-                            <a href="#" class="on">평생교육이용권이란?</a>
-                            <a href="#">평생교육이용권 사용하기</a>
+                            <a href="IGP_001.html">평생교육이용권이란?</a>
+                            <a href="IGP_001.html">평생교육이용권 사용하기</a>
                         </div>
                     </li>
                     <li>
                         <span class="tit">이용권 사용기관</span>
                         <div class="link-item">
-                            <a href="#">사용처 안내</a>
-                            <a href="#">사용기관 신청 현황</a>
-                            <a href="#" class="hidden">이용권 사용내역</a>
-                            <a href="#" class="hidden">교육과정 정보</a>
-                            <a href="#" class="hidden">학습자 정보</a>
-                            <a href="#">기관 정보 수정</a>
-                            <a href="#" class="hidden">사용기관 연수</a>
-                            <a href="#">서약서 동의</a>
+                            <a href="ILP_001.html">사용기관 신청</a>
+                            <a href="IIP_800.html">사용기관 신청 현황</a>
+                            <a class="hidden" href="#">이용권 사용내역</a>
+                            <a href="#">교육결과 관리</a>
+                            <a class="hidden" href="#">교육과정 정보</a>
+                            <a class="hidden" href="#">학습자 정보</a>
+                            <a href="IIP_400.html">기관 정보 수정</a>
+                            <a class="hidden" href="#">사용기관 연수</a>
                         </div>
                     </li>
                     <li>
                         <span class="tit">게시판</span>
                         <div class="link-item">
-                            <a href="#">공지사항</a>
-                            <a href="#">자료실</a>
-                            <a href="#">자주하는질문</a>
-                            <a href="#">질의응답</a>
+                            <a href="IIP_001.html">공지사항</a>
+                            <a href="INP_100.html">자료실</a>
+                            <a href="INP_200.html">자주하는질문</a>
+                            <a href="INP_200.html">질의응답</a>
                         </div>
                     </li>
                 </ul>
@@ -348,7 +353,7 @@
             </div>    
             <div class="com-write-table">
                 <table>
-                    <caption>업무 담당자 정보 테이블</caption>
+                    <caption>업무 담당자 정보 입력란</caption>
                     <colgroup>
                         <col style="width: 200px;">
                         <col>
@@ -401,24 +406,26 @@
                 <small><em class="color-red">*</em> xlsx 파일만 업로드가 가능합니다.</small>
             </div>    
             <div class="com-write-table">
-                <table>
-                    <caption>신청정보 테이블</caption>
+                <table class="program-process">
+                    <caption>평생교육프로그램 운영과정 입력란</caption>
                     <colgroup>
                         <col style="width: 310px;">
-                        <col>
+                        <col style="width: 330px;">
                         <col style="width: 200px;">
                         <col>
                     </colgroup>
                     <tbody>
                         <tr>
                             <th class="txt-l">프로그램 운영계획서 업로드</th>
-                            <td colspan="3">
-                                <div class="input-wrap">
-                                    <input type="text" placeholder="텍스트 비활성화" disabled>
-                                    <button type="button" class="btns">파일첨부</button>
-                                    <button type="button" class="btns">양식다운로드</button>
-                                    <button type="button" class="btns">첨부파일추가</button>
-                                    <button type="button" class="btns">업로드</button>
+                            <td colspan="3" class="input-group">
+                                <div class="flex-ac">
+                                    <div class="filebox flex-ac">
+                                        <input class="upload-name fixed-value" placeholder="텍스트 비활성화" disabled>
+                                        <label for="file01" class="btns bg-blue">파일첨부</label> 
+                                        <input type="file" id="file01" class="file">
+                                    </div>
+                                    <button type="button" class="btns bg-blue">양식다운로드</button>
+                                    <button type="button" class="btns bg-blue">업로드</button>
                                 </div>
                             </td>
                         </tr>
@@ -437,47 +444,46 @@
             </div>    
             <div class="com-write-table">
                 <table>
-                    <caption>신청정보 테이블</caption>
+                    <caption>증빙자료 입력란</caption>
                     <colgroup>
                         <col style="width: 310px;">
                         <col>
-                        <col style="width: 182px;">
                     </colgroup>
                     <tbody>
                         <tr>
                             <th class="txt-l">사업자등록증/고유번호증</th>
                             <td>이미지 2. jpg[114615 byte]</td>
-                            <td class="txt-c">2024.03.15</td>
                         </tr>
                         <tr>
                             <th class="txt-l">평생교육기관 증빙서류</th>
                             <td>이미지 2. jpg[114615 byte]</td>
-                            <td class="txt-c">2024.03.15</td>
                         </tr>
                         <tr>
                             <th class="txt-l">2024년 평생교육강좌<br>운영 계획서</th>
                             <td class="plan type-wrap">이미지 2. jpg[114615 byte]
-                                <div class="input-wrap">
-                                    <input type="text" disabled>
-                                    <button type="button" class="btns">파일첨부</button>
-                                    <button type="button" class="btns">양식다운로드</button>
+                                <div class="flex-ac">
+                                    <div class="filebox">
+                                        <input class="upload-name fixed-value" disabled>
+                                        <label for="file02" class="btns bg-blue">파일첨부</label> 
+                                        <input type="file" id="file02" class="file">
+                                    </div>
+                                    <button type="button" class="btns bg-blue">양식다운로드</button>
                                 </div>
                             </td>
-                            <td class="txt-c">2024.03.15</td>
                         </tr>
                         <tr>
                             <th class="txt-l">운영계획 증빙자료<br>(교육청 신고내역, 기관정관 등)</th>
                             <td class="plan type-wrap">이미지 2. jpg[114615 byte]
-                                <div class="input-wrap">
-                                    <input type="text" disabled>
-                                    <button type="button" class="btns">파일첨부</button>
+                                <div class="filebox flex-ac">
+                                    <input class="upload-name fixed-value" disabled>
+                                    <label for="file03" class="btns bg-blue">파일첨부</label> 
+                                    <input type="file" id="file03" class="file">
                                 </div>
-                                <ul class="add-txt">
-                                    <li class="bullet">해당 관할철(해당교육지원청 등)에 신고한 교육과정 및 학습비내역 등 운영 근거 제출</li>
-                                    <li class="bullet">이외의 경우, 기관정관 · 운영실적 · 수강료 증빙자료 제출(자율양식)</li>
+                                <ul class="bullet-list">
+                                    <li>해당 관할철(해당교육지원청 등)에 신고한 교육과정 및 학습비내역 등 운영 근거 제출</li>
+                                    <li>이외의 경우, 기관정관 · 운영실적 · 수강료 증빙자료 제출(자율양식)</li>
                                 </ul>
                             </td>
-                            <td class="txt-c">2024.03.15</td>
                         </tr>
                     </tbody>
                 </table>

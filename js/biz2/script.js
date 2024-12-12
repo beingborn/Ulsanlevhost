@@ -29,7 +29,6 @@ $(document).ready(function () {
     return false;
   }).filter(':eq(0)').click();
 
-
   /* layer pop 형성 시 */
   $('.layer-btn').on('click',function(){
     $('body').css('overflow', 'hidden')
@@ -39,10 +38,58 @@ $(document).ready(function () {
     $('body').css('overflow', '')
   })
 
+  /* layer pop hide 클래스 동적 추가 */
+  $('.layer-pop button').each(function(){
+    var onClickValue = $(this).attr('onclick')
+    if(onClickValue && onClickValue.includes('hide()') && onClickValue.includes('data-pop') ){
+      $(this).addClass('layer-hide-trigger')
+    }
+  })
+
+  /* hide trigger 클릭 시 스크롤 풀기  */
+  $(document).on("click", ".layer-hide-trigger", function() {
+    $('body').css('overflow', '')
+  });
+
   $('.auth-area button').click(function(){
     $('.auth-area button').not($(this)).removeClass('is-active')
     $(this).addClass('is-active')
   }).filter(':eq(0)').click();
+
+
+  /* input-type file 클릭시 가까운 upload-name에 값 추가 */
+  // $('.file').on('change', function(){
+  //   var fileName = $(this).val().split('\\').pop()
+  //   $(this).closest('.filebox').find('.upload-name').val(fileName)
+  // })
+
+  // 파일첨부
+  $('.file').on('change', function() {
+    var fileName = $(this).val().split(/\\|\//).pop();
+    if (fileName) {
+        $(this).siblings('.upload-name').val(fileName);
+    } else {
+        $(this).siblings('.upload-name').val(''); // 비어있을 경우 초기화
+    }
+  });
+
+  /* 본인인증 임시 값 숨기기 */
+  const actualValue = "135345";
+  $('#secure-value').text('●'.repeat(actualValue.length));
+  
+  /* 본인인증 테이블 변환 */
+  $('.birth-chk').hide();
+  $('.auth-area-in button').on('click',function(){
+    // 휴대폰 인증, 아이핀 클릭 시
+    if($(this).hasClass('mo-auth') || $(this).hasClass('i-pin')){
+      $('.resident-chk').hide();
+      $('.birth-chk').show()
+    // 간편인증, 공동인증서 클릭 시
+    } else {
+      $('.birth-chk').hide();
+      $('.resident-chk').show();
+    }
+  })
 
 });
 
@@ -61,4 +108,7 @@ $(function(){
 $(window).on('resize', function(){
   adjustContainerHeight()
 })
+
+
+
 

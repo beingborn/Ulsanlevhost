@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css js inject -->
+    <link rel="stylesheet" href="../css/biz2/reset.css">
+    <link rel="stylesheet" href="../css/biz2/common.css">
+    <link rel="stylesheet" href="../css/biz2/layout.css">
+    <link rel="stylesheet" href="../css/biz2/main.css">
+    <link rel="stylesheet" href="../css/biz2/style.css">
+    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
+    <script src="../js/biz2/jquery.1.8.2.min.js"></script>
+    <script src="../js/biz2/swiper-bundle.min.js"></script>
+    <script src="../js/biz2/script.js"></script>
+    <title>울산광역시 평생교육이용원</title>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="IMP_002.html">
+                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+            </a>
+        </div>
+        <div class="menu-area">
+            <!-- 로그인 시 -->
+            <a href="#" class="log-info">
+                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
+                <span class="log-info-txt">로그아웃</span>
+            </a>
+            <button class="open-btn">
+                <span class="blind">메뉴 열기</span>
+            </button>
+            <div class="menu-box">
+                <ul class="link-group login">
+                    <li>
+                        <span class="tit">사업안내</span>
+                        <div class="link-item">
+                            <a href="IGP_001.html">평생교육이용권이란?</a>
+                            <a href="IGP_001.html">평생교육이용권 사용하기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">이용권 사용기관</span>
+                        <div class="link-item">
+                            <a href="ILP_001.html">사용기관 신청</a>
+                            <a href="IIP_800.html">사용기관 신청 현황</a>
+                            <a class="hidden" href="#">이용권 사용내역</a>
+                            <a href="#">교육결과 관리</a>
+                            <a class="hidden" href="#">교육과정 정보</a>
+                            <a class="hidden" href="#">학습자 정보</a>
+                            <a href="IIP_400.html">기관 정보 수정</a>
+                            <a class="hidden" href="#">사용기관 연수</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">게시판</span>
+                        <div class="link-item">
+                            <a href="IIP_001.html">공지사항</a>
+                            <a href="INP_100.html">자료실</a>
+                            <a href="INP_200.html">자주하는질문</a>
+                            <a href="INP_200.html">질의응답</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="close-btn">
+                    <span class="blind">메뉴 닫기</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="top-location">
+        <div class="top-location-area wrap">
+            <span class="home"><span class="blind">홈</span></span>
+            <div class="location-box">
+                <span class="arrow">이용권 사용기관</span>
+                <span class="arrow">이용권 사용기관 신청</span>
+            </div>
+        </div>
+    </div>
+    <div class="container wrap">
+        <div class="page-header">
+            <h2 class="page-header-tit">이용권 사용기관 신청</h2>
+            <p class="page-header-desc">평생교육이용권 사용기관 신청 내역을 수정하는 화면입니다.</p>
+        </div>
+
+        <ul class="steps flex-acjc">
+            <li>
+                <span class="step03">1단계</span>
+                <strong>신청서 작성</strong>
+            </li>
+            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="active">
+                <span class="step04">2단계</span>
+                <strong>담당자 등록</strong>
+            </li>
+            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step05">3단계</span>
+                <strong>첨부</strong>
+            </li>
+            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step06">4단계</span>
+                <strong>수정완료</strong>
+            </li>
+        </ul>
+
+        <hr>
+
+        <div class="top-info-group">
+            <h3>업무 담당자 정보</h3>
+            <small><em class="color-red">*</em> 는 필수사항입니다.</small>
+        </div>
+        <div class="com-write-table">
+            <table class="basic-info">
+                <caption>업무 담당자 정보 입력란</caption>
+                <colgroup>
+                    <col style="width: 200px;">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th class="txt-l must-type"><label for="a">이름</label></th>
+                        <td>
+                            <input type="text" id="a" class="fixed-value" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type"><label for="b">회원ID</label></th>
+                        <td class="input-group">
+                            <div class="flex-ac">
+                                <input type="text" id="b" class="fixed-value" disabled>
+                                <button type="button" class="btns bg-blue">ID생성</button>
+                            </div>
+                            <p class="bullet">사업자등록번호 인증 시 ID는 자동으로 부여됩니다.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type"><label for="c">비밀번호</label></th>
+                        <td><input type="password" placeholder="영문/숫자/특수문자조합으로9~16자리" id="c" class="fixed-value"></td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type"><label for="d">비밀번호확인</label></th>
+                        <td><input type="password" id="d" class="fixed-value"></td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type"><label for="tel">휴대전화번호</label></th>
+                        <td class="input-group space">
+                            <div class="flex-ac">
+                                <div class="input-num">
+                                    <select id="tel">
+                                        <option value="none">선택</option>
+                                        <option value="1">2</option>
+                                        <option value="1">3</option>
+                                        <option value="1">4</option>
+                                    </select>
+                                    -
+                                    <input type="tel" title="전화번호 중간자리">
+                                    -
+                                    <input type="tel" title="전화번호 끝자리">
+                                </div>
+                                <button type="button" class="btns bg-blue">문자인증</button>
+                                <div class="chk-box">
+                                    <input type="checkbox" id="chk01">
+                                    <label for="chk01">문자 서비스 수신동의</label>
+                                </div>
+                            </div>
+                            <div class="flex-ac">
+                                <input type="text" title="인증번호 확인">
+                                <button type="button" class="btns bg-blue">확인</button>
+                            </div>
+                            <p class="bullet">홈페이지 로그인 시 휴대문자 인증이 필요하므로 업무 담당자의 정확한 휴대번호를 입력하여 주시기 바랍니다.</p>
+                        </td>
+                    </tr>                   
+                    <tr>
+                        <th class="txt-l"><label for="extension-num">업무내선번호</label></th>
+                        <td class="input-group space">
+                            <div class="flex-ac input-num">
+                                <select id="extension-num">
+                                    <option value="none">선택</option>
+                                    <option value="1">2</option>
+                                    <option value="1">3</option>
+                                    <option value="1">4</option>
+                                </select>
+                                -
+                                <input type="tel" title="전화번호 중간자리">
+                                -
+                                <input type="tel" title="전화번호 끝자리">
+                            </div>
+                            <ul class="bullet-list">
+                                <li>업무내선번호는 업무담당자의 직통연락처로 기재바라며, 홈페이지에는 노출되지 않습니다.</li>
+                                <li>업무내선번호는 평생교육이용권이 관리자와 직접 소통할 수 있는 직통번호로 기재해주세요.</i>                                
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type"><label for="email">전자우편주소</label></th>
+                        <td class="input-group space">
+                            <div class="flex-ac">
+                                <input type="text" id="email">
+                                @
+                                <input type="text" class="email">
+                                <select>
+                                    <option value="none">직접입력</option>
+                                    <option value="1">2</option>
+                                    <option value="1">3</option>
+                                    <option value="1">4</option>
+                                </select>     
+                                <button type="button" class="btns bg-blue">이메일 인증</button>
+                                <div class="chk-box">
+                                    <input type="checkbox" id="chk02">
+                                    <label for="chk02">전자우편 수신동의</label>
+                                </div>                     
+                            </div>
+                            <div class="flex-ac">
+                                <input type="text" title="인증번호 확인">
+                                <button type="button" class="btns bg-blue">확인</button>
+                            </div>
+                            <p class="bullet">전자우편 수신 동의에 동의하지 않을 시, 평생교육이용권과 관련된 안내 메일을 받아보실 수 없습니다.</p>                 
+                        </td>                                    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="agree-box">
+            <div class="agree">
+                <h5 class="agree-tit">업무담당자 정보보안 서약서 동의</h5>
+                <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-1]').show();">내용보기</button>
+                <div class="agree-radio">
+                    <span>정보보안 서약서를 제출하시겠습니까?</span>
+                    <div class="radio-box">
+                        <input type="radio" id="agree1" name="agree1" value="yes">
+                        <label for="agree1">예</label>
+                        <input type="radio" id="agree2" name="agree1" value="no">
+                        <label for="agree2">아니오</label>
+                    </div>
+                </div>
+            </div>
+            <div class="agree">
+                <h5 class="agree-tit">평생교육이용권 사용기관 부정사용 처리기준 및 절차 동의</h5>
+                <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-2]').show();">내용보기</button>
+                <div class="agree-radio">
+                    <span>사용기관 부정사용 처리기준 및 절차 동의하시겠습니까?</span>
+                    <div class="radio-box">
+                        <input type="radio" id="agree3" name="agree2" value="yes">
+                        <label for="agree3">예</label>
+                        <input type="radio" id="agree4" name="agree2" value="no">
+                        <label for="agree4">아니오</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btns-bottom">
+            <a href="javascript:;" class="btn-bd green">이전</a>
+            <a href="javascript:;" class="btns">다음</a>
+        </div>
+    </div>
+    <footer class="wrap">
+        <div class="info-content">
+            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
+            <address>
+                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
+                <span class="tel"><span>대표전화</span><span>1600-3005 (평일 09시~18시)</span></span>
+            </address>
+            <select class="ui-select" title="관련 사이트 선택">
+                <option value="#">관련 사이트</option>
+            </select>
+            <div class="link-area">
+                <div class="link-box">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="on">개인정보처리방침</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">이메일무단수집거부</a>
+                </div>
+                <span class="copy">
+                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
+                    RESERVED.
+                </span>
+                <div class="support-box">
+                    <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                    <img src="../images/biz2/footer_link_2.png" alt="국가평생교육진흥원">
+                    <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="layer-pop" data-pop="pop-1">
+        <div class="layer-content" style="--max-width: 880px">
+            <div class="layer-scroll">
+                <span class="title">평생교육이용권 사용기관 정보보안 서약서(담당자용)</span>
+                <div class="info-area">
+                    <div class="layer-document">
+                        <div class="layer-document-top agree-box">
+                            <div class="agree-detail">
+                                <h4>본인은 2024년 10월 11일부로 「평생교육이용권 지원사업」 을 수행함에 있어 다음 사항을 준수할 것을 엄숙히 서약합니다.</h4>
+                            </div>
+                            <ul>
+                                <li>1. 본인은 본 사업의 수행 중 알게 될 일체의 내용이 직무상 기밀사항임을 인정하며, 관련 정보가 누설되지 않도록 「국가 정보보안 기본지침」 및 $지자체명$ 규정 등 제반 규정을 준수한다.</li>
+                                <li>2. 본인은 1항의 기밀을 누설함이 국가안전보장 및 $지자체명$의 이익에 위해가 될 수 있음을 인식하여 사업 수행 중 지득한 제반 기밀사항을 일체 누설하거나 공개하지 아니한다.</li>
+                                <li>3. 본 사업의 수행 관련 정보시스템 및 자료의 반출 등은 관련 규정에 의하여 실시하며 보안관련 문제점이 발생하거나, 예견될 때에는 지체없이 보고하여 조치사항을 지시받는다.</li>
+                                <li>4. 본인이 1항의 기밀을 누설하거나 관계규정을 위반한 때에는 형법 등 관련 법령 및 계약에 따라 엄중한 처벌을 받을 것을 서약합니다.</li>
+                            </ul>
+                            <div class="date">
+                                <span>2024년 10월 11일</span>
+                            </div>
+                        </div>
+                        <div class="layer-document-btm">
+                            <ul>
+                                <li>
+                                    평생교육이용권 사용기관 :<b>서울대학교부설평생교육원</b>
+                                </li>
+                                <li>
+                                    담당자 : <b>홍길동</b>
+                                    <span class="il-flex-ac gap-10">
+                                        <label for="sign">(서명</label>
+                                        <input type="checkbox" id="sign">
+                                        )
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="giver">
+                                <span>$지자체명$지자체장 귀하</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-1]').hide();">확인</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=pop-1]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="layer-pop" data-pop="pop-2">
+        <div class="layer-content" style="--max-width: 1000px">
+            <div class="layer-scroll">
+                <span class="title">평생교육이용권 사용기관 부정사용 처리기준 및 절차 동의</span>
+                <div class="info-area">
+                    <div class="top-info-group">
+                        <h3>평생교육이용권 사용기관 부정사용 처리기준</h3>
+                    </div>
+                    <div class="com-view-table">
+                        <table class="mg-0">
+                            <caption>평생교육이용권 사용기관 부정사용 처리기준</caption>
+                            <colgroup>
+                                <col style="width: 25%;">
+                                <col style="width: 25%;">
+                                <col style="width: 25%;">
+                                <col style="width: 25%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>유형</th>
+                                    <th>내용</th>
+                                    <th>처리기준(안)</th>
+                                    <th>관련법 및 규정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>① 등록범위 상실·자격 미충족</td>
+                                    <td class="txt-l">
+                                        <ul>
+                                            <li class="bullet">사용기관 등록 범위(유형) 및 자격을 미충족하거나 자격을 상실* 한 경우</li>
+                                            <li class="bullet">평생교육시설, 평생직업교육학원, 타법령에 따라 평생교육을 시행하고 있는 기관 등 관련 법령 운영 규정 미충족, 설치 인가 또는 등록취소 등</li>
+                                            <li class="bullet">관할 기관에 등록 정보가 아닌 허위 정보로 사용기관을 등록·변경한 경우</li>
+                                        </ul>
+                                    </td>
+                                    <td class="txt-l">
+                                        <ul>
+                                            <li class="bullet">이용권 사용기관 행정조치 - 사용기관 등록 취소</li>
+                                            <li class="bullet">부당이득 반환</li>
+                                        </ul>
+                                        <br>
+                                        ※ 사안별 관할청 처리규정 준용하여 단순 사안의 경우 운영중지 가능
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="layer-agree-group">
+                        <p class="desc">[귀하는 평생교육이용권 사용기관 부정사용 처리기준 및 절차] 동의하지 않을 수 있으나, 동의를 거부할 경우 평생교육이용권 사용기관으로서의 사업 참여가 제한됩니다]</p>
+                        <div class="flex-je">
+                            <div class="radio-box">
+                                <input type="radio" id="agree-a" name="agree6" value="yes">
+                                <label for="agree-a">동의함</label>
+                                <input type="radio" id="agree-b" name="agree6" value="no">
+                                <label for="agree-b">동의하지 않음</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-2]').hide();">확인</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=pop-2]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

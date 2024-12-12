@@ -49,6 +49,9 @@
 .txt-gray66 {color: #666666;}
 .txt-grayb5 {color: #b5b5b5;}
 
+/* white-space */
+.wh-nowrap {white-space: nowrap;}
+
 /* margin - top */
 .mt-40 {margin-top: 40px;}
 .mt-80 {margin-top: 80px;}
@@ -61,6 +64,8 @@
 .mr-10 {margin-right: 10px;}
 /* margin init */
 .mg-0 {margin: 0!important;}
+/* margin-top init */
+.mt-0 {margin-top: 0!important;}
 
 /* width style */
 .w-100 {width: 100%;}
@@ -81,6 +86,7 @@
 .flex {display: flex;}
 .flex-ac { display: flex; align-items: center;}
 .flex-acjs {display: flex; align-items: center; justify-content: space-between;}
+.flex-acjc {display: flex; align-items: center; justify-content: center;}
 .il-flex-ac {display: inline-flex; align-items: center;}
 .flex-je {display: flex; justify-content: end;}
 

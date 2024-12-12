@@ -20,11 +20,16 @@
 <body>
     <header>
         <div class="logo-area">
-            <a href="#">
+            <a href="IMP_002.html">
                 <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
             </a>
         </div>
         <div class="menu-area">
+            <!-- 로그인 시 -->
+            <a href="#" class="log-info">
+                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
+                <span class="log-info-txt">로그아웃</span>
+            </a>
             <button class="open-btn">
                 <span class="blind">메뉴 열기</span>
             </button>
@@ -33,30 +38,30 @@
                     <li>
                         <span class="tit">사업안내</span>
                         <div class="link-item">
-                            <a href="#" class="on">평생교육이용권이란?</a>
-                            <a href="#">평생교육이용권 사용하기</a>
+                            <a href="IGP_001.html">평생교육이용권이란?</a>
+                            <a href="IGP_001.html">평생교육이용권 사용하기</a>
                         </div>
                     </li>
                     <li>
                         <span class="tit">이용권 사용기관</span>
                         <div class="link-item">
-                            <a href="#">사용처 안내</a>
-                            <a href="#">사용기관 신청 현황</a>
-                            <a href="#" class="hidden">이용권 사용내역</a>
-                            <a href="#" class="hidden">교육과정 정보</a>
-                            <a href="#" class="hidden">학습자 정보</a>
-                            <a href="#">기관 정보 수정</a>
-                            <a href="#" class="hidden">사용기관 연수</a>
-                            <a href="#">서약서 동의</a>
+                            <a href="ILP_001.html">사용기관 신청</a>
+                            <a href="IIP_800.html">사용기관 신청 현황</a>
+                            <a class="hidden" href="#">이용권 사용내역</a>
+                            <a href="#">교육결과 관리</a>
+                            <a class="hidden" href="#">교육과정 정보</a>
+                            <a class="hidden" href="#">학습자 정보</a>
+                            <a href="IIP_400.html">기관 정보 수정</a>
+                            <a class="hidden" href="#">사용기관 연수</a>
                         </div>
                     </li>
                     <li>
                         <span class="tit">게시판</span>
                         <div class="link-item">
-                            <a href="#">공지사항</a>
-                            <a href="#">자료실</a>
-                            <a href="#">자주하는질문</a>
-                            <a href="#">질의응답</a>
+                            <a href="IIP_001.html">공지사항</a>
+                            <a href="INP_100.html">자료실</a>
+                            <a href="INP_200.html">자주하는질문</a>
+                            <a href="INP_200.html">질의응답</a>
                         </div>
                     </li>
                 </ul>
@@ -77,12 +82,11 @@
     </div>
     <div class="container wrap">
         <div class="page-header">
-            <h2 class="page-header-tit">이용권 사용기관 신청 현황</h2>
+            <h2 class="page-header-tit">사용기관 신청 현황</h2>
         </div>
         <div class="contents">
             <div class="top-info-group">
                 <h3>신청정보</h3>
-                <small><em class="color-red">*</em> 신청 등록시 입력한 정보이며 추후 기관 정보를 수정하더라도 변경되지 않습니다.</small>
             </div>
             <div class="com-write-table">
                 <table>
@@ -133,7 +137,7 @@
                             <td colspan="5">부산평생교육원</td>
                         </tr>
                         <tr>
-                            <th class="txt-l must-type">추가 기관명</th>
+                            <th class="txt-l">추가 기관명</th>
                             <td colspan="5"></td>  
                         </tr>
                         <tr>
@@ -151,15 +155,15 @@
                             <td colspan="3">기타(조례·운영규칙 등)</td>
                         </tr>
                         <tr>
-                            <th class="txt-l must-type">기관 구분</th>
+                            <th class="txt-l">기관 구분</th>
                             <td colspan="5" class="division">
                                 <div class="flex-ac">
                                     <span class="chk-box">
-                                        <input type="checkbox" id="chk-1">
+                                        <input type="checkbox" disabled  id="chk-1">
                                         <label for="chk-1">온라인 교육기관</label>
                                     </span>
                                     <span class="chk-box">
-                                        <input type="checkbox" id="chk-2">
+                                        <input type="checkbox" disabled>
                                         <label for="chk-2">오프라인 교육기관</label>
                                     </span>
                                 </div>
@@ -171,7 +175,7 @@
                                 <div class="flex-ac">
                                     <small class="txt-s">(10101)</small>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-3">
+                                        <input type="checkbox" disabled  id="chk-3">
                                         <label for="chk-3">지도 서비스 제공</label>
                                     </div>
                                     <small class="txt-s color-primary">(오프라인 교육기관 체크시 선택 가능합니다.)</small>
@@ -185,7 +189,9 @@
                             <th class="txt-l">
                                 <label for="tel">전화번호</label>
                             </th>
-                            <td colspan="5"></td>
+                            <td colspan="5">
+                                010-0000-****
+                            </td>
                         </tr>
                         <tr>
                             <th class="txt-l">
@@ -193,10 +199,12 @@
                             </th>
                             <td colspan="5">
                                 <p>qwer1234@****.gmail.com</p>
-                                <div class="chk-box agree">
-                                    <input type="checkbox" id="chk-4">
-                                    <label for="chk-4">전자우편 수신동의</label>
-                                </div>                         
+                                <p>
+                                    전자우편 수신동의
+                                    <span class="mail-yes"></span>
+                                    <!-- N일 시  -->
+                                    <!-- <span class="mail-no"></span> -->
+                                </p>
                             </td>                                    
                         </tr>
                         <tr>
@@ -208,31 +216,31 @@
                             <td colspan="5" class="type-wrap">
                                 <div class="flex-ac divide">
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-5">
+                                        <input type="checkbox" disabled  id="chk-5">
                                         <label for="chk-5">장애인 화장실</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-6">
+                                        <input type="checkbox" disabled  id="chk-6">
                                         <label for="chk-6">장애인용 엘리베이터</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-7">
+                                        <input type="checkbox" disabled  id="chk-7">
                                         <label for="chk-7">장애인전용 주차구역</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-8">
+                                        <input type="checkbox" disabled  id="chk-8">
                                         <label for="chk-8">주출입구 단차없음</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-9">
+                                        <input type="checkbox" disabled  id="chk-9">
                                         <label for="chk-9">휠체어 대여</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-10">
+                                        <input type="checkbox" disabled  id="chk-10">
                                         <label for="chk-10">시각장애인 편의서비스</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-11">
+                                        <input type="checkbox" disabled  id="chk-11">
                                         <label for="chk-11">청각장애인 편의서비스</label>
                                     </div>
                                 </div>
@@ -243,46 +251,46 @@
                             <td colspan="5" class="type-wrap">
                                 <div class="row-gap">
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-12">
+                                        <input type="checkbox" disabled  id="chk-12">
                                         <label for="chk-12" class="ico organ01">학점은행제 평가인정기관</label>
                                     </div>
                                     <div class="chk-box ico">
-                                        <input type="checkbox" id="chk-13">
+                                        <input type="checkbox" disabled  id="chk-13">
                                         <label for="chk-13" class="ico organ02">평생학습계좌제 평가인정기관</label>
                                     </div>
                                     <div class="chk-box ico">
-                                        <input type="checkbox" id="chk-14">
+                                        <input type="checkbox" disabled  id="chk-14">
                                         <label for="chk-14" class="ico organ03">성인문해교육 프로그램 운영기관</label>
                                     </div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <th class="txt-l must-type">기관 운영강좌 유형</th>
+                            <th class="txt-l">운영강좌 유형</th>
                             <td colspan="5" class="type-wrap">
                                 <div class="row-gap">
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-15">
+                                        <input type="checkbox" disabled  id="chk-15">
                                         <label for="chk-15">학력보완교육</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-16">
+                                        <input type="checkbox" disabled  id="chk-16">
                                         <label for="chk-16">성인 문해교육</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-17">
+                                        <input type="checkbox" disabled  id="chk-17">
                                         <label for="chk-17">직업능력 향상교육</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-18">
+                                        <input type="checkbox" disabled  id="chk-18">
                                         <label for="chk-18">성인 진로개발역량 향상교육</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-19">
+                                        <input type="checkbox" disabled  id="chk-19">
                                         <label for="chk-19">인문교양교육</label>
                                     </div>
                                     <div class="chk-box">
-                                        <input type="checkbox" id="chk-20">
+                                        <input type="checkbox" disabled  id="chk-20">
                                         <label for="chk-20">문화예술교육</label>
                                     </div>
                                 </div>
@@ -290,13 +298,12 @@
                         </tr>
                         <tr>
                             <th class="txt-l"><label for="aa">검색 키워드</label></th>
-                            <td class="input-group" colspan="5">
+                            <td class="input-group search-keyword view" colspan="5">
                                 <div class="flex-ac">
-                                    <input type="text" id="aa" class="fixed-width">
-                                    <input type="text" class="fixed-width">
-                                    <input type="text" class="fixed-width">
+                                    <input type="text" id="aa" class="fixed-width" value="키워드1"  readonly>
+                                    <input type="text" class="fixed-width" value="키워드2" readonly>
+                                    <input type="text" class="fixed-width" value="키워드3" readonly>
                                 </div>
-                                <p class="bullet">최대 10자까지 입력가능하며, 비속어 등 입력 시, 이용이 제한됩니다.</p>
                             </td>
                         </tr>
                     </tbody>
@@ -324,19 +331,15 @@
                         </tr>
                         <tr>
                             <th class="txt-l">휴대전화번호</th>
-                            <td>010-000-****
-                                <div class="chk-box agree">
-                                    <input type="checkbox" id="chk-21">
-                                    <label for="chk-21">문자서비스 수신동의</label>
-                                </div>
-                            </td>
+                            <td>010-0000-****</td>
+                            <th class="txt-l">보조 휴대전화번호</th>
+                            <td></td>
+                        </tr>
+                        <tr>
                             <th class="txt-l">전자우편주소</th>
-                            <td>qwer1234@*.com
-                                <div class="chk-box agree">
-                                    <input type="checkbox" id="chk-22">
-                                    <label for="chk-22">전자우편 수신동의</label>
-                                </div>
-                            </td>
+                            <td>qwer1234@*****.gmail.com</td>
+                            <th class="txt-l">보조 전자우편주소</th>
+                            <td></td>
                         </tr>
                         <tr>
                             <th class="txt-l">업무내선번호</th>
@@ -347,71 +350,47 @@
                                 </ul>
                             </td>
                         </tr>
+                        <tr>
+                            <th class="txt-l">평생교육이용권 사용기관 정보보안 서약서(담당자용)</th>
+                            <td class="txt-l" colspan="2">동의</td>
+                            <td>2024-05-12</td>
+                        </tr>
                     </tbody>
                 </table>
+            </div>      
+            <div class="top-info-group">
+                <h3>평생교육프로그램 운영과정</h3>
             </div>
-            <div class="top-info-group">
-                <h3>업무담당자 정보보안 서약서 동의</h3>
-            </div>    
             <div class="com-write-table">
                 <table>
-                    <caption>업무담당자 정보보안 서약서 동의 테이블</caption>
+                    <caption>평생교육프로그램 운영과정 입력란</caption>
                     <colgroup>
-                        <col style="width: 310px;">
+                        <col style="width: 200px;">
                         <col>
-                        <col style="width: 182px;">
+                        <col style="width: 200px;">
+                        <col>
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th class="txt-l">정보보안 서약서</th>
-                            <td>동의</td>
-                            <td class="txt-c">2024.03.15</td>
+                            <th class="txt-l"><label for="x">평생교육프로그램<br>운영과정</label></th>
+                            <td colspan="3">
+                                <div class="flex-acjs">
+                                    <span>운영계획서.jpg[114615 byte]</span>
+                                    <button type="button" class="btns bg-blue layer-btn" onclick="$('[data-pop=pop-1]').show();">상세보기</button>
+                                </div>
+                            </td>
                         </tr>
-                    </tbody>
-                </table>
-            </div> 
-            <div class="top-info-group">
-                <h3>평생교육이용권 사용기관 부정사용 처리기준 및 절차 동의</h3>
-            </div>    
-            <div class="com-write-table">
-                <table>
-                    <caption>평생교육이용권 사용기관 부정사용 처리기준 및 절차 동의 테이블</caption>
-                    <colgroup>
-                        <col style="width: 310px;">
-                        <col>
-                        <col style="width: 182px;">
-                    </colgroup>
-                    <tbody>
                         <tr>
-                            <th class="txt-l">부정사용 처리기준 및 절차 동의</th>
-                            <td>동의</td>
-                            <td class="txt-c">2024.03.15</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>  
-            <div class="top-info-group">
-                <h3>서약서 동의</h3>
-            </div>    
-            <div class="com-write-table">
-                <table>
-                    <caption>평생교육이용권 사용기관 부정사용 처리기준 및 절차 동의 테이블</caption>
-                    <colgroup>
-                        <col>
-                        <col style="width: 182px;">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th class="txt-l">개인정보 처리 위탁 계약서, 정보보안 서약서, 사용기관 준수사항 전자서명 동의가 완료되었습니다.
-                            </th>
-                            <td class="txt-c">2024.03.15</td>
+                            <th class="txt-l">등록일자</th>
+                            <td>2024.03.15</td>
+                            <th class="txt-l"><label for="z">등록 건수</label></th>
+                            <td>1</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="top-info-group">
                 <h3>증빙자료</h3>
-                <small><em class="color-red">*</em> 수정한 정보는 사용기관 신청 현황에 반영되지 않습니다.</small>
             </div>    
             <div class="com-write-table">
                 <table>
@@ -424,47 +403,36 @@
                     <tbody>
                         <tr>
                             <th class="txt-l">사업자등록증/고유번호증</th>
-                            <td>
-                                <div class="flex-ac">
-                                    이미지 2. jpg[114615 byte]
-                                    <button type="button" class="btn-search">검색</button>
-                                </div>
-                            </td>
+                            <td>이미지 2. jpg[114615 byte]</td>
                             <td class="txt-c">2024.03.15</td>
                         </tr>
                         <tr>
                             <th class="txt-l">평생교육기관 증빙서류</th>
-                            <td>
-                                <div class="flex-ac">
-                                    이미지 2. jpg[114615 byte]
-                                    <button type="button" class="btn-search">검색</button>
-                                </div>
-                            </td>
+                            <td>이미지 2. jpg[114615 byte]</td>
                             <td class="txt-c">2024.03.15</td>
                         </tr>
                         <tr>
-                            <th class="txt-l">평생교육강좌 운영계획서</th>
-                            <td>
-                                <div class="flex-ac">
-                                    이미지 2. jpg[114615 byte]
-                                    <button type="button" class="btn-search">검색</button>
-                                </div>
-                            </td>
+                            <th class="txt-l">
+                                2024년 평생교육강좌<br>
+                                운영계획서
+                            </th>
+                            <td>이미지 2. jpg[114615 byte]</td>
                             <td class="txt-c">2024.03.15</td>
                         </tr>
                         <tr>
-                            <th class="txt-l">운영계획 증빙자료</th>
-                            <td>
-                                <div class="flex-ac">
-                                    이미지 2. jpg[114615 byte]
-                                    <button type="button" class="btn-search">검색</button>
-                                </div>
-                            </td>
+                            <th class="txt-l">
+                                운영계획 증빙자료 <br>
+                                (교육청 신고내역, 기관정관 등)
+                            </th>
+                            <td>이미지 2. jpg[114615 byte]</td>
                             <td class="txt-c">2024.03.15</td>
                         </tr>
                     </tbody>
                 </table>
             </div> 
+            <div class="btns-bottom">
+                <a href="javascript:;" class="btns">수정</a>
+            </div>
         </div>
     </div>
     <footer class="wrap">
@@ -498,86 +466,128 @@
         </div>
     </footer>
     <div class="layer-pop" data-pop="pop-1">
-        <div class="layer-content" style="--max-width: 840px">
+        <div class="layer-content" style="--max-width: 1200px">
             <div class="layer-scroll">
-                <span class="title">평생교육이용권 신청을 위한 개인정보 수집 · 이용 동의(선택)</span>
+                <span class="title">평생교육프로그램 운영과정</span>
                 <div class="info-area">
-                    <div class="text-box">
-                        <p class="txt">평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집.유출.오용.남용으로부터 사생활의 비밀 등을 보호하도록 한 개인정보보호법 규정에 따라 다음과 같이 수집·이용 됩니다.</p>
-                        <div class="table-group">
-                            <span class="tit">개인정보 수집 · 이용 동의</span>
-                            <table>
-                                <caption>개인정보 수집 · 이용 동의에 관한 테이블이며 항목, 수집이용 목적, 보유기간 등으로 구성되어 있음</caption>
-                                <colgroup>
-                                    <col style="width:218px;">
-                                    <col style="width:291px;">
-                                    <col style="width:159px;">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>항목</th>
-                                        <th>수집 · 이용 목적</th>
-                                        <th>보유기간</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>회원 계정정보(ID, 비밀번호), 암호화된 이용자 확인 값(CI), 회원가입동의여부, 평생학습계좌번호</td>
-                                        <td>- 평생학습계좌제 학습계좌 발급 및 학습이력관리<br>- 평생교육이용권 홈페이지 회원관리</td>
-                                        <td class="center">5년, 회원탈퇴 시까지</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="txt">※ 위의 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시 평생교육이용권 신청 · 선정 · 지급에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</p>
+                    <div class="top-info-group">
+                        <p class="top-info-group-data">총 <strong>19</strong>건</p>
+                        <select id="select-view">
+                            <option value="1">10건 보기</option>
+                            <option value="2">20건 보기</option>
+                            <option value="3">30건 보기</option>
+                        </select>
                     </div>
-                    <div class="btn-box">
-                        <button onclick="$('[data-pop=pop-1]').hide();">확인</button>
-                    </div>
-                </div>
-                <button class="close-btn" onclick="$('[data-pop=pop-1]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
-            </div>
-        </div>
-    </div>
-    <div class="layer-pop" data-pop="pop-2">
-        <div class="layer-content" style="--max-width: 840px">
-            <div class="layer-scroll">
-            <span class="title">평생교육프로그램 6대 영역별 분류</span>
-            <div class="info-area">
-                <div class="text-box">
-                    <p class="txt">평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집.유출.오용.남용으로부터 사생활의 비밀 등을 보호하도록 한 개인정보보호법 규정에 따라 다음과 같이 수집·이용 됩니다.</p>
-                    <div class="table-group">
-                        <span class="tit">개인정보 수집 · 이용 동의</span>
-                        <table>
-                            <caption>개인정보 수집 · 이용 동의에 관한 테이블이며 항목, 수집이용 목적, 보유기간 등으로 구성되어 있음</caption>
+                    <div class="com-view-table table-scroll">
+                        <table class="mg-0" style="--minwidth: 1464px">
+                            <caption>평생교육프로그램 운영과정</caption>
                             <colgroup>
-                                <col style="width:218px;">
-                                <col style="width:291px;">
-                                <col style="width:159px;">
+                                <col style="width: 4.10%"> 
+                                <col style="width: 13.66%"> 
+                                <col style="width: 6.83%"> 
+                                <col style="width: 11.34%"> 
+                                <col style="width: 6.83%">
+                                <col style="width: 5.46%"> 
+                                <col style="width: 10.11%"> 
+                                <col style="width: 6.83%"> 
+                                <col style="width: 6.83%"> 
+                                <col style="width: 8.54%"> 
+                                <col style="width: 8.54%"> 
+                                <col style="width: 10.93%">
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th>항목</th>
-                                    <th>수집 · 이용 목적</th>
-                                    <th>보유기간</th>
+                                    <th class="wh-nowrap">순번</th>
+                                    <th>강좌명</th>
+                                    <th>대상자</th>
+                                    <th>강좌분류</th>
+                                    <th>교육방법</th>
+                                    <th>이용권<br>유형</th>
+                                    <th>총교육<br>일수/시간/회차</th>
+                                    <th>총교육<br>단위구분</th>
+                                    <th>(회당)<br>교육시간</th>
+                                    <th>수강료<br>(단위 : 원)</th>
+                                    <th>교재비<br>(단위 : 원)</th>
+                                    <th>등록일자</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>회원 계정정보(ID, 비밀번호), 암호화된 이용자 확인 값(CI), 회원가입동의여부, 평생학습계좌번호</td>
-                                    <td>- 평생학습계좌제 학습계좌 발급 및 학습이력관리<br>- 평생교육이용권 홈페이지 회원관리</td>
-                                    <td class="center">5년, 회원탈퇴 시까지</td>
+                                    <td>1</td>
+                                    <td class="txt-l">실전 한국어</td>
+                                    <td>홍길동</td>
+                                    <td class="txt-l">학력보완교육</td>
+                                    <td>온라인</td>
+                                    <td>일반</td>
+                                    <td>10</td>
+                                    <td>일</td>
+                                    <td>1</td>
+                                    <td>10,000</td>
+                                    <td>0</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="txt-l">칼퇴하는 O/A</td>
+                                    <td>홍길동</td>
+                                    <td class="txt-l">성인 문해교육</td>
+                                    <td>오프라인</td>
+                                    <td>일반</td>
+                                    <td>10.3</td>
+                                    <td>일</td>
+                                    <td>20</td>
+                                    <td>85,000</td>
+                                    <td>0</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="txt-l">직업능력 향상교육</td>
+                                    <td>홍길동</td>
+                                    <td class="txt-l">직업능력 향상교육</td>
+                                    <td>온/오프<br>혼합</td>
+                                    <td>일반</td>
+                                    <td>20</td>
+                                    <td>일</td>
+                                    <td>1.2</td>
+                                    <td>15,000</td>
+                                    <td></td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="txt-l">실전 한국어</td>
+                                    <td>홍길동</td>
+                                    <td class="txt-l">직업능력 향상교육</td>
+                                    <td>온/오프<br>혼합</td>
+                                    <td>일반</td>
+                                    <td>100, 10.3</td>
+                                    <td>회차</td>
+                                    <td>1.2</td>
+                                    <td>85,000</td>
+                                    <td>0</td>
+                                    <td>YYYY.MM.DD</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="txt">※ 위의 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시 평생교육이용권 신청 · 선정 · 지급에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</p>
+                    <div class="com-paging">
+                        <button class="prev">이전</button>
+                        <button class="on">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <span class="empty">...</span>
+                        <button>120</button>
+                        <button class="next">다음</button>
+                    </div>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-1]').hide();">닫기</button>
+                    </div>
                 </div>
-                <div class="btn-box">
-                    <button onclick="$('[data-pop=pop-2]').hide();">확인</button>
-                </div>
+                <button class="close-btn" onclick="$('[data-pop=pop-1]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
             </div>
-            <button class="close-btn" onclick="$('[data-pop=pop-2]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
         </div>
     </div>
 </body>
