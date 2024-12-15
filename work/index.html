@@ -40,10 +40,26 @@
     .color-info {margin-top: 20px;}
     .color-info p {padding: 8px; border-radius: 8px; border: 1px solid black;}
     .color-info p + p {margin-left: 10px;}
+    /* 상단 검색 */
+    .file_lst_search > fieldset { display: flex; column-gap: 10px; padding: 20px; margin-top: 20px; margin-bottom: 10px; width: 840px; border-radius: 12px; font-size: 13px; font-weight: 700; border: none;}
+    .file_lst_search select {width: 168px;}
+    .file_lst_search :where(select, input, button) {border-radius: 8px; height: 44px; padding: 0 8px;}
+    .file_lst_search button.search-btn {background: #333333; color: #fff; font-weight: 700; width: 120px;}
+    .file_lst_search button.search-btn:disabled {background: #999; color: #eee;}
+    .file_lst_search input {flex: 1;}
+    /* 아이템 정렬 */
+    .flex-item-right {display: flex; justify-content: end;}
+    /* 검색 */
+    .btn-function {border: 1px solid #d8d8d8; border-radius: 12px;}
+    .btn-function.is-active {background: rgb(139, 182, 221);}
+    /* tooltip */
+    .file_tooltip {display: inline-block; position: relative;  width: 20px; height: 20px; background-color: #555; color: #fff; font-weight: 700; text-align: center; vertical-align: middle; border-radius: 50%;}
+    .file_tooltip_box {display: none; background: #fff; position: absolute; right: 60px; top: 0; width: 400px; border-radius: 12px; border: 1px solid #d8d8d8; text-align: left; padding: 12px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1)}
+    .file_tooltip_box > p { color: #000; font-weight: 500;}
+    .file_tooltip_box > strong {font-weight: 700;}
+    .file_tooltip:hover .file_tooltip_box {display: block; }
   </style>
-
 </head>
-
 <body>
   <div class="cont">
     <h2 style="font-size: 28px;">울산광역시 평생교육이용권 <span style="color: #999!important; font-size: 18px!important;">사용기관 (PC만 제작 반응형 X)</span></h2>
@@ -52,6 +68,27 @@
       <p style="background-color: rgb(241, 252, 255); font-size: 15px; display: inline-block; font-weight: 700;">* 하늘색: 사용기관</p>
       <p style="background-color: lightgoldenrodyellow; font-size: 15px; display: inline-block; font-weight: 700;">* 노란색: 국가포털</p>
       <p style="background-color:  rgb(255, 224, 211); font-size: 15px; display: inline-block; font-weight: 700;">* 주황색: 지자체</p>
+    </div>
+    <div class="flex-item-right">
+      <form class="file_lst_search">
+        <fieldset>
+          <legend>
+            검색
+            <a href="#" class="file_tooltip">
+              ?
+              <div class="file_tooltip_box">
+                <p><strong>필터 버튼이 활성화된 상태</strong>에서 인풋에 값을 넣으면 해당 검색어를 포함한 행을 <strong>실시간으로 필터링</strong>합니다.</p>
+                <br>
+                <p><strong>검색모드 버튼이 활성화된 상태</strong>에선 인풋에 <strong>값을 넣고 검색 버튼을 클릭해야만</strong> 데이터가 필터링됩니다.</p>
+              </div>
+            </a>
+          </legend>
+          <input type="text" id="search" placeholder="검색어를 입력해주세요.">
+          <button class="search-btn" id="search-confirm">검색</button>
+          <button class="btn-function" id="fastModeBtn">필터</button>
+          <button class="btn-function" id="slowModeBtn">검색모드</button>
+        </fieldset>
+      </form>
     </div>
     <span class="count-info">
       <span class="page">페이지 : <span></span></span>
@@ -146,15 +183,6 @@
         </tr>
         <tr class="line done">
           <th>평생교육이용권</th>
-          <td>이용권 사용기관_자주하는 질문</td>
-          <td>page</td>
-          <td><a href="./INP_200.html" target="blank">INP_200.html</a></td>
-          <td class="ac">O</td>
-          <td></td>
-        </tr>
-
-        <tr class="line done">
-          <th>평생교육이용권</th>
           <td>이용권 사용기관_이용권_사용내역</td>
           <td>page</td>
           <td><a href="./IIP_100.html" target="blank">IIP_100.html</a></td>
@@ -232,7 +260,15 @@
         </tr>
         <tr class="line done">
           <th>평생교육이용권</th>
-          <td>이용권 사용기관_사용기관 문의사항 등록</td>
+          <td>이용권 사용기관_질의응답 ((구) 사용기관 문의사항)</td>
+          <td>page</td>
+          <td><a href="./INP_200.html" target="blank">INP_200.html</a></td>
+          <td class="ac">O</td>
+          <td></td>
+        </tr>
+        <tr class="line done">
+          <th>평생교육이용권</th>
+          <td>이용권 사용기관_질의응답등록 ((구) 사용기관 문의사항 등록)</td>
           <td>page</td>
           <td><a href="./IIP_501.html" target="blank">IIP_501.html</a></td>
           <td class="ac">O</td>
@@ -240,9 +276,17 @@
         </tr>
         <tr class="line done">
           <th>평생교육이용권</th>
-          <td>이용권 사용기관_사용기관 문의사항 상세</td>
+          <td>이용권 사용기관_사용기관_질의응답 상세 ((구) 사용기관 문의사항 상세)</td>
           <td>page</td>
           <td><a href="./IIP_502.html" target="blank">IIP_502.html</a></td>
+          <td class="ac">O</td>
+          <td></td>
+        </tr>
+        <tr class="line done">
+          <th>평생교육이용권</th>
+          <td>이용권 사용기관_사용기관_질의응답 관리자 답변 상세 ((구) 사용기관 문의사항 상세)</td>
+          <td>page</td>
+          <td><a href="./IIP_503.html" target="blank">IIP_503.html</a></td>
           <td class="ac">O</td>
           <td></td>
         </tr>
@@ -527,13 +571,45 @@
           <td class="ac">O</td>
           <td>12.11 : 시연용 대체 이미지 퍼블리싱</td>
         </tr>
+        <tr class="line l">
+          <th>평생교육이용권</th>
+          <td>이용권 지자체_사용처 상세</td>
+          <td>page</td>
+          <td><a href="./LUP_003.html">LUP_003.html</a></td>
+          <td class="ac"></td>
+          <td></td>
+        </tr>
         <tr class="line done l">
           <th>평생교육이용권</th>
-          <td>이용권 지자체_우수 이용자 신청</td>
+          <td>이용권 지자체_우수 이용자 신청_1단계</td>
           <td>page</td>
           <td><a href="./LAP_001.html">LAP_001.html</a></td>
           <td class="ac">O</td>
           <td>12.11 : 시연용 대체 이미지 퍼블리싱</td>
+        </tr>
+        <tr class="line l">
+          <th>평생교육이용권</th>
+          <td>이용권 지자체_우수 이용자 신청_2단계</td>
+          <td>page</td>
+          <td><a href="./LAP_002.html">LAP_002.html</a></td>
+          <td class="ac"></td>
+          <td></td>
+        </tr>
+        <tr class="line l">
+          <th>평생교육이용권</th>
+          <td>이용권 지자체_우수 이용자 신청_3단계</td>
+          <td>page</td>
+          <td><a href="./LAP_003.html">LAP_003.html</a></td>
+          <td class="ac"></td>
+          <td></td>
+        </tr>
+        <tr class="line l">
+          <th>평생교육이용권</th>
+          <td>이용권 지자체_우수 이용자 신청완료</td>
+          <td>page</td>
+          <td><a href="./LAP_004.html">LAP_004.html</a></td>
+          <td class="ac"></td>
+          <td></td>
         </tr>
         <tr class="line done l">
           <th>평생교육이용권</th>
@@ -543,11 +619,59 @@
           <td class="ac">O</td>
           <td>12.11 : 시연용 대체 이미지 퍼블리싱</td>
         </tr>
+        <tr class="line l">
+          <th>평생교육이용권</th>
+          <td>이용권 지자체_평생교육이용권 신청 2단계_본인인증</td>
+          <td>page</td>
+          <td><a href="./LAP_101.html">LAP_101.html</a></td>
+          <td class="ac"></td>
+          <td></td>
+        </tr>
+        <tr class="line l">
+          <th>평생교육이용권</th>
+          <td>이용권 지자체_평생교육이용권 신청 2단계_자격검증</td>
+          <td>page</td>
+          <td><a href="./LAP_102.html">LAP_102.html</a></td>
+          <td class="ac"></td>
+          <td></td>
+        </tr>
+        <tr class="line l">
+          <th>평생교육이용권</th>
+          <td>이용권 지자체_평생교육이용권 신청 3단계</td>
+          <td>page</td>
+          <td><a href="./LAP_103.html">LAP_103.html</a></td>
+          <td class="ac"></td>
+          <td></td>
+        </tr>
+        <tr class="line l">
+          <th>평생교육이용권</th>
+          <td>이용권 지자체_평생교육이용권 신청 4단계</td>
+          <td>page</td>
+          <td><a href="./LAP_104.html">LAP_104.html</a></td>
+          <td class="ac"></td>
+          <td></td>
+        </tr>
+        <tr class="line l">
+          <th>평생교육이용권</th>
+          <td>이용권 지자체_평생교육이용권 신청 완료</td>
+          <td>page</td>
+          <td><a href="./LAP_105.html">LAP_105.html</a></td>
+          <td class="ac"></td>
+          <td></td>
+        </tr>
         <tr class="line done l">
           <th>평생교육이용권</th>
           <td>이용권 지자체_공지사항</td>
           <td>page</td>
           <td><a href="./LNP_001.html">LNP_001.html</a></td>
+          <td class="ac">O</td>
+          <td>12.11 : 1차 퍼블리싱</td>
+        </tr>
+        <tr class="line done l">
+          <th>평생교육이용권</th>
+          <td>이용권 지자체_공지사항_상세</td>
+          <td>page</td>
+          <td><a href="./LNP_002.html">LNP_002.html</a></td>
           <td class="ac">O</td>
           <td>12.11 : 1차 퍼블리싱</td>
         </tr>
@@ -601,7 +725,7 @@
         </tr>
         <tr class="line done l">
           <th>평생교육이용권</th>
-          <td>이용권 지자체_마이페이지_이용권 신청 내역</td>
+          <td>이용권 지자체_마이페이지_평생교육이용권 신청 내역</td>
           <td>page</td>
           <td><a href="./LIP_100.html">LIP_100.html</a></td>
           <td class="ac">O</td>
@@ -618,7 +742,6 @@
       </tbody>
     </table>
   </div>
-
   <script>
     $(function() {
       $(".main-tab .tab").each(function(i) {
@@ -662,8 +785,81 @@
       $('.count-info .page span').text(pageNum);
       $('.count-info .popup span').text(popupNum);
     });
+    /* 검색 전환 */
+    $('.file_lst_search .btn-function').eq(0).addClass('is-active')
+    $('.file_lst_search .btn-function').click(function () {
+      $('.file_lst_search .btn-function').not($(this)).removeClass('is-active')
+      $(this).addClass('is-active');
+    })
+    let searchMode = "fastmode"; // 기본값을 패스트 모드로 설정
+    const fastModeBtn = document.querySelector('#fastModeBtn')
+    const slowModeBtn = document.querySelector('#slowModeBtn')
+    fastModeBtn.addEventListener('click',function(event){
+      event.preventDefault();
+      searchMode = "fastmode";
+      searchBtn.disabled = true;
+    })
+    slowModeBtn.addEventListener('click',function(event){
+      event.preventDefault();
+      searchMode = "slowmode"
+      searchBtn.disabled = false;
+    })
+    let filterValue;
+    let searchTbody;
+    let rows;
+    document.addEventListener('DOMContentLoaded', function(){
+      if (searchMode = "fastmode"){
+        searchBtn.disabled = true;
+      } else {
+        searchBtn.disabled = false;
+      }
+      const searchInput = document.querySelector('#search')
+      searchTbody = document.querySelector('.file_lst tbody');
+      searchInput.addEventListener('keyup', function(){
+        filterValue = searchInput.value;
+        if (searchMode == "fastmode"){
+          // 해당 요소의 tr들 모두 배열로 넣기
+          rows = searchTbody.querySelectorAll('tr');
+          for (var i = 0; i < rows.length; i++){
+            var rowText = rows[i].textContent;
+            if(rowText.includes(filterValue)){
+              rows[i].style.display = '';
+            } else {
+              rows[i].style.display = 'none'
+            }
+          }
+        } 
+      })
+    })
+    // 검색 버튼 기능
+    const searchBtn = document.querySelector('#search-confirm')
+    searchBtn.addEventListener('click',function(event){
+      event.preventDefault();
+      const pageNameRows = searchTbody.querySelectorAll('tr');
+      let matched = false;
+      for (var i = 0; i < pageNameRows.length; i++){
+        var pageNumText = pageNameRows[i].textContent;
+        // 각각의 tr의 text컨텐츠의 filterValue가 포함되어있다면, tr의 display값을 'block'
+        if(pageNumText.includes(filterValue)){
+          pageNameRows[i].style.display = '';
+          matched = true;
+        } else {
+          pageNameRows[i].style.display = 'none';
+        }
+      } 
+      // 검색어가 없을 경우
+      if (matched === false) {
+          const noDataTr = document.createElement('tr')
+          const noDataTd = document.createElement('td')
+          noDataTd.textContent = "조회된 데이터가 없습니다."
+          noDataTd.setAttribute('colspan', '6')
+          noDataTd.setAttribute('style', 'text-align: center;')
+          noDataTr.appendChild(noDataTd);
+          searchTbody.appendChild(noDataTr)
+          return false;
+      }
+    })
   </script>
-
 </body>
 
 </html>

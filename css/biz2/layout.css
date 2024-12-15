@@ -46,9 +46,10 @@ header .menu-area .menu-box .link-group li > .tit { display: block; font-size: 2
 header .menu-area .menu-box .link-group li .link-item { display: flex; flex-direction: column; margin-top: 31px; }
 header .menu-area .menu-box .link-group li .link-item a { font-size: 19px; font-weight: 500; line-height: 48px; white-space: nowrap; color: #000; }
 header .menu-area .menu-box .link-group li .link-item a:hover { color: #00ADB2; text-decoration: underline; font-weight: bold; }
+header .menu-area .menu-box .link-group li .link-item a.disabled-link:hover {color: darkgray;} 
 
 /* body container */
-.container { position: relative; min-height: calc(100vh - 400px); padding-bottom: 80px; padding-top: 80px; }
+.container { position: relative; padding-bottom: 80px; padding-top: 80px; }
 .container > .sub-title { display: block; margin-top: 64px; font-size: 30px; font-weight: bold; color: #191919; }
 .container > .sub-title + .agree-info-area { margin-top: 32px; }
 

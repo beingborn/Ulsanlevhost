@@ -49,15 +49,21 @@ select{color:#8e8e8e;font-size:18px;font-weight:500}
 .btns-bottom a,
 .btns-bottom button{width:100%;height:72px;padding:16px 10px;font-size:26px;font-weight:700;text-align:center}
 
+/* 공통 더보기 버튼 */
+.more-btn::before {content: ''; display: inline-block; vertical-align: middle; background: url(../../images/biz2/ico/ico_more_btn.svg) no-repeat center; width: 24px; height: 24px;}
+
 /* checkbox,radio 공통 */
 input[type="checkbox"]{-webkit-appearance:none;-moz-appearance:none;appearance:none;display:inline-block;width:22px;height:22px;margin:2px 0 0 0;border:1px solid #999;border-radius:4px;cursor:pointer;background-color:var(--white);outline:0}
 input[type="checkbox"]::after{content:'';display:block;width:100%;height:100%;position:relative;background:url(../../images/biz2/ico/ico_checkbox.svg) no-repeat center}
 input[type="checkbox"]:checked{border:none;background-color:var(--primary-color-600)}
 input[type="checkbox"]:checked::after{display:block;box-sizing:initial}
 /* 비활성화 스타일 */
-input[type="checkbox"][disabled]{background-color:var(--gray-05-f8);border:1px solid #999999; cursor: auto;}
-/* 비활성화 스타일 임시로 해제 */
-input[type="checkbox"][disabled]::after{display: none;}
+input[type="checkbox"][disabled]{background-color:var(--gray-05-f8);}
+input[type="checkbox"][disabled]::after {display: none;}
+/* 비활성화된 상태에서 체크되었을 시 */
+input[type="checkbox"]:checked:disabled::after{ background:url(../../images/biz2/ico/ico_checkbox_disabled.svg) no-repeat center}
+input[type="checkbox"]:checked:disabled {border: 1px solid #999999;}
+input[type="checkbox"]:checked:disabled::after {display: block;}
 
 input[type="radio"]{-webkit-appearance:none;-moz-appearance:none;appearance:none;display:inline-block;width:22px;height:22px;margin:2px 0 0 0;border:1px solid #999;border-radius:50%;cursor:pointer;background-color:var(--white);outline:0}
 input[type="radio"]::after{content:'';display:none;position:relative;top:50%;left:50%;width:10px;height:10px;margin:-5px;background-color:var(--white);border-radius:50%}
@@ -541,5 +547,62 @@ p.bullet,
 .temp-cont.lip-100 {height: 713px; background-image: url(../../images/biz2/LIP_100_\(임시\).jpg);}
 .temp-cont.lip-001 {height: 1441px; background-image: url(../../images/biz2/LIP_001_\(임시\).jpg);}
 
-
-
+/* 지자체 메인 LMP_001 */
+.main-cont {display: flex; justify-content: space-between; position: relative; padding: 40px 0;}
+.main-cont::before {content: ''; display: block; position: absolute; left: 0; top: 0; height: 100%; width: 100vw; margin-left: calc(-50vw + 50%); background: #27C2CB; z-index: -1;}
+.main-info-left {width: calc(100% - 330px); display: flex; flex-direction: column; gap: 20px;}
+/* 메인 타이틀 그룹 */
+.main-tit-group {display: flex; justify-content: space-between; align-items: center;}
+.main-tit-group > h2 {font-size: 40px; font-weight: 700;}
+.main-info-wrap {display: flex; justify-content: space-between;}
+.main-info-mo-wrap {flex: 1; display: flex; margin-left: 20px;}
+.main-info-mo-wrap > .main-info-link {width: calc(100% / 2);}
+.main-info-mo-wrap > .main-info-link + .main-info-link {margin-left: 20px;}
+.main-info-link {border-radius: 15px; height: 280px; text-align: center; padding: 20px;}
+.main-info-link.personal {width: calc(100% / 3 - 20px);}
+.main-info-link .ico::before {align-self: center; margin-top: 20px;}
+.main-info-link > a {display: block;}
+.main-info-link:not(.personal) > a {width: 100%; height: 100%; display: flex; flex-direction: column;}
+.main-info-link:not(.personal) > a .ico::before {width: 120px; height: 120px;}
+/* 개인정보 */
+.main-info-link.personal {background: var(--white); display: flex; flex-direction: column; }
+.main-info-link.personal > a {margin-top: auto; display: flex; justify-content: center; align-items: center; border-radius: 16px; background: #383838; color: #fff; font-weight: 700; font-size: 24px; height: 50px;}
+.main-info-link.personal .ico.before-login::before {width: 140px; height: 140px; background: url(../../images/biz2/ico_before_login.svg) no-repeat center;}
+.main-info-link.apply-ticket {background: #3B98EF;}
+.main-info-link.apply-ticket .ico::before {background: url(../../images/biz2/icon_apply_ticket.svg) no-repeat center;}
+.main-info-link.use-where {background: #1D2088;}
+.main-info-link.use-where .ico::before {background: url(../../images/biz2/icon_use_where.svg) no-repeat center;}
+.main-info-tit {font-weight: 700; font-size: 38px; color: var(--white); margin-top: auto;}
+.more-link-area {display: flex; flex-direction: column; gap: 20px;}
+.more-link-area > a {display: block; width: 310px; min-height: 130px; background: var(--white); display: flex; justify-content: space-between; align-items: center; border-radius: 15px; font-size: 28px; font-weight: 700; padding: 0 30px 0 20px;}
+/* 메인 공지사항 */
+.main-notice {border-radius: 15px; flex: 1; padding: 20px; background: var(--white);}
+.main-notice .main-tit-group {max-height: 48px;}
+.main-notice-detail {margin-top: 16px;}
+.main-notice-detail .new-badge {font-size: 12px; display: inline-block; padding: 0 10px; background: #73D75A; color: var(--white); line-height: 21px; border-radius: 10px; text-transform: uppercase;}
+.main-notice-detail ul > li > a {padding: 15px 20px 23px 20px; display: block; border: 1px solid #c5c5c5; border-radius: 15px;}
+.main-notice-detail .main-notice-tit {font-weight: 700; font-size: 20px; margin: 5px 0 25px 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; max-height: 54px;}
+.main-notice-detail .main-notice-date {color: #6f6f6f; font-weight: 500; font-size: 20px; line-height: 27px;}
+.main-notice-detail .swiper-indicator {display: none;}
+/* 메인 링크 */
+.more-link-area .more-link-ticket .ico::before {width: 59px; height: 59px; background: url(../../images/biz2/ic_main_link_4.png) no-repeat center;}
+.more-link-area .more-link-login .ico::before {width: 54px; height: 54px; background: url(../../images/biz2/ic_main_link_5.png) no-repeat center; }
+.more-link-area .more-link-qna .ico::before {width: 61px; height: 60px; background: url(../../images/biz2/ic_main_link_6.png) no-repeat center; }
+.more-link-area .more-link-archive .ico::before {width: 62px; height: 52px; background: url(../../images/biz2/ic_main_link_7.png) no-repeat center;}
+/* 지자체 메인 상담센터안내 */
+.main-counseling {padding: 60px 0;}
+.main-search-box {display: flex; padding: 23px 19px; gap: 20px; border-radius: 15px; background: var(--primary-color);}
+.main-search-box > select {width: 150px; color: var(--text-primary-00); font-weight: 700; font-size: 20px; border-radius: 10px; height: 50px; background: #fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 20px center;}
+.main-search-box > input {flex: 1; border-radius: 10px; height: 50px; color: #dddddd; font-size: 18px; font-weight: 500;}
+.main-search-box button {color: #fff; font-weight: 700; font-size: 24px; display: inline-flex; align-items: center; justify-content: center; height: 50px; width: 100px; border-radius: 10px; background: #383838;}
+.main-counseling-content {margin-top: 26px;}
+.main-counseling-wrap {display: flex; column-gap: 24px; row-gap: 40px; flex-wrap: wrap;}
+.main-counseling-card {width: calc(50% - 24px); display: flex; border: 1px solid #c5c5c5; border-radius: 20px; padding: 28px;}
+.main .com-paging {margin-bottom: 54px;}
+/* 메인 고정 배너 */
+.fixed-quick {padding: 10px 10px 20px 10px;  border-radius: 18px; border: 1px solid var(--gray-30-d8); position: absolute; top: 44px; right: -130px; width: 100px; background: var(--white);}
+.fixed-quick > ul {display: flex; flex-direction: column; gap: 24px; align-items: center; text-align: center;}
+.fixed-quick li > a::before {content: ''; display: inline-block; width: 80px; height: 80px; border: 1px solid var(--gray-30-d8); border-radius: 16px;}
+.fixed-quick li > a {display: flex; flex-direction: column; gap : 4px; line-height: 27px; font-size: 16px; font-weight: 500; align-items: center; letter-spacing: -0.8px;}
+.fixed-quick li.issue-info > a::before {background: url(../../images/biz2/ic_fixed_1.png) no-repeat center center;}
+.fixed-quick li.nle-agency > a::before {background: url(../../images/biz2/ic_fixed_2.png) no-repeat center center;}

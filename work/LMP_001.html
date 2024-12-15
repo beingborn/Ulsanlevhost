@@ -15,8 +15,13 @@
     <script src="../js/biz2/swiper-bundle.min.js"></script>
     <script src="../js/biz2/script.js"></script>
     <title>울산광역시 평생교육이용권</title>
+    <style>
+        .b {border: 1px solid blue;}
+        .g {border: 1px solid green;}
+        .r {border: 1px solid red;}
+    </style>
 </head>
-<body>
+<body class="main">
     <header>
         <div class="logo-area multi-logo-area">
             <a href="LMP_001.html"><img src="../images/biz2/header_logo_horizontal.svg" alt="울산광역시"></a>
@@ -51,9 +56,9 @@
                     <li>
                         <span class="tit">평생교육이용권</span>
                         <div class="link-item">
-                            <a href="LAP_100.html">이용권 신청</a>
-                            <a href="#">이의제기 신청</a>
-                            <a href="#">선정 취소 신청</a>
+                            <a href="LAP_100.html">평생교육이용권 신청</a>
+                            <a class="hidden" href="#">이의제기 신청</a>
+                            <a href="#">선정 포기 신청</a>
                             <a href="LAP_400.html">수기 공모 신청</a>
                         </div>
                     </li>
@@ -76,10 +81,10 @@
                         <span class="tit">마이페이지</span>
                         <div class="link-item">
                             <a href="LIP_001.html">개인정보수정</a>
-                            <a href="LIP_100.html">이용권 신청내역</a>
-                            <a href="#">이용권 이용내역</a>
+                            <a href="LIP_100.html">평생교육이용권 신청내역</a>
+                            <a href="#">평생교육이용권 이용내역</a>
                             <a href="#">교육이수정보</a>
-                            <a href="#">이용자 이벤트</a>
+                            <a class="hidden" href="#">이용자 이벤트</a>
                         </div>
                     </li>
                 </ul>
@@ -89,21 +94,182 @@
             </div>
         </div>
     </header>
-    <div class="container temp">
-        <div class="temp-cont lgp-1">
-            <div class="temp-links-wrap">
-                <a href="LCP_001.html" title="지자체_로그인" style="width: 260px; height: 50px; left: 20px; top: 250px;"></a>
-                <a href="LAP_100.html" title="지자체_이용권신청" style="width: 302px; height: 280px; left: 324px;"></a>
-                <a href="LUP_001.html" title="지자체_사용처확인" style="width: 302px; height: 280px; left: 648px;"></a>
-                <a href="LNP_001.html" title="지자체_공지사항" style="width: 24px; height: 24px; top: 372px; left: 908px;"></a>
-                <a href="LNP_002.html" title="지자체_공지사항상세" style="width: 290px; height: 170px; top: 430px; left: 20px;"></a>
-                <a href="LNP_002.html" title="지자체_공지사항상세" style="width: 290px; height: 170px; top: 430px; left: 330px;"></a>
-                <a href="LNP_002.html" title="지자체_공지사항상세" style="width: 290px; height: 170px; top: 430px; left: 640px;"></a>
-                <a href="LGP_001.html" title="지자체_평생교육이용권이란?"></a>
-                <a href="IMP_001.html" title="지자체_사용기관로그인 및 등록 신청" style="top: 189px;"></a>
-                <a href="LNP_200.html" title="지자체_질의응답" style="top: 339px;"></a>
-                <a href="LNP_100.html" title="지자체_자료실" style="top: 489px;"></a>
+    <div class="container wrap">
+        <div class="main-cont">
+            <div class="main-info-left">
+                <section class="main-info-wrap">
+                    <div class="main-info-link personal">
+                        <span class="ico before-login"></span>
+                        <a href="#">로그인</a>
+                        <!-- 로그인 후 -->
+                        <!-- <span class="ico after-login"></span>
+                        <p>
+                            <span class="user-name">김국바</span>님 환영합니다.
+                        </p>
+                        <a href="#">개인정보 수정</a> -->
+                    </div>
+                    <div class="main-info-mo-wrap">
+                        <div class="main-info-link apply-ticket">
+                            <a href="LAP_100.html">
+                                <span class="ico"></span>
+                                <span class="main-info-tit">이용권 신청</span>
+                            </a>
+                        </div>
+                        <div class="main-info-link use-where">
+                            <a href="LUP_001.html">
+                                <span class="ico"></span>
+                                <span class="main-info-tit">사용처 확인</span>                            
+                            </a>
+                        </div>
+                    </div>
+                </section>      
+                <section class="main-notice">
+                    <div class="main-tit-group">
+                        <h2>공지사항</h2>
+                        <a href="LNP_001.html" class="more-btn"><span class="blind">더보기</span></a>
+                    </div>
+                    <div class="main-notice-detail">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="LNP_002.html">
+                                        <span class="new-badge">new</span>
+                                        <p class="main-notice-tit">2024년 10월 1일 (화) '국군의 날' 휴무안내</p>
+                                        <span class="main-notice-date">2024.10.25</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="LNP_002.html">
+                                        <span class="new-badge">new</span>
+                                        <p class="main-notice-tit">2024년 10월 1일 (화) '국군의 날' 휴무안내</p>
+                                        <span class="main-notice-date">2024.10.25</span>
+                                    </a>                            
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="LNP_002.html">
+                                        <span class="new-badge">new</span>
+                                        <p class="main-notice-tit">2024년 10월 1일 (화) '국군의 날' 휴무안내</p>
+                                        <span class="main-notice-date">2024.10.25</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="LNP_002.html">
+                                        <span class="new-badge">new</span>
+                                        <p class="main-notice-tit">2024년 10월 1일 (화) '국군의 날' 휴무안내</p>
+                                        <span class="main-notice-date">2024.10.25</span>
+                                    </a>                            
+                                </li>
+                            </ul>
+                            <div class="swiper-indicator">
+                                <button class="swiper-button-next"></button>
+                                <button class="swiper-button-prev"></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
+            <div class="main-info-right">
+                <div class="more-link-area">
+                    <a href="LGP_001.html" class="more-link-ticket">
+                        평생교육<br>
+                        이용권이란?
+                        <span class="ico"></span>
+                    </a>
+                    <a href="IMP_001.html" class="more-link-login">
+                        사용기관 로그인 <br>
+                        및 등록 신청
+                        <span class="ico"></span>
+                    </a>
+                    <a href="LNP_200.html" class="more-link-qna">
+                        질의응답
+                        <span class="ico"></span>
+                    </a>
+                    <a href="LNP_100.html" class="more-link-archive">
+                        자료실
+                        <span class="ico"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main-counseling">
+            <div class="main-tit-group">
+                <h2>평생교육이용권 상담센터</h2>
+                <div class="main-search-group">
+                    <form>
+                        <fieldset>
+                            <legend>평생교육이용권 상담센터 검색영역</legend>
+                            <div class="main-search-box">
+                                <select title="지역선택">
+                                    <option value="지역">지역</option>
+                                </select>
+                                <input type="text" placeholder="검색어를 입력하세요.">
+                                <button>조회</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="main-counseling-content">
+                <div class="main-counseling-wrap">
+                    <div class="main-counseling-card">
+                        <div class="card-wrap">
+                            <span>콜센터</span>
+                            <div class="main-counseling-detail">
+                                <h5>평생교육이용권 문의</h5>
+                                <span class="main-counseling-num">054-123-124</span>
+                            </div>    
+                        </div>
+                        <a href="#" class="ico"></a>
+                    </div>
+                    <div class="main-counseling-card">
+                        <div class="card-wrap">
+                            <span>콜센터</span>
+                            <div class="main-counseling-detail">
+                                <h5>평생교육이용권 문의</h5>
+                                <span class="main-counseling-num">054-123-124</span>
+                            </div>    
+                        </div>
+                        <a href="#" class="ico"></a>
+                    </div>
+                    <div class="main-counseling-card">
+                        <div class="card-wrap">
+                            <span>콜센터</span>
+                            <div class="main-counseling-detail">
+                                <h5>평생교육이용권 문의</h5>
+                                <span class="main-counseling-num">054-123-124</span>
+                            </div>    
+                        </div>
+                        <a href="#" class="ico"></a>
+                    </div>
+                    <div class="main-counseling-card">
+                        <div class="card-wrap">
+                            <span>콜센터</span>
+                            <div class="main-counseling-detail">
+                                <h5>평생교육이용권 문의</h5>
+                                <span class="main-counseling-num">054-123-124</span>
+                            </div>    
+                        </div>
+                        <a href="#" class="ico"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="com-paging">
+            <button class="prev">이전</button>
+            <button class="on">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <span class="empty">...</span>
+            <button>120</button>
+            <button class="next">다음</button>
+        </div>
+        <div class="fixed-quick">
+            <ul>
+                <li class="issue-info"><a href="#">발급안내</a></li>
+                <li class="nle-agency"><a href="#">국가평생교육<br>진흥원</a></li>
+            </ul>
         </div>
     </div>
     <footer class="wrap">

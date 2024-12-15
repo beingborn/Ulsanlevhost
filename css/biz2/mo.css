@@ -12,10 +12,20 @@
 @media only screen and (min-width:1024px){
 	.lg-only {display: block;}
 }
+
+/* Min-width Tablet */
+@media only screen and (max-width: 1024px){
+	.wrap {padding: 0 20px;}
+}
+
 /* Mobile Android */
 @media only screen and (max-width:800px){
 	/* pc content hide */
 	.lg-only {display: none;}
+
+	/* 메인 공지사항 스와이퍼 버튼 */
+	.main-notice-detail .swiper-indicator {display: block;}
+
 
 	/* layer popup padding */
 	.layer-pop .layer-content {padding: 0 20px;}

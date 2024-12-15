@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+  // 임시 비활성화 링크 표시
+  $('.link-item a').each(function(){
+    var href = $(this).attr('href');
+    if (!href || href === '#') { $(this).addClass('disabled-link'); }
+  })
+
   //gnb 메뉴
   $("header .menu-area .open-btn").on("click", function () {
     $(this).toggleClass("on");
@@ -7,18 +14,6 @@ $(document).ready(function () {
   $("header .menu-box .close-btn").on("click", function () {
     $("header .open-btn").removeClass("on");
     $('.log-info').show();
-  });
-
-  //메인 공지사항 배너
-  var mainInfoSwiper = new Swiper(".main-info-content .notice-area .swiper", {
-    loop: true,
-    autoplay: {
-      delay: 4000,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
   });
 
   /* 탭 변환 */
@@ -56,13 +51,6 @@ $(document).ready(function () {
     $(this).addClass('is-active')
   }).filter(':eq(0)').click();
 
-
-  /* input-type file 클릭시 가까운 upload-name에 값 추가 */
-  // $('.file').on('change', function(){
-  //   var fileName = $(this).val().split('\\').pop()
-  //   $(this).closest('.filebox').find('.upload-name').val(fileName)
-  // })
-
   // 파일첨부
   $('.file').on('change', function() {
     var fileName = $(this).val().split(/\\|\//).pop();
@@ -90,6 +78,17 @@ $(document).ready(function () {
       $('.resident-chk').show();
     }
   })
+
+  /* 메인화면 공지사항 스와이퍼 */
+  var mainNotice = new Swiper(".main-notice-detail .swiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".main-notice-detail .swiper-button-next",
+      prevEl: ".main-notice-detail .swiper-button-prev",
+    },
+});
+
 
 });
 
