@@ -1,34 +1,236 @@
 /****************************************************
-	파일명	: mo.css
-	최초작성자	: 이민혁
-	최초작성일	: 2024-11-23
+	파일명	:mo.css
+	최초작성자	:이민혁
+	최초작성일	:2024-11-23
 	-------------------------------------------------
 	Dec. 모바일 미디어쿼리 정의
 	-------------------------------------------------
-	속성순서    : 레이아웃 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+	속성순서    :레이아웃 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
 *****************************************************/
 
-/* pc content 1024~1920 */
-@media only screen and (min-width:1024px){
-	.lg-only {display: block;}
+@media only screen and (min-width:1080px){
+	/* PC 전용 호버 애니메이션 */
+	.more-link-area > a:hover {transform:translateY(-15px)}
+	.main-info-mo-wrap > .main-info-link:hover {transform:translateY(-30px)}
+	.lg-only{display:block}	
 }
 
-/* Min-width Tablet */
-@media only screen and (max-width: 1024px){
-	.wrap {padding: 0 20px;}
+@media only screen and (min-width:1441px) and (max-width: 1580px){
+	.fixed-quick{right:-50px}
+	.main-cont {justify-content: flex-start; gap: 20px;}
+	.main-info-right {width: 260px;}
 }
 
-/* Mobile Android */
-@media only screen and (max-width:800px){
-	/* pc content hide */
-	.lg-only {display: none;}
+@media only screen and (max-width:1440px){
+	header .menu-area .menu-box .link-group li .link-item {margin-top: 16px;}
+	header .menu-area .menu-box .link-group li > .tit {font-size: 20px;}
+	header .menu-area .menu-box .link-group li .link-item a {font-size: 16px;}
 
-	/* 메인 공지사항 스와이퍼 버튼 */
-	.main-notice-detail .swiper-indicator {display: block;}
+	/* 레이아웃 공통 */
+	header,
+	.wrap{width:100%;max-width:none}
+	footer .info-content .link-area{padding-top:20px}
+	footer .info-content .link-area .support-box{position:static;padding-top:20px;border-top:1px solid #D8D8D8;flex-wrap:wrap;row-gap:10px;column-gap:20px}
+	footer .info-content .link-area .copy{margin-top:20px;margin-bottom:20px;line-height:150%}
+	.fixed-quick{display:none}
 
+	/* LMP_001 지자체 메인 */
+	.main-tit-group > h2{font-size:38px}
+	.main-info-link.personal{width:33.3333%}
+	.main-info-mo-wrap > .main-info-link{width:50%}
+	.main-counseling-card{padding:16px}
+	.main-counseling-detail > h5{font-size:20px}
+	.main-counseling-detail > .main-counseling-num{font-size:20px}
+}
 
-	/* layer popup padding */
-	.layer-pop .layer-content {padding: 0 20px;}
+@media only screen and (max-width:1080px){
+	/* LMP_001 지자체 메인 상단 */
+	.main-cont{flex-direction:column}
+	.main-info-left{width:100%}
+	.main-info-right{width:100%;margin-top:16px}
+	.more-link-area{flex-direction:row;flex-wrap:wrap;row-gap:16px;column-gap:16px;justify-content:space-between}
+	.more-link-area > a{width:auto;flex:1 0 calc(50% - 16px);min-height:110px}
+
+	/* 평생교육 상담센터 */
+	.main-counseling .main-tit-group{flex-direction:column;align-items:flex-start}
+	.main-counseling .main-search-group{width:100%;margin-top:16px}
+	.main-counseling .main-search-box{width:auto}
+	.main-counseling-content{margin-top:16px}
+	.main-counseling-wrap{flex-direction:column;row-gap:16px}
+
+	/* 헤더 공통 */
+	header{height:56px}
+	header .menu-area .open-btn{width:24px;height:24px;background-size:contain}
+	header .menu-area .open-btn ~ .menu-box {display: none;}
+	header .multi-logo-area a{display:inline-flex;align-items:center}
+	header .multi-logo-area a:nth-child(1) > img{width:96px;height:24px;object-fit:cover}
+	header .multi-logo-area a:nth-child(1):after{display:none}
+	header .multi-logo-area a:nth-child(2){padding-left:0}
+	header .multi-logo-area a:nth-child(2) > img{width:90px;height:24px}
+	
+	/* 컨텐츠 공통 */
+	.container{padding:20px 20px 28px}
+	.top-info-group{margin-top:40px}
+	.top-info-group h3{font-size:24px}
+	.page-header-tit{font-size:26px}
+	.page-header-desc{margin-top:12px;text-align:left}
+	.page-header{margin-bottom:40px}
+
+	input[type=number], 
+	input[type=file], 
+	input[type=date], 
+	input[type=tel], 
+	input[type="text"], 
+	input[type="password"], 
+	input[type="search"], 
+	input[type="email"], 
+	textarea,
+	select, 
+	option{height:40px}
+
+	table{font-size:18px}
+	.com-write-table table th{padding:0 8px}
+	.com-write-table table td{padding:8px}
+	.com-write-table colgroup col:nth-child(1),
+	.com-write-table colgroup col:nth-child(3){width:114px !important}
+
+	.steps{margin-bottom:40px}
+	.steps.flex-acjc{gap:2%}
+	.steps li span{font-size:15px}
+	.steps li strong{font-size:18px}
+	.steps li span::before{width:82px;height:82px;margin-bottom:3px;background-size:auto 189px}
+	.steps .step02::before{background-position:-107px 0}
+	.steps .step03::before{background-position:-214px 0px}
+	.steps .step04::before{background-position:-321px 0}
+	.steps .step05::before{background-position:-428px 0}
+	.steps .step06::before{background-position:-535px 0}
+	.steps .step07::before{background-position:-643px 0px}
+	/* 활성화 */
+	.steps li.active .step01::before{background-position:0 -107px}
+	.steps li.active .step02::before{background-position:-107px -107px}
+	.steps li.active .step03::before{background-position:-214px -107px}
+	.steps li.active .step04::before{background-position:-321px -107px}
+	.steps li.active .step05::before{background-position:-428px -107px}
+	.steps li.active .step06::before{background-position:-535px -107px}
+	.steps li.active .step07::before{background-position:-643px -107px}
+
+	.btns-bottom{margin-top:40px}
+	.btns-bottom a, 
+	.btns-bottom button{height:48px;padding:10px;font-size:20px}
+
+	.flex-ac{flex-wrap:wrap;width:100%}
+	.basic-info .fixed-value{width:100%}
+	.basic-info .fixed-value input{flex:1}
+	.basic-info .space .chk-box{margin-left:0}
+	.basic-info .input-num{flex-direction:column;align-items:flex-start;width:100%}
+	.basic-info .input-num select{width:auto}
+	.tel-num{width:100%}
+	.tel-num input{width:calc(50% - 15px)}
+	.basic-info .input-group .email,
+	.basic-info .input-group .email+select{width:calc(50% - 5px)}
+	.basic-info .input-group .email-id{width:calc(100% - 26px)}
+	.asterisk-list{font-size:16px}
+
+	/* 우수이용자 신청 */	
+	hr+.auth-area{margin-top:40px}
+	.auth-area-in{gap:16px}
+	.auth-area-in button{flex:calc(50% - 8px);height:126px;font-size:16px}
+	.auth-area-in button::before{height:58px;margin-bottom:8px;background-size:100% !important}
+	.auth-area-in button.simple::before{width:90px}
+	.auth-area-in button:not(.simple)::before{width:56px}
+
+	.basic-info input[type=number]{flex:calc(100% - 20px)}
+		
+
+	/* 푸터 공통 */
+	footer .info-content{padding:20px 0}
+	footer .info-content .link-area .copy{font-size:14px}
+	footer .info-content .link-area .link-box a{font-size:16px}
+	footer .info-content address > span{font-size:16px}
+	footer .info-content .link-area .link-box{flex-wrap:wrap;row-gap:12px;column-gap:24px}
+	footer .info-content .family-select-wrap{position:static;margin-bottom:20px}
+	footer .info-content .family-select-lg > button{width:100%;font-size:18px;height:40px;padding:0 8px;background:#fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 8px center}
+	footer .info-content .family-select-lg > button.is-open{background:#fff url(../../images/biz2/ic_arrow_big_top.png) no-repeat right 8px center}
+	footer .info-content .family-select-lg .family-site-list > li > a{font-size:16px;line-height:56px}
+	footer .info-content .footer-logo{width:90px;height:24px;background-size:cover}
+
+	/* 페이지네이션 공통 */
+	.com-paging{gap:6.4px;padding:0 9.2px}
+	.com-paging button, .com-paging .empty{width:32px;height:32px}
+	.com-paging button.next, .com-paging button.prev{font-size:15px;width:51.6px}
+	.com-paging button:not(.next, .prev){font-size:16px}
+	.com-paging button.next::after, .com-paging button.prev::after{width:16px;height:16px}
+
+	/* PC 전용 콘텐츠 */
+	.lg-only{display:none}
+	.lg-only-i{display:none!important}
+
+	/* 모바일 전용 콘텐츠 */
+	.sm-show-800{display:block}
+
+	/* LMP_001 지차체 메인 배경 */
+	.main-cont{padding:0}
+	.main-cont::before{display:none}
+	.main-info-link.personal{padding:9px 16px}
+	.main-info-link.personal .main-info-user{font-size:16px}
+	.main-info-group{margin-top:0}
+	.main-info-tit{line-height:150%;font-size:22px}
+	.main-info-link{height:auto}
+	.main-info-mo-wrap{margin-left:16px}
+	.main-info-mo-wrap{flex-direction:column;gap:16px}
+	.main-info-mo-wrap .main-info-link{width:100%}
+	.main-info-mo-wrap > .main-info-link + .main-info-link{margin-left:0}
+	.main-info-link:not(.personal){padding:16px}
+	.main-info-link:not(.personal) > a{justify-content:space-between;align-items:flex-start;position:relative}
+	.main-info-link:not(.personal) > a .ico{position:absolute;right:0px;top:0px}
+	.main-info-link.apply-ticket > a .ico{padding-top:8px}
+	.main-info-link:not(.personal) > a .ico::before{width:40px;height:40px}
+	.main-info-group{text-align:left}
+	.main-info-link.personal{justify-content:center}
+	.main-info-link.personal .ico.after-login::before{width:88px;height:88px}
+	.main-info-link.personal .ico.before-login::before{width:88px;height:88px}
+	.main-info-link.personal > a{height:auto;padding:8px 7px;font-size:21px;border-radius:4px}
+	.main-info-link.personal > a.login{margin-top:16px}
+
+	/* LMP_001 지차체 메인 공지사항 스와이퍼 버튼 */
+	.main-notice .main-notice-detail .swiper-indicator{display:flex}	
+	.main-info-wrap{position:relative;padding:40px 0}
+	.main-info-wrap::before{content:'';display:block;position:absolute;left:0;top:0;height:100%;width:100vw;margin-left:calc(-50vw + 50%);background:#27C2CB;z-index:-1}
+	.more-link-area > a{border:1px solid #c5c5c5;padding:16px;font-size:18px;align-items:flex-start;position:relative}
+	.more-link-area > a .ico{position:absolute;right:14px;bottom:14px}
+	.more-link-one{line-height:54px}
+	.main-info-right .more-link-area > a .ico::before{width:40px;height:40px}
+	.more-link-area .more-link-ticket .ico::before{background:url(../../images/biz2/ic_main_link_4_mo.png) no-repeat center;background-size:cover}
+	.more-link-area .more-link-login .ico::before{background:url(../../images/biz2/ic_main_link_5_mo.png) no-repeat center;background-size:cover}
+	.more-link-area .more-link-archive .ico::before{background:url(../../images/biz2/ic_main_link_7_mo.png) no-repeat center;background-size:cover}
+
+	/* 레이어 팝업 공통 */
+	.layer-pop .layer-content{padding:0 20px}
+
+	/* LMP_001 지차체 평생교육 상담센터 */
+	.main-search-box > input::placeholder{ color:transparent}
+	.main-search-box{padding:12px 10px;gap:10px}
+	.main-search-group .main-search-box :where(select, input, button){height:40px}
+	.main-search-box > select{min-width:0;width:112px;font-size:18px;padding:0 32px 0px 8px;background-position:right 8px center} 
+	.main-search-box button{width:50px;font-weight:500;font-size:18px;border-radius:6px}
+	.main-counseling{padding:60px 0 16px 0}
+	.main-counseling-card{padding:16px 16px 14px 16px;align-items:flex-start; width: 100%; position: relative;}
+	.main-counseling-ico { position: absolute; right: 16px; top: 16px;}
+	.main-counseling-card > .card-wrap{flex-direction:column;gap:8px;align-items:flex-start;max-height:none}
+	.main-counseling-card .main-counseling-label{font-size:18px;height:auto;padding:8px 12px}
+	.main-counseling-ico > a{width:40px;height:40px}
+	.main-counseling-ico > a.ico.counceling-link::before{width:40px;height:40px;background-size:17px 17px}
+	.main-counseling-ico > a.ico.call-link::before{display:block}
+	.main-counseling .main-tit-group{padding:0}
+	
+	/* LMP_001 지차체 메인 공지사항 */
+	.main-notice{padding:0}
+	.main-notice-detail ul > li > a{padding:16px 16px 58px 16px}
+	.main-notice-detail .main-notice-tit{font-size:18px}
+	.main-tit-group > h2{font-size:26px}
+	.main-info-left{gap:40px}
+	.main-info-link.personal{flex:1;width:auto}
+	.main-info-mo-wrap{flex:auto}
 }
 
 

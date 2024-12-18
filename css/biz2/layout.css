@@ -10,16 +10,14 @@
 
 .wrap {
 	position: relative;
-	max-width: 1280px;
+	max-width: 1320px;
 	/* min-height: 768px; */
 	margin: 0 auto;
+	padding:0 20px
 }
 
 /* header style */
-header { display: flex; align-items: center; justify-content: space-between; position: relative; height: 116px; 
-	/* 이민혁 임시 추가 */
-	max-width: 1280px; margin: 0px auto; 
-}
+header { display: flex; align-items: center; justify-content: space-between; position: relative; height: 116px;  max-width: 1320px; margin: 0px auto; padding:0 20px;}
 header::after { content: ""; position: absolute; left: -9999px; right: -9999px; bottom: 0; height: 1px; background: #d8d8d8; }
 header .logo-area { display: flex;}
 /* 로고가 여러개일 경우 */
@@ -29,24 +27,37 @@ header .multi-logo-area a:nth-child(1):after {content: ''; display: inline-block
 header .link-area { display: flex; column-gap: 30px; margin-left: auto; }
 header .menu-area { display: flex; column-gap: 16px; align-items: center; margin-left: 60px; }
 header .menu-area .home-btn  { display: inline-block; width: 52px; height: 52px; background: url(../../images/biz2/ico/ico_home.svg) no-repeat 0 0; background-size: contain; }
-header .menu-area .open-btn { width: 34px; height: 28px; background: url(../../images/biz2/header_menu.png) no-repeat 0 0; }
+header .menu-area .open-btn { width: 34px; height: 28px; background: url(../../images/biz2/ico/ico_header_menu.svg) no-repeat center; background-size: cover; }
 header .menu-area .open-btn.on { display: none; }
 header .menu-area .open-btn.on ~ .menu-box { display: block; }
-header .menu-area .menu-box { display: none; position: absolute; left: 0; right: 0; top: 116px; min-height: 400px; padding: 25px 0 77px; z-index: 100; }
+header .menu-area .menu-box { display: none; position: absolute; left: 0; right: 0; top: 116px; min-height: 400px; padding: 25px 0 77px; z-index: 100; padding: 40px 20px 0 20px }
 header .menu-area .menu-box::before { content: ""; position: absolute; left: -9999px; top: 0; right: -9999px; bottom: 0; background: #fff; border-bottom: 1px solid #DDDDDD; z-index: 1; }
-header .menu-area .menu-box > .close-btn { position: absolute; right: 3px; top: -74px; width: 27px; height: 27px; background: url(../../images/biz2/ic_gnb_close.png) no-repeat 0 0; }
+header .menu-area .menu-box > .close-btn { position: absolute; right: 20px; top: -74px; width: 27px; height: 27px; background: url(../../images/biz2/ic_gnb_close.png) no-repeat 0 0; }
 header .menu-area .menu-box .link-group { display: flex; position: relative; z-index: 10; justify-content: space-between;}
 header .menu-area .menu-box .link-group:not(.login) { justify-content: space-between; }
 header .menu-area .menu-box .link-group:not(.login) li {width: 200px;}
 header .menu-area .log-info {display: flex; align-items: center; gap: 8px; font-size: 14px;}
 header .menu-area .log-info-txt {font-weight: 500;}
 header .menu-area .menu-box .link-group li { display: flex; flex-direction: column; width: 100%; max-width: 200px;}
-
 header .menu-area .menu-box .link-group li > .tit { display: block; font-size: 24px; line-height: 27px; font-weight: bold; color: #000; }
 header .menu-area .menu-box .link-group li .link-item { display: flex; flex-direction: column; margin-top: 31px; }
 header .menu-area .menu-box .link-group li .link-item a { font-size: 19px; font-weight: 500; line-height: 48px; white-space: nowrap; color: #000; }
 header .menu-area .menu-box .link-group li .link-item a:hover { color: #00ADB2; text-decoration: underline; font-weight: bold; }
 header .menu-area .menu-box .link-group li .link-item a.disabled-link:hover {color: darkgray;} 
+
+/* 모바일 GNB */
+.sm-menu-box {display: none;}
+.sm-menu-box .sm-menu-header {height: 58px; display: flex; align-items: center; border-bottom: 1px solid var(--gray-30-d8); padding: 0 20px; font-size: 18px;}
+.sm-menu-box .sm-menu-header .ico.user::before {width: 28px; height: 28px; background: url(../../images/biz2/ico/ico_user_info.svg) no-repeat center; margin-right: 4px;}
+.sm-menu-box .sm-menu-header {display: flex; align-items: center; justify-content: space-between ;}
+.sm-menu-box .sm-menu-body .sm-sub-menu {padding: 20px;}
+.sm-menu-box .sm-menu-body .sm-sub-menu + .sm-sub-menu {border-top: 1px solid var(--gray-30-d8);}
+.sm-menu-box .sm-menu-body .sm-menu-tit {font-size: 26px; font-weight: bold; margin-bottom: 10px; display: block;}
+.sm-menu-box .sm-menu-body .sm-sub-list > li {font-size: 22px;}
+.sm-menu-box .sm-menu-body .sm-sub-list > li + li {margin-top: 4px;}
+.sm-menu-box .sm-close.ico::before {width: 24px; height: 24px; background: url(../../images/biz2/ic_pop_close.svg) no-repeat center; }
+header .open-btn.sm-on ~ .sm-menu-box {display: block; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #EDF0F7; overflow: hidden; overflow-y: auto; z-index: 999;}
+
 
 /* body container */
 .container { position: relative; padding-bottom: 80px; padding-top: 80px; }
@@ -70,14 +81,13 @@ footer .favorite-content .link-area:first-child .open-btn { border-left: 1px sol
 footer .favorite-content .link-area .open-btn { width: 320px; height: 56px; padding-left: 20px; border-right: 1px solid #d8d8d8; text-align: left; font-size: 17px; font-weight: 500; color: #000; background: url(../../images/biz2/ic_link_plus.png) no-repeat right 28px center; }
 footer .info-content { display: flex; flex-direction: column; position: relative; padding: 42px 0 41px; }
 footer .info-content::before { content: ""; position: absolute; top: 0; bottom: 0; left: -9999px; right: -9999px; background: #F2FBFC; border-top: 1px solid #D8D8D8; }
-footer .info-content .ui-select { font-weight: 700; position: absolute; right: 0; top: 118px; width: 240px; height: 50px; padding: 0 20px; border-radius: 10px; border-color: #CACACA; background: #fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 20px center; }
+footer .info-content .ui-select {color: var(--text-primary-00);  font-weight: 700; position: absolute; right: 0; top: 118px; width: 240px; height: 50px; padding: 0 20px; border-radius: 10px; border-color: #CACACA; background: #fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 20px center; }
 footer .info-content .footer-logo { position: relative; width: 192px; height: 51px; background: url(../../images/biz2/footer_logo.png) no-repeat 0 0; }
 footer .info-content address { position: relative; margin-top: 23px; font-size: 17px; font-weight: 500; line-height: 30px; color: #000; }
 footer .info-content address > span { display: flex; font-size: 17px; line-height: 27px; font-weight: 500; color: #000000; }
 footer .info-content address > span.txt span + span { margin-left: 8px; }
 footer .info-content address > span.tel { margin-top: 4px; }
-footer .info-content address > span.tel span + span { margin-left: 7px; }
-footer .info-content address > span.tel { font-weight: bold; }
+footer .info-content address > span.tel span + span { margin-left: 11px; }
 footer .info-content .link-area { position: relative; margin-top: 25px; border-top: 1px solid #d8d8d8; padding: 15px 0 0 0; }
 footer .info-content .link-area .link-box { display: flex; column-gap: 26px; }
 footer .info-content .link-area .link-box a { font-size: 17px; font-weight: 500; line-height: 27px; color: #000; }
@@ -85,4 +95,22 @@ footer .info-content .link-area .link-box a.on { font-weight: bold; color: #0036
 footer .info-content .link-area .copy { display: block; margin-top: 11px; font-size: 17px; font-weight: 500; line-height: 27px; color: #000; }
 footer .info-content .link-area .support-box { display: flex; column-gap: 22px; position: absolute; right: 0; bottom: 0; }
 
+/* PC용 footer 관련 사이트 셀렉트 (* 접두어 lg) */
+footer .info-content .family-select-wrap {position: absolute; right: 0; top: 118px; z-index: 1;}
+footer .info-content .family-select-lg {color: var(--text-primary-00); }
+footer .info-content .family-select-lg  > button {font-weight: 700; width: 240px; height: 50px; padding: 0 20px; border: 1px solid #c5c5c5;  background: #fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 20px center; border-radius: 10px;}
+footer .info-content .family-select-lg > button {font-size: 20px;}
+footer .info-content .family-select-lg .family-site-list {font-size: 18px; border-radius: 10px; padding-top: 20px; padding-bottom: 20px; height: 432px; overflow-y: auto;}
+footer .info-content .family-select-lg .family-site-list::-webkit-scrollbar {width: 4px;}
+footer .info-content .family-select-lg .family-site-list::-webkit-scrollbar-thumb {background: #d9d9d9; border-radius: 10px;}
+footer .info-content .family-select-lg .family-site-list > li > a {padding: 0 20px; line-height: 48px; font-size: 15px; font-weight: 700;}
+footer .info-content .family-select-lg .family-site-list > li > a:hover {background: var(--primary-color); color: var(--white);}
 
+
+/* PC용 footer 관련 사이트 셀렉트 (* 접두어 sm) */
+footer .family-select-sm {display: none;}
+footer .family-select-sm {width: 100vw; margin-left: calc(-50vw + 50%); padding: 0 20px; border: 1px solid #d8d8d8; position: relative;}
+footer .family-select-sm > button {height: 56px; font-size: 20px; font-weight: 700;}
+footer .family-select-sm > button::after {content : ''; display: inline-block; vertical-align: middle; width: 20px; height: 20px; border: 1px solid blue;}
+footer .family-select-sm .family-site-list {padding: 0 20px; padding-top: 12px; padding-bottom: 12px;}
+footer .info-content .family-select-lg > button.is-open {background: #fff url(../../images/biz2/ic_arrow_big_top.png) no-repeat right 20px center;}

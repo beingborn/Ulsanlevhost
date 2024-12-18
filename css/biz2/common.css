@@ -48,6 +48,9 @@
 .txt-gray55 {color: var(--gray-70-55);}
 .txt-gray66 {color: #666666;}
 .txt-grayb5 {color: #b5b5b5;}
+/* txt font-weight */
+.txt-bold {font-weight: 700;}
+.txt-thin {font-weight: 300;}
 
 /* white-space */
 .wh-nowrap {white-space: nowrap;}
@@ -68,7 +71,7 @@
 .mt-0 {margin-top: 0!important;}
 
 /* width style */
-.w-100 {width: 100%;}
+.w-100 {width: 100% !important;}
 .mw-140 {max-width: 140px;}
 
 /* height */
@@ -89,7 +92,6 @@
 .flex-acjc {display: flex; align-items: center; justify-content: center;}
 .il-flex-ac {display: inline-flex; align-items: center;}
 .flex-je {display: flex; justify-content: end;}
-
 .hidden {display: none;}
 
 

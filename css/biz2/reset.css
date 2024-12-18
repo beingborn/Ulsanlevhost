@@ -55,13 +55,15 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, button {
+time, mark, audio, video, button , select , input , textarea {
 	font-style: inherit;
 	padding: 0;
 	margin: 0;
 	border: 0;
 	outline: 0;
 	font-size: inherit;
+	font-family: inherit;
+	letter-spacing: -0.02em;
 }
 
 ul,ol,li {list-style: none;}
@@ -83,12 +85,11 @@ a[href^=tel] { font-style: normal;}
  /* input */
 input[type=number], input[type=file], input[type=date], 
 input[type=tel], input[type="text"], input[type="password"], 
-input[type="search"], input[type="email"], textarea {
+input[type="search"], input[type="email"], textarea, option {
 	height: 56px;
 	background: #fff;
 	border: 1px solid var(--gray-30-d8);
 	padding: 0 16px;
-
 	font-size: inherit;
 }
 
