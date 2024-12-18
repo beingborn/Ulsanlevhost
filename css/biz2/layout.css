@@ -97,15 +97,8 @@ footer .info-content .link-area .support-box { display: flex; column-gap: 22px; 
 
 /* PC용 footer 관련 사이트 셀렉트 (* 접두어 lg) */
 footer .info-content .family-select-wrap {position: absolute; right: 0; top: 118px; z-index: 1;}
-footer .info-content .family-select-lg {color: var(--text-primary-00); }
-footer .info-content .family-select-lg  > button {font-weight: 700; width: 240px; height: 50px; padding: 0 20px; border: 1px solid #c5c5c5;  background: #fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 20px center; border-radius: 10px;}
-footer .info-content .family-select-lg > button {font-size: 20px;}
-footer .info-content .family-select-lg .family-site-list {font-size: 18px; border-radius: 10px; padding-top: 20px; padding-bottom: 20px; height: 432px; overflow-y: auto;}
-footer .info-content .family-select-lg .family-site-list::-webkit-scrollbar {width: 4px;}
-footer .info-content .family-select-lg .family-site-list::-webkit-scrollbar-thumb {background: #d9d9d9; border-radius: 10px;}
-footer .info-content .family-select-lg .family-site-list > li > a {padding: 0 20px; line-height: 48px; font-size: 15px; font-weight: 700;}
-footer .info-content .family-select-lg .family-site-list > li > a:hover {background: var(--primary-color); color: var(--white);}
-
+footer .info-content .family-select-lg  > button {width: 240px;}
+footer .info-content .family-select-lg .family-site-list {height: 282px;}
 
 /* PC용 footer 관련 사이트 셀렉트 (* 접두어 sm) */
 footer .family-select-sm {display: none;}
@@ -113,4 +106,3 @@ footer .family-select-sm {width: 100vw; margin-left: calc(-50vw + 50%); padding:
 footer .family-select-sm > button {height: 56px; font-size: 20px; font-weight: 700;}
 footer .family-select-sm > button::after {content : ''; display: inline-block; vertical-align: middle; width: 20px; height: 20px; border: 1px solid blue;}
 footer .family-select-sm .family-site-list {padding: 0 20px; padding-top: 12px; padding-bottom: 12px;}
-footer .info-content .family-select-lg > button.is-open {background: #fff url(../../images/biz2/ic_arrow_big_top.png) no-repeat right 20px center;}

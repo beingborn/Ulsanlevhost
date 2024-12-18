@@ -119,11 +119,17 @@ table td{color:var(--text-sub-33)}
 .com-paging button.next::after{content:"";display:inline-block;width:20px;height:20px;vertical-align:middle;background:url(../../images/biz2/ico/paging_arrow.svg) no-repeat center;transform:rotate(180deg);margin-top:-2px; }
 
 /* custom select 공통 */
-.custom-select-list {display: none}
-.custom-select-open {display: flex; align-items: center; justify-content: space-between; width: 100%}
+.custom-select-box {color: var(--text-primary-00);}
+.custom-select-list {display: none; border-radius: 10px; padding-top: 10px; padding-bottom: 10px; overflow-y: auto;}
+.custom-select-list > li > a {display: block; line-height: 36px; font-size: 15px; font-weight: 500; padding: 0 16px;}
+.custom-select-list > li > a:hover {background: var(--primary-color); color: var(--white);}
+button.custom-select-open {display: flex; align-items: center; justify-content: space-between; padding: 0 16px; width: 100%; font-weight: 700; height: 44px; font-size: 16px; border: 1px solid var(--gray-30-d8);  background: #fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 16px center; border-radius: 10px;}
+button.custom-select-open.is-open {background: #fff url(../../images/biz2/ic_arrow_big_top.png) no-repeat right 16px center;}
+/* custom select 오픈 스타일 */
 .custom-select-box.is-open {position: relative}
 .custom-select-box.is-open .custom-select-list {display: block; position: absolute; z-index: -1; width: 100%; left: 0; bottom: calc(100% - 11.5px); background: #fff; border: 1px solid #c5c5c5}
-.custom-select-list > li > a {display: block}
+.custom-select-box.is-open .custom-select-list::-webkit-scrollbar {width: 12px; height: 70px;}
+.custom-select-box.is-open .custom-select-list::-webkit-scrollbar-thumb {background: #e4e4e4; border: 3px solid transparent; background-clip: padding-box; border-radius: 6px;}
 
 /* sub */
 /* IIP_001 사용기관 공지사항 */
