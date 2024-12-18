@@ -681,6 +681,6 @@ hr+.auth-area{margin-top:80px}
 .fixed-quick {padding:10px 10px 20px 10px;  border-radius:18px; border:1px solid var(--gray-30-d8); position:absolute; top:44px; right:-110px; width:100px; background:var(--white)}
 .fixed-quick > ul {display:flex; flex-direction:column; gap:24px; align-items:center; text-align:center}
 .fixed-quick li > a::before {content:''; display:inline-block; width:80px; height:80px; border:1px solid var(--gray-30-d8); border-radius:16px}
-.fixed-quick li > a {display:flex; flex-direction:column; gap :4px; line-height:27px; font-size:16px; font-weight:500; align-items:center; letter-spacing:-0.8px}
+.fixed-quick li > a {display:flex; flex-direction:column; gap :4px; line-height:27px; font-size:16px; font-weight:700; align-items:center; letter-spacing:-0.8px}
 .fixed-quick li.issue-info > a::before {background:url(../../images/biz2/ic_fixed_1.png) no-repeat center center}
 .fixed-quick li.nle-agency > a::before {background:url(../../images/biz2/ic_fixed_2.png) no-repeat center center}

@@ -44,6 +44,9 @@
 }
 
 @media only screen and (max-width:1080px){
+	/* 임시 보고용 구분 텍스트 */
+	.temp-page-txt {display: none;} 
+
 	/* LMP_001 지자체 메인 상단 */
 	.main-cont{flex-direction:column}
 	.main-info-left{width:100%}
@@ -67,7 +70,11 @@
 	header .multi-logo-area a:nth-child(1):after{display:none}
 	header .multi-logo-area a:nth-child(2){padding-left:0}
 	header .multi-logo-area a:nth-child(2) > img{width:90px;height:24px}
-	
+	header .menu-area .log-info {display: none;}
+
+	/* 푸터 공통 */
+	footer .info-content address > span.txt span + span {margin-left: 2px;}
+	footer .info-content address > span.tel span + span {margin-left: 2px;}
 	/* 컨텐츠 공통 */
 	.container{padding:20px 20px 28px}
 	.top-info-group{margin-top:40px}
