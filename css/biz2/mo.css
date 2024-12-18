@@ -49,9 +49,6 @@
 	/* 임시 보고용 구분 텍스트 */
 	.temp-page-txt {display: none;} 
 
-	/* html */
-	html {width: 100%;}
-
 	/* LMP_001 지자체 메인 상단 */
 	.main-cont{flex-direction:column}
 	.main-info-left{width:100%}
@@ -126,7 +123,9 @@
 	.steps li.active .step06::before{background-position:-535px -107px}
 	.steps li.active .step07::before{background-position:-643px -107px}
 
-	.btns-bottom{margin-top:40px}
+	hr{margin:40px 0}
+
+	.btns-bottom{max-width:100%;margin-top:40px}
 	.btns-bottom a, 
 	.btns-bottom button{height:48px;padding:10px;font-size:20px}
 
@@ -152,7 +151,18 @@
 	.auth-area-in button:not(.simple)::before{width:56px}
 
 	.basic-info input[type=number]{flex:calc(100% - 20px)}
-		
+
+	/* 우수이용자 신청 완료 */
+	.complete-area{margin-top:0}
+	.complete-wrap::before{margin-bottom:40px}
+	.complete-wrap strong{font-size:24px}
+
+	/* LAM 평생교육이용권 신청 */
+	.agree-box{padding:20px 16px}	
+	.agree-box .agree{gap:12px}
+	.agree-box .agree-radio{flex-wrap:wrap;padding:16px;gap:16px}
+	.agree-box .agree + .agree{padding-top:26px}
+	.asterisk-list .agree-btn{display:block;margin-top:8px;margin-left:-21px}
 
 	/* 푸터 공통 */
 	footer .info-content{padding:20px 0}

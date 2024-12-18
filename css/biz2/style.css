@@ -320,7 +320,7 @@ button.custom-select-open.is-open {background: #fff url(../../images/biz2/ic_arr
 .agree-box .radio-box label{ flex:auto;color:var(--black-90-1d)}
 .agree-box .radio-box label:not(:last-of-type){margin-right:16px}
 .agree-box .agree-tit{font-size:22px}
-.agree-box .agree-btn{border:1px solid var(--gray-30-d8);color:#666666;border-radius:8px;max-width:84px;height:44px}
+.agree-btn{border:1px solid var(--gray-30-d8);color:#666666;border-radius:8px;max-width:84px;height:44px}
 
 /* LCP_002 본인인증 */
 .auth-area-in{gap:30px}
@@ -388,13 +388,12 @@ button.custom-select-open.is-open {background: #fff url(../../images/biz2/ic_arr
 .use-ticket .border-box .ordered-list li+li{margin-top:4px}
 
 /* ILP_002 이용권 사용기관 신청_본인인증 */
-.steps{margin-bottom:80px}
 .steps.flex-ac{justify-content:space-between}
-.steps li{color:var(--text-sub-33);text-align:center}
+.steps li{position: relative; color:var(--text-sub-33);text-align:center}
 .steps li span{display:block;font-size:16px}
 .steps li strong{font-size:20px}
 .steps li.active strong{color:var(--primary-color-600)}
-.steps li.step-arrow{margin-top:-50px}
+.steps li.step-arrow{margin-top:50px}
 .steps li span::before{content:"";display:block;width:130px;height:130px;margin-bottom:5px;background:url(../../images/biz2/ico/sp_ico_steps.png) no-repeat 0 0}
 .steps .step02::before{background-position:-170px 0}
 .steps .step03::before{background-position:-340px 0}
@@ -402,6 +401,7 @@ button.custom-select-open.is-open {background: #fff url(../../images/biz2/ic_arr
 .steps .step05::before{background-position:-680px 0}
 .steps .step06::before{background-position:-850px 0}
 .steps .step07::before{background-position:-1020px 0}
+.steps .step08::before{background-position:-1190px 0}
 /* 활성화 */
 .steps li.active .step01::before{background-position:0 -170px}
 .steps li.active .step02::before{background-position:-170px -170px}
@@ -410,8 +410,12 @@ button.custom-select-open.is-open {background: #fff url(../../images/biz2/ic_arr
 .steps li.active .step05::before{background-position:-680px -170px}
 .steps li.active .step06::before{background-position:-850px -170px}
 .steps li.active .step07::before{background-position:-1020px -170px}
+.steps li.active .step08::before{background-position:-1190px -170px}
 /* 비활성화 */
 .steps li.disabled{opacity:.5}
+
+hr{margin:80px 0;border: 0; border-bottom: 4px solid #D8D8D8}
+
 /* 생년월일 숨김표시 */
 #secure-value{padding-left:16px;margin-left:10px;letter-spacing:8px}
 
@@ -451,11 +455,8 @@ p.bullet,
 .complete-wrap .mssg{margin-top:40px}
 
 /* ILP_030 사용기관 신청 현황_수정 */
-.steps.flex-acjc{gap:32px}
+.steps.flex-acjc{align-items: inherit;gap:32px}
 .input-group .filebox .fixed-width{width:400px}
-
-/* LAP_001 우수이용자 신청 */
-hr+.auth-area{margin-top:80px}
 
 /* LAP_003 우수이용자 신청 */
 .asterisk-list{margin-top:20px;font-size:18px;color:var(--text-sub-33)}
@@ -476,6 +477,9 @@ hr+.auth-area{margin-top:80px}
 
 /* IIP_153 교육결과 관리 */
 .course-info .fixed-width{width:calc(50% - 120px)}
+
+/* LAP_101 평생교육이용권 신청 2단계_본인인증 */
+.asterisk-list .agree-btn{padding: 10px;margin-left: 3px;font-size: 16px;color:var(--text-primary-00)}
 
 
 /* ILP_024 이용권 사용기관 신청 > 사용기관 정보보안 서약서 팝업 */
