@@ -56,7 +56,7 @@ header .menu-area .menu-box .link-group li .link-item a.disabled-link:hover {col
 .sm-menu-box .sm-menu-body .sm-sub-list > li {font-size: 22px;}
 .sm-menu-box .sm-menu-body .sm-sub-list > li + li {margin-top: 4px;}
 .sm-menu-box .sm-close.ico::before {width: 24px; height: 24px; background: url(../../images/biz2/ic_pop_close.svg) no-repeat center; }
-header .open-btn.sm-on ~ .sm-menu-box {display: block; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #EDF0F7; overflow: hidden; overflow-y: auto; z-index: 999;}
+header .open-btn.sm-on ~ .sm-menu-box {display: block; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #EDF0F7; overflow: hidden; overflow-y: auto; z-index: 999;}
 
 
 /* body container */
