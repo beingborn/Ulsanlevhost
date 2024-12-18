@@ -19,7 +19,7 @@
 /* header style */
 header { display: flex; align-items: center; justify-content: space-between; position: relative; height: 116px;  max-width: 1320px; margin: 0px auto; padding:0 20px;}
 header::after { content: ""; position: absolute; left: -9999px; right: -9999px; bottom: 0; height: 1px; background: #d8d8d8; }
-header .logo-area { display: flex;}
+header .logo-area { display: flex; align-items: center;}
 /* 로고가 여러개일 경우 */
 header .multi-logo-area a:nth-child(1){position: relative; padding-right: 20px;}
 header .multi-logo-area a + a {padding-left: 20px;}
