@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css js inject -->
+    <link rel="stylesheet" href="../css/biz2/reset.css">
+    <link rel="stylesheet" href="../css/biz2/common.css">
+    <link rel="stylesheet" href="../css/biz2/layout.css">
+    <link rel="stylesheet" href="../css/biz2/main.css">
+    <link rel="stylesheet" href="../css/biz2/style.css">
+    <link rel="stylesheet" href="../css/biz2/mo.css">
+    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
+    <script src="../js/biz2/jquery.1.8.2.min.js"></script>
+    <script src="../js/biz2/swiper-bundle.min.js"></script>
+    <script src="../js/biz2/script.js"></script>
+    <title>울산광역시 평생교육이용원</title>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="IMP_002.html">
+                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+            </a>
+        </div>
+        <div class="menu-area">
+            <!-- 로그인 시 -->
+            <a href="#" class="log-info">
+                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
+                <span class="log-info-txt">로그아웃</span>
+            </a>
+            <button class="open-btn">
+                <span class="blind">메뉴 열기</span>
+            </button>
+            <div class="menu-box">
+                <ul class="link-group login">
+                    <li>
+                        <span class="tit">사업안내</span>
+                        <div class="link-item">
+                            <a href="IGP_001.html">평생교육이용권이란?</a>
+                            <a href="IGP_001.html">평생교육이용권 사용하기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">이용권 사용기관</span>
+                        <div class="link-item">
+                            <a href="ILP_001.html">사용기관 신청</a>
+                            <a href="IIP_800.html">사용기관 신청 현황</a>
+                            <a class="hidden" href="#">이용권 사용내역</a>
+                            <a href="#">교육결과 관리</a>
+                            <a class="hidden" href="#">교육과정 정보</a>
+                            <a class="hidden" href="#">학습자 정보</a>
+                            <a href="IIP_400.html">기관 정보 수정</a>
+                            <a class="hidden" href="#">사용기관 연수</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">게시판</span>
+                        <div class="link-item">
+                            <a href="IIP_001.html">공지사항</a>
+                            <a href="INP_100.html">자료실</a>
+                            <a href="INP_200.html">자주하는질문</a>
+                            <a href="INP_200.html">질의응답</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="close-btn">
+                    <span class="blind">메뉴 닫기</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="top-location">
+        <div class="top-location-area wrap">
+            <span class="home"><span class="blind">홈</span></span>
+            <div class="location-box">
+                <span class="arrow">이용권 사용기관</span>
+                <span class="arrow">이용권 사용기관 신청</span>
+            </div>
+        </div>
+    </div>
+    <div class="container wrap">
+        <div class="page-header">
+            <h2 class="page-header-tit">평생교육이용권 신청</h2>
+            <p class="page-header-desc">평생교육이용권 이용을 위한 사용기관 신청 화면입니다.</p>
+        </div>
+
+        <ul class="steps flex-acjc">
+            <li class="lg-only">
+                <span class="step01">1단계</span>
+                <strong>약관동의</strong>
+            </li>
+            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="lg-only">
+                <span class="step02">2단계</span>
+                <strong>본인인증 및<br>자격검증</strong>
+            </li>
+            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="active">
+                <span class="step03">3단계</span>
+                <strong>신청서 작성</strong>
+            </li>
+            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled"> 
+                <span class="step08">4단계</span>
+                <strong>이용자 서약</strong>
+            </li>
+            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
+                <span class="step06">5단계</span>
+                <strong>신청완료</strong>
+            </li>
+        </ul>
+
+        <hr>
+
+        <div class="top-info-group">
+            <h3>신청정보</h3>
+        </div>
+        <div class="com-write-table">
+            <table class="basic-info">
+                <caption>신청정보 입력란</caption>
+                <colgroup>
+                    <col style="width: 200px;">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th class="txt-l must-type">
+                            <label for="a">이름</label>
+                        </th>
+                        <td>
+                            <input type="text" id="a" class="fixed-value" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type">
+                            <label for="b">주민등록번호</label>
+                        </th>
+                        <td>
+                            <div class="flex-ac gap-10 fixed-value">
+                                <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" readonly>
+                                -
+                                <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" readonly>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type">
+                            <label for="f">신청 지역</label>
+                        </th>
+                        <td>
+                            <input type="text" id="f" class="fixed-value" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type">
+                            <label for="d">이용권 유형</label>
+                        </th>
+                        <td>
+                            <input type="text" id="d" class="fixed-value" readonly>
+                        </td>
+                    </tr>
+                    <tr class="address">
+                        <th class="txt-l must-type"><label for="e">주소</label></th>
+                        <td class="input-group space">
+                            <div class="flex-ac">
+                                <input type="text" id="e" class="fixed-width">
+                                <button type="button" class="btns bg-blue">주소검색</button>
+                            </div>
+                            <p class="flex-ac"><input type="text" class="fixed-value"></p>
+                            <p class="flex-ac"><input type="text" class="fixed-value"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type"><label for="tel">휴대전화번호</label></th>
+                        <td class="input-group space">
+                            <div class="flex-ac">
+                                <div class="input-num">
+                                    <select id="tel">
+                                        <option value="none">선택</option>
+                                        <option value="1">2</option>
+                                        <option value="1">3</option>
+                                        <option value="1">4</option>
+                                    </select>
+                                    <span class="lg-only">-</span>
+                                    <div class="tel-num flex-ac">
+                                        <input type="tel" title="전화번호 중간자리">
+                                        -
+                                        <input type="tel" title="전화번호 끝자리">
+                                    </div>
+                                </div>
+                                <button type="button" class="btns bg-blue">휴대번호 인증</button>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th class="txt-l"><label for="email">전자우편주소</label></th>
+                        <td class="input-group space">
+                            <div class="flex-ac">
+                                <div class="flex-ac">
+                                    <input type="text" id="email" class="email-id">
+                                    @
+                                    <div class="flex-ac">
+                                        <input type="text" class="email">
+                                        <select>
+                                            <option value="none">직접입력</option>
+                                            <option value="1">2</option>
+                                            <option value="1">3</option>
+                                            <option value="1">4</option>
+                                        </select> 
+                                    </div>
+                                </div>                              
+                            </div>                         
+                        </td>                            
+                    </tr>
+                    <tr>
+                        <th class="txt-l">결과 통지방법</th>
+                        <td>결과통지는 지자체에서 별도로 합니다.</td>                                    
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="asterisk-list">
+                <li>※ 연락두절로 인한 불이익이 없도록 연락이 가능한 휴대전화번호, 이메일 주소 등을 필히 확인 후 신청</li>
+                <li>※ 회원정보 오기재, 미수정, 수신거부, 수신 불가 기종 등으로 인한 미수신은 책임지지 않음</li>
+                <li>※ 추후 휴대전화번호 등이 변경될 경우 평생교육이용권 홈페이지 [개인정보 수정] 메뉴를 통한 수정 필수</li>
+            </ul>
+        </div>
+        <div class="top-info-group">
+            <h3>회원가입</h3>
+            <small>회원가입 동의 시<em class="color-red">*</em> 는 필수사항입니다.</small> 
+        </div>
+        <div class="com-write-table">
+            <table class="basic-info">
+                <caption>회원가입 정보 입력란</caption>
+                <colgroup>
+                    <col style="width: 200px;">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th class="txt-l must-type">회원가입 동의여부</th>
+                        <td>
+                            <div class="chk-box">
+                                <input type="checkbox" id="chk-5">
+                                <label for="chk-5">가입동의</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type"><label for="id">회원 아이디</label></th>
+                        <td class="input-group">
+                            <div class="flex-ac">
+                                <input type="text" placeholder="영문(소문자)/숫자 조합 5~10자리" id="id" class="fixed-value">
+                                <button type="button" class="btns bg-blue">중복확인</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type"><label for="pw">비밀번호</label></th>
+                        <td>
+                            <input type="password" placeholder="영문(소문자)/숫자/특수문자 조합 9~16자리" id="pw" class="fixed-value">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type"><label for="pw1">비밀번호 확인</label></th>
+                        <td>
+                            <input type="password" placeholder="영문(소문자)/숫자/특수문자 조합 9~16자리" id="pw1" class="fixed-value">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="asterisk-list">
+                <li>※ 개인정보 수집 · 이용(선택)에 동의한 경우만 회원가입 가능</li>
+                <li>※ 신청 내역 확인, 이용권 카드관리 및 학습결과 관리 등 부가서비스 이용 시 회원가입 필요</li>
+            </ul>
+        </div>        
+        <div class="top-info-group">
+            <h3>평생학습계좌 연계</h3>
+        </div>
+        <div class="agree-box learning">
+            <h5 class="agree-tit">평생학습계좌에 평생교육이용권 사용 결과를 등록하시겠습니까?</h5>
+            <div class="agree-radio">
+                <div class="radio-box">
+                    <input type="radio" id="agree1" name="agree" value="yes">
+                    <label for="agree1">예</label>
+                    <input type="radio" id="agree2" name="agree" value="no">
+                    <label for="agree2">아니오</label>
+                </div>                
+            </div>
+            <ul class="bullet-list">
+                <li>평생교육이용권 사용 결과는 평생학습계좌를 활용하여 관리하실 수 있습니다.</li>
+                <li>평생학습계좌번호가 없으신 분은 평생학습계좌제 홈페이지 <em class="color-primary-1c">www.all.go.kr</em> 에서도 등록하실 수 있습니다.</li>
+            </ul>
+        </div>
+        <div class="top-info-group">
+            <h3>학습계획서 등록</h3>
+        </div>
+        <div class="agree-box learning">
+            <h5 class="agree-tit">학습계획서를 등록하시겠습니까?</h5>
+            <button type="button" class="btn-bd blue small">학습계획서 등록</button>
+            <p class="bullet">평생교육이용권 사업에서는 학습계획서 등록 시 이용권 이용자 우선 선발하고 있습니다.</p>
+        </div>
+        <div class="btns-bottom">
+            <a href="javascript:;" class="btn-bd green">이전</a>
+            <a href="javascript:;" class="btns">다음</a>
+        </div>
+    </div>
+    <footer class="wrap">
+        <div class="info-content">
+            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
+            <address>
+                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
+                <span class="tel"><span>대표전화</span><span>1600-3005 (평일 09시~18시)</span></span>
+            </address>
+            <select class="ui-select" title="관련 사이트 선택">
+                <option value="#">관련 사이트</option>
+            </select>
+            <div class="link-area">
+                <div class="link-box">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="on">개인정보처리방침</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">이메일무단수집거부</a>
+                </div>
+                <span class="copy">
+                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
+                    RESERVED.
+                </span>
+                <div class="support-box">
+                    <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                    <img src="../images/biz2/footer_link_2.png" alt="국가평생교육진흥원">
+                    <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    /* 20241216 이민혁 임시 새창 팝업 제어 스크립트 */
+    function modalPop(){
+        popup = window.open('ILP_023.html', '기관 조회 팝업', 'status=no, toolbar=no, menubar=no, resizable=1,')
+        popup.onload = function(){
+            // 팝업 높이 setting
+            let contentHeight = popup.document.querySelector('.new-window-content').scrollHeight;
+            let browserUiHeight = popup.outerHeight - popup.innerHeight;
+            let resizeHeight = contentHeight + browserUiHeight;
+            // 팝업 넓이 세팅
+            let contentWidth = popup.document.querySelector('.new-window-content').scrollWidth;
+            let browserUiWidth = popup.outerWidth - popup.innerWidth;
+            let resizeWidth = contentWidth + browserUiWidth;
+            // 브라우저 ui 높이 넓이를 뺀 값으로 리사이징
+            popup.resizeTo(resizeWidth ,resizeHeight)
+            // 브라우저 스크린 기준으로 중앙 정렬
+            let left = Math.ceil((window.screen.width - resizeWidth)/2);
+            let top = Math.ceil((window.screen.height - resizeHeight)/2);
+            popup.moveTo(left, top)
+        }
+    }
+</script>
+</html>

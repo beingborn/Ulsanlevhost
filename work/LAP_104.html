@@ -86,115 +86,51 @@
         </div>
 
         <ul class="steps flex-acjc">
-            <li>
+            <li class="lg-only">
                 <span class="step01">1단계</span>
                 <strong>약관동의</strong>
             </li>
-            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="active">
+            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="lg-only">
                 <span class="step02">2단계</span>
                 <strong>본인인증 및<br>자격검증</strong>
             </li>
-            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
+            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li>
                 <span class="step03">3단계</span>
                 <strong>신청서 작성</strong>
             </li>
-            <li class="step-arrow disabled lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled lg-only"> 
+            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="active"> 
                 <span class="step08">4단계</span>
                 <strong>이용자 서약</strong>
             </li>
-            <li class="step-arrow disabled lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled lg-only">
+            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="disabled">
                 <span class="step06">5단계</span>
                 <strong>신청완료</strong>
             </li>
         </ul>
 
         <hr>
-       
-        <div class="auth-area">
-            <div class="auth-area-in flex-ac">
-                <button class="ico simple">간편인증</button>
-                <button class="ico joint">공동인증서</button>
-                <button class="ico mo-auth">휴대폰인증</button>
-                <button class="ico i-pin">아이핀(i-pin)</button>
-            </div>
-        </div>
+
         <div class="top-info-group">
-            <h3>본인인증 정보</h3>
-        </div>
-        <div class="com-write-table resident-chk">
-            <table class="basic-info">
-                <caption>본인인증 정보 입력란</caption>
-                <colgroup>
-                    <col style="width: 200px;">
-                    <col>
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th class="txt-l">
-                            <label for="a">이름</label>
-                        </th>
-                        <td>
-                            <input type="text" id="a" class="fixed-value">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">
-                            <label for="b">주민등록번호</label>
-                        </th>
-                        <td>
-                            <div class="flex-ac gap-10 fixed-value">
-                                <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                                -
-                                <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <ul class="asterisk-list">
-                <li>※ 본인인증 불가 시 대체 인증방법 <strong>[게시판-공지사항 185번] 참고</strong> <button type="button" class="agree-btn">바로보기</button></li>
-                <li>※ 이수결과는 강의를 수강한 사용기관에서 등록하므로 해당 사용기관에 확인 필요</li>
-            </ul>
-        </div>
-        <div class="com-write-table birth-chk">
-            <table>
-                <caption>신청정보 입력란</caption>
-                <colgroup>
-                    <col style="width: 200px;">
-                    <col>
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th class="txt-l">
-                            <label for="c">이름</label>
-                        </th>
-                        <td>
-                            <input type="text" id="c" class="mw-set" style="--mw-set: 560px">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">
-                            <label for="d">생년월일</label>
-                        </th>
-                        <td>
-                            <div class="flex-ac gap-10 mw-set" style="--mw-set: 560px">
-                                <div>
-                                    <input type="number" id="d" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                                </div>
-                                -
-                                <div class="flex-ac">
-                                    <input type="password" id="e" maxlength="1" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                                    <span id="secure-value"></span>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <h3>확약동의서</h3>
+        </div> 
+        <div class="agree-box">
+            <div class="agree">
+                <h5 class="agree-tit">평생교육이용권 신청을 위한 필수사항 및 이용자 준수사항 확인에 대한 확약동의서에 동의하시겠습니까?</h5>
+                <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-1]').show();">내용보기</button>
+                <div class="agree-radio">
+                    <span>확약동의서에 대한 안내 사항을 읽고 동의합니다.</span>
+                    <div class="radio-box">
+                        <input type="radio" id="agree1" name="agree1" value="no">
+                        <label for="agree1">동의안함</label>
+                        <input type="radio" id="agree2" name="agree1" value="yes">
+                        <label for="agree2">동의함</label>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="btns-bottom">
             <a href="javascript:;" class="btn-bd green">이전</a>

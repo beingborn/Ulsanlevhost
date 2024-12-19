@@ -180,7 +180,7 @@
 .com-write-table table { width: 100%; border-top: 1px solid var(--gray-30-d8)}
 .com-write-table table th {background: var(--gray-05-f8);  border-bottom: 1px solid var(--gray-30-d8); font-weight: bold; padding-left: 30px;}
 .com-write-table table th:last-child { border-right: 0;}
-.com-write-table table td {padding: 13px 20px; border-right: 1px solid var(--gray-30-d8); border-bottom: 1px solid var(--gray-30-d8); font-weight: 500; text-align: left;}
+.com-write-table table td {height: 76px; padding: 13px 20px; border-right: 1px solid var(--gray-30-d8); border-bottom: 1px solid var(--gray-30-d8); font-weight: 500; text-align: left;}
 .com-write-table table td:last-child { border-right: 0; }
 
 .com-write-table table td .input-item { display: flex; align-items: center; margin-top: 20px; }

@@ -22,10 +22,10 @@ select{color:#8e8e8e;font-size:18px;font-weight:500}
 .txt{font-size:20px;font-weight:500;color:var(--text-sub-33)}
 
 /* color 공통 */
-.color-primary{color:var(--primary-color-600)}
-.color-primary-1c{color:#1C8A90}
-.color-red{color:#F54141}
-.color-blue{color:#218CEF}
+.color-primary{color:var(--primary-color-600) !important}
+.color-primary-1c{color:#1C8A90 !important}
+.color-red{color:#F54141 !important}
+.color-blue{color:#218CEF !important}
 .bg-blue{background-color:#4C85BA !important}
 .bg-gray{background-color:#586377 !important}
 .bg-primary-600{background-color:var(--primary-color-600)!important}
@@ -35,9 +35,9 @@ select{color:#8e8e8e;font-size:18px;font-weight:500}
 .ico::after{content:"";display:inline-block;vertical-align:middle}
 
 /* display 공통 */
-.sm-show-800 {display: none}
-.v-hidden {visibility: hidden!important}
-.v-hide {display: none!important}
+.sm-show-800 {display:none}
+.v-hidden {visibility:hidden!important}
+.v-hide {display:none!important}
 
 /* button 공통 */
 .btns{display:inline-block;height:56px;padding:11px 16px 8px;border-radius:8px;background-color:var(--primary-color-600);color:var(--white);font-size:20px;letter-spacing:-0.4px} /* 20241211 이민혁 수정된 디자인 시스템따라 좌우 패딩 16px, letter spacing 추가 */
@@ -119,17 +119,17 @@ table td{color:var(--text-sub-33)}
 .com-paging button.next::after{content:"";display:inline-block;width:20px;height:20px;vertical-align:middle;background:url(../../images/biz2/ico/paging_arrow.svg) no-repeat center;transform:rotate(180deg);margin-top:-2px; }
 
 /* custom select 공통 */
-.custom-select-box {color: var(--text-primary-00);}
-.custom-select-list {display: none; border-radius: 10px; padding-top: 10px; padding-bottom: 10px; overflow-y: auto;}
-.custom-select-list > li > a {display: block; line-height: 36px; font-size: 15px; font-weight: 500; padding: 0 16px;}
-.custom-select-list > li > a:hover {background: var(--primary-color); color: var(--white);}
-button.custom-select-open {display: flex; align-items: center; justify-content: space-between; padding: 0 16px; width: 100%; font-weight: 700; height: 44px; font-size: 16px; border: 1px solid var(--gray-30-d8);  background: #fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 16px center; border-radius: 10px;}
-button.custom-select-open.is-open {background: #fff url(../../images/biz2/ic_arrow_big_top.png) no-repeat right 16px center;}
+.custom-select-box {color:var(--text-primary-00)}
+.custom-select-list {display:none; border-radius:10px; padding-top:10px; padding-bottom:10px; overflow-y:auto}
+.custom-select-list > li > a {display:block; line-height:36px; font-size:15px; font-weight:500; padding:0 16px}
+.custom-select-list > li > a:hover {background:var(--primary-color); color:var(--white)}
+button.custom-select-open {display:flex; align-items:center; justify-content:space-between; padding:0 16px; width:100%; font-weight:700; height:44px; font-size:16px; border:1px solid var(--gray-30-d8);  background:#fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 16px center; border-radius:10px}
+button.custom-select-open.is-open {background:#fff url(../../images/biz2/ic_arrow_big_top.png) no-repeat right 16px center}
 /* custom select 오픈 스타일 */
-.custom-select-box.is-open {position: relative}
-.custom-select-box.is-open .custom-select-list {display: block; position: absolute; z-index: -1; width: 100%; left: 0; bottom: calc(100% - 11.5px); background: #fff; border: 1px solid #c5c5c5}
-.custom-select-box.is-open .custom-select-list::-webkit-scrollbar {width: 12px; height: 70px;}
-.custom-select-box.is-open .custom-select-list::-webkit-scrollbar-thumb {background: #e4e4e4; border: 3px solid transparent; background-clip: padding-box; border-radius: 6px;}
+.custom-select-box.is-open {position:relative}
+.custom-select-box.is-open .custom-select-list {display:block; position:absolute; z-index:-1; width:100%; left:0; bottom:calc(100% - 11.5px); background:#fff; border:1px solid #c5c5c5}
+.custom-select-box.is-open .custom-select-list::-webkit-scrollbar {width:12px; height:70px}
+.custom-select-box.is-open .custom-select-list::-webkit-scrollbar-thumb {background:#e4e4e4; border:3px solid transparent; background-clip:padding-box; border-radius:6px}
 
 /* sub */
 /* IIP_001 사용기관 공지사항 */
@@ -389,7 +389,7 @@ button.custom-select-open.is-open {background: #fff url(../../images/biz2/ic_arr
 
 /* ILP_002 이용권 사용기관 신청_본인인증 */
 .steps.flex-ac{justify-content:space-between}
-.steps li{position: relative; color:var(--text-sub-33);text-align:center}
+.steps li{position:relative; color:var(--text-sub-33);text-align:center}
 .steps li span{display:block;font-size:16px}
 .steps li strong{font-size:20px}
 .steps li.active strong{color:var(--primary-color-600)}
@@ -414,7 +414,7 @@ button.custom-select-open.is-open {background: #fff url(../../images/biz2/ic_arr
 /* 비활성화 */
 .steps li.disabled{opacity:.5}
 
-hr{margin:80px 0;border: 0; border-bottom: 4px solid #D8D8D8}
+hr{margin:80px 0;border:0; border-bottom:4px solid #D8D8D8}
 
 /* 생년월일 숨김표시 */
 #secure-value{padding-left:16px;margin-left:10px;letter-spacing:8px}
@@ -455,11 +455,13 @@ p.bullet,
 .complete-wrap .mssg{margin-top:40px}
 
 /* ILP_030 사용기관 신청 현황_수정 */
-.steps.flex-acjc{align-items: inherit;gap:32px}
+.steps.flex-acjc{align-items:inherit;gap:32px}
 .input-group .filebox .fixed-width{width:400px}
 
 /* LAP_003 우수이용자 신청 */
+.asterisk,
 .asterisk-list{margin-top:20px;font-size:18px;color:var(--text-sub-33)}
+.asterisk,
 .asterisk-list li{padding-left:21px;text-indent:-21px}
 .asterisk-list li+li{margin-top:8px}
 
@@ -479,7 +481,37 @@ p.bullet,
 .course-info .fixed-width{width:calc(50% - 120px)}
 
 /* LAP_101 평생교육이용권 신청 2단계_본인인증 */
-.asterisk-list .agree-btn{padding: 10px;margin-left: 3px;font-size: 16px;color:var(--text-primary-00)}
+.asterisk-list .agree-btn{padding:10px;margin-left:3px;font-size:16px;color:var(--text-primary-00)}
+
+/* LAP_102 평생교육이용권 신청 2단계 */
+.available-tickets{border:1px solid #d8d8d8;border-top:2px solid #000}
+.available-tickets > li{display:flex;justify-content:space-between;align-items:center}
+.available-tickets > li+li{border-top:1px solid #d8d8d8}
+.available-tickets > li strong{width:24%; padding:20px;font-size:26px; text-align:center}
+.available-tickets > li .disc{width:61%;padding:20px}
+.available-tickets > li .disc .price-wrap{display:flex;align-items:center;gap:10px;margin-top:16px}
+.available-tickets > li .disc .price{font-size:22px;font-weight:700}
+.available-tickets > li .disc .box{padding:8px 16px;border:1px solid var(--gray-30-d8);border-radius:12px;background-color:var(--gray-05-f8); font-size:16px}
+.available-tickets > li .disc .bullet-list{margin-top:16px;color:var(--text-sub-33)}
+.available-tickets > li .disc .bullet-list li+li{margin-top:8px}
+.available-tickets > li .btns{margin:0 auto}
+.available-tickets .color-primary{font-size:22px}
+
+/* LAP_103 평생교육이용권 신청 3단계 */
+.agree-box.learning .agree-radio,
+.agree-box.learning .btn-bd{margin-top:28px}
+.agree-box.learning .bullet-list
+.agree-box.learning .bullet{margin-top:20px;font-size:18px}
+.agree-box.learning .bullet-list li+li{margin-top:8px}
+.agree-box.learning .radio-box label:not(:last-of-type){margin-right:80px}
+
+/* LAP_105 평생교육이용권 신청 완료 */
+.complete-wrap.border-box{padding:60px 40px}
+.complete-wrap.border-box::before{content:none}
+.complete-wrap.border-box+p{margin-top:20px}
+.complete-area+.page-header{margin-top:80px}
+table .total th{font-weight:500}
+table .total td{background-color:#E9F9FA}
 
 
 /* ILP_024 이용권 사용기관 신청 > 사용기관 정보보안 서약서 팝업 */
@@ -493,10 +525,6 @@ p.bullet,
 .layer-pop .layer-document-btm ul > li::before{content:'•';margin-right:10px;margin-top:1px}
 .layer-pop .layer-document-btm b{font-weight:500}
 .layer-document-btm .giver{text-align:center;font-weight:700;font-size:18px;margin-top:30px}
-
-
-
-
 
 /* full page layout (로그인 및 메인 사용)*/
 /* border */
@@ -615,7 +643,7 @@ p.bullet,
 .main-cont {display:flex; justify-content:space-between; position:relative; padding:40px 0}
 .main-cont::before {content:''; display:block; position:absolute; left:0; top:0; height:100%; width:100vw; margin-left:calc(-50vw + 50%); background:#27C2CB; z-index:-1}
 .main-info-left { width:calc(100% - 24.21875% - 20px); display:flex; flex-direction:column; gap:20px}
-.main-info-right {width: 24.21875%;}
+.main-info-right {width:24.21875%}
 /* 메인 타이틀 그룹 */
 .main-tit-group {display:flex; justify-content:space-between; align-items:center}
 .main-tit-group > h2 {font-size:40px; font-weight:700; letter-spacing:0}
@@ -669,24 +697,24 @@ p.bullet,
 .more-link-area .more-link-qna .ico::before {width:61px; height:60px; background:url(../../images/biz2/ic_main_link_6.png) no-repeat center; background-size:cover; }
 .more-link-area .more-link-archive .ico::before {width:62px; height:52px; background:url(../../images/biz2/ic_main_link_7.png) no-repeat center; background-size:cover}
 /* 지자체 메인 상담센터안내 */
-.main-counseling {padding: 60px 0}
-.main-counseling .main-tit-group {padding: 3px 0}
-.main-search-box {display: flex; padding: 20px; gap: 20px; border-radius: 15px; background: var(--primary-color); width: 628px}
-.main-search-box > select {width: 150px; color: var(--text-primary-00); font-weight: 700; font-size: 20px; border-radius: 10px; height: 50px; background: #fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 20px center}
-.main-search-box > input {flex: 1; border-radius: 10px; height: 50px; font-size: 18px; font-weight: 500}
-.main-search-box > input::placeholder {color: #dddddd}
-.main-search-box button {color: #fff; font-weight: 700; font-size: 24px; display: inline-flex; align-items: center; justify-content: center; height: 50px; width: 100px; border-radius: 10px; background: #383838}
-.main-counseling-content {margin-top: 26px}
-.main-counseling-wrap {display: flex; column-gap: 24px; row-gap: 40px; flex-wrap: wrap}
-.main-counseling-card {flex: 1 0 calc(50% - 24px); display: flex; align-items: center; border: 1px solid #c5c5c5; border-radius: 20px; padding: 30px 28px 30px 28px}
-.main-counseling-card > .card-wrap {display: flex; gap: 15px; align-items: center; max-height: 78px}
-.main-counseling-card .main-counseling-label {color: #fff; border-radius: 5px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px;  background: #67B0FF; height: 78px; padding: 0 18px}
-.main-counseling-ico {margin-left: auto; display: flex; gap: 10px}
-.main-counseling-ico > a.ico.call-link::before {display: none; width: 40px; height: 40px; background-color: #00ADB2; background-image : url(../../images/biz2/ico/ico_call.svg); background-repeat: no-repeat; background-size: 18px 18px; background-position: center center; border-radius: 50%}
-.main-counseling-ico > a.ico.counceling-link::before {width: 70px; height: 70px; background-color: #218CEF; background-image : url(../../images/biz2/ico/ico_home_white.svg); background-repeat: no-repeat; background-size: 24px 24px; background-position: center center; border-radius: 50%}
-.main-counseling-detail > h5 {font-weight: 700; font-size: 26px; letter-spacing: 0; white-space: nowrap}
-.main-counseling-detail .main-counseling-num {font-weight: 500; color: #1D2089; font-size: 26px; margin-top: 16px; letter-spacing: 0} 
-.main .com-paging {margin-bottom: 60px; margin-top: 0} 
+.main-counseling {padding:60px 0}
+.main-counseling .main-tit-group {padding:3px 0}
+.main-search-box {display:flex; padding:20px; gap:20px; border-radius:15px; background:var(--primary-color); width:628px}
+.main-search-box > select {width:150px; color:var(--text-primary-00); font-weight:700; font-size:20px; border-radius:10px; height:50px; background:#fff url(../../images/biz2/ic_arrow_big.png) no-repeat right 20px center}
+.main-search-box > input {flex:1; border-radius:10px; height:50px; font-size:18px; font-weight:500}
+.main-search-box > input::placeholder {color:#dddddd}
+.main-search-box button {color:#fff; font-weight:700; font-size:24px; display:inline-flex; align-items:center; justify-content:center; height:50px; width:100px; border-radius:10px; background:#383838}
+.main-counseling-content {margin-top:26px}
+.main-counseling-wrap {display:flex; column-gap:24px; row-gap:40px; flex-wrap:wrap}
+.main-counseling-card {flex:1 0 calc(50% - 24px); display:flex; align-items:center; border:1px solid #c5c5c5; border-radius:20px; padding:30px 28px 30px 28px}
+.main-counseling-card > .card-wrap {display:flex; gap:15px; align-items:center; max-height:78px}
+.main-counseling-card .main-counseling-label {color:#fff; border-radius:5px; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:20px;  background:#67B0FF; height:78px; padding:0 18px}
+.main-counseling-ico {margin-left:auto; display:flex; gap:10px}
+.main-counseling-ico > a.ico.call-link::before {display:none; width:40px; height:40px; background-color:#00ADB2; background-image :url(../../images/biz2/ico/ico_call.svg); background-repeat:no-repeat; background-size:18px 18px; background-position:center center; border-radius:50%}
+.main-counseling-ico > a.ico.counceling-link::before {width:70px; height:70px; background-color:#218CEF; background-image :url(../../images/biz2/ico/ico_home_white.svg); background-repeat:no-repeat; background-size:24px 24px; background-position:center center; border-radius:50%}
+.main-counseling-detail > h5 {font-weight:700; font-size:26px; letter-spacing:0; white-space:nowrap}
+.main-counseling-detail .main-counseling-num {font-weight:500; color:#1D2089; font-size:26px; margin-top:16px; letter-spacing:0} 
+.main .com-paging {margin-bottom:60px; margin-top:0} 
 /* 메인 고정 배너 */
 .fixed-quick {padding:10px 10px 20px 10px;  border-radius:18px; border:1px solid var(--gray-30-d8); position:absolute; top:44px; right:-110px; width:100px; background:var(--white)}
 .fixed-quick > ul {display:flex; flex-direction:column; gap:24px; align-items:center; text-align:center}

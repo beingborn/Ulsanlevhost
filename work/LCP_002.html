@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
+    <link rel="stylesheet" href="../css/biz2/mo.css">
     <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
     <script src="../js/biz2/jquery.1.8.2.min.js"></script>
     <script src="../js/biz2/swiper-bundle.min.js"></script>
@@ -105,7 +106,7 @@
             <h3>본인인증 정보</h3>
         </div>
         <div class="com-write-table resident-chk">
-            <table>
+            <table class="basic-info">
                 <caption>본인인증 정보 입력란</caption>
                 <colgroup>
                     <col style="width: 200px;">
@@ -117,7 +118,7 @@
                             <label for="a">이름</label>
                         </th>
                         <td>
-                            <input type="text" id="a" class="mw-set">
+                            <input type="text" id="a" class="fixed-value">
                         </td>
                     </tr>
                     <tr>
@@ -125,7 +126,7 @@
                             <label for="b">주민등록번호</label>
                         </th>
                         <td>
-                            <div class="flex-ac gap-10 mw-set">
+                            <div class="flex-ac gap-10 fixed-value">
                                 <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                 -
                                 <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
