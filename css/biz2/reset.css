@@ -99,7 +99,7 @@ select {
 	-webkit-appearance: none;
 	-moz-appearance: none; 
 	appearance: none; 
-	padding: 0 54px 0 16px; 
+	padding: 0 61px 0 16px; 
 	background: #fff url('../../images/biz2/ic_arrow_down.svg') 
 	no-repeat right 16px center; border: 1px solid var(--gray-30-d8); 
 	font-size: inherit;

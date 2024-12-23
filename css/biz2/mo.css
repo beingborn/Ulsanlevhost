@@ -10,22 +10,23 @@
 
 @media only screen and (min-width:1080px){
 	/* PC 전용 호버 애니메이션 */
-	.more-link-area > a:hover {transform:translateY(-15px)}
-	.main-info-mo-wrap > .main-info-link:hover {transform:translateY(-30px)}
+	.more-link-area > a:hover{transform:translateY(-15px)}
+	.main-info-mo-wrap > .main-info-link:hover{transform:translateY(-30px)}
 	.lg-only{display:block}	
+	table.lg-only{display:table}	
 }
 
 @media only screen and (min-width:1441px) and (max-width:1580px){
 	.fixed-quick{right:-50px}
-	.main-cont {justify-content:flex-start; gap:20px}
-	.main-info-right {width:260px}
-	.more-link-area > a {font-size:23px}
+	.main-cont{justify-content:flex-start;gap:20px}
+	.main-info-right{width:260px}
+	.more-link-area > a{font-size:23px}
 }
 
 @media only screen and (max-width:1440px){
-	header .menu-area .menu-box .link-group li .link-item {margin-top:16px}
-	header .menu-area .menu-box .link-group li > .tit {font-size:20px}
-	header .menu-area .menu-box .link-group li .link-item a {font-size:16px}
+	header .menu-area .menu-box .link-group li .link-item{margin-top:16px}
+	header .menu-area .menu-box .link-group li > .tit{font-size:20px}
+	header .menu-area .menu-box .link-group li .link-item a{font-size:16px}
 
 	/* 레이아웃 공통 */
 	header,
@@ -42,12 +43,12 @@
 	.main-counseling-card{padding:16px}
 	.main-counseling-detail > h5{font-size:20px}
 	.main-counseling-detail > .main-counseling-num{font-size:20px}
-	.more-link-area > a {font-size:23px}
+	.more-link-area > a{font-size:23px}
 }
 
 @media only screen and (max-width:1080px){
 	/* 임시 보고용 구분 텍스트 */
-	.temp-page-txt {display:none} 
+	.temp-page-txt{display:none} 
 
 	/* LMP_001 지자체 메인 상단 */
 	.main-cont{flex-direction:column}
@@ -66,17 +67,17 @@
 	/* 헤더 공통 */
 	header{height:56px}
 	header .menu-area .open-btn{width:24px;height:24px;background-size:contain}
-	header .menu-area .open-btn ~ .menu-box {display:none}
+	header .menu-area .open-btn ~ .menu-box{display:none}
 	header .multi-logo-area a{display:inline-flex;align-items:center}
 	header .multi-logo-area a:nth-child(1) > img{width:96px;height:24px;object-fit:cover}
 	header .multi-logo-area a:nth-child(1):after{display:none}
 	header .multi-logo-area a:nth-child(2){padding-left:0}
 	header .multi-logo-area a:nth-child(2) > img{width:90px;height:24px}
-	header .menu-area .log-info {display:none}
+	header .menu-area .log-info{display:none}
 
 	/* 푸터 공통 */
-	footer .info-content address > span.txt span + span {margin-left:2px}
-	footer .info-content address > span.tel span + span {margin-left:2px}
+	footer .info-content address > span.txt span + span{margin-left:2px}
+	footer .info-content address > span.tel span + span{margin-left:2px}
 	/* 컨텐츠 공통 */
 	.container{padding:20px 20px 28px}
 	.top-info-group{margin-top:40px;margin-bottom:12px}
@@ -99,33 +100,37 @@
 	
 	.btns{width:100%;height:40px;padding:9px 16px 8px;font-size:16px}
 
-	table{font-size:18px}
-	.com-write-table table th{padding:0 8px}
-	.com-write-table table td{padding:8px}
+	/* table 공통 */
+	table{font-size:18px}	
+	table.sm-show-800{display:table}
+	.com-write-table table th,
+	.com-write-table table td{height:56px;padding:8px}
 	.com-write-table colgroup col:nth-child(1),
 	.com-write-table colgroup col:nth-child(3){width:114px !important}
+	.com-view-table table th,
+	.com-view-table table td{height:56px;padding:8px}
 
 	.steps{margin-bottom:40px}
 	.steps.flex-acjc{gap:2%}
 	.steps li span{font-size:15px}
 	.steps li strong{font-size:18px}
 	.steps li span::before{width:82px;height:82px;margin-bottom:3px;background-size:auto 188px}
-	.steps .step02::before{background-position:-107px 0}
-	.steps .step03::before{background-position:-214px 0px}
+	.steps .step02::before{background-position:-106px 0}
+	.steps .step03::before{background-position:-213px 0px}
 	.steps .step04::before{background-position:-321px 0}
 	.steps .step05::before{background-position:-428px 0}
 	.steps .step06::before{background-position:-532px 0}
-	.steps .step07::before{background-position:-643px 0px}
+	.steps .step07::before{background-position:-639px 0px}
 	.steps .step08::before{background-position:-745px 0px}
 	/* 활성화 */
-	.steps li.active .step01::before{background-position:0 -107px}
-	.steps li.active .step02::before{background-position:-107px -107px}
-	.steps li.active .step03::before{background-position:-214px -107px}
-	.steps li.active .step04::before{background-position:-321px -107px}
-	.steps li.active .step05::before{background-position:-428px -107px}
-	.steps li.active .step06::before{background-position:-535px -107px}
-	.steps li.active .step07::before{background-position:-643px -107px}
-	.steps li.active .step08::before{background-position:-750px -107px}
+	.steps li.active .step01::before{background-position:0 -106px}
+	.steps li.active .step02::before{background-position:-106px -106px}
+	.steps li.active .step03::before{background-position:-213px -106px}
+	.steps li.active .step04::before{background-position:-321px -106px}
+	.steps li.active .step05::before{background-position:-428px -106px}
+	.steps li.active .step06::before{background-position:-535px -106px}
+	.steps li.active .step07::before{background-position:-639px -106px}
+	.steps li.active .step08::before{background-position:-750px -106px}
 
 	hr{margin:40px 0}
 
@@ -179,13 +184,13 @@
 	/* LAM_102 평생교육이용권 신청 2단계 */
 	.available-tickets{margin-top:12px;border-left:0;border-right:0}
 	.available-tickets > li{flex-direction:column}
-	.available-tickets > li strong{display:block;width:100%;padding:26px 8px 6px;font-size:18px; text-align:left}
+	.available-tickets > li strong{display:block;width:100%;padding:26px 8px 6px;font-size:18px;text-align:left}
 	.available-tickets > li strong br{display:none}
 	.available-tickets .color-primary{font-size:16px}
 	.available-tickets > li .disc{width:100%;padding:10px 8px}
 	.available-tickets > li .disc .price{font-size:18px}
 	.available-tickets > li .disc .bullet-list{font-size:18px}
-	.available-tickets > li .btns{width:120px; margin:20px auto}
+	.available-tickets > li .btns{width:120px;margin:20px auto}
 
 	/* LAM_103 평생교육이용권 신청 3단계 */			
 	.agree-box.learning .agree-radio, 
@@ -194,8 +199,18 @@
 
 	/* LAM_105 평생교육이용권 신청 완료 */
 	.complete-wrap.border-box{padding:20px 16px}
-	.complete-wrap.border-box+p{margin-top:10px; font-size:16px}
+	.complete-wrap.border-box+p{margin-top:10px;font-size:16px}
 	.complete-area+.page-header{margin-top:40px}
+
+	/* LAM_400 수기공모 신청 */
+	.contest .top-info-group .btns{width:auto}
+	.contest .sm-show-800{padding:20px 8px;border-top:3px solid var(--gray-30-d8);border-bottom:1px solid var(--gray-30-d8)}
+	.contest .sm-show-800 li{display:flex;align-items:center}
+	.contest .sm-show-800 li+li{margin-top:4px}
+	.contest .sm-show-800 li p{margin-left:6px}
+
+	/* LAM_401 수기공모 신청 */	
+	.timer{display:block}
 
 	/* 푸터 공통 */
 	footer .info-content{padding:20px 0}
@@ -266,8 +281,8 @@
 	.main-search-box > select{min-width:0;width:112px;font-size:18px;padding:0 32px 0px 8px;background-position:right 8px center} 
 	.main-search-box button{width:50px;font-weight:500;font-size:18px;border-radius:6px}
 	.main-counseling{padding:60px 0 16px 0}
-	.main-counseling-card{padding:16px 16px 14px 16px;align-items:flex-start; width:100%; position:relative}
-	.main-counseling-ico { position:absolute; right:16px; top:16px}
+	.main-counseling-card{padding:16px 16px 14px 16px;align-items:flex-start;width:100%;position:relative}
+	.main-counseling-ico{ position:absolute;right:16px;top:16px}
 	.main-counseling-card > .card-wrap{flex-direction:column;gap:8px;align-items:flex-start;max-height:none}
 	.main-counseling-card .main-counseling-label{font-size:18px;height:auto;padding:8px 12px}
 	.main-counseling-ico > a{width:40px;height:40px}

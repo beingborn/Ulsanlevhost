@@ -228,6 +228,15 @@
                         </tr>
                         <tr>
                             <th class="txt-l">
+                                <label for="ee" class="must-type">정원</label>
+                            </th>
+                            <td colspan="3">
+                                <input type="text" id="ee">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="txt-l">
                                 <label for="g" class="must-type">총교육일수/<br>시간/차수</label>
                             </th>
                             <td>
@@ -289,47 +298,79 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="top-info-group">
-                    <h3>학습자 정보</h3>
+            </div>
+            <div class="top-info-group">
+                <h3>학습자 정보</h3>
+                <div class="r-section">
+                    <label for="aa">학습자 정렬 :</label>
+                    <select id="aa">
+                        <option value="1">학습자 등록일</option>
+                        <option value="1">rolemipsum</option>
+                        <option value="1">rolemipsum</option>
+                        <option value="1">rolemipsum</option>
+                    </select>
                 </div>
-                <div class="com-view-table">
-                    <table>
-                        <caption>학습자 정보 테이블</caption>
-                        <colgroup>
-                            <col style="width: 20%;">
-                            <col style="width: 20%;">
-                            <col style="width: 20%;">
-                            <col style="width: 20%;">
-                            <col style="width: 20%;">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>학습자명</th>
-                                <th>생년월일</th>
-                                <th>출석일수</th>
-                                <th>이수여부</th>
-                                <th>
-                                    <button type="button" class="layer-btn btns bg-blue" onclick="$('[data-pop=pop-3]').show();">추가</button>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="btns-bottom">
-                    <button type="button" class="btn-bd">목록</button>
-                    <button type="button" class="btns">등록</button>
-                </div>
-            </div>                    
-        </div>
+            </div>
+            <div class="com-view-table">
+                <table>
+                    <caption>학습자정보 테이블</caption>
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 18%;">
+                        <col style="width: 18%;">
+                        <col style="width: 14%;">
+                        <col style="width: 20%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>순번</th>
+                            <th>이용권구분</th>
+                            <th>학습자명</th>
+                            <th>생년월일</th>
+                            <th>출석일수/시간/차수</th>
+                            <th>이수여부</th>
+                            <th>
+                                <button type="button" class="layer-btn btns bg-blue" onclick="$('[data-pop=pop-1]').show();">추가</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>디지털</td>
+                            <td>홍길동</td>
+                            <td>1989.02.12</td>
+                            <td class="day"><input type="text"> 일</td>
+                            <td>이수중</td>
+                            <td class="btn-wrap">
+                                <button type="button" class="btns bg-blue">저장</button>
+                                <button type="button" class="btns bg-blue">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>디지털</td>
+                            <td>홍길동</td>
+                            <td>1989.02.12</td>
+                            <td class="day"><input type="text"> 일</td>
+                            <td>이수중</td>
+                            <td class="btn-wrap">
+                                <button type="button" class="btns bg-blue">저장</button>
+                                <button type="button" class="btns bg-blue">삭제</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="add-notice">* 이수여부는 80%이상 출석여부에 따라 자동 계산되며, 학습자의 출석일수 저장 시 강좌의 총교육일수는 수정이 불가합니다.</p>
+            <div class="btns-bottom">
+                <button type="button" class="btn-bd">목록</button>
+                <button type="button" class="btns">수정</button>
+            </div>
+        </div>                    
+    </div>
     </div>
     <footer class="wrap">
         <div class="info-content">
