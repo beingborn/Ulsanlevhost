@@ -142,7 +142,7 @@ input[type=date] {
 	padding-left: 10px;
 	border-radius: 8px;
 	border: 1px solid #DDDDDD;
-	background: url(../../images/biz2/ic_calendar.png) no-repeat right 12px center;
+	background: #fff url(../../images/biz2/ic_calendar.png) no-repeat right 12px center;
 	font-size: 16px;
 	font-family: "KoPubDotum", sans-serif;
 }

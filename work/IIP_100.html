@@ -230,8 +230,8 @@
                             <td>서울시 은평구</td>
                             <td>홍길*</td>
                             <td></td>
-                            <td><img src="../images/biz2/ico/ico_complete.svg" alt="매핑"></td>
-                            <td><button class="layer-btn ico" onclick="$('[data-pop=pop-2]').show();">매핑선택</button></td>
+                            <td><button class="layer-btn ico map-yes" onclick="$('[data-pop=pop-2]').show();">매핑완료</button></td>
+                            <td><button class="layer-btn ico map-no" onclick="$('[data-pop=pop-2]').show();">매핑선택</button></td>
                         </tr>
                         <tr>
                             <td>배치</td>
@@ -242,8 +242,8 @@
                             <td>서울시 은평구</td>
                             <td>홍길*</td>
                             <td></td>
-                            <td><button class="layer-btn ico" onclick="$('[data-pop=pop-1]').show();">출결선택</button></td>
-                            <td></td>
+                            <td><button class="layer-btn ico map-no" onclick="$('[data-pop=pop-1]').show();">출결선택</button></td>
+                            <td><button class="layer-btn ico map-yes">매핑완료</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -292,51 +292,87 @@
         </div>
     </footer>
     <div class="layer-pop" data-pop="pop-1">
-        <div class="layer-content" style="--max-width: 840px">
+        <div class="layer-content">
             <div class="layer-scroll">
-                <span class="title">학습자 매핑</span>
+                <span class="title">교육과정 매핑</span>
                 <div class="info-area">
-                        <div class="search-box">
-                            <label for="name">교육과정명</label>
-                            <input type="text" id="name">
-                            <button class="btns">검색</button>
-                        </div>
-                        <div class="table-box">
-                            <div class="com-view-table">
-                                <table summary="">
-                                    <caption></caption>
-                                    <colgroup>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>강좌명</th>
-                                            <th>분반</th>
-                                            <th>교육방법</th>
-                                            <th>강좌시작일</th>
-                                            <th>강좌종료일</th>
-                                            <th>등록</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="no-data" colspan="6">조회를 해주세요.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    <div class="layer-text-box mt-80">
-                        <ul>
-                            <li class="layer-text-tit">※ 학습자 정보 추가 전 유의사항</li>
-                            <li class="layer-text-desc">- 이용권 카드 본인사용 확인(카드결제 정보내 이름과 실제 수강자명 일치여부 확인</li>
+                    <div class="search-box">
+                        <label for="name">교육과정명</label>
+                        <input type="text" id="name">
+                        <button class="btns">검색</button>
+                    </div>
+                    <ul class="layer-notice-list">
+                        <li class="layer-notice-desc">&#8251; 선택한 학습자 결제 승인일 이전의 종료일을 가진 강좌만 검색 됩니다.</li>
+                    </ul>
+                    <div class="top-info-group">     
+                        <p class="top-info-group-data">
+                            총 <strong>1</strong>건
+                        </p>
+                    </div>
+                    <div class="com-view-table">
+                        <table summary="">
+                            <caption>교육과정 정보</caption>
+                            <colgroup>
+                                <col style="width: 160px;">
+                                <col style="width: 68px;">
+                                <col style="width: 112px;">
+                                <col style="width: 110px;">
+                                <col style="width: 110px;">
+                                <col style="width: 160px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>강좌명</th>
+                                    <th>분반</th>
+                                    <th>교육방법</th>
+                                    <th>강좌시작일</th>
+                                    <th>강좌종료일</th>
+                                    <th>등록</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>한국어음운론</td>
+                                    <td>1</td>
+                                    <td>오프라인(출석)</td>
+                                    <td>20240101</td>
+                                    <td>20241230</td>
+                                    <td><button type="button" class="btns">등록</button></td>
+                                </tr>
+                                <tr>
+                                    <td>관리자등록강좌</td>
+                                    <td>2</td>
+                                    <td>온라인</td>
+                                    <td>20240101</td>
+                                    <td>20241230</td>
+                                    <td><button type="button" class="btns">등록</button></td>
+                                </tr>
+                                <tr>
+                                    <td>중복강좌TEST 수정테스트</td>
+                                    <td>1</td>
+                                    <td>온라인</td>
+                                    <td>20240101</td>
+                                    <td>20241230</td>
+                                    <td><button type="button" class="btns">등록</button></td>
+                                </tr>
+                                <tr>
+                                    <td>중복강좌TEST</td>
+                                    <td>1</td>
+                                    <td>오프라인(출석)</td>
+                                    <td>20240101</td>
+                                    <td>20241230</td>
+                                    <td><button type="button" class="btns">등록</button></td>
+                                </tr>
+                                <!-- <tr><td class="no-data" colspan="6">조회를 해주세요.</td></tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="layer-text-box">
+                        <ul class="layer-text-list">
+                            <li class="layer-text-tit color-red">※ 학습자 정보 추가 전 유의사항</li>
+                            <li class="layer-text-desc">- <em class="color-blue">이용권 카드 본인사용 확인</em>(카드결제 정보내 이름과 실제 수강자명 일치여부 확인</li>
                             <li class="layer-text-desc">- 평생교육강좌 수강료 및 이에 해당하는 교재 외 결제, 등록불가(교재 단독 결제 불가)</li>
-                            <li>※ 학습자 정보 추가 전 유의사항</li>
+                            <li class="layer-text-desc" >평생교육이용권 본인외 사용 및 목적외 사용 확인시 이용자 안내 후 카드 취소 처리 요청</li>
                         </ul>
                     </div>
                     <div class="layer-btn-wrap">
@@ -348,7 +384,7 @@
         </div>
     </div>
     <div class="layer-pop" data-pop="pop-2">
-        <div class="layer-content" style="--max-width: 840px">
+        <div class="layer-content">
             <div class="layer-scroll">
                 <span class="title">사용 내역 별 수강 이력</span>
                 <div class="info-area">
@@ -390,14 +426,6 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                    <div class="layer-text-box mt-80">
-                        <ul>
-                            <li class="layer-text-tit color-red">※ 학습자 정보 추가 전 유의사항</li>
-                            <li class="layer-text-desc">- <em class="color-blue">이용권 카드 본인사용 확인</em>(카드결제 정보내 이름과 실제 수강자명 일치여부 확인</li>
-                            <li class="layer-text-desc">- 평생교육강좌 수강료 및 이에 해당하는 교재 외 결제, 등록불가(교재 단독 결제 불가)</li>
-                            <li>평생교육이용권 본인외 사용 및 목적외 사용 확인시 이용자 안내 후 카드 취소 처리 요청</li>
-                        </ul>
                     </div>
                     <div class="layer-btn-wrap">
                         <button class="btns" onclick="$('[data-pop=pop-2]').hide();">닫기</button>

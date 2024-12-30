@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css js inject -->
+    <link rel="stylesheet" href="../css/biz2/reset.css">
+    <link rel="stylesheet" href="../css/biz2/common.css">
+    <link rel="stylesheet" href="../css/biz2/layout.css">
+    <link rel="stylesheet" href="../css/biz2/main.css">
+    <link rel="stylesheet" href="../css/biz2/style.css">
+    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css" />
+    <script src="../js/biz2/jquery.1.8.2.min.js"></script>
+    <script src="../js/biz2/swiper-bundle.min.js"></script>
+    <script src="../js/biz2/script.js"></script>
+    <title>울산광역시 평생교육이용권</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-area multi-logo-area">
+            <a href="LMP_001.html"><img src="../images/biz2/header_logo_horizontal.svg" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/header_logo_2.png" alt="울산광역시"></a>
+            <!-- 임시 구분용 텍스트 -->
+            <span style="margin-left: 20px;">지자체 홈페이지</span>
+        </div>
+        <div class="menu-area">
+            <!-- 로그인 시 -->
+            <!-- <a href="#" class="log-info">
+                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
+                <span class="log-info-txt">로그아웃</span>
+            </a> -->
+            <button class="open-btn">
+                <span class="blind">메뉴 열기</span>
+            </button>
+            <div class="menu-box">
+                <ul class="link-group login">
+                    <li>
+                        <span class="tit">사업안내</span>
+                        <div class="link-item">
+                            <a href="LGP_001.html">평생교육이용권이란?</a>
+                            <a href="LGP_001.html">평생교육이용권 사용하기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">사용안내</span>
+                        <div class="link-item">
+                            <a href="LUP_001.html">사용처 안내</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">평생교육이용권</span>
+                        <div class="link-item">
+                            <a href="LAP_100.html">평생교육이용권 신청</a>
+                            <a class="hidden" href="#">이의제기 신청</a>
+                            <a href="#">선정 포기 신청</a>
+                            <a href="LAP_400.html">수기 공모 신청</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">우수이용자 신청</span>
+                        <div class="link-item">
+                            <a href="LAP_001.html">우수이용자 신청</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">게시판</span>
+                        <div class="link-item">
+                            <a href="LNP_001.html">공지사항</a>
+                            <a href="LNP_100.html">자료실</a>
+                            <a href="LNP_200.html">자주하는질문</a>
+                            <a href="LNP_200.html">질의응답</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">마이페이지</span>
+                        <div class="link-item">
+                            <a href="LIP_001.html">개인정보수정</a>
+                            <a href="LIP_100.html">평생교육이용권 신청내역</a>
+                            <a href="#">평생교육이용권 이용내역</a>
+                            <a href="#">교육이수정보</a>
+                            <a class="hidden" href="#">이용자 이벤트</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="close-btn">
+                    <span class="blind">메뉴 닫기</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="top-location">
+        <div class="top-location-area wrap">
+            <span class="home"><span class="blind">홈</span></span>
+            <div class="location-box">
+                <span class="arrow">게시판</span>
+                <span class="arrow">자주하는질문</span>
+            </div>
+        </div>
+    </div>
+    <div class="container wrap">
+        <div class="tab-area">
+            <ul class="tab-list">
+                <li role="tab" aria-selected="true" aria-controls="tab-1" data-tab="tab-1">
+                    <a href="#tab-1">자주하는 질문</a>
+                </li>
+                <li role="tab" aria-selected="false" aria-controls="tab-2" data-tab="tab-2">
+                    <a href="#tab-2">질의응답</a>
+                </li>
+            </ul>
+            <div class="tab-conts-wrap">
+                <div id="tab-1" role="tab-panel" class="tab-cont show">
+                    <div class="page-header">
+                        <h2 class="page-header-tit">자주하는 질문</h2>
+                    </div>
+                    <div class="contents">
+                        <div class="search-area">
+                            <div class="flex-ac">
+                                <label for="select-box" class="blind">검색조건 선택</label>
+                                <select id="select-box" class="ui-select">
+                                    <option value="1">전체</option>
+                                    <option value="1">제목</option>
+                                    <option value="1">내용</option>
+                                </select>
+                                <div class="search-input">
+                                    <label for="search-bar" class="blind"> 공지사항 검색어 입력</label>
+                                    <input type="text" id="search-bar">
+                                    <button type="button" class="btn-search">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-info-group">
+                            <p class="top-info-group-data">총 <strong>6,234</strong>건</p>
+                            <label for="select-view" class="blind">노출 조건 선택</label>
+                            <select id="select-view">
+                                <option value="1">10건 보기</option>
+                                <option value="2">20건 보기</option>
+                                <option value="3">30건 보기</option>
+                            </select>
+                        </div>
+                        <div class="com-view-table">
+                            <table>
+                                <caption>공지사항 안내 테이블</caption>
+                                <colgroup>
+                                    <col style="width: 102px;">
+                                    <col>
+                                    <col style="width: 172px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>제목</th>
+                                        <th>작성일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="txt-l">
+                                            <a href="#" class="com-view-title">평생교육이용권 카드 발급 방법은?</a>
+                                        </td>
+                                        <td>2024-10-02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">평생교육이용권 신청기간은 언제인가요?</a></td>
+                                        <td>2024-09-12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">주민번호가 변경된 경우, 이후 이용절차는?</a></td>
+                                        <td>2024-09-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">개명한 경우, 평생교육희망카드를 재발급 받아야 하나요?</a></td>
+                                        <td>2024-08-25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">크롬(Chrome) 브라우저를 통한 평생교육이용권 신청 시 인증실패 조치방법</a></td>
+                                        <td>2024-08-23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">ATM(현금자동입출금기)에서 이용권 잔액 확인이 가능한가요?</a></td>
+                                        <td>2024-08-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">평생교육이용권 결제 금액의 부분 취소가 가능한가요?</a></td>
+                                        <td>2024-07-29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">평생교육이용권 이용에 지역 제한이 있나요?</a></td>
+                                        <td>2024-07-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">평생교육이용권 이용에 지역 제한이 있나요?</a></td>
+                                        <td>2024-07-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">평생교육이용권 이용에 지역 제한이 있나요?</a></td>
+                                        <td>2024-07-10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="com-paging">
+                            <button class="prev">이전</button>
+                            <button class="on">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <span class="empty">...</span>
+                            <button>120</button>
+                            <button class="next">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-2" role="tab-panel" class="tab-cont">
+                    <div class="page-header">
+                        <h2 class="page-header-tit">질의응답</h2>
+                    </div>
+                    <div class="contents">
+                        <div class="search-area">
+                            <div class="flex-ac">
+                                <label for="select-box" class="blind">검색조건 선택</label>
+                                <select id="select-box" class="ui-select">
+                                    <option value="1">전체</option>
+                                    <option value="1">제목</option>
+                                    <option value="1">내용</option>
+                                </select>
+                                <div class="search-input">
+                                    <label for="search-bar" class="blind"> 공지사항 검색어 입력</label>
+                                    <input type="text" id="search-bar">
+                                    <button type="button" class="btn-search">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-info-group">
+                            <p class="top-info-group-data">총 <strong>6,234</strong>건</p>
+                            <label for="select-view" class="blind">노출 조건 선택</label>
+                            <select id="select-view">
+                                <option value="1">10건 보기</option>
+                                <option value="2">20건 보기</option>
+                                <option value="3">30건 보기</option>
+                            </select>
+                        </div>
+                        <div class="com-view-table">
+                            <table>
+                                <caption>공지사항 안내 테이블</caption>
+                                <colgroup>
+                                    <col style="width: 102px;">
+                                    <col>
+                                    <col style="width: 172px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>제목</th>
+                                        <th>작성일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="txt-l">
+                                            <a href="#" class="com-view-title">평생교육이용권 카드 발급 방법은?</a>
+                                        </td>
+                                        <td>2024-10-02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">평생교육이용권 신청기간은 언제인가요?</a></td>
+                                        <td>2024-09-12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">주민번호가 변경된 경우, 이후 이용절차는?</a></td>
+                                        <td>2024-09-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">개명한 경우, 평생교육희망카드를 재발급 받아야 하나요?</a></td>
+                                        <td>2024-08-25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">크롬(Chrome) 브라우저를 통한 평생교육이용권 신청 시 인증실패 조치방법</a></td>
+                                        <td>2024-08-23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">ATM(현금자동입출금기)에서 이용권 잔액 확인이 가능한가요?</a></td>
+                                        <td>2024-08-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">평생교육이용권 결제 금액의 부분 취소가 가능한가요?</a></td>
+                                        <td>2024-07-29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">평생교육이용권 이용에 지역 제한이 있나요?</a></td>
+                                        <td>2024-07-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">평생교육이용권 이용에 지역 제한이 있나요?</a></td>
+                                        <td>2024-07-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="txt-l"><a href="#" class="com-view-title">평생교육이용권 이용에 지역 제한이 있나요?</a></td>
+                                        <td>2024-07-10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="com-paging">
+                            <button class="prev">이전</button>
+                            <button class="on">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <span class="empty">...</span>
+                            <button>120</button>
+                            <button class="next">다음</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="wrap">
+        <div class="info-content">
+            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
+            <address>
+                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
+                <span class="tel"><span>대표전화</span><span>1600-3005 (평일 09시~18시)</span></span>
+            </address>
+            <select class="ui-select" title="관련 사이트 선택">
+                <option value="#">관련 사이트</option>
+            </select>
+            <div class="link-area">
+                <div class="link-box">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="on">개인정보처리방침</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">이메일무단수집거부</a>
+                </div>
+                <span class="copy">
+                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
+                    RESERVED.
+                </span>
+                <div class="support-box">
+                    <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                    <img src="../images/biz2/footer_link_2.png" alt="국가평생교육진흥원">
+                    <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+</html>

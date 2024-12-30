@@ -245,17 +245,18 @@
         </div>
     </footer>
     <div class="layer-pop" data-pop="pop-1">
-        <div class="layer-content" style="--max-width: 840px">
+        <div class="layer-content">
             <div class="layer-scroll">
                 <span class="title">교육과정 및 학습자 일괄 업로드</span>
                 <div class="info-area">
-                    <div class="search-box">
-                        <input type="text" id="name">
-                        <button class="btns">파일첨부</button>
+                    <div class="filebox">
+                        <input class="upload-name">
+                        <label for="file01" class="btns">파일첨부</label>
                         <button class="btns">양식다운로드</button>
+                        <input type="file" id="file01" class="file">
                     </div>
                     <ul class="add-notice">
-                        <li>* 엑셀 데이터 형식이 <em class="color-red">텍스트</em>가 아니면 업로드할 엑셀에 표기된 값과 상이할 수 있습니다.</li>
+                        <li>* 엑셀 데이터 형식이 텍스트가 아니면 업로드할 엑셀에 표기된 값과 상이할 수 있습니다.</li>
                         <li>* 항목별 입력이 가능한 범위를 넘어서면 업로드 검증이 불가합니다.</li>
                     </ul>
                     <div class="layer-btn-wrap">

@@ -52,13 +52,30 @@ $(document).ready(function () {
     return false;
   }).filter(':eq(0)').click();
 
+  /* table click event */
+  var ableClickTr = $('.com-view-table table.hasClick tbody tr');
+  ableClickTr.click(function(){
+    ableClickTr.removeClass('is-clicked')
+    $(this).addClass('is-clicked')
+  })
+
+  /* ILP_003 기관 운영강좌 유형 텍스트 필드 show hide */
+  $('.chk-write .chk-box input[type="text"]').addClass('v-hide');
+  $('.chk-write .chk-box input[type="checkbox"]').click(function(){
+    var chkInput = $(this).parent().find('input[type="text"]');
+    chkInput.toggleClass('v-hide')
+    if(!chkInput.hasClass('v-hide')){
+      chkInput.focus();
+    }
+  })
+
   /* layer pop 형성 시 */
   $('.layer-btn').on('click',function(){
-    $('body').css('overflow', 'hidden')
+    $('html').css('overflow-y', 'hidden')
   })
   /* layer pop 삭제 시 */
   $('.layer-pop .layer-close').on('click',function(){
-    $('body').css('overflow', '')
+    $('html').css('overflow-y', 'scroll')
   })
 
   /* layer pop hide 클래스 동적 추가 */
@@ -71,7 +88,7 @@ $(document).ready(function () {
 
   /* hide trigger 클릭 시 스크롤 풀기  */
   $(document).on("click", ".layer-hide-trigger", function() {
-    $('body').css('overflow', '')
+    $('html').css('overflow-y', 'scroll')
   });
 
   $('.auth-area button').click(function(){
@@ -89,23 +106,28 @@ $(document).ready(function () {
     }
   });
 
+  let windowLocation = window.location.pathname;
+  if (windowLocation != "/work/LCP_002.html" && windowLocation != "/work/LAP_101.html"){
+      /* 본인인증 테이블 변환 */
+    $('.birth-chk').hide();
+    $('.auth-area-in button').on('click',function(){
+      // 휴대폰 인증, 아이핀 클릭 시
+      if($(this).hasClass('mo-auth') || $(this).hasClass('i-pin')){
+        $('.resident-chk').hide();
+        $('.birth-chk').show()
+      // 간편인증, 공동인증서 클릭 시
+      } else {
+        $('.birth-chk').hide();
+        $('.resident-chk').show();
+      }
+    })
+  }
+
   /* 본인인증 임시 값 숨기기 */
   const actualValue = "135345";
   $('#secure-value').text('●'.repeat(actualValue.length));
   
-  /* 본인인증 테이블 변환 */
-  $('.birth-chk').hide();
-  $('.auth-area-in button').on('click',function(){
-    // 휴대폰 인증, 아이핀 클릭 시
-    if($(this).hasClass('mo-auth') || $(this).hasClass('i-pin')){
-      $('.resident-chk').hide();
-      $('.birth-chk').show()
-    // 간편인증, 공동인증서 클릭 시
-    } else {
-      $('.birth-chk').hide();
-      $('.resident-chk').show();
-    }
-  })
+
 
   /* 메인화면 공지사항 스와이퍼 */
   var mainNotice = new Swiper(".main-notice-detail .swiper", {

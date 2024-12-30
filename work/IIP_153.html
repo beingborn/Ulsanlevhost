@@ -140,7 +140,7 @@
                         <tr>
                             <th class="txt-l must-type"><label for="srch02">과정명</label></th>
                             <td><input type="text" id="srch02"></td>
-                            <th class="txt-l must-type"><label for="srch03">교육기관</label></th>
+                            <th class="txt-l must-type"><label for="srch03">교육기간</label></th>
                             <td class="period flex-ac"><input type="date" id="srch03" class="date"> <span class="dash">~</span> <input type="date" class="date"></td>
                         </tr>
                         <tr>
@@ -164,7 +164,7 @@
                             
                         </tr>
                         <tr>
-                            <th class="txt-l must-type">7대 영역 *</th>
+                            <th class="txt-l must-type">7대 영역</th>
                             <td colspan="3" class="type-wrap">
                                 <div class="flex-ac divide">
                                     <div class="chk-box">
@@ -240,7 +240,7 @@
                 <div class="btn-wrap">
                     <button type="button" class="btns bg-blue">추가</button>
                     <button type="button" class="btns bg-blue">엑셀 다운로드</button>
-               </div>                
+                </div>                
             </div>
             <div class="com-view-table">
                 <table>
@@ -276,7 +276,14 @@
                             <td><button type="button" class="btns bg-blue">삭제</button></td>
                         </tr>
                         <tr>
-                            <td><input type="text"></td>
+                            <td>
+                                <select id="aa" class="w-100">
+                                    <option value="none">선택</option>
+                                    <option value="1">서울시</option>
+                                    <option value="2">세종시</option>
+                                    <option value="3">경기도</option>
+                                </select>
+                            </td>
                             <td><input type="text"></td>
                             <td class="period"><input type="date" class="date w-100"></td>
                             <td><input type="text"></td>
