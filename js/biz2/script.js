@@ -79,9 +79,9 @@ $(document).ready(function () {
   })
 
   /* layer pop hide 클래스 동적 추가 */
-  $('.layer-pop button').each(function(){
+  $('.layer-pop button:not(.hide-layer-close)').each(function(){
     var onClickValue = $(this).attr('onclick')
-    if(onClickValue && onClickValue.includes('hide()') && onClickValue.includes('data-pop') ){
+    if(onClickValue && onClickValue.includes('hide()') && onClickValue.includes('data-pop')){
       $(this).addClass('layer-hide-trigger')
     }
   })
@@ -89,6 +89,12 @@ $(document).ready(function () {
   /* hide trigger 클릭 시 스크롤 풀기  */
   $(document).on("click", ".layer-hide-trigger", function() {
     $('html').css('overflow-y', 'scroll')
+
+    // 중복 팝업 있을 시 닫을 때 함께 hide()
+    var closestPop = $(this).closest('.layer-pop');
+    if(closestPop.find('.hide-layer-content').length > 0){
+      closestPop.find('.hide-layer-content').hide();
+    }
   });
 
   $('.auth-area button').click(function(){
@@ -108,7 +114,7 @@ $(document).ready(function () {
 
   let windowLocation = window.location.pathname;
   if (windowLocation != "/work/LCP_002.html" && windowLocation != "/work/LAP_101.html"){
-      /* 본인인증 테이블 변환 */
+    /* 본인인증 테이블 변환 */
     $('.birth-chk').hide();
     $('.auth-area-in button').on('click',function(){
       // 휴대폰 인증, 아이핀 클릭 시
@@ -127,8 +133,6 @@ $(document).ready(function () {
   const actualValue = "135345";
   $('#secure-value').text('●'.repeat(actualValue.length));
   
-
-
   /* 메인화면 공지사항 스와이퍼 */
   var mainNotice = new Swiper(".main-notice-detail .swiper", {
     allowTouchMove: false,

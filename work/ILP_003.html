@@ -487,7 +487,7 @@
                                     <label for="file02" class="btns bg-blue">파일첨부</label> 
                                     <input type="file" id="file02" class="file">
                                 </div>
-                                <button type="button" class="btns bg-blue">업로드</button>
+                                <button type="button" class="btns bg-blue" onclick="$('[data-pop=excel-res]').show();">업로드</button>
                                 <button type="button" class="btns bg-blue btn-download">양식 다운로드</button>
                             </div>
                             <p class="bullet">xlsx 파일만 업로드가 가능합니다.</p>
@@ -537,6 +537,29 @@
             </div>
         </div>
     </footer>
+    <div class="layer-pop" data-pop="excel-res">
+        <div class="layer-content" style="--max-width: 640px">
+            <div class="layer-scroll">
+                <span class="title">엑셀 업로드 결과</span>
+                <div class="info-area upload-res">
+                    <p class="upload-res-txt">총 
+                        <strong>0</strong>건 중
+                        <strong class="color-red">0</strong>건 까지 확인 되었습니다.
+                    </p>
+                    <p class="upload-res-detail">
+                        오류 : <strong class="color-red">제공된 양식의 엑셀이 아닙니다.</strong>
+                    </p>
+                    <ul class="add-notice">
+                        <li>*다운로드한 양식의 가이드[입력 가이드] 시트를 확인 해주세요.</li>
+                    </ul>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=excel-res]').hide();">닫기</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=excel-res]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     /* 20241216 이민혁 임시 새창 팝업 제어 스크립트 */

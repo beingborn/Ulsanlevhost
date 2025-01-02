@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css js inject -->
+    <link rel="stylesheet" href="../css/biz2/reset.css">
+    <link rel="stylesheet" href="../css/biz2/common.css">
+    <link rel="stylesheet" href="../css/biz2/layout.css">
+    <link rel="stylesheet" href="../css/biz2/main.css">
+    <link rel="stylesheet" href="../css/biz2/style.css">
+    <link rel="stylesheet" href="../css/biz2/mo.css">
+    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
+    <script src="../js/biz2/jquery.1.8.2.min.js"></script>
+    <script src="../js/biz2/swiper-bundle.min.js"></script>
+    <script src="../js/biz2/script.js"></script>
+    <title>울산광역시 평생교육이용권</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="IMP_002.html">
+                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+            </a>
+        </div>
+        <div class="menu-area">
+            <!-- 로그인 시 -->
+            <a href="#" class="log-info">
+                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
+                <span class="log-info-txt">로그아웃</span>
+            </a>
+            <button class="open-btn">
+                <span class="blind">메뉴 열기</span>
+            </button>
+            <div class="menu-box">
+                <ul class="link-group login">
+                    <li>
+                        <span class="tit">사업안내</span>
+                        <div class="link-item">
+                            <a href="IGP_001.html">평생교육이용권이란?</a>
+                            <a href="IGP_001.html">평생교육이용권 사용하기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">이용권 사용기관</span>
+                        <div class="link-item">
+                            <a href="ILP_001.html">사용기관 신청</a>
+                            <a href="IIP_800.html">사용기관 신청 현황</a>
+                            <a class="hidden" href="#">이용권 사용내역</a>
+                            <a href="#">교육결과 관리</a>
+                            <a class="hidden" href="#">교육과정 정보</a>
+                            <a class="hidden" href="#">학습자 정보</a>
+                            <a href="IIP_400.html">기관 정보 수정</a>
+                            <a class="hidden" href="#">사용기관 연수</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">게시판</span>
+                        <div class="link-item">
+                            <a href="IIP_001.html">공지사항</a>
+                            <a href="INP_100.html">자료실</a>
+                            <a href="INP_200.html">자주하는질문</a>
+                            <a href="INP_200.html">질의응답</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="close-btn">
+                    <span class="blind">메뉴 닫기</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="top-location">
+        <div class="top-location-area wrap">
+            <span class="home"><span class="blind">홈</span></span>
+            <div class="location-box">
+                <span class="arrow">게시판</span>
+                <span class="arrow">질의응답</span>
+                <span class="arrow">질의응답 작성</span>
+            </div>
+        </div>
+    </div>
+    <div class="container wrap">
+        <div class="page-header">
+            <h2 class="page-header-tit">질의응답</h2>
+        </div>
+        <div class="contents cs-center">
+            <div class="com-write-table">
+                <table class="basic-info lg-only">
+                    <caption>질의응답 입력란</caption>
+                    <colgroup>
+                        <col style="width: 200px;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th class="txt-l">
+                                <label for="title">제목</label>
+                            </th>
+                            <td>
+                                <input type="text" id="title" class="fixed-w560">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="txt-l"><label for="type01">이용권 구분</label></th>
+                            <td>
+                                <input type="text" id="type01" class="fixed-w260" value="지역이용권" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="txt-l"><label for="type02">질문유형</label></th>
+                            <td class="input-group">
+                                <select id="type02" class="fixed-w260">
+                                    <option>선택</option>
+                                </select>                         
+                            </td>                                    
+                        </tr>
+                        <tr>
+                            <th class="txt-l"><label>글내용</label></th>
+                            <td class="edit-area">
+                                <p class="asterisk">※ 에디터를 빠져나가고자 하실 경우 ctrl 키를 한번 입력 후 탭키를 사용하여 나오실 수 있습니다.</p>
+                                <div class="edit-box">                                    
+                                    <!-- 에디터 영역-->
+                                    <img src="../images/biz2/임시/LNP_301_에디터.jpg" alt="임시 에디터 이미지">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="txt-l">파일첨부</th>
+                            <td>
+                                <div class="filebox flex-ac">
+                                    <input class="upload-name">
+                                    <label for="file01" class="btns bg-blue">파일첨부</label> 
+                                    <input type="file" id="file01" class="file">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="basic-info sm-show-800">
+                    <caption>신청정보 입력란</caption>
+                    <colgroup>
+                        <col style="width: auto;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th class="txt-l">
+                                <label for="title02">제목</label>
+                            </th>
+                            <td>
+                                <input type="text" id="title02" class="fixed-value">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="txt-l"><label for="type03">이용권 구분</label></th>
+                            <td>
+                                <input type="text" id="type03" class="fixed-value" value="지역이용권" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="txt-l"><label for="type04">질문유형</label></th>
+                            <td class="input-group">
+                                <select id="type04" class="fixed-value">
+                                    <option>선택</option>
+                                </select>                         
+                            </td>                                    
+                        </tr>
+                        <tr>
+                            <th class="txt-l"><label>글내용</label></th>
+                            <td class="edit-area">
+                                <div class="edit-box">                                    
+                                    <!-- 에디터 영역-->
+                                    <img src="../images/biz2/임시/LNP_301_에디터.jpg" alt="임시 에디터 이미지" style="width:100%;min-height:inherit;">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="txt-l">파일첨부</th>
+                            <td class="file-up-area">
+                                <div class="filebox flex-ac">
+                                    <input class="upload-name fixed-value">
+                                    <label for="file02" class="btns bg-blue">파일첨부</label> 
+                                    <input type="file" id="file02" class="file">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btns-bottom">
+                <button type="button" class="btns">목록</button>
+                <button type="button" class="btns">등록</button>
+            </div>
+        </div>
+    </div>
+    <footer class="wrap">
+        <div class="info-content">
+            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
+            <address>
+                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
+                <span class="tel"><span>대표전화</span><span>1600-3005 (평일 09시~18시)</span></span>
+            </address>
+            <select class="ui-select" title="관련 사이트 선택">
+                <option value="#">관련 사이트</option>
+            </select>
+            <div class="link-area">
+                <div class="link-box">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="on">개인정보처리방침</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">이메일무단수집거부</a>
+                </div>
+                <span class="copy">
+                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
+                    RESERVED.
+                </span>
+                <div class="support-box">
+                    <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                    <img src="../images/biz2/footer_link_2.png" alt="국가평생교육진흥원">
+                    <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="layer-pop" data-pop="pop-1">
+        <div class="layer-content" style="--max-width: 1200px">
+            <div class="layer-scroll">
+                <span class="title">평생교육프로그램 운영과정</span>
+                <div class="info-area">
+                    <div class="top-info-group">
+                        <p class="top-info-group-data">총 <strong>19</strong>건</p>
+                        <select id="select-view">
+                            <option value="1">10건 보기</option>
+                            <option value="2">20건 보기</option>
+                            <option value="3">30건 보기</option>
+                        </select>
+                    </div>
+                    <div class="com-view-table table-scroll">
+                        <table class="mg-0" style="--minwidth: 1464px">
+                            <caption>평생교육프로그램 운영과정</caption>
+                            <colgroup>
+                                <col style="width: 4.10%"> 
+                                <col style="width: 13.66%"> 
+                                <col style="width: 6.83%"> 
+                                <col style="width: 11.34%"> 
+                                <col style="width: 6.83%">
+                                <col style="width: 5.46%"> 
+                                <col style="width: 10.11%"> 
+                                <col style="width: 6.83%"> 
+                                <col style="width: 6.83%"> 
+                                <col style="width: 8.54%"> 
+                                <col style="width: 8.54%"> 
+                                <col style="width: 10.93%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="wh-nowrap">순번</th>
+                                    <th>강좌명</th>
+                                    <th>대상자</th>
+                                    <th>강좌분류</th>
+                                    <th>교육방법</th>
+                                    <th>이용권<br>유형</th>
+                                    <th>총교육<br>일수/시간/회차</th>
+                                    <th>총교육<br>단위구분</th>
+                                    <th>(회당)<br>교육시간</th>
+                                    <th>수강료<br>(단위 : 원)</th>
+                                    <th>교재비<br>(단위 : 원)</th>
+                                    <th>등록일자</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="txt-l">실전 한국어</td>
+                                    <td>홍길동</td>
+                                    <td class="txt-l">학력보완교육</td>
+                                    <td>온라인</td>
+                                    <td>일반</td>
+                                    <td>10</td>
+                                    <td>일</td>
+                                    <td>1</td>
+                                    <td>10,000</td>
+                                    <td>0</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="txt-l">칼퇴하는 O/A</td>
+                                    <td>홍길동</td>
+                                    <td class="txt-l">성인 문해교육</td>
+                                    <td>오프라인</td>
+                                    <td>일반</td>
+                                    <td>10.3</td>
+                                    <td>일</td>
+                                    <td>20</td>
+                                    <td>85,000</td>
+                                    <td>0</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="txt-l">직업능력 향상교육</td>
+                                    <td>홍길동</td>
+                                    <td class="txt-l">직업능력 향상교육</td>
+                                    <td>온/오프<br>혼합</td>
+                                    <td>일반</td>
+                                    <td>20</td>
+                                    <td>일</td>
+                                    <td>1.2</td>
+                                    <td>15,000</td>
+                                    <td></td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="txt-l">실전 한국어</td>
+                                    <td>홍길동</td>
+                                    <td class="txt-l">직업능력 향상교육</td>
+                                    <td>온/오프<br>혼합</td>
+                                    <td>일반</td>
+                                    <td>100, 10.3</td>
+                                    <td>회차</td>
+                                    <td>1.2</td>
+                                    <td>85,000</td>
+                                    <td>0</td>
+                                    <td>YYYY.MM.DD</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="com-paging">
+                        <button class="prev">이전</button>
+                        <button class="on">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <span class="empty">...</span>
+                        <button>120</button>
+                        <button class="next">다음</button>
+                    </div>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=pop-1]').hide();">닫기</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=pop-1]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

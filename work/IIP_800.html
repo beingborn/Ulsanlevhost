@@ -376,7 +376,7 @@
                             <td colspan="3">
                                 <div class="flex-acjs">
                                     <span>운영계획서.jpg[114615 byte]</span>
-                                    <button type="button" class="btns bg-blue layer-btn" onclick="$('[data-pop=pop-1]').show();">상세보기</button>
+                                    <button type="button" class="btns bg-blue layer-btn" onclick="modalPop()">상세보기</button>
                                 </div>
                             </td>
                         </tr>
@@ -590,5 +590,26 @@
             </div>
         </div>
     </div>
+    <script>
+    /* 20241230 이민혁 임시 새창 팝업 제어 스크립트 */
+    function modalPop(){
+        popup = window.open('IPP_800.html', '기관 조회 팝업', 'status=no, toolbar=no, menubar=no, resizable=1,')
+        popup.onload = function(){
+            // 팝업 높이 setting
+            let contentHeight = popup.document.querySelector('.new-window-content').scrollHeight;
+            let browserUiHeight = popup.outerHeight - popup.innerHeight;
+            let resizeHeight = contentHeight + browserUiHeight;
+            // 팝업 넓이 세팅
+            let contentWidth = popup.document.querySelector('.new-window-content').scrollWidth;
+            let resizeWidth = contentWidth;
+            // 브라우저 ui 높이 넓이를 뺀 값으로 리사이징
+            popup.resizeTo(resizeWidth ,resizeHeight)
+            // 브라우저 스크린 기준으로 중앙 정렬
+            let left = Math.ceil((window.screen.width - resizeWidth)/2);
+            let top = Math.ceil((window.screen.height - resizeHeight)/2);
+            popup.moveTo(left, top)
+        }
+    }
+    </script>
 </body>
 </html>

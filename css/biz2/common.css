@@ -83,6 +83,8 @@
 /* border */
 .b {border: 1px solid black; border-radius: 12px;}
 .border-d8-r {border-right: 1px solid #d8d8d8!important;} /* border-right 값 재설정 */
+.border-left-init {border-left: 0!important;}
+.border-right-init {border-right: 0!important;}
 
 
 /* display */
@@ -95,7 +97,7 @@
 .flex-dc{display: flex;flex-direction: column;}
 .hidden {display: none;}
 .flex-align-top {align-items: flex-start!important;}
-
+.flex-noWrap {flex-wrap: nowrap!important;}
 
 /* display */
 .flex-col {display: flex; flex-direction: column;}
@@ -111,6 +113,7 @@
 
 /* bg */
 .bg-primary {background: var(--primary-color);}
+.bg-init {background: transparent!important;}
 
 /* table */
 table {font-size: 20px;}
