@@ -784,7 +784,13 @@ table .total td{background-color:#E9F9FA}
 .main-info-tit{font-weight:700;font-size:38px;color:var(--white);line-height:38px;letter-spacing:0}
 .main-info-mo-desc{color:#fff;font-weight:700;margin-top:8px;font-size:16px}
 .more-link-area{display:flex;flex-direction:column;gap:20px}
-.more-link-area > a{display:block;min-height:130px;background:var(--white);display:flex;justify-content:space-between;align-items:center;border-radius:15px;font-size:28px;font-weight:700;padding:0 30px 0 20px;transition:transform 0.5s}
+.more-link-area > a{
+	transition:transform 0.5s; 
+	display:block;
+	min-height:130px;
+	background:var(--white);
+	display:flex;
+	justify-content:space-between;align-items:center;border-radius:15px;font-size:28px;font-weight:700;padding:0 30px 0 20px;}
 /* 메인 공지사항 */
 .main-notice{border-radius:15px;flex:1;padding:20px;background:var(--white)}
 .main-notice .main-tit-group{max-height:48px}
@@ -834,6 +840,7 @@ table .total td{background-color:#E9F9FA}
 .fixed-quick li > a{display:flex;flex-direction:column;gap :4px;line-height:27px;font-size:16px;font-weight:700;align-items:center;letter-spacing:-0.8px}
 .fixed-quick li.issue-info > a::before{background:url(../../images/biz2/ic_fixed_1.png) no-repeat center center}
 .fixed-quick li.nle-agency > a::before{background:url(../../images/biz2/ic_fixed_2.png) no-repeat center center}
+.fixed-quick li.portal > a::before{background: url(../../images/biz2/ic_fixed_portal.png) no-repeat center center;}
 
 /* Parkjm */
 /* 상세 테이블 공통 */

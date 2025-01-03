@@ -251,6 +251,8 @@
 }
 /* 기관 정보 */
 .agency-info {font-size: 32px; font-weight: 700;}
+
+/* 사용기관 메인 */
 .main-info-content .link-area .link-box .tikcet-btn { padding-top: 44px; background: #218CEF; transition: transform 0.5s; }
 .main-info-content .link-area .link-box .tikcet-btn:hover { transform: translateY(-30px); }
 .main-info-content .link-area .link-box .tikcet-btn .txt { display: block; width: 100%; margin-top: 155px; font-size: 38px; font-weight: bold; line-height: 45px; color: #fff; }

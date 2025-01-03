@@ -11,7 +11,7 @@
 @media only screen and (min-width:1080px){
 	/* PC 전용 호버 애니메이션 */
 	.more-link-area > a:hover{transform:translateY(-15px)}
-	.main-info-mo-wrap > .main-info-link:hover{transform:translateY(-30px)}
+	.main-info-mo-wrap > .main-info-link:hover{transform:translateY(-15px)}
 	.lg-only{display:block}	
 	table.lg-only{display:table}	
 }
