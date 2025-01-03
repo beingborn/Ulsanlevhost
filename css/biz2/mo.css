@@ -422,7 +422,8 @@
 	.cs-center .com-write-table table tr td:not(.cont-area):first-child{border-left:1px solid var(--gray-30-d8);}
 	.cs-center .com-write-table table tr td:not(.cont-area):last-child{border-right:1px solid var(--gray-30-d8);}
 	.cs-center .com-write-table table td.cont-area dt{display:none;}
-	.cs-center .com-write-table table td.add-file .attached-file{font-size:16px;}
+	.cs-center .com-write-table table td.add-file .attached-file{height:56px;line-height:56px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;font-size:16px;color:var(--text-sub-33);}
+	.cs-center .com-write-table table td.add-file .attached-file .ico-pdf{padding-left:16px;margin-right:4px;vertical-align:middle;}
 	.cs-center .com-write-table .btn-download{width:40px;min-width:40px;height:56px;background-color:transparent;}
 	.cs-center .com-write-table .btn-download > span{display:block;overflow:hidden;font-size:0;line-height:0;position:absolute;text-indent:-9999px;width:1px;height:1px;}
 	.cs-center .com-write-table .btn-download::after{margin-left:0;margin-right:8px;background-image:url(../../images/biz2/ico/ico_download_black.svg);}
@@ -452,9 +453,10 @@
 	.objection table.basic-info .filebox.flex-ac, 
 	.file-up-area .filebox.flex-ac{position:relative;}
 	.objection table.basic-info .filebox.flex-ac .upload-name, 
-	.file-up-area .filebox.flex-ac .upload-name{height:40px;}
-	.objection table.basic-info .filebox.flex-ac .btns, 
-	.file-up-area .filebox.flex-ac .btns{position:absolute;top:50%;right:8px;width:24px;height:24px;background:url(../../images/biz2/ico/ico_file_up_mo.svg) no-repeat 50%;background-color:transparent !important;background-size:20px;text-indent: -999px;transform:translateY(-50%);}
+	.file-up-area .filebox.flex-ac .upload-name{min-width:auto;max-width:unset;width:100%;height:40px;}
+	.objection table.basic-info .filebox.flex-ac label.btns, 
+	.file-up-area .filebox.flex-ac label.btns{position:absolute;top:50%;right:8px;min-width:24px;width:24px;height:24px;background:url(../../images/biz2/ico/ico_file_up_mo.svg) no-repeat 50%;background-color:transparent !important;background-size:20px;text-indent: -999px;transform:translateY(-50%);}
+	.objection table.basic-info td button.file-reset.btns{min-width:61px;width:auto;height:36px;padding:9px 12px 8px;font-size:14px;border-radius:4px;}
 	.objection .btns-bottom{padding-bottom:60px;}
 	/* LAP_201 선정 포기 신청 */
 	.objection .com-write-table .basic-info td .row-gap{gap:10px;margin:0;}
@@ -479,6 +481,11 @@
 	/* LNP_300 질의응답 */
 	.cs-center .top-info-group .right-wrap.flex-ac{width:calc(100% - 100px);justify-content:flex-end;}
 	.cs-center .top-info-group .right-wrap.flex-ac .btns{width:auto;min-width:49px;height:36px;font-size:14px;font-weight:500;}
+	/* LNP_303 질의응답 */
+	.qna .add-file .attached-file.file-name-area{width:100%;}
+	.qna .add-file .attached-file.file-name-area .ico-pdf{padding-left:16px;margin-right:4px;vertical-align:middle;}
+	.qna .add-file .attached-file.file-name-area .file-name{display:inline-block;max-width:calc(100% - 150px);height:56px;line-height:56px;overflow:hidden;text-overflow:ellipsis;display:-webkit-inline-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;font-size:16px;color:var(--text-sub-33);vertical-align:middle;}	
+	.qna .add-file .attached-file.file-name-area .byte{font-size:16px;color:var(--text-sub-33);}
 	/* // Parkjm */
 }
 

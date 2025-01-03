@@ -231,6 +231,7 @@
                                     <input class="upload-name fixed-value">
                                     <label for="file01" class="btns bg-blue">파일첨부</label> 
                                     <input type="file" id="file01" class="file">
+                                    <button type="button" class="btns bg-blue">초기화</button>
                                 </div>
                                 <p class="bullet-txt">pdf 또는 jpg 파일만 첨부가 가능합니다</p>
                             </td>
@@ -245,25 +246,16 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th class="txt-l"><label for="name">성명</label></th>
-                            <td>
-                                <input type="text" id="name" class="fixed-value" value="홍길동" readonly="readonly">
-                            </td>
+                            <th class="txt-l">성명</th>
+                            <td>홍길동</td>
                         </tr>
                         <tr>
-                            <th class="txt-l"><label for="birth">생년월일</label></th>
-                            <td>
-                                <input type="text" id="name" class="fixed-value" value="1976년 08월 08일" readonly="readonly"></td>
+                            <th class="txt-l">생년월일</th>
+                            <td>1976년 08월 08일</td>
                         </tr>
-                        <tr class="address">
-                            <th class="txt-l"><label for="address">주소</label></th>
-                            <td class="input-group space">
-                                <div class="flex-ac">
-                                    <input type="text" id="address" class="fixed-width" value="04520" readonly="readonly">
-                                </div>
-                                <p class="flex-ac"><input type="text" class="fixed-value" value="서울특별시 중구 청계천로" readonly="readonly"></p>
-                                <p class="flex-ac"><input type="text" class="fixed-value" value="14 7층" readonly="readonly"></p>
-                            </td>
+                        <tr>
+                            <th class="txt-l">주소</th>
+                            <td>(04520) 서울특별시 중구 청계천로 14 7층</td>
                         </tr>
                         <tr>
                             <th class="txt-l"><label for="tel">휴대전화번호</label></th>
@@ -374,6 +366,7 @@
                                     <input type="file" id="file01" class="file">
                                 </div>
                                 <p class="bullet-txt">pdf 또는 jpg 파일만 첨부가 가능합니다</p>
+                                <button type="button" class="file-reset btns bg-blue">초기화</button>
                             </td>
                         </tr>
                     </tbody>

@@ -752,7 +752,7 @@ table .total td{background-color:#E9F9FA}
 .temp-cont.lip-001{height:1441px;background-image:url(../../images/biz2/LIP_001_\(임시\).jpg)}
 
 /* 지자체 메인 LMP_001 */
-.main-cont{display:flex;justify-content:space-between;position:relative;padding:40px 0}
+.main-cont{display:flex;justify-content:space-between;position:relative;padding:20px 0}
 .main-cont::before{content:'';display:block;position:absolute;left:0;top:0;height:100%;width:100vw;margin-left:calc(-50vw + 50%);background:#27C2CB;z-index:-1}
 .main-info-left{width:calc(100% - 24.21875% - 20px);display:flex;flex-direction:column;gap:20px}
 .main-info-right{width:24.21875%}
@@ -760,10 +760,10 @@ table .total td{background-color:#E9F9FA}
 .main-tit-group{display:flex;justify-content:space-between;align-items:center}
 .main-tit-group > h2{font-size:40px;font-weight:700;letter-spacing:0}
 .main-info-wrap{display:flex;justify-content:space-between}
-.main-info-mo-wrap{flex:1;display:flex;margin-left:22px}
+.main-info-mo-wrap{flex:1;display:flex;margin-left:20px}
 .main-info-mo-wrap > .main-info-link{transition:transform 0.5s}
-.main-info-mo-wrap > .main-info-link + .main-info-link{margin-left:22px}
-.main-info-link{border-radius:15px;width:302px;height:280px;text-align:center}
+.main-info-mo-wrap > .main-info-link + .main-info-link{margin-left:20px}
+.main-info-link{border-radius:15px;width:304px;height:280px;text-align:center}
 .main-info-link.personal{padding:40px 20px 20px 20px}
 .main-info-link:not(.personal){padding:40px 0}
 .main-info-link .ico::before{align-self:center}
@@ -828,7 +828,7 @@ table .total td{background-color:#E9F9FA}
 .main-counseling-detail .main-counseling-num{font-weight:500;color:#1D2089;font-size:26px;margin-top:16px;letter-spacing:0} 
 .main .com-paging{margin-bottom:60px;margin-top:0} 
 /* 메인 고정 배너 */
-.fixed-quick{padding:10px 10px 20px 10px;border-radius:18px;border:1px solid var(--gray-30-d8);position:absolute;top:44px;right:-110px;width:100px;background:var(--white)}
+.fixed-quick{padding:10px 10px 20px 10px;border-radius:18px;border:1px solid var(--gray-30-d8);position:absolute;top:20px;right:-100px;width:100px;background:var(--white)}
 .fixed-quick > ul{display:flex;flex-direction:column;gap:24px;align-items:center;text-align:center}
 .fixed-quick li > a::before{content:'';display:inline-block;width:80px;height:80px;border:1px solid var(--gray-30-d8);border-radius:16px}
 .fixed-quick li > a{display:flex;flex-direction:column;gap :4px;line-height:27px;font-size:16px;font-weight:700;align-items:center;letter-spacing:-0.8px}
@@ -943,6 +943,9 @@ table .total td{background-color:#E9F9FA}
 }
 .objection table.basic-info td .txt-box{min-height:100px;} 
 .objection table.basic-info td textarea{min-height:100px;height:100px;}
+.objection table.basic-info .filebox.flex-ac .upload-name{min-width:calc(100% - 309px);max-width:532px;width:auto;}
+.objection table.basic-info .filebox.flex-ac label.btns{min-width:117px;text-align:center;}
+.objection table.basic-info .filebox.flex-ac button.btns{min-width:98px;}
 .objection table.basic-info td .bullet-txt{margin:10px 0;}
 .objection table.basic-info td .bullet-txt::before{content:'';display:inline-block;width:4px;height:4px;margin-right:10px;background-color:var(--text-sub-33);}
 .objection .agree-box02 .asterisk{padding:0;text-indent:0;}
@@ -969,3 +972,7 @@ table .total td{background-color:#E9F9FA}
 .cs-center td .fixed-w260{width:260px}
 .cs-center .edit-area .asterisk{margin-top:0;margin-bottom:10px;font-size:16px;}
 .cs-center .basic-info .edit-area .edit-box{min-height:160px;}
+/* LNP_303 질의응답 */
+.qna .top-info-group h3.ico.a-ico::before{background-image:url(../../images/biz2/ico/ico_answer.svg);}
+.qna .add-file .attached-file.file-name-area .ico-pdf.pl-0{padding-left:0;}
+/* // Parkjm */
