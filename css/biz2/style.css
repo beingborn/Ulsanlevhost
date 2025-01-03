@@ -132,11 +132,22 @@ ul.txt-indent-14 > li {padding-left: 14px; text-indent: -14px;}
 .blue-box{padding:40px 38px;border-radius:40px;background-color:#F7F9FC}
 
 /* paging 공통 */
-.com-paging button{display:flex;align-items:center;justify-content:center}
-.com-paging button.prev,
-.com-paging button.next{width:64px;padding:0;line-height:0;background:none}
-.com-paging button.prev::before{content:"";display:inline-block;width:20px;height:20px;vertical-align:middle;background:url(../../images/biz2/ico/paging_arrow.svg) no-repeat center;margin-top:-2px}
-.com-paging button.next::after{content:"";display:inline-block;width:20px;height:20px;vertical-align:middle;background:url(../../images/biz2/ico/paging_arrow.svg) no-repeat center;transform:rotate(180deg);margin-top:-2px}
+/* pagination styling */
+.paging { display: flex; justify-content: center; align-items: center; column-gap: 8px; margin-top: 40px; }
+.paging a{ display: inline-flex; align-items:center; justify-content:center;}
+.paging a:not(.prev, .next) { width: 40px; height: 40px; font-size: 18px; font-weight: 500; color: #666666;}
+.paging a.on { background: #00b3be; border-radius: 6px; color: #fff; }
+
+.paging a.prev {font-size: 18px; font-weight: 500; line-height: 40px; color: var(--text-primary-00); background: url(../../images/biz2/paging_arrow_left.png) no-repeat 0 9px; }
+.paging a.next {font-size: 18px; font-weight: 500; line-height: 40px; color: var(--text-primary-00); background: url(../../images/biz2/paging_arrow_right.png) no-repeat right 9px; }
+.paging a.prev,
+.paging a.next{width:64px;padding:0; background:none}
+.paging a.prev::before{content:"";display:inline-block;width:20px;height:20px;vertical-align:middle;background:url(../../images/biz2/ico/paging_arrow.svg) no-repeat center;margin-top:-2px}
+.paging a.next::after{content:"";display:inline-block;width:20px;height:20px;vertical-align:middle;background:url(../../images/biz2/ico/paging_arrow.svg) no-repeat center;transform:rotate(180deg);margin-top:-2px}
+.paging span.num {display: flex; align-items: center; gap: 8px;}
+/* 이민혁 개발 이슈로 임시 삭제 */
+/* .paging .empty { width: 40px; height: 40px; font-size: 18px; font-weight: 500; color: #333333; text-align: center; } */
+
 
 /* tooltip 공통 */
 .tooltip{position:relative}
@@ -832,7 +843,7 @@ table .total td{background-color:#E9F9FA}
 .main-counseling-ico > a.ico.counceling-link::before{width:70px;height:70px;background-color:#218CEF;background-image :url(../../images/biz2/ico/ico_home_white.svg);background-repeat:no-repeat;background-size:24px 24px;background-position:center center;border-radius:50%}
 .main-counseling-detail > h5{font-weight:700;font-size:26px;letter-spacing:0;white-space:nowrap}
 .main-counseling-detail .main-counseling-num{font-weight:500;color:#1D2089;font-size:26px;margin-top:16px;letter-spacing:0} 
-.main .com-paging{margin-bottom:60px;margin-top:0} 
+.main .paging{margin-bottom:60px;margin-top:0} 
 /* 메인 고정 배너 */
 .fixed-quick{padding:10px 10px 20px 10px;border-radius:18px;border:1px solid var(--gray-30-d8);position:absolute;top:20px;right:-100px;width:100px;background:var(--white)}
 .fixed-quick > ul{display:flex;flex-direction:column;gap:24px;align-items:center;text-align:center}
@@ -982,4 +993,11 @@ table .total td{background-color:#E9F9FA}
 /* LNP_303 질의응답 */
 .qna .top-info-group h3.ico.a-ico::before{background-image:url(../../images/biz2/ico/ico_answer.svg);}
 .qna .add-file .attached-file.file-name-area .ico-pdf.pl-0{padding-left:0;}
+/* LIP_500 이용권 선정결과 */
+.ticket-result .border-box02{padding:60px 40px;border:1px solid #D8D8D8;border-radius:20px;}
+.ticket-result .border-box02 .txt{font-size:32px;font-weight:300;text-align:center;}
+.ticket-result .border-box02 .txt .name{margin-right:8px;}
+.ticket-result .color-blue02{color:#0CA2FF;}
+/* LIP_200 평생교육이용권 이용 내역 */
+.search-list.r-btn dl{flex:1;}
 /* // Parkjm */

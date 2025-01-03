@@ -86,6 +86,13 @@ $(document).ready(function () {
     }
   })
 
+  $('.new-window-pop button').each(function(){
+    var onClickValue = $(this).attr('onclick')
+    if(onClickValue && onClickValue.includes('close()')){
+      $(this).addClass('layer-hide-trigger')
+    }
+  })
+
   /* hide trigger 클릭 시 스크롤 풀기  */
   $(document).on("click", ".layer-hide-trigger", function() {
     $('html').css('overflow-y', 'scroll')
