@@ -493,9 +493,25 @@
 	/* LIP_200 평생교육이용권 이용 내역 */
 	.ticket-use-history.search-box{padding:12px 10px;background-color:#00B3BE;border-radius:6px;}    
 	.ticket-use-history.search-box .search-list{align-items:center;}
-	.ticket-use-history.search-box .search-list dt{width:auto;min-width:75px;color:var(--white);}
-	.ticket-use-history.search-box .btns{width:auto;height:40px;padding:7px 10ox 6px 10px;margin:0;background-color:#383838;}
+	.ticket-use-history.search-box .search-list dt{width:auto;padding-left:0;font-size:18px;color:var(--white);}
+	.ticket-use-history.search-box .search-list dd{padding:0 10px;}
+	.ticket-use-history.search-box .search-list dd select{width:100%;}
+	.ticket-use-history.search-box .btns{width:auto;height:40px;padding:7px 10px 6px 10px;margin:0;background-color:#383838;font-size:18px;}
+	.ticket-use-history.search-box .btns span.lg-only{display:none;}
+
+	.adjust-sm.search-box{padding:12px 10px;background-color:#00B3BE;border-radius:6px;}    
+	.adjust-sm.search-box .search-list {align-items: center;}
+	.adjust-sm.search-box .search-list dt{width:auto;padding-left:0;font-size:18px;color:var(--white);}
+	.adjust-sm.search-box .search-list dd select {width: 100%;}
+	.adjust-sm.search-box .btns { width:auto; height:40px; padding:7px 10px 6px 10px; margin:0; background-color:#383838; font-size:18px; }
+	.adjust-sm.search-box .btns span.lg-only{display:none;}
+		
+
+	.cs-center .top-info-group .btns.w-auto{width:auto;min-width:100px;}	
 	.cs-center .top-info-group .btns.w-auto{width:auto;min-width:100px;}
+	.cs-center .com-view-table+.asterisk{font-size:16px;}
+	.cs-center .table-list.class-list ul li{align-items:baseline;}
+	.cs-center .table-list.class-list ul li > strong{white-space:nowrap;}
 	/* // Parkjm */
 }
 

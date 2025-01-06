@@ -76,7 +76,6 @@
         <div class="top-location-area wrap">
             <span class="home"><span class="blind">홈</span></span>
             <div class="location-box">
-                <span class="arrow">게시판</span>
                 <span class="arrow">마이페이지</span>
                 <span class="arrow">교육이수정보</span>
             </div>
@@ -87,11 +86,11 @@
             <h2 class="page-header-tit">교육 이수 정보</h2>
         </div>
         <div class="contents cs-center">
-            <div class="search-box">
+            <div class="search-box edu-learned-info">
                 <form>
                     <fieldset>
                         <legend>교육 이수 정보 검색영역</legend>
-                        <div class="search-list">
+                        <div class="search-list r-btn">
                             <dl>
                                 <dt><label for="srch01">사업년도</label></dt>
                                 <dd>
@@ -100,16 +99,8 @@
                                     </select>
                                 </dd>                    
                             </dl>
-                            <dl>
-                                <dt><label for="srch02">차수</label></dt>
-                                <dd>
-                                    <select name="" id="srch02">
-                                        <option value="">1</option>
-                                    </select>
-                                </dd>                    
-                            </dl>
+                            <button type="submit" class="btns">검색<span class="lg-only">하기</span></button>
                         </div>
-                        <button type="submit" class="btns">검색</button>
                     </fieldset>
                 </form> 
             </div>
@@ -193,23 +184,55 @@
                     <li><strong>승인번호 :</strong> 72344234</li>
                 </ul>
             </div>
-            <div class="com-paging">
-                <button class="prev">이전</button>
-                <button class="on">1</button>
-                <button class="next">다음</button>
+            <div class="paging ">
+                <span class="pg">
+                    <a href="#" class="prev">
+                        <span>이전</span>
+                    </a>
+                </span>
+                <span class="num">
+                    <a href="#" class="on">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                </span>
+                <span class="pg">
+                    <a href="#" class="next">
+                        <span>다음</span>
+                    </a>
+                </span>
             </div>
         </div>
     </div>
     <footer class="wrap">
         <div class="info-content">
+            <div class="family-select-wrap">
+                <div class="family-select-lg custom-select-box" >
+                    <button class="custom-select-open">관련 사이트</button>
+                    <ul class="family-site-list custom-select-list">
+                        <li><a href="#">국가평생교육진흥원 독학학위제</a></li>
+                        <li><a href="#">학점은행제 정보공시제(알리미)</a></li>
+                        <li><a href="#">평생학습계좌제</a></li>
+                        <li><a href="#">학점은행제</a></li>
+                        <li><a href="#">평생학습포털 늘배움</a></li>
+                        <li><a href="#">국가평생진흥원</a></li>
+                        <li><a href="#">교육부</a></li>
+                        <li><a href="#">고용노동부</a></li>
+                        <li><a href="#">한국진흥원</a></li>
+                        <li><a href="#">관련사이트10</a></li>
+                        <li><a href="#">관련사이트11</a></li>
+                        <li><a href="#">관련사이트12</a></li>
+                        <li><a href="#">관련사이트13</a></li>
+                        <li><a href="#">관련사이트14</a></li>
+                    </ul>
+                </div>
+            </div>
             <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
             <address>
                 <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
-                <span class="tel"><span>대표전화</span><span>1600-3005 (평일 09시~18시)</span></span>
+                <span class="tel"><span class="txt-bold">대표전화</span><span><span class="txt-bold">1600-3005</span> (평일 09시~18시)</span></span>
             </address>
-            <select class="ui-select" title="관련 사이트 선택">
-                <option value="#">관련 사이트</option>
-            </select>
             <div class="link-area">
                 <div class="link-box">
                     <a href="#">이용약관</a>
@@ -336,16 +359,24 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="com-paging">
-                        <button class="prev">이전</button>
-                        <button class="on">1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>4</button>
-                        <button>5</button>
-                        <span class="empty">...</span>
-                        <button>120</button>
-                        <button class="next">다음</button>
+                    <div class="paging ">
+                        <span class="pg">
+                            <a href="#" class="prev">
+                                <span>이전</span>
+                            </a>
+                        </span>
+                        <span class="num">
+                            <a href="#" class="on">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                        </span>
+                        <span class="pg">
+                            <a href="#" class="next">
+                                <span>다음</span>
+                            </a>
+                        </span>
                     </div>
                     <div class="layer-btn-wrap">
                         <button class="btns" onclick="$('[data-pop=pop-1]').hide();">닫기</button>

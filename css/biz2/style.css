@@ -993,6 +993,9 @@ table .total td{background-color:#E9F9FA}
 /* LNP_303 질의응답 */
 .qna .top-info-group h3.ico.a-ico::before{background-image:url(../../images/biz2/ico/ico_answer.svg);}
 .qna .add-file .attached-file.file-name-area .ico-pdf.pl-0{padding-left:0;}
+/* LIP_400 이용자 이벤트 */
+.user-event-box {overflow: hidden; border-radius: 12px; margin-top: 40px;}
+.user-event-box img {object-fit: cover; height: auto; width: 100%;}
 /* LIP_500 이용권 선정결과 */
 .ticket-result .border-box02{padding:60px 40px;border:1px solid #D8D8D8;border-radius:20px;}
 .ticket-result .border-box02 .txt{font-size:32px;font-weight:300;text-align:center;}
@@ -1000,4 +1003,9 @@ table .total td{background-color:#E9F9FA}
 .ticket-result .color-blue02{color:#0CA2FF;}
 /* LIP_200 평생교육이용권 이용 내역 */
 .search-list.r-btn dl{flex:1;}
+.ticket-use-history.search-box .btns span.lg-only,
+.adjust-sm.search-box .btns span.lg-only 
+{display:inline-block;}
+
 /* // Parkjm */
+

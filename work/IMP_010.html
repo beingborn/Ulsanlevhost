@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- css js inject -->
+        <link rel="stylesheet" href="../css/biz2/reset.css">
+        <link rel="stylesheet" href="../css/biz2/common.css">
+        <link rel="stylesheet" href="../css/biz2/layout.css">
+        <link rel="stylesheet" href="../css/biz2/main.css">
+        <link rel="stylesheet" href="../css/biz2/style.css">
+        <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
+        <script src="../js/biz2/jquery.1.8.2.min.js"></script>
+        <script src="../js/biz2/swiper-bundle.min.js"></script>
+        <script src="../js/biz2/script.js"></script>
+        <title>울산광역시 평생교육이용권</title>
+    </head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="IMP_002.html">
+                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+            </a>
+        </div>
+        <div class="menu-area">
+            <!-- 로그인 시 -->
+            <a href="#" class="log-info">
+                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
+                <span class="log-info-txt">로그아웃</span>
+            </a>
+            <button class="open-btn">
+                <span class="blind">메뉴 열기</span>
+            </button>
+            <div class="menu-box">
+                <ul class="link-group login">
+                    <li>
+                        <span class="tit">사업안내</span>
+                        <div class="link-item">
+                            <a href="IGP_001.html">평생교육이용권이란?</a>
+                            <a href="IGP_001.html">평생교육이용권 사용하기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">이용권 사용기관</span>
+                        <div class="link-item">
+                            <a href="ILP_001.html">사용기관 신청</a>
+                            <a href="IIP_800.html">사용기관 신청 현황</a>
+                            <a class="hidden" href="#">이용권 사용내역</a>
+                            <a href="#">교육결과 관리</a>
+                            <a class="hidden" href="#">교육과정 정보</a>
+                            <a class="hidden" href="#">학습자 정보</a>
+                            <a href="IIP_400.html">기관 정보 수정</a>
+                            <a class="hidden" href="#">사용기관 연수</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="tit">게시판</span>
+                        <div class="link-item">
+                            <a href="IIP_001.html">공지사항</a>
+                            <a href="INP_100.html">자료실</a>
+                            <a href="INP_200.html">자주하는질문</a>
+                            <a href="INP_200.html">질의응답</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="close-btn">
+                    <span class="blind">메뉴 닫기</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container wrap">
+        <div class="page-header">
+            <h2 class="page-header-tit">아이디 찾기</h2>
+        </div>
+        <div class="top-info-group">
+            <h3>회원정보 입력</h3>
+            <small><em class="color-red">*</em> 는 필수사항입니다.</small>
+        </div>
+        <div class="com-write-table">
+            <table class="basic-info">
+                <caption>회원정보 입력 테이블</caption>
+                <colgroup>
+                    <col style="width: 200px;">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th class="txt-l">
+                            <label for="name" class="must-type">이름(국문)</label>
+                        </th>
+                        <td>
+                            <input type="text" class="fixed-value" maxlength="20" title="이름(국문)" name="mberNm" id="mberNm">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l">
+                            <label for="category" class="must-type">인증방법</label>
+                        </th>
+                        <td>
+                            <div class="radio-wrap">
+                                <div class="radio-box">
+                                    <input type="radio" name="searchRole"id="searchRole1" value="phoneNum">
+                                    <label for="searchRole1">휴대전화번호로 찾기</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" name="searchRole"id="searchRole2" value="email">
+                                    <label for="searchRole2">전자우편(E-mail) 찾기</label>
+                                </div> 
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hp">
+                        <th class="txt-l">
+                            <label for="tel" class="must-type">휴대전화번호</label>
+                        </th>
+                        <td class="input-group">
+                            <div class="input-num">
+                                <select id="areaHpNo" name="areaHpNo">
+                                    <option value>선택</option>
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="012">012</option>
+                                </select>
+                                <span>-</span>
+                                <div class="tel-num flex-ac">
+                                    <input type="tel" title="전화번호 중간자리">
+                                    <span>-</span>
+                                    <input type="tel" title="전화번호 끝자리">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="email">
+                        <th class="txt-l"><label for="email">전자우편주소</label></th>
+                        <td class="input-group space">
+                            <div class="flex-ac">
+                                <div class="flex-ac">
+                                    <input type="text" id="email" class="email-id">
+                                    @
+                                    <div class="flex-ac">
+                                        <input type="text" class="email">
+                                        <select>
+                                            <option value="none">직접입력</option>
+                                            <option value="1">2</option>
+                                            <option value="1">3</option>
+                                            <option value="1">4</option>
+                                        </select> 
+                                    </div>
+                                </div>                              
+                            </div>                         
+                        </td>                            
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+
+    

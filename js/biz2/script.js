@@ -86,10 +86,11 @@ $(document).ready(function () {
     }
   })
 
-  $('.new-window-pop button').each(function(){
-    var onClickValue = $(this).attr('onclick')
-    if(onClickValue && onClickValue.includes('close()')){
-      $(this).addClass('layer-hide-trigger')
+  /* 로컬 스토리지 새창 팝업 */
+  var isWindowOpen = localStorage.getItem('newWindow')
+  window.addEventListener('storage', (event)=>{
+    if(event.newValue === 'false') {
+      $('html').css('overflow-y', 'scroll')
     }
   })
 
