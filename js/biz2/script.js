@@ -6,6 +6,12 @@ $(document).ready(function () {
     if (!href || href === '#') { $(this).addClass('disabled-link'); }
   })
 
+  // 임시 비활성화
+  // $('table tr th').each(function(){
+  //   var hasMustType = $(this).hasClass('must-type')
+  //   $(this).attr('title', '필수입력')
+  // })
+
   let desktop = window.matchMedia('(min-width: 1080px)').matches;
 
   /* js 미디어쿼리 */
@@ -137,6 +143,20 @@ $(document).ready(function () {
     })
   }
 
+  /* 아이디 찾기 인증 방식 */
+  $("input:radio[name=searchGbn]").click(function() {
+		if(this.value == "01")
+		{
+			$(".hp").css("display","");
+			$(".email").css("display","none");
+		}
+		else if(this.value == "02")
+		{
+			$(".hp").css("display","none");
+			$(".email").css("display","");
+		}
+	});
+
   /* 본인인증 임시 값 숨기기 */
   const actualValue = "135345";
   $('#secure-value').text('●'.repeat(actualValue.length));
@@ -177,6 +197,7 @@ $(function(){
 $(window).on('resize', function(){
   adjustContainerHeight()
 })
+
 
 
 

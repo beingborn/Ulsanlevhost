@@ -48,6 +48,7 @@
 .txt-gray55 {color: var(--gray-70-55);}
 .txt-gray66 {color: #666666;}
 .txt-grayb5 {color: #b5b5b5;}
+.txt-gray99 {color: #999999!important;}
 /* txt font-weight */
 .txt-bold {font-weight: 700;}
 .txt-thin {font-weight: 300;}

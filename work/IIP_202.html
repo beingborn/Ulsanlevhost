@@ -27,8 +27,10 @@
         <div class="menu-area">
             <!-- 로그인 시 -->
             <a href="#" class="log-info">
-                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
                 <span class="log-info-txt">로그아웃</span>
+            </a>
+            <a href="#" class="log-info">
+                <span class="log-info-txt">담당자 정보 수정</span>
             </a>
             <button class="open-btn">
                 <span class="blind">메뉴 열기</span>
@@ -45,13 +47,12 @@
                     <li>
                         <span class="tit">이용권 사용기관</span>
                         <div class="link-item">
-                            <a href="ILP_001.html">사용기관 신청</a>
-                            <a href="IIP_800.html">사용기관 신청 현황</a>
+                            <a href="IIP_800.html">사용기관 등록 신청 현황</a>
                             <a class="hidden" href="#">이용권 사용내역</a>
                             <a href="#">교육결과 관리</a>
                             <a class="hidden" href="#">교육과정 정보</a>
                             <a class="hidden" href="#">학습자 정보</a>
-                            <a href="IIP_400.html">기관 정보 수정</a>
+                            <a class="hidden" href="IIP_400.html">기관 정보 수정</a>
                             <a class="hidden" href="#">사용기관 연수</a>
                         </div>
                     </li>
@@ -61,7 +62,7 @@
                             <a href="IIP_001.html">공지사항</a>
                             <a href="INP_100.html">자료실</a>
                             <a href="INP_200.html">자주하는질문</a>
-                            <a href="INP_200.html">질의응답</a>
+                            <a href="IIP_500.html">온라인 상담</a>
                         </div>
                     </li>
                 </ul>
@@ -75,7 +76,7 @@
         <div class="top-location-area wrap">
             <span class="home"><span class="blind">홈</span></span>
             <div class="location-box">
-                <span class="arrow">이용권 사용기관</span>
+                <span class="arrow">사용기관</span>
                 <span class="arrow">교육과정 정보</span>
                 <span class="arrow">교육과정 정보 상세</span>
                 <span class="arrow">교육과정 정보 수정</span>
@@ -412,9 +413,15 @@
                     RESERVED.
                 </span>
                 <div class="support-box">
-                    <img src="../images/biz2/footer_link_1.png" alt="교육부">
-                    <img src="../images/biz2/footer_link_2.png" alt="국가평생교육진흥원">
-                    <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    <a href="http://www.moe.go.kr" target="_blank">
+                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                    </a>
+                    <a href="http://www.nile.or.kr" target="_blank">
+                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                    </a>
+                    <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
+                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    </a>
                     <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
                 </div>
             </div>
@@ -616,17 +623,19 @@
                             </a>
                         </span>
                     </div>
-                    <div class="layer-btn-wrap">
-                        <button class="btns" onclick="$('[data-pop=often-course]').hide();">닫기</button>
-                    </div>
                 </div>
+                <button class="close-btn" onclick="$('[data-pop=often-course]').hide();">
+                    <span class="blind">
+                    레이어 팝업 닫기
+                    </span>
+                </button>
             </div>
         </div>
     </div>    
     <div class="layer-pop" data-pop="six-category">
         <div class="layer-content" style="--max-width: 1200px">
             <div class="layer-scroll">
-                <span class="title">평생교육프로그램 6대 영역별 분류</span>
+                <span class="title">평생교육프로그램 7대 영역별 분류</span>
                 <div class="info-area">
                     <div class="table-box mg-0">
                         <div class="com-view-table">
@@ -667,9 +676,14 @@
                         </div>
                     </div>
                     <div class="layer-btn-wrap">
-                        <button class="btns" onclick="$('[data-pop=six-category]').hide();">닫기</button>
+                        <button class="btns" onclick="$('[data-pop=six-category]').hide();">확인</button>
                     </div>
                 </div>
+                <button class="close-btn" onclick="$('[data-pop=six-category]').hide();">
+                    <span class="blind">
+                    레이어 팝업 닫기
+                    </span>
+                </button>
             </div>
         </div>
     </div>

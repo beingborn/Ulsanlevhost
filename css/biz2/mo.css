@@ -515,4 +515,9 @@
 	/* // Parkjm */
 }
 
-
+@media only screen and (max-width:800px){
+	/* dl dataset 자격검증 팝업 사용 */
+	.data-list dl dt {width: 96px; margin-right: 8px;}
+	.auth-res .auth-res-detail {text-align: left;}
+	.auth-res .border-box-20:has(>.auth-res-txt) {padding: 16px; font-size: 18px;}
+}

@@ -38,7 +38,17 @@ header .menu-area .menu-box .link-group:not(.login) { justify-content: space-bet
 header .menu-area .menu-box .link-group:not(.login) li {width: 200px;}
 header .menu-area .log-info {display: flex; align-items: center; gap: 8px; font-size: 14px;}
 header .menu-area .log-info-txt {font-weight: 500;}
-header .menu-area .menu-box .link-group li { display: flex; flex-direction: column; width: 100%; max-width: 200px;}
+header .menu-area .menu-box .link-group li { 
+	display: flex; 
+	flex-direction: column;
+	padding-left: 16px;  
+	border-left: 1px solid #D8D8D8;
+}
+header .menu-area .menu-box .link-group li:not(:last-child){
+	width: 100%; 
+	max-width: 206px;
+}
+
 header .menu-area .menu-box .link-group li > .tit { display: block; font-size: 24px; line-height: 27px; font-weight: bold; color: #000; }
 header .menu-area .menu-box .link-group li .link-item { display: flex; flex-direction: column; margin-top: 31px; }
 header .menu-area .menu-box .link-group li .link-item a { font-size: 19px; font-weight: 500; line-height: 48px; white-space: nowrap; color: #000; }
@@ -94,6 +104,7 @@ footer .info-content .link-area .link-box a { font-size: 17px; font-weight: 500;
 footer .info-content .link-area .link-box a.on { font-weight: bold; color: #003675; }
 footer .info-content .link-area .copy { display: block; margin-top: 11px; font-size: 17px; font-weight: 500; line-height: 27px; color: #000; }
 footer .info-content .link-area .support-box { display: flex; column-gap: 22px; position: absolute; right: 0; bottom: 0; }
+footer .info-content .link-area .support-box > img {height: 100%;}
 
 /* PC용 footer 관련 사이트 셀렉트 (* 접두어 lg) */
 footer .info-content .family-select-wrap {position: absolute; right: 0; top: 118px; z-index: 1;}

@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
     <link rel="stylesheet" href="../css/biz2/reset.css">
     <link rel="stylesheet" href="../css/biz2/common.css">
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
-    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/biz2/style.css">
+    <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
     <script src="../js/biz2/jquery.1.8.2.min.js"></script>
-    <script src="../js/biz2/js/swiper-bundle.min.js"></script>
-    <script src="../js/biz2/js/script.js"></script>
-    <title>울산광역시 평생교육이용권</title>
+    <script src="../js/biz2/swiper-bundle.min.js"></script>
+    <script src="../js/biz2/script.js"></script>
+    <title>울산광역시 평생교육이용원</title>
 </head>
 <body>
     <header>
@@ -26,8 +25,10 @@
         <div class="menu-area">
             <!-- 로그인 시 -->
             <a href="#" class="log-info">
-                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
                 <span class="log-info-txt">로그아웃</span>
+            </a>
+            <a href="#" class="log-info">
+                <span class="log-info-txt">담당자 정보 수정</span>
             </a>
             <button class="open-btn">
                 <span class="blind">메뉴 열기</span>
@@ -44,13 +45,12 @@
                     <li>
                         <span class="tit">이용권 사용기관</span>
                         <div class="link-item">
-                            <a href="ILP_001.html">사용기관 신청</a>
-                            <a href="IIP_800.html">사용기관 신청 현황</a>
+                            <a href="IIP_800.html">사용기관 등록 신청 현황</a>
                             <a class="hidden" href="#">이용권 사용내역</a>
                             <a href="#">교육결과 관리</a>
                             <a class="hidden" href="#">교육과정 정보</a>
                             <a class="hidden" href="#">학습자 정보</a>
-                            <a href="IIP_400.html">기관 정보 수정</a>
+                            <a class="hidden" href="IIP_400.html">기관 정보 수정</a>
                             <a class="hidden" href="#">사용기관 연수</a>
                         </div>
                     </li>
@@ -60,7 +60,7 @@
                             <a href="IIP_001.html">공지사항</a>
                             <a href="INP_100.html">자료실</a>
                             <a href="INP_200.html">자주하는질문</a>
-                            <a href="INP_200.html">질의응답</a>
+                            <a href="IIP_500.html">온라인 상담</a>
                         </div>
                     </li>
                 </ul>
@@ -70,18 +70,45 @@
             </div>
         </div>
     </header>
-    <div class="top-location">
-        <div class="top-location-area wrap">
-            <span class="home"><span class="blind">홈</span></span>
-            <div class="location-box">
-                <span class="arrow">이용권사용기관</span>
-                <span class="arrow">서약서 동의</span>
-            </div>
-        </div>
-    </div>
     <div class="container wrap">
         <div class="page-header">
-            <h2 class="page-header-tit">페이지 제목 (임시)</h2>
+            <h2 class="page-header-tit">담당자정보 수정</h2>
+        </div>
+        <div class="top-info-group">
+            <h3>인증정보 입력</h3>
+            <small><em class="color-red">*</em> 는 필수사항입니다.</small> 
+        </div>
+        <div class="com-write-table">
+            <table class="basic-info">
+                <caption>인증정보 입력란</caption>
+                <colgroup>
+                    <col style="width: 200px;">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th class="txt-l must-type"><label for="a">아이디</label></th>
+                        <td class="input-group">
+                            <div class="flex-ac">
+                                <input type="text" id="a" class="fixed-value">                                                            
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="txt-l must-type"><label for="b">비밀번호</label></th>
+                        <td class="input-group">
+                            <div class="flex-ac">
+                                <div class="input-num">
+                                    <input type="text" id="a" class="fixed-value">                                                            
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btns-bottom">
+            <a href="javascript:;" class="btns">확인</a>
         </div>
     </div>
     <footer class="wrap">
@@ -124,13 +151,42 @@
                     RESERVED.
                 </span>
                 <div class="support-box">
-                    <img src="../images/biz2/footer_link_1.png" alt="교육부">
-                    <img src="../images/biz2/footer_link_2.png" alt="국가평생교육진흥원">
-                    <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    <a href="http://www.moe.go.kr" target="_blank">
+                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                    </a>
+                    <a href="http://www.nile.or.kr" target="_blank">
+                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                    </a>
+                    <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
+                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    </a>
                     <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
                 </div>
             </div>
         </div>
     </footer>
+    <div class="layer-pop" data-pop="excel-res">
+        <div class="layer-content" style="--max-width: 640px">
+            <div class="layer-scroll">
+                <span class="title">엑셀 업로드 결과</span>
+                <div class="info-area upload-res">
+                    <p class="upload-res-txt">총 
+                        <strong>0</strong>건 중
+                        <strong class="color-red">0</strong>건 까지 확인 되었습니다.
+                    </p>
+                    <p class="upload-res-detail">
+                        오류 : <strong class="color-red">제공된 양식의 엑셀이 아닙니다.</strong>
+                    </p>
+                    <ul class="add-notice">
+                        <li>*다운로드한 양식의 가이드[입력 가이드] 시트를 확인 해주세요.</li>
+                    </ul>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=excel-res]').hide();">닫기</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=excel-res]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

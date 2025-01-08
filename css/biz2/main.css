@@ -132,26 +132,8 @@
 .layer-content .layer-scroll .info-area .text-box .table-group table td:last-child { border-right: 0; }
 .layer-content .layer-scroll .info-area .text-box .table-group table td.center { text-align: center; color: #191919; }
 .layer-content .layer-scroll .btn-box button { min-width: 74px; height: 38px; padding: 0 15px; border-radius: 6px; background: #00B3BE; font-size: 16px; font-weight: bold; color: #FFFFFF; }
-
 /* ui */
 .sample-pop-btn { height: 44px; padding: 0 14px; border-radius: 8px; border: 1px solid #DDDDDD; font-size: 16px; color: #666; }
-
-
-/* .ui-select { 
-	width: 100%; 
-	height: 44px;
-	padding: 0 10px; 
-	border: 1px solid #DDDDDD; 
-	border-radius: 8px; 
-	font-size: 16px;
-	color: #222; 
-	-webkit-appearance: none;
-	-moz-appearance: none; 
-	appearance: none; 
-	background: url(../../images/biz2/ic_select_arrow.png) 
-	no-repeat right 12px center;
-} */
-
 .ui-select.w-180 { width: 180px;}
 .ui-radio { display: inline-block; }
 .ui-radio input, .ui-radio label { cursor: pointer; }
@@ -233,7 +215,7 @@
 .main-info-content .link-area .link-box .link { display: flex; position: relative; width: 300px; height: 280px; border-radius: 17px; padding: 0 20px; }
 
 /* 기관 정보 수정 버튼 */
-.main-info-content .link-area .link-box .login-btn { padding-top: 44px; padding-bottom: 31px; background: #fff; flex-direction: column; text-align: center;}
+.main-info-content .link-area .link-box .login-btn { padding-top: 44px; padding-bottom: 31px; background: #fff; flex-direction: column; text-align: center; justify-content: center;}
 .main-info-content .link-area .link-box .login-btn .txt { 
 	display: flex; justify-content: center; align-items: center; 
 	position: relative; margin-top: auto;  width: 100%; height: 50px;
@@ -245,11 +227,11 @@
 
 /* 사용기관 메인 */
 .main-info-content .link-area .link-box .tikcet-btn { padding-top: 44px; background: #218CEF; transition: transform 0.5s; }
-.main-info-content .link-area .link-box .tikcet-btn:hover { transform: translateY(-30px); }
+.main-info-content .link-area .link-box .tikcet-btn:hover { transform: translateY(-15px); }
 .main-info-content .link-area .link-box .tikcet-btn .txt { display: block; width: 100%; margin-top: 155px; font-size: 38px; font-weight: bold; line-height: 45px; color: #fff; }
 .main-info-content .link-area .link-box .tikcet-btn .txt::before { content: ""; position: absolute; left: 50%; top: 44px; transform: translateX(-50%); width: 120px; height: 120px; background: url(../../images/biz2/ic_main_link_2.png) no-repeat 0 0; }
 .main-info-content .link-area .link-box .use-btn { padding-top: 44px; background: #1D2088; transition: transform 0.5s; }
-.main-info-content .link-area .link-box .use-btn:hover { transform: translateY(-30px);}
+.main-info-content .link-area .link-box .use-btn:hover { transform: translateY(-15px);}
 .main-info-content .link-area .link-box .use-btn .txt { display: block; width: 100%; margin-top: 155px; font-size: 38px; font-weight: bold; line-height: 45px; color: #fff; }
 .main-info-content .link-area .link-box .use-btn .txt::before { content: ""; position: absolute; left: 50%; top: 44px; transform: translateX(-50%); width: 120px; height: 120px; background: url(../../images/biz2/ic_main_link_3.png) no-repeat 0 0; }
 .main-info-content .link-area .notice-box { position: relative; margin-top: 19px; padding: 20px; background: #fff; border-radius: 17px; }
@@ -267,8 +249,8 @@
 .main-info-content .more-link-area a:hover { transform: translateY(-15px); }
 .main-info-content .more-link-area a::before { content: ""; position: absolute; right: 30px; top: 50%; transform: translateY(-50%); background-size: contain; }
 .main-info-content .more-link-area a:nth-child(1)::before { width: 59px; height: 59px; background: url(../../images/biz2/ic_main_link_4.png) no-repeat center; }
-.main-info-content .more-link-area a:nth-child(2)::before { width: 61px; height: 60px; background: url(../../images/biz2/ic_main_link_6.png) no-repeat center; }
-.main-info-content .more-link-area a:nth-child(3)::before { width: 62px; height: 52px; background: url(../../images/biz2/ic_main_link_7.png) no-repeat center; }
+.main-info-content .more-link-area a:nth-child(3)::before { width: 61px; height: 60px; background: url(../../images/biz2/ic_main_link_6.png) no-repeat center; }
+.main-info-content .more-link-area a:nth-child(2)::before { width: 62px; height: 52px; background: url(../../images/biz2/ic_main_link_7.png) no-repeat center; }
 .main-info-content .more-link-area a:nth-child(4)::before { width: 62px; height: 52px; background: url(../../images/biz2/ic_main_link_7.png) no-repeat center; }
 
 .main-info-content .ticker-area { position: relative; width: 280px; height: 590px; border-radius: 18px; background: #fff; }
@@ -460,3 +442,4 @@
 .agree-info-area .agree-box .agree-group > .txt { font-size: 16px; color: #797979; }
 .agree-info-area .agree-box .agree-group .check-item { display: flex; align-items: center; }
 
+					

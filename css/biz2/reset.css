@@ -85,7 +85,8 @@ a[href^=tel] { font-style: normal;}
  /* input */
 input[type=number], input[type=file], input[type=date], 
 input[type=tel], input[type="text"], input[type="password"], 
-input[type="search"], input[type="email"], textarea, option {
+input[type="search"], input[type="email"], input[type="number"]
+textarea, option {
 	height: 56px;
 	background: #fff;
 	border: 1px solid var(--gray-30-d8);
@@ -125,6 +126,7 @@ textarea {
 	border-radius: 12px;
 	border: 1px solid #ddd;
 	padding: 10px 15px;
+	resize: none;
 }
 
 
