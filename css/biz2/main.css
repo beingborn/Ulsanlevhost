@@ -66,13 +66,26 @@
 .btn.primary {background: var(--primary-color); color: #fff;}
 .btn.navy-12 {background: var(--navy-12); color: #fff;}
 
-/* table-label */
-.table-label {font-size: 16px; display: inline-block; border-radius: 8px; padding: 0px 12px; height: 30px; line-height: 30px; color: #fff; margin-right: 8px; font-weight: 700; text-align: center;}
-.table-label.apply {background:#12B7DC}
-.table-label.system {background: #6DB979;}
-.table-label.lottery {background: #7784D9;}
-.table-label.user-agency {background: #58AEE3;}
-.table-label.notice {background:#00ADB2 ;}
+/* category-label */
+.category-label:not(.new-label) {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	border-radius: 8px;
+	width: 96px;
+	height: 30px; 
+	color: #fff; 
+	margin-right: 8px; 
+	font-weight: 700;
+}
+.category-label.new-label + .category-label:not(.new-label) {margin-left: 4px;}
+.category-label.new-label {color: #fff; text-transform: uppercase; background: #FAB700; display: inline-flex; align-items: center; justify-content: center; font-size: 18px; border-radius: 8px; width: 32px; height: 30px;}
+.category-label.notice {background:#00ADB2 ;}
+.category-label.system {background: #6DB979;}
+.category-label.user-agency {background: #58AEE3;}
+.category-label.apply {background: #6095E5;}
+.category-label.lottery {background: #7784D9;}
 
 /* 사용기관 연수 임시 (요청) */
 .bad {background: url('../../images/biz2/quiz_icon_bad.png') no-repeat;}
@@ -241,9 +254,9 @@
 .main-info-content .link-area .notice-box .banner-group { margin-top: 20px; }
 .main-info-content .link-area .notice-box .banner-group .swiper-wrapper { display: flex; column-gap: 20px; }
 .main-info-content .link-area .notice-box .banner-group .swiper-wrapper .swiper-slide { width: auto; }
-.main-info-content .link-area .notice-box .banner-group .swiper-slide a { display: block; width: 290px; height: 170px; border: 2px solid #c5c5c5; border-radius: 17px; padding: 15px 20px 0; }
+.main-info-content .link-area .notice-box .banner-group .swiper-slide a { display: block; width: 290px; height: 170px; border: 2px solid #c5c5c5; border-radius: 17px; padding: 15px 20px 0; font-size: 0;}
 .main-info-content .link-area .notice-box .banner-group .swiper-slide a .ic { display: inline-flex; height: 21px; margin-bottom: 5px; padding: 0 10px; border-radius: 11px; background: #73D75A; font-size: 12px; font-weight: 500; line-height: 21px; color: #fff; }
-.main-info-content .link-area .notice-box .banner-group .swiper-slide a .txt { display: block; height: 54px; font-size: 20px; line-height: 27px; color: #000; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.main-info-content .link-area .notice-box .banner-group .swiper-slide a .txt { display: block; height: 54px; margin-top: 5px; font-size: 20px; line-height: 27px; color: #000; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .main-info-content .link-area .notice-box .banner-group .swiper-slide a .day { display: block; margin-top: 25px; font-size: 18px; font-weight: bold; color: #999999; }
 .main-info-content .link-area .more-btn { position: absolute; right: 23px; top: 38px; width: 18px; height: 18px; background: url(../../images/biz2/ic_list_plus.png) no-repeat 0 0; }
 .main-info-content .more-link-area { display: flex; flex-direction: column; justify-content: space-between; position: relative; width: 308px; gap: 22px; height: auto;}

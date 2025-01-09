@@ -95,6 +95,12 @@ table.file_lst .date { font-family: Tahoma; color: #999}
     <span>/</span>
     <span class="popup">팝업 : <span></span></span>
 </span>
+<div class="page-count-info">
+    <div class="page-user"><strong>사용기관</strong> : <span></span>페이지</div>
+    <div class="page-local"><strong>지자체</strong> : <span></span>페이지</div>
+    <div class="page-portal"><strong>포털</strong> : <span></span>페이지</div>
+</div>
+
 <table class="file_lst">
     <colgroup>
     <col width="15%" />
@@ -316,11 +322,13 @@ table.file_lst .date { font-family: Tahoma; color: #999}
     </tr>
     <tr class="line done">
         <th>평생교육이용권</th>
-        <td>이용권 사용기관_온라인 상담</td>
+        <td>이용권 사용기관_자주하는질문</td>
         <td>page</td>
-        <td><a href="./IIP_500.html" target="blank">IIP_500.html</a></td>
+        <td><a href="./INP_200.html" target="blank">INP_200.html</a></td>
         <td class="ac">O</td>
-        <td></td>
+        <td>
+            01.09 : 탭 2 : IIP_500.html 온라인 상담
+        </td>
     </tr>
     <tr class="line done">
         <th>평생교육이용권</th>
@@ -885,6 +893,14 @@ table.file_lst .date { font-family: Tahoma; color: #999}
     </tr>
     <tr class="line done l">
         <th>평생교육이용권</th>
+        <td>이용권 지자체_수기공모신청등록</td>
+        <td>page</td>
+        <td><a href="./LAP_401.html">LAP_401.html</a></td>
+        <td class="ac">O</td>
+        <td></td>
+    </tr>
+    <tr class="line done l">
+        <th>평생교육이용권</th>
         <td>이용권 지자체_마이페이지_평생교육이용권 신청 내역</td>
         <td>page</td>
         <td><a href="./LIP_100.html">LIP_100.html</a></td>
@@ -976,6 +992,29 @@ $(function() {
     });
     $('.count-info .page span').text(pageNum);
     $('.count-info .popup span').text(popupNum);
+
+    var userNum = 0;
+    var localNum = 0;
+    var portalNum = 0;
+
+    $('.file_lst tbody tr').each(function() {
+        var text = $(this).find('td').eq(2).text();
+        if(text.startsWith('I')){
+            userNum++;
+        } 
+        if(text.startsWith('L')){
+            localNum++;
+        }
+        if(text.startsWith('P')){
+            portalNum++;
+        }
+    })
+
+    $('.page-count-info .page-user span').text(userNum)
+    $('.page-count-info .page-local span').text(localNum)
+    $('.page-count-info .page-portal span').text(portalNum)
+
+
 });
 /* 검색 전환 */
 $('.file_lst_search .btn-function').eq(0).addClass('is-active')

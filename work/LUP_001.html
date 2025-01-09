@@ -43,22 +43,17 @@
                     <li>
                         <span class="tit">사용안내</span>
                         <div class="link-item">
-                            <a href="LUP_001.html">사용처 안내</a>
+                            <a href="LUP_001.html">사용기관 안내</a>
                         </div>
                     </li>
                     <li>
                         <span class="tit">평생교육이용권</span>
                         <div class="link-item">
                             <a href="LAP_100.html">평생교육이용권 신청</a>
-                            <a class="hidden" href="#">이의제기 신청</a>
-                            <a href="#">선정 포기 신청</a>
-                            <a href="LAP_400.html">수기 공모 신청</a>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="tit">우수이용자 신청</span>
-                        <div class="link-item">
                             <a href="LAP_001.html">우수이용자 신청</a>
+                            <a class="hidden" href="#">이의제기 신청</a>
+                            <a href="LAP_300.html">선정 포기 신청</a>
+                            <a href="LAP_400.html">수기 공모 신청</a>
                         </div>
                     </li>
                     <li>
@@ -67,7 +62,7 @@
                             <a href="LNP_001.html">공지사항</a>
                             <a href="LNP_100.html">자료실</a>
                             <a href="LNP_200.html">자주하는질문</a>
-                            <a href="LNP_200.html">질의응답</a>
+                            <a href="LNP_200.html">온라인 상담</a>
                         </div>
                     </li>
                     <li>
@@ -75,7 +70,7 @@
                         <div class="link-item">
                             <a href="LIP_001.html">개인정보수정</a>
                             <a href="LIP_100.html">평생교육이용권 신청내역</a>
-                            <a href="#">평생교육이용권 이용내역</a>
+                            <a class="hidden" href="#">평생교육이용권 이용내역</a>
                             <a href="LIP_300.html">교육이수정보</a>
                             <a class="hidden" href="#">이용자 이벤트</a>
                         </div>
@@ -110,16 +105,16 @@
                         <div class="sm-sub-menu">
                             <span class="sm-menu-tit">사용안내</span>
                             <ul class="sm-sub-list">
-                                <li><a href="LUP_001.html">사용처 안내</a></li>
+                                <li><a href="LUP_001.html">사용기관 안내</a></li>
                             </ul>
                         </div>
                         <div class="sm-sub-menu">
                             <span class="sm-menu-tit">평생교육이용권</span>
                             <ul class="sm-sub-list">
-                                <li><a href="LAP_001.html">이용권신청</a></li>
+                                <li><a href="LAP_001.html">평생교육이용권신청</a></li>
                                 <li><a href="#" class="hidden">이의제기신청</a></li>
-                                <li><a href="#">선정 취소 신청</a></li>
-                                <li><a href="#">수기 공모 신청</a></li>
+                                <li><a href="LAP_300.html">선정 취소 신청</a></li>
+                                <li><a href="LAP_400.html">수기 공모 신청</a></li>
                             </ul>
                         </div>
                         <div class="sm-sub-menu">
@@ -134,7 +129,7 @@
                                 <li><a href="LNP_001.html">공지사항</a></li>
                                 <li><a href="LNP_100.html">자료실</a></li>
                                 <li><a href="LNP_200.html">자주하는질문</a></li>
-                                <li><a href="LNP_200.html">질의응답</a></li>
+                                <li><a href="LNP_200.html">온라인 상담</a></li>
                             </ul>
                         </div> 
                         <div class="sm-sub-menu">
@@ -142,7 +137,7 @@
                             <ul class="sm-sub-list">
                                 <li><a href="LIP_001.html">개인정보수정</a></li>
                                 <li><a href="LIP_100.html">평생교육이용권 신청내역</a></li>
-                                <li><a href="#">평생교육이용권 이용내역</a></li>
+                                <li><a href="#" class="hidden">평생교육이용권 이용내역</a></li>
                                 <li><a href="#">교육이수정보</a></li>
                                 <li><a class="hidden" href="#">이용자 이벤트</a></li>
                             </ul>
@@ -179,11 +174,12 @@
                                     </div>
                                 </dd>                   
                             </dl>
+                            <hr>
                             <dl>
                                 <dt><label for="srch02">평생교육이용권 유형</label></dt>
                                 <dd>
                                     <div class="flex-ac mw-set">
-                                        <select id="srch02">
+                                        <select id="srch02" class="w-100">
                                             <option value="none">전체</option>
                                             <option value="1">2</option>
                                             <option value="1">3</option>
@@ -293,9 +289,9 @@
                                 </dd>                 
                             </dl>
                         </div>
-                        <button type="button">버튼명</button>
                     </fieldset>
                 </form>
+                <button type="submit" class="btns">검색</button>
             </div>  
             <ul class="bullet-list asterisk-list">
                 <li>검색하기를 통해 조회된 기관에서만 평생교육이용권 카드 이용이 가능합니다</li>
@@ -337,24 +333,57 @@
                             <td class="txt-l">인천광역시 서구</td>
                             <td>오프라인</td>
                             <td>&nbsp;</td>
-                            <td><i class="ico homepage">홈페이지</i></td>
-                            <td>&nbsp;</td>
+                            <td>
+                                <a href="#" target="_blank" class="ico-cont-32 ico homepage">
+                                    <span class="blind">홈페이지</span>
+                                </a>
+                            </td>
+                            <td>
+                                <i class="ico-cont-32 ico organ01">
+                                    <span class="blind">기관 연계사업 유형</span>
+                                </i>
+                            </td>
                         </tr>
                         <tr>
                             <td class="txt-l">(주)중앙자동차운전전문학원</td>
                             <td class="txt-l">인천광역시 서구</td>
                             <td>오프라인</td>
-                            <td><i class="ico map">지도보기</i></td>
-                            <td><i class="ico homepage">홈페이지</i></td>
-                            <td>&nbsp;</td>
+                            <td>
+                                <!-- 지도는 새 창(팝업) 형식으로 보여야 합니다. -->
+                                <a href="#" target="_blank" class="ico-cont-32 ico map">
+                                    <span class="blind">지도보기</span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" target="_blank" class="ico-cont-32 ico homepage">
+                                    <span class="blind">홈페이지</span>
+                                </a>
+                            </td>
+                            <td>
+                                <i class="ico-cont-32 ico organ02">
+                                    <span class="blind">기관 연계사업 유형</span>
+                                </i>
+                            </td>
                         </tr>
                         <tr>
                             <td class="txt-l">(주)중앙자동차운전전문학원</td>
                             <td class="txt-l">인천광역시 서구</td>
                             <td>오프라인</td>
-                            <td><i class="ico map">지도보기</i></td>
-                            <td><i class="ico homepage">홈페이지</i></td>
-                            <td><i class="ico organ02">기관 연계사업 유형</i></td>
+                            <td>
+                                <a href="#" target="_blank" class="ico-cont-32 ico map">
+                                    <span class="blind">지도보기</span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" target="_blank" class="ico-cont-32 ico homepage">
+                                    <span class="blind">홈페이지</span>
+                                </a>
+                            </td>
+                            <td>
+                                <i class="ico-cont-32 ico organ03">
+                                    <span class="blind">기관 연계사업 유형</span>
+                                </i>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

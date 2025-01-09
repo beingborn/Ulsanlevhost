@@ -39,6 +39,13 @@ input.readonly-txt[type=text]:read-only, input.readonly-txt[type=number]:read-on
 .ico::before, 
 .ico::after{content:"";display:inline-block;vertical-align:middle}
 
+/* icon-container 공통 */
+[class*=ico-cont-] {display: inline-block;}
+[class*=ico-cont-].ico::before {background-repeat: no-repeat; background-position: center; background-size: cover;}
+.ico-cont-32 {width: 32px; height: 32px;}
+.ico-cont-24 {width: 24px; height: 24px;}
+.ico-cont-16 {width: 16px; height: 16px;}
+
 /* display 공통 */
 .sm-show-800{display:none}
 .v-hidden{visibility:hidden!important}
@@ -221,7 +228,8 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .search-box .search-list .period .btn-wrap .btn-bd+.btn-bd{margin-left:16px}
 .search-box .search-list .period .txt-s{margin-left:16px}
 .period .dash{display:inline-block;margin:0 7px}
-.search-box .btns{display:block;width:120px;}
+.search-box .btns{display:block;width:120px; margin: 30px auto;}
+.search-box .r-btn .btns {margin: 0 auto;}
 .search-box .chk-box input[type="checkbox"]{width:24px;height:24px;margin-top:-2px}
 .search-box .chk-box label{font-size:16px}
 
@@ -231,7 +239,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .top-info-group .border-box p img{margin-right:8px}
 
 .top-info-group .btn-wrap .btns+.btns{margin-left:15px}
-.com-view-table .ico{font-size:0;text-indent:-9999em}
+/* .com-view-table .ico{font-size:0;text-indent:-9999em} */
 .com-view-table .ico.map-no::before{width:40px;height:40px;border:0;background:url(../../images/biz2/ico/ico_unmapped.svg) no-repeat center}
 .com-view-table .ico.map-yes::before{width:40px;height:40px;border:0;background:url(../../images/biz2/ico/ico_complete.svg) no-repeat center}
 
@@ -474,6 +482,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .steps li.disabled{opacity:.5}
 
 hr{margin:80px 0;border:0;border-bottom:4px solid #D8D8D8}
+.search-box hr {margin: 12px 0; border-bottom: 2px solid #D8D8D8;}
 
 /* 생년월일 숨김표시 */
 #secure-value{padding-left:16px;margin-left:10px;letter-spacing:8px}
@@ -635,9 +644,11 @@ table .total td{background-color:#E9F9FA}
 .usage-guide .top-info-group select{color:var(--text-primary-00)}
 .usage-guide .com-view-table td{font-weight:700}
 .usage-guide .new{height:36px;margin-left:16px;padding:6px 12px;border:2px solid #EA292E;border-radius:8px;font-size:16px}
-.com-view-table .ico.map::before{background:url(../../images/biz2/ico/ico_map.svg) no-repeat center}
-.com-view-table .ico.homepage::before{background:url(../../images/biz2/ico/ico_homepage.svg) no-repeat center}
-.com-view-table .ico.organ02::before{background:url(../../images/biz2/ico/ico_organ02.svg) no-repeat center}
+.com-view-table .ico.map{background:url(../../images/biz2/ico/ico_map.svg) no-repeat center;}
+.com-view-table .ico.homepage {background:url(../../images/biz2/ico/ico_homepage.svg)}
+.com-view-table .ico.organ01 {background:url(../../images/biz2/ico/ico_organ01.svg)}
+.com-view-table .ico.organ02 {background:url(../../images/biz2/ico/ico_organ02.svg)}
+.com-view-table .ico.organ03 {background:url(../../images/biz2/ico/ico_organ03.svg) no-repeat center / cover;}
 
 /* ILP_024 이용권 사용기관 신청 > 사용기관 정보보안 서약서 팝업 */
 .layer-pop .layer-document .agree-box > ul > li{padding-left:16px;text-indent:-16px}
@@ -865,7 +876,7 @@ table .total td{background-color:#E9F9FA}
 .main-notice-detail{margin-top:20px}
 .main-notice-detail .new-badge{font-size:12px;display:inline-block;padding:0 10px;background:#73D75A;color:var(--white);line-height:21px;border-radius:10px;text-transform:uppercase}
 .main-notice-detail .category-badge {font-size: 12px; display: inline-block; padding: 0 10px; border: 1px solid #73D75A; color: #73D75A; line-height: 21px; border-radius: 10px;}
-.main-notice-detail ul > li > a{padding:15px 20px 23px 20px;display:block;border:1px solid #c5c5c5;border-radius:15px}
+.main-notice-detail ul > li > a{padding:15px 20px 23px 20px;display:block;border:1px solid #c5c5c5;border-radius:15px; font-size: 0;}
 .main-notice-detail .main-notice-tit{font-size:20px;margin: 5px 0 25px 0;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:54px;line-height:27px}
 .main-notice-detail .main-notice-date{color:#999999;font-weight:700;font-size: 18px;line-height:27px}
 .main-notice .main-notice-detail .swiper-indicator{display:none}
