@@ -211,14 +211,6 @@ html {
 	overflow-y: scroll;
 }
 
-html input {
-	font-weight: 300;
-	outline: none;
-}
-html a, html button {
-	font-weight: 300;
-}
-
 /* Scrollbar Design */
 .agree-box::-webkit-scrollbar { width: 10px; }
 .agree-box::-webkit-scrollbar-button:start {size: 0;}

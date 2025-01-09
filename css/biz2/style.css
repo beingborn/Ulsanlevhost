@@ -49,8 +49,8 @@ input.readonly-txt[type=text]:read-only, input.readonly-txt[type=number]:read-on
 .click-trigger {cursor: pointer;}
 
 /* button 공통 */
-.btns{display:inline-block;height:56px;padding:11px 16px 8px;border-radius:8px;background-color:var(--primary-color-600);color:var(--white);font-size:20px;letter-spacing:-0.4px} /* 20241211 이민혁 수정된 디자인 시스템따라 좌우 패딩 16px, letter spacing 추가 */
-.btn-bd{display:inline-block;height:56px;padding:11px 16px 8px;border:1px solid #555;border-radius:8px;background-color:var(--white);font-size:20px;letter-spacing:-0.4px}
+.btns{display:inline-block;height:56px;padding:11px 16px 8px;border-radius:8px;background-color:var(--primary-color-600);color:var(--white);font-size:20px;} /* 20241211 이민혁 수정된 디자인 시스템따라 좌우 패딩 16px, letter spacing 추가 */
+.btn-bd{display:inline-block;height:56px;padding:11px 16px 8px;border: 2px solid #555;border-radius:8px;background-color:var(--white);font-size:20px;}
 .btn-bd.green{border-color:var(--primary-color-600) !important;color:var(--primary-color-600)}
 .btn-bd.blue{border-color:#4C85BA !important;color:#4C85BA}
 .btn-bd.blue.small{height:44px;padding:10px 12px;font-size:16px}
@@ -167,7 +167,6 @@ ul.txt-indent-14 > li {padding-left: 14px; text-indent: -14px;}
 .tooltip .tooltip-txt::after{content:'';display:inline-block;width:24px;height:24px;background:url(../../images/biz2/ico/ico_tooltip.svg) no-repeat center;vertical-align:middle;margin-left:10px}
 .tooltip:hover .tooltip-content{display:block} 
 
-
 /* custom select 공통 */
 .custom-select-box{color:var(--text-primary-00)}
 .custom-select-list{display:none;border-radius:10px;padding-top:10px;padding-bottom:10px;overflow-y:auto}
@@ -208,9 +207,9 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .mapping-area .mapping dl+dl{margin-left:30px}
 .mapping-area .mapping dl dt{color:var(--primary-color-600);font-weight:700}
 .mapping-area .mapping dl dd{margin-top:16px;color:#333;font-weight:700}
-.mapping-area p{margin-top:30px;font-size:18px;color:#666}
-
-.search-box .search-list{display:flex;flex-wrap:wrap}
+.mapping-area p.bullet {margin-top:30px;font-size:18px;color:#666}
+.mapping-area p.bullet::before {background: #666;}
+.search-box .search-list{display:flex;flex-wrap:wrap; align-items: center;}
 .search-box .search-list dl{display:flex;align-items:center;width:50%}
 .search-box .search-list dt{width:144px;padding-left:20px;color:#111;font-size:20px;font-weight:700}
 .search-box .search-list dd{flex:1;padding:10px 20px;color:#8e8e8e}
@@ -222,13 +221,9 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .search-box .search-list .period .btn-wrap .btn-bd+.btn-bd{margin-left:16px}
 .search-box .search-list .period .txt-s{margin-left:16px}
 .period .dash{display:inline-block;margin:0 7px}
-.search-box .btns{display:block;width:120px;margin:30px auto}
+.search-box .btns{display:block;width:120px;}
 .search-box .chk-box input[type="checkbox"]{width:24px;height:24px;margin-top:-2px}
 .search-box .chk-box label{font-size:16px}
-
-
-.add-notice{margin-top:30px;font-size:18px;color:#666}
-.add-notice li+li{margin-top:8px}
 
 .top-info-group .border-box{margin-left:30px}
 .top-info-group .border-box p{font-size:18px;font-weight:500}
@@ -331,7 +326,6 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 
 /* IIP_800 이용권 사용기관 신청 현황 */
 .chk-box.agree{margin-top:10px}
-.color-primary.txt-list{font-size:18px}
 .color-primary.txt-list li::before{width:4px;height:4px;background-color:var(--primary-color-600)}
 
 /*  LAP_103 알림톡 (문자)인증 팝업 */
@@ -383,8 +377,9 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .agree-box .agree-radio > span{font-size:18px;font-weight:300}
 .agree-box .radio-box label{flex:auto;color:var(--black-90-1d)}
 .agree-box .radio-box label:not(:last-of-type){margin-right:16px}
-.agree-box .agree-tit{font-size:22px}
-.agree-btn{border:1px solid var(--gray-30-d8);color:#666666;border-radius:8px;max-width:84px;height:44px}
+.agree-box .agree-tit{display: flex; align-items: center; justify-content: space-between;}
+.agree-box .agree-tit h5{font-size:22px}
+.agree-btn{border:1px solid var(--gray-30-d8);color:#666666;border-radius:8px;min-width: 84px; max-width:84px;height:44px}
 
 /* LCP_002 본인인증 */
 .auth-area-in{gap:30px}
@@ -499,10 +494,23 @@ p.bullet,
 .basic-info th small{display:block;letter-spacing:-1px}
 .bullet-list{margin-top:10px;font-size:16px}
 .bullet,
-.bullet-list li{padding-left:24px;text-indent:-24px}
+
+/* 정보 info 공통 */
 .bullet{font-size:16px}
-.bullet-list li::before,
-.bullet::before{content:"";display:inline-block;width:4px;height:4px;margin:-2px 10px 0 10px;border-radius:50%;background-color:#333;vertical-align:middle}
+ul.bullet-list.color-primary li::before {background: var(--primary-color-600);}
+ul.bullet-list.color-primary{font-size:18px; margin-top: 0;}
+ul.bullet-list li{padding-left:24px;text-indent:-24px}
+ul.bullet-list li::before,
+.bullet::before {
+	content:"";
+	display:inline-block;
+	width:4px;
+	height:4px;
+	margin:-2px 10px 0 10px;
+	border-radius:50%;
+	background-color:#333;
+	vertical-align:middle;
+}
 .bullet.error::before {
 	content: "";
 	display: inline-block;
@@ -511,6 +519,15 @@ p.bullet,
 	background: url(../../images/biz2/ico/ico_error.svg) no-repeat left center/16px 17px;
 	vertical-align: middle;
 }
+ul.bullet-list.add-notice {font-size: 18px; margin-top: 30px;}
+ul.add-notice li+li{margin-top:8px}
+/* LAP_003 우수이용자 신청 */
+.asterisk,
+ul.asterisk-list{margin-top:20px;font-size:18px;color:var(--text-sub-33)}
+ul.asterisk-list li+li{margin-top:8px}
+/* .asterisk,
+ul.asterisk-list li{padding-left:21px;text-indent:-21px} 임시 ㅏㅅㄱ제 */
+
 .row-gap .bullet,
 .row-gap .bullet-list{margin-top:0}
 .input-group .mw-set{flex:1}
@@ -546,13 +563,6 @@ p.bullet,
 /* ILP_030 사용기관 신청 현황_수정 */
 .steps.flex-acjc{align-items:inherit;gap:32px}
 .input-group .filebox .fixed-width{width:400px}
-
-/* LAP_003 우수이용자 신청 */
-.asterisk,
-.asterisk-list{margin-top:20px;font-size:18px;color:var(--text-sub-33)}
-.asterisk,
-.asterisk-list li{padding-left:21px;text-indent:-21px}
-.asterisk-list li+li{margin-top:8px}
 
 /* IIP_150 교육결과 관리 */
 .search-box .search-list dd select.w-100{width:100%}
@@ -757,6 +767,9 @@ table .total td{background-color:#E9F9FA}
 .data-radio-list .data-radio {display: flex; align-items: center; gap: 8px;}
 .data-radio-list > .flex-ac {gap: 16px;}
 
+/* 학습계획서 LAP_215.html */
+.study-plan-img {position: absolute; left: 60px; top: 20px; width: 140px; height: 24px;} 
+
 .auth-res .border-box-20:has(>.auth-res-txt) {background-color: #f8f8f8; font-weight: 700; font-size: 20px;}
 .auth-res > .border-box-20 {display: flex; flex-direction: column; gap: 30px;}
 .auth-res-detail {font-size: 14px; font-weight: 300; text-align: center; padding: 0 8px;}
@@ -805,18 +818,21 @@ table .total td{background-color:#E9F9FA}
 .temp-cont.lip-001{height:1441px;background-image:url(../../images/biz2/LIP_001_\(임시\).jpg)}
 
 /* 지자체 메인 LMP_001 */
-.main-cont{display:flex;justify-content:space-between;position:relative;padding:20px 0}
+.main-cont{display:flex;justify-content:space-between;position:relative;padding:22px 0}
 .main-cont::before{content:'';display:block;position:absolute;left:0;top:0;height:100%;width:100vw;margin-left:calc(-50vw + 50%);background:#27C2CB;z-index:-1}
-.main-info-left{width:calc(100% - 24.21875% - 20px);display:flex;flex-direction:column;gap:20px}
-.main-info-right{width:24.21875%}
+.main-info-left{width:calc(100% - 308px - 22px);display:flex;flex-direction:column;gap:22px}
+.main-info-right{
+	/* width:24.21875% */
+	width: 308px;
+}
 /* 메인 타이틀 그룹 */
 .main-tit-group{display:flex;justify-content:space-between;align-items:center}
 .main-tit-group > h2{font-size:40px;font-weight:700;letter-spacing:0}
 .main-info-wrap{display:flex;justify-content:space-between}
-.main-info-mo-wrap{flex:1;display:flex;margin-left:20px}
+.main-info-mo-wrap{flex:1;display:flex;margin-left:22px}
 .main-info-mo-wrap > .main-info-link{transition:transform 0.5s}
-.main-info-mo-wrap > .main-info-link + .main-info-link{margin-left:20px}
-.main-info-link{border-radius:15px;width:304px;height:280px;text-align:center}
+.main-info-mo-wrap > .main-info-link + .main-info-link{margin-left:22px}
+.main-info-link{border-radius:15px;width:302px;height:280px;text-align:center}
 .main-info-link.personal{padding:40px 20px 20px 20px}
 .main-info-link:not(.personal){padding:40px 0}
 .main-info-link .ico::before{align-self:center}
@@ -836,22 +852,22 @@ table .total td{background-color:#E9F9FA}
 .main-info-group{margin-top:auto}
 .main-info-tit{font-weight:700;font-size:38px;color:var(--white);line-height:38px;letter-spacing:0}
 .main-info-mo-desc{color:#fff;font-weight:700;margin-top:8px;font-size:16px}
-.more-link-area{display:flex;flex-direction:column;gap:20px}
+.more-link-area{display:flex;flex-direction:column;gap:22px; height: 100%;}
 .more-link-area > a{
 	transition:transform 0.5s; 
-	display:block;
-	min-height:130px;
+	flex: 1;
 	background:var(--white);
 	display:flex;
 	justify-content:space-between;align-items:center;border-radius:15px;font-size:28px;font-weight:700;padding:0 30px 0 20px;}
 /* 메인 공지사항 */
 .main-notice{border-radius:15px;flex:1;padding:20px;background:var(--white)}
 .main-notice .main-tit-group{max-height:48px}
-.main-notice-detail{margin-top:16px}
+.main-notice-detail{margin-top:20px}
 .main-notice-detail .new-badge{font-size:12px;display:inline-block;padding:0 10px;background:#73D75A;color:var(--white);line-height:21px;border-radius:10px;text-transform:uppercase}
+.main-notice-detail .category-badge {font-size: 12px; display: inline-block; padding: 0 10px; border: 1px solid #73D75A; color: #73D75A; line-height: 21px; border-radius: 10px;}
 .main-notice-detail ul > li > a{padding:15px 20px 23px 20px;display:block;border:1px solid #c5c5c5;border-radius:15px}
-.main-notice-detail .main-notice-tit{font-weight:700;font-size:20px;margin:12px 0 12px 0;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:54px;line-height:27px}
-.main-notice-detail .main-notice-date{color:#6f6f6f;font-weight:500;font-size:20px;line-height:27px}
+.main-notice-detail .main-notice-tit{font-size:20px;margin: 5px 0 25px 0;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:54px;line-height:27px}
+.main-notice-detail .main-notice-date{color:#999999;font-weight:700;font-size: 18px;line-height:27px}
 .main-notice .main-notice-detail .swiper-indicator{display:none}
 .main-notice-detail .swiper-indicator{position:absolute;bottom:16px;right:16px;display:inline-flex;align-items:center;justify-content:flex-end;gap:2px}
 .main-notice-detail .swiper-button-next.swiper-button-disabled, .main-notice-detail .swiper-button-prev.swiper-button-disabled{opacity:0.4}

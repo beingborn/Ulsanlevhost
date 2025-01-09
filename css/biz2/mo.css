@@ -18,7 +18,7 @@
 
 @media only screen and (min-width:1441px) and (max-width:1580px){
 	.fixed-quick{right:-50px}
-	.main-cont{justify-content:flex-start;gap:20px}
+	.main-cont{justify-content:flex-start;gap:22px;}
 	.main-info-right{width:260px}
 	.more-link-area > a{font-size:23px}
 }
@@ -103,6 +103,7 @@
 	option{height:40px}
 	
 	.btns{width:100%;height:40px;padding:9px 16px 8px;font-size:16px}
+	.btns.w-auto {width: auto;}
 
 	/* table 공통 */
 	table{font-size:18px}	
@@ -154,7 +155,7 @@
 	.basic-info .input-group .email+select{width:calc(50% - 5px)}
 	.basic-info .input-group .email-id{width:calc(100% - 26px)}
 	.basic-info input[type=number]{flex:calc(100% - 20px)}
-	.asterisk-list{font-size:16px}
+	ul.asterisk-list{font-size:16px}
 	
 	/* 완료 공통 */
 	.complete-area{margin-top:0}
@@ -173,7 +174,7 @@
 
 	/* 동의박스 공통 */
 	.agree-box{padding:20px 16px}	
-	.agree-box .agree-tit{font-size:20px}
+	.agree-box .agree-tit h5{font-size:20px}
 	.agree-box .agree{gap:12px}
 	.agree-box .agree-radio{flex-wrap:wrap;padding:16px;gap:16px}
 	.agree-box .agree-radio > span{font-size:20px}
@@ -250,7 +251,7 @@
 	.paging {gap:6.4px;padding:0 9.2px}
 	.paging a, .paging .empty{width:32px;height:32px}
 	.paging a.next, .paging a.prev{font-size:15px;width:51.6px}
-	.paging a:not(.next, .prev){font-size:16px}
+	.paging a:not(.next, .prev){font-size:16px; width: 32px; height: 32px;}
 	.paging a.next::after, .paging a.prev::after{width:16px;height:16px}
 
 	/* PC 전용 콘텐츠 */
@@ -410,12 +411,36 @@
 	.cs-center .search-area{padding:12px 10px;border-radius:6px;}
 	.cs-center .search-area .ui-select,
 	.search-area input[type="text"]{border-radius:6px;}
+	.search-area .ui-select {width: auto;} /* pc ver. 200px 제거 */
 	.cs-center .search-area .search-input .btn-search{top:50%;background-size:24px;transform:translateY(-50%);}
 	.cs-center .table-list{border-top:3px solid var(--gray-30-d8);font-size:18px}
-	.cs-center .table-list ul{padding:20px 8px; border-bottom:1px solid var(--gray-30-d8)}
+	/* .cs-center .table-list ul{padding:20px 8px; border-bottom:1px solid var(--gray-30-d8)} */
 	.cs-center .table-list ul li{display:flex;align-items:center;margin-top:4px}
 	.cs-center .table-list ul li strong+img{margin-left:10px}
 	.cs-center .table-list ul li .new{margin-left:10px}
+	.cs-center .table-list ul li {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 4px;
+		padding:20px 8px; border-bottom:1px solid var(--gray-30-d8)
+	}
+	.cs-center .table-list ul li p strong.list-label::after {
+		content: ":";
+		display: inline-block;
+		margin: 0 6px;
+	}
+	.cs-center .table-list ul li a { width: 100%;}
+	.cs-center .table-list ul li a strong.list-title {
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.cs-center .table-list ul li p span.list-bold { font-weight: 700; }
+	.cs-center .table-list ul li p span.list-point { color: #0CA2FF; }
 	/* LNP_001 공지사항 상세 */
 	.cs-center .com-write-table table{border-left:none;border-right:none;}
 	.cs-center .com-write-table table tr th:first-child, 

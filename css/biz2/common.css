@@ -97,6 +97,7 @@
 .flex-je {display: flex; justify-content: end;}
 .flex-dc{display: flex;flex-direction: column;}
 .hidden {display: none;}
+.hidden-i {display: none !important;}
 .flex-align-top {align-items: flex-start!important;}
 .flex-noWrap {flex-wrap: nowrap!important;}
 

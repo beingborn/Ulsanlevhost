@@ -106,6 +106,10 @@ footer .info-content .link-area .copy { display: block; margin-top: 11px; font-s
 footer .info-content .link-area .support-box { display: flex; column-gap: 22px; position: absolute; right: 0; bottom: 0; }
 footer .info-content .link-area .support-box > img {height: 100%;}
 
+/* 상담센터 임시 */
+footer .footer-top {position: relative; display: flex; justify-content: space-between;}
+footer .customer-info {color: #000; }
+
 /* PC용 footer 관련 사이트 셀렉트 (* 접두어 lg) */
 footer .info-content .family-select-wrap {position: absolute; right: 0; top: 118px; z-index: 1;}
 footer .info-content .family-select-lg  > button {width: 240px;}

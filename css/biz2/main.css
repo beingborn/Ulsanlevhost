@@ -66,11 +66,13 @@
 .btn.primary {background: var(--primary-color); color: #fff;}
 .btn.navy-12 {background: var(--navy-12); color: #fff;}
 
-
-
-
 /* table-label */
-.table-label {font-size: 16px; display: inline-block; border: 1px solid var(--primary-color);  border-radius: 8px;  padding: 5px 12px;}
+.table-label {font-size: 16px; display: inline-block; border-radius: 8px; padding: 0px 12px; height: 30px; line-height: 30px; color: #fff; margin-right: 8px; font-weight: 700; text-align: center;}
+.table-label.apply {background:#12B7DC}
+.table-label.system {background: #6DB979;}
+.table-label.lottery {background: #7784D9;}
+.table-label.user-agency {background: #58AEE3;}
+.table-label.notice {background:#00ADB2 ;}
 
 /* 사용기관 연수 임시 (요청) */
 .bad {background: url('../../images/biz2/quiz_icon_bad.png') no-repeat;}
@@ -158,7 +160,7 @@
 .com-write-table table th:last-child { border-right: 0;}
 .com-write-table table td {height: 76px; padding: 13px 20px; border-right: 1px solid var(--gray-30-d8); border-bottom: 1px solid var(--gray-30-d8); font-weight: 500; text-align: left;}
 .com-write-table table td:last-child { border-right: 0; }
-
+.com-write-table table td.readonly {background: var(--gray-05-f8);}
 .com-write-table table td .input-item { display: flex; align-items: center; margin-top: 20px; }
 .com-write-table table td .input-item.phone-number select { width: 90px; }
 .com-write-table table td .input-item.phone-number input[type=text], .com-write-table table td .input-item.phone-number input[type=number] { width: 90px; }
@@ -208,11 +210,11 @@
 .main .container {padding-top: 0; padding-bottom: 0;}      
 
 
-.main-info-content { display: flex; justify-content: space-between; padding: 40px 0; gap: 30px;}
+.main-info-content { display: flex; justify-content: space-between; padding: 22px 0; gap: 22px;}
 .main-info-content::before { content: ""; position: absolute; left: -9999px; right: -9999px; top: 0; bottom: 0; background: #27C2CB; }
-.main-info-content .link-area { display: flex; flex-direction: column; position: relative; width: 950px; }
-.main-info-content .link-area .link-box { display: flex; justify-content: space-between; gap: 25px;}
-.main-info-content .link-area .link-box .link { display: flex; position: relative; width: 300px; height: 280px; border-radius: 17px; padding: 0 20px; }
+.main-info-content .link-area { display: flex; flex-direction: column; position: relative; flex: 1;}
+.main-info-content .link-area .link-box { display: flex; justify-content: space-between; gap: 22px;}
+.main-info-content .link-area .link-box .link { display: flex; position: relative; flex: 1; height: 280px; border-radius: 17px; padding: 0 20px; }
 
 /* 기관 정보 수정 버튼 */
 .main-info-content .link-area .link-box .login-btn { padding-top: 44px; padding-bottom: 31px; background: #fff; flex-direction: column; text-align: center; justify-content: center;}
@@ -234,17 +236,17 @@
 .main-info-content .link-area .link-box .use-btn:hover { transform: translateY(-15px);}
 .main-info-content .link-area .link-box .use-btn .txt { display: block; width: 100%; margin-top: 155px; font-size: 38px; font-weight: bold; line-height: 45px; color: #fff; }
 .main-info-content .link-area .link-box .use-btn .txt::before { content: ""; position: absolute; left: 50%; top: 44px; transform: translateX(-50%); width: 120px; height: 120px; background: url(../../images/biz2/ic_main_link_3.png) no-repeat 0 0; }
-.main-info-content .link-area .notice-box { position: relative; margin-top: 19px; padding: 20px; background: #fff; border-radius: 17px; }
+.main-info-content .link-area .notice-box { position: relative; margin-top: 22px; padding: 20px; background: #fff; border-radius: 17px; }
 .main-info-content .link-area .notice-box > .title { display: block; padding-left: 10px; font-size: 40px; font-weight: bold; line-height: 50px; color: #333; }
 .main-info-content .link-area .notice-box .banner-group { margin-top: 20px; }
 .main-info-content .link-area .notice-box .banner-group .swiper-wrapper { display: flex; column-gap: 20px; }
 .main-info-content .link-area .notice-box .banner-group .swiper-wrapper .swiper-slide { width: auto; }
 .main-info-content .link-area .notice-box .banner-group .swiper-slide a { display: block; width: 290px; height: 170px; border: 2px solid #c5c5c5; border-radius: 17px; padding: 15px 20px 0; }
 .main-info-content .link-area .notice-box .banner-group .swiper-slide a .ic { display: inline-flex; height: 21px; margin-bottom: 5px; padding: 0 10px; border-radius: 11px; background: #73D75A; font-size: 12px; font-weight: 500; line-height: 21px; color: #fff; }
-.main-info-content .link-area .notice-box .banner-group .swiper-slide a .txt { display: block; height: 54px; font-size: 20px; font-weight: bold; line-height: 27px; color: #000; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-.main-info-content .link-area .notice-box .banner-group .swiper-slide a .day { display: block; margin-top: 25px; font-size: 18px; font-weight: bold; color: #6f6f6f; }
+.main-info-content .link-area .notice-box .banner-group .swiper-slide a .txt { display: block; height: 54px; font-size: 20px; line-height: 27px; color: #000; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.main-info-content .link-area .notice-box .banner-group .swiper-slide a .day { display: block; margin-top: 25px; font-size: 18px; font-weight: bold; color: #999999; }
 .main-info-content .link-area .more-btn { position: absolute; right: 23px; top: 38px; width: 18px; height: 18px; background: url(../../images/biz2/ic_list_plus.png) no-repeat 0 0; }
-.main-info-content .more-link-area { display: flex; flex-direction: column; justify-content: space-between; position: relative; width: 300px; gap: 20px; }
+.main-info-content .more-link-area { display: flex; flex-direction: column; justify-content: space-between; position: relative; width: 308px; gap: 22px; height: auto;}
 .main-info-content .more-link-area a { display: flex; position: relative; width: 100%; flex: 1; padding-left: 20px; align-items: center; background: #fff; border-radius: 17px; font-size: 28px; line-height: 34px; font-weight: bold; color: #000; letter-spacing: -2px; transition: transform 0.4s; }
 .main-info-content .more-link-area a:hover { transform: translateY(-15px); }
 .main-info-content .more-link-area a::before { content: ""; position: absolute; right: 30px; top: 50%; transform: translateY(-50%); background-size: contain; }
