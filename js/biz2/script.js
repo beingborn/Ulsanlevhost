@@ -129,7 +129,9 @@ $(document).ready(function () {
   });
 
   let windowLocation = window.location.pathname;
-  if (windowLocation != "/work/LCP_002.html" && windowLocation != "/work/LAP_101.html"){
+
+  // location 문자열에 LCP_002.html과 LAP_101.html을 가지고 있지 않은경우 즉 없는 경우에만 해당 코드 실행
+  if(windowLocation.includes("LCP_001") == false && windowLocation.includes("LAP_101") == false ){
     /* 본인인증 테이블 변환 */
     $('.birth-chk').hide();
     $('.auth-area-in button').on('click',function(){
