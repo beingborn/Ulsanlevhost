@@ -386,14 +386,45 @@
             <div class="layer-scroll">
                 <span class="title">[학습계획서]</span>
                 <div class="study-plan info-area">
-                    <ul class="bullet-list asterisk">
+                    <ul class="bullet-list">
                         <li>
                             본 학습계획서는 반드시 작성하셔야 하는 서류는 아닙니다. <br>
                             그러나 평생교육 이용권 신청자가 선정 인원 수 보다 많을 경우, 학습계획서를 작성하신 분을 우선 선정합니다.
                         </li>
                     </ul>
+                    <div class="top-info-group vertical-info">
+                        <h3>수강 예정 과정</h3>
+                        <p>본 학습계획서는 반드시 작성하셔야 하는 서류는 아닙니다.</p>
+                    </div>
+                    <div class="agree-box">
+                        <div class="chk-box">
+                            <input type="checkbox" name="name1" id="1" >
+                            <label for="1">
+                                학력 취득 목적 교육(학력 취득 목적의 교육은 초등학교, 중학교, 고등학교, 대학교 졸업에 대항하는 학력을 인정받고자 참여하는 교육을 뜻함)
+                            </label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" name="name2" id="2">
+                            <label for="2">
+                                학력 취득 목적 외 교육(학력을 취득하는 것 이외에 직업, 교양, 취미, 여가 등과 관련된 활동을 하기 위한 교육을 뜻함)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="top-info-group">
+                        <p>구체적으로 수강 예정 강좌가 있을 경우, 강좌명을 적어주세요.</p>
+                    </div>  
+                    <form>
+                        <div style="vertical-align: middle;">
+                            <div>
+                                <textarea name="courseName" class="textarea-cus" id="courseName" placeholder="강좌명을 적어주세요"></textarea>
+                            </div>
+                        </div>
+                        <div class="layer-btn-wrap">
+                            <button class="btns">등록</button>
+                        </div>
+                    </form>
                 </div>
-                <img class="study-plan-img" src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원 로고">
+                <img class="layer-top-logo" src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원 로고">
                 <button class="close-btn" onclick="$('[data-pop=study-plan]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
             </div>
         </div>

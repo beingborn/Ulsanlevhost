@@ -107,12 +107,6 @@
                             <td colspan="5">평생교육강좌</td>
                         </tr>
                         <tr>
-                            <th class="txt-l must-type">추가 기관명</th>
-                            <td colspan="5">평생교육강좌
-                                <p class="add-note">이 기관명대로 사용처 안내 메뉴에서 검색됩니다.</p>
-                            </td>  
-                        </tr>
-                        <tr>
                             <th class="txt-l">사업자등록번호</th>
                             <td>111-11-11111</td>
                             <th class="txt-l">기관 대표자명</th>
@@ -159,13 +153,13 @@
                         </tr>
                         <tr>
                             <th class="txt-l">
-                                <label for="tel" class="must-type">전화번호</label>
+                                <label for="tel">전화번호</label>
                             </th>
                             <td colspan="5">010-0000-****</td>
                         </tr>
                         <tr>
                             <th class="txt-l">
-                                <label for="email" class="must-type">전자우편주소</label>
+                                <label for="email">전자우편주소</label>
                             </th>
                             <td colspan="5">
                                 <p>qwer1234@*****.gmail.com</p> 
@@ -270,11 +264,10 @@
                             <th class="txt-l"><label for="aa">검색 키워드</label></th>
                             <td class="input-group search-keyword" colspan="5">
                                 <div class="flex-ac">
-                                    <input type="text" id="aa" class="fixed-width">
-                                    <input type="text" class="fixed-width">
-                                    <input type="text" class="fixed-width">
+                                    <input type="text" id="aa" class="fixed-width" value="키워드1" readonly>
+                                    <input type="text" class="fixed-width" value="키워드2" readonly>
+                                    <input type="text" class="fixed-width" value="키워드3" readonly>
                                 </div>
-                                <p class="bullet">최대 10자까지 입력가능하며, 비속어 등 입력 시, 이용이 제한됩니다.</p>
                             </td>
                         </tr>
                     </tbody>
@@ -282,7 +275,6 @@
             </div>  
             <div class="top-info-group">
                 <h3>현행화/서약서 동의 현황</h3>
-                <button type="button" class="btns bg-blue">동의하러가기</button>
             </div>    
             <div class="com-write-table">
                 <table>
@@ -382,7 +374,7 @@
                         </tr>
                         <tr>
                             <th class="txt-l">
-                                <label for="tel01" class="must-type">업무내선번호</label>
+                                <label for="tel01">업무내선번호</label>
                             </th>
                             <td colspan="3">
                                 -
@@ -423,7 +415,6 @@
             </div> 
             <div class="top-info-group">
                 <h3>증빙자료</h3>
-                <small><em class="color-red">*</em> 수정한 정보는 사용기관 신청 현황에 반영되지 않습니다.</small>
             </div>    
             <div class="com-write-table">
                 <table>
@@ -442,7 +433,7 @@
                                     <button type="button" class="btn-search">검색</button>
                                 </div>
                             </td>
-                            <td class="txt-c">2024.03.15</td>
+                            <td class="txt-c">2024-03-15</td>
                         </tr>
                         <tr>
                             <th class="txt-l">평생교육기관 증빙서류</th>
@@ -452,7 +443,7 @@
                                     <button type="button" class="btn-search">검색</button>
                                 </div>
                             </td>
-                            <td class="txt-c">2024.03.15</td>
+                            <td class="txt-c">2024-03-15</td>
                         </tr>
                         <tr>
                             <th class="txt-l">2024년 평생교육강좌<br>운영 계획서</th>
@@ -462,7 +453,7 @@
                                     <button type="button" class="btn-search">검색</button>
                                 </div>
                             </td>
-                            <td class="txt-c">2024.03.15</td>
+                            <td class="txt-c">2024-03-15</td>
                         </tr>
                         <tr>
                             <th class="txt-l">운영계획 증빙자료<br>(교육청 신고내역, 기관정관 등)</th>
@@ -472,13 +463,13 @@
                                     <button type="button" class="btn-search">검색</button>
                                 </div>
                             </td>
-                            <td class="txt-c">2024.03.15</td>
+                            <td class="txt-c">2024-03-15</td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="btns-bottom">
-                    <button type="button" class="btns">수정</button>
                     <button type="button" class="btn-bd">등록취소</button>                                                
+                    <button type="button" class="btns">수정</button>
                 </div>
             </div>   
         </div>
@@ -576,48 +567,6 @@
                         </div>
                     </div>
                 <button class="close-btn" onclick="$('[data-pop=pop-1]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
-            </div>
-        </div>
-    </div>
-    <div class="layer-pop" data-pop="pop-2">
-        <div class="layer-content" style="--max-width: 840px">
-            <div class="layer-scroll">
-                <span class="title">평생교육프로그램 6대 영역별 분류</span>
-                <div class="info-area">
-                    <div class="text-box">
-                        <p class="txt">평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집.유출.오용.남용으로부터 사생활의 비밀 등을 보호하도록 한 개인정보보호법 규정에 따라 다음과 같이 수집·이용 됩니다.</p>
-                        <div class="table-group">
-                            <span class="tit">개인정보 수집 · 이용 동의</span>
-                            <table>
-                                <caption>개인정보 수집 · 이용 동의에 관한 테이블이며 항목, 수집이용 목적, 보유기간 등으로 구성되어 있음</caption>
-                                <colgroup>
-                                    <col style="width:218px;">
-                                    <col style="width:291px;">
-                                    <col style="width:159px;">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>항목</th>
-                                        <th>수집 · 이용 목적</th>
-                                        <th>보유기간</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>회원 계정정보(ID, 비밀번호), 암호화된 이용자 확인 값(CI), 회원가입동의여부, 평생학습계좌번호</td>
-                                        <td>- 평생학습계좌제 학습계좌 발급 및 학습이력관리<br>- 평생교육이용권 홈페이지 회원관리</td>
-                                        <td class="center">5년, 회원탈퇴 시까지</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="txt">※ 위의 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시 평생교육이용권 신청 · 선정 · 지급에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</p>
-                    </div>
-                    <div class="btn-box">
-                        <button onclick="$('[data-pop=pop-2]').hide();">확인</button>
-                    </div>
-                </div>
-                <button class="close-btn" onclick="$('[data-pop=pop-2]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
             </div>
         </div>
     </div>

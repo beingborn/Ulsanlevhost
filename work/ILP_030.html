@@ -256,7 +256,7 @@
                         <th class="txt-l must-type"><label for="chk07">주소</label></th>
                         <td class="input-group space">
                             <div class="flex-ac">
-                                <input type="text" id="chk07" class="fixed-width">
+                                <input type="text" id="chk07" class="fixed-width" value="04520" readonly />
                                 <button type="button" class="btns bg-blue">주소검색</button>
                                 <div class="chk-box">
                                     <input type="checkbox" id="chk-3">
@@ -264,7 +264,7 @@
                                 </div>
                                 <small class="txt-s">(오프라인 교육기관 체크시 선택 가능합니다.)</small>
                             </div>
-                            <p class="flex-ac"><input type="text" class="fixed-value"></p>
+                            <p class="flex-ac"><input type="text" class="fixed-value" value="서울특별시 중구 청계천로 14 (무교동 77)" readonly /></p>
                             <p class="flex-ac"><input type="text" class="fixed-value"></p>
                         </td>
                     </tr>
@@ -483,12 +483,6 @@
                             <p class="bullet">xlsx 파일만 업로드가 가능합니다.</p>
                         </td>
                     </tr>
-                    <tr>
-                        <th class="txt-l"><label for="y">등록 일자</label></th>
-                        <td><input type="text" id="y"></td>
-                        <th class="txt-l"><label for="z">등록 건수</label></th>
-                        <td><input type="text" id="z"></td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -559,7 +553,7 @@
                     <div class="border-box-20">
                         <p>
                             동일한 사업자등록번호의 신청서가 존재합니다. <br>
-                            아래 목록의 정보와 일치하는 교육기관인 경우 신청서 작성을 중지하여 주십시오.
+                            확인 후 필요한 경우만 추가 신청하시기 바랍니다.
                         </p>
                     </div>
                     <div class="top-info-group">
@@ -570,12 +564,12 @@
                     <div class="com-view-table">
                         <table>
                             <colgroup>
-                                <col style="width: 130px;">
+                                <col style="width: 20%">
                                 <col style="width: auto">
-                                <col style="width: 90px;">
-                                <col style="width: 110px;">
-                                <col style="width: 100px;">
-                                <col style="width: 90px;">
+                                <col style="width: 12.5%">
+                                <col style="width: 15%">
+                                <col style="width: 15%">
+                                <col style="width: 10%">
                             </colgroup>
                             <thead>
                                 <tr>
@@ -593,7 +587,7 @@
                                     <td>서울특별시 중구 청계천로 14</td>
                                     <td>홍길동</td>
                                     <td>11a1212</td>
-                                    <td>2024.12.12</td>
+                                    <td>2024-12-12</td>
                                     <td>신청</td>
                                 </tr>
                             </tbody>

@@ -209,7 +209,7 @@
 
 	/* LAM_400 수기공모 신청 */
 	.contest .top-info-group .btns{width:auto}
-	.contest .sm-show-800{padding:20px 8px;border-top:3px solid var(--gray-30-d8);border-bottom:1px solid var(--gray-30-d8)}
+	/* .contest .sm-show-800{padding:20px 8px;border-top:3px solid var(--gray-30-d8);border-bottom:1px solid var(--gray-30-d8)} */
 	.contest .sm-show-800 li{display:flex;align-items:center}
 	.contest .sm-show-800 li+li{margin-top:4px}
 	.contest .sm-show-800 li p{margin-left:6px}
@@ -300,6 +300,7 @@
 	/* 레이어 팝업 공통 */
 	.layer-pop .layer-content{padding:0 20px}
 	.layer-pop .layer-content .layer-scroll {padding: 32px 16px;}
+	.layer-top-logo {left: 16px;}
 
 
 	/* LMP_001 지차체 평생교육 상담센터 */
@@ -413,24 +414,32 @@
 	.search-area input[type="text"]{border-radius:6px;}
 	.search-area .ui-select {width: auto;} /* pc ver. 200px 제거 */
 	.cs-center .search-area .search-input .btn-search{top:50%;background-size:24px;transform:translateY(-50%);}
-	.cs-center .table-list{border-top:3px solid var(--gray-30-d8);font-size:18px}
+	.table-list{border-top:3px solid var(--gray-30-d8);font-size:18px}
 	/* .cs-center .table-list ul{padding:20px 8px; border-bottom:1px solid var(--gray-30-d8)} */
 	.cs-center .table-list ul li{display:flex;align-items:center;margin-top:4px}
 	.cs-center .table-list ul li strong+img{margin-left:10px}
 	.cs-center .table-list ul li .new{margin-left:10px}
-	.cs-center .table-list ul li {
+	.contest .sm-show-800 ul li, .cs-center .table-list ul li,
+	.contest .sm-show-800 ul li div, .cs-center .table-list ul li div {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 4px;
-		padding:20px 8px; border-bottom:1px solid var(--gray-30-d8)
+		padding: 20px 8px; border-bottom:1px solid var(--gray-30-d8)
 	}
+	.contest .sm-show-800 ul li div, .cs-center .table-list ul li div {
+		padding: 0;
+		border-bottom: 0;
+	}
+	.contest .table-list ul li p strong.list-label::after,
 	.cs-center .table-list ul li p strong.list-label::after {
 		content: ":";
 		display: inline-block;
 		margin: 0 6px;
 	}
+	.contest .table-list ul li a,
 	.cs-center .table-list ul li a { width: 100%;}
+	.contest .table-list ul li a strong.list-title,
 	.cs-center .table-list ul li a strong.list-title {
 		width: 100%;
 		overflow: hidden;
@@ -439,8 +448,14 @@
 		display: inline-block;
 		vertical-align: middle;
 	}
+	.contest .table-list ul li p span.list-bold,
 	.cs-center .table-list ul li p span.list-bold { font-weight: 700; }
+	.contest .table-list ul li p span.list-point,
 	.cs-center .table-list ul li p span.list-point { color: #0CA2FF; }
+	.contest .sm-show-800 ul li.sm-select-list, .cs-center .table-list ul li.sm-select-list {
+		flex-direction: row;
+		align-items: center;
+	}
 	/* LNP_001 공지사항 상세 */
 	.cs-center .com-write-table table{border-left:none;border-right:none;}
 	.cs-center .com-write-table table tr th:first-child, 

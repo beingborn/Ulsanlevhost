@@ -186,7 +186,7 @@
                                     -
                                     <input type="text" title="사업자등록번호 끝자리">
                                 </div>
-                                <button type="button" class="btns bg-blue">사업자인증</button>
+                                <button type="button" class="btns layer-btn bg-blue" onclick="$('[data-pop=busynum-guide]').show();">사업자인증</button>
                             </div>
                             <p class="bullet">사업자인증 실패 시 나이스(niceid.co.kr 또는 1600-1522)로 문의하시기 바랍니다.</p>
                         </td>
@@ -562,6 +562,81 @@
             </div>
         </div>
     </footer>
+    <div class="layer-pop" data-pop="busynum-guide">
+        <div class="layer-content">
+            <div class="layer-scroll">
+                <span class="title">사업자등록번호 안내</span>
+                <div class="info-area busynum-guide">
+                    <div class="border-box-20">
+                        <p>
+                            동일한 사업자등록번호의 신청서가 존재합니다. <br>
+                            확인 후 필요한 경우만 추가 신청하시기 바랍니다.
+                        </p>
+                    </div>
+                    <div class="top-info-group">
+                        <p class="top-info-group-data">
+                            총 <strong>1</strong>건                            
+                        </p>
+                    </div>
+                    <div class="com-view-table">
+                        <table>
+                            <colgroup>
+                                <col style="width: 20%">
+                                <col style="width: auto">
+                                <col style="width: 12.5%">
+                                <col style="width: 15%">
+                                <col style="width: 15%">
+                                <col style="width: 10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>기관명</th>
+                                    <th>주소</th>
+                                    <th>대표자명</th>
+                                    <th>신청자ID</th>
+                                    <th>신청일자</th>
+                                    <th>신청상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>타오실용음악학원</td>
+                                    <td>서울특별시 중구 청계천로 14</td>
+                                    <td>홍길동</td>
+                                    <td>11a1212</td>
+                                    <td>2024-12-12</td>
+                                    <td>신청</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="paging ">
+                        <span class="pg">
+                            <a href="#" class="prev">
+                                <span>이전</span>
+                            </a>
+                        </span>
+                        <span class="num">
+                            <a href="#" class="on">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                        </span>
+                        <span class="pg">
+                            <a href="#" class="next">
+                                <span>다음</span>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=busynum-guide]').hide();">확인</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=busynum-guide]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
     <div class="layer-pop" data-pop="excel-res">
         <div class="layer-content" style="--max-width: 640px">
             <div class="layer-scroll">

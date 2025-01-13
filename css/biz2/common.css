@@ -95,6 +95,7 @@
 .flex-acjc {display: flex; align-items: center; justify-content: center;}
 .il-flex-ac {display: inline-flex; align-items: center;}
 .flex-je {display: flex; justify-content: end;}
+.flex-jc-i {justify-content: center!important;}
 .flex-dc{display: flex;flex-direction: column;}
 .hidden {display: none;}
 .hidden-i {display: none !important;}

@@ -163,28 +163,92 @@
         </div>
         <div class="contents contest">
             <div class="top-info-group">
+                <h3>선정내역</h3>
                 <p class="top-info-group-data">총 <strong>1</strong>건</p>
             </div>
-            <div class="com-view-table table-scroll">
-                <table class="mg-0" style="--minwidth:1024px">
+            <div class="com-view-table lg-only">
+                <table>
                     <caption>선정포기 신청 테이블</caption>
                     <colgroup>
                         <col style="width: 6%;">
-                        <col style="width: 12%;">                        
+                        <col style="width: 12%;">
                         <col style="width: 12%;">
                         <col style="width: 12%;">
                         <col style="width: 8%;">
                         <col style="width: 12%;">
                         <col style="width: 12%;">
-                        <col>
                         <col style="width: 12%;">
                     </colgroup>
                     <thead>
                         <tr>
                             <th>선택</th>
-                            <th>신청일자</th>
+                            <th>선정일자</th>
                             <th>지역</th>
                             <th>이용권 유형</th>
+                            <th>차수</th>
+                            <th>성명</th>
+                            <th>생년월일</th>
+                            <th>처리상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="radio" id="rd0101" name="rd01"></td>
+                            <td>2025-01-01</td>
+                            <td>국가이용권</td>
+                            <td>지역특화</td>
+                            <td>1</td>
+                            <td>홍길동</td>
+                            <td>1998-03-02</td>
+                            <td>처리중</td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">신청 내역이 없습니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-list sm-show-800">
+                <ul>
+                    <li class="sm-select-list">
+                        <p class="select-ip"><input type="radio" id="rd0101" name="rd01"></p>
+                        <div>
+                            <p><strong class="list-label">카드번호</strong><span>9007-****-****-9917</span></p>
+                            <p><strong class="list-label">승인일자</strong><span>2025-01-01</span></p>
+                            <p><strong class="list-label">승인시각</strong><span>16:20:00</span></p>
+                            <p><strong class="list-label">승인번호</strong><span>177770009</span></p>
+                            <p><strong class="list-label">가맹점명</strong><span>배치</span></p>
+                            <p><strong class="list-label">처리구분</strong><span>부분 매입취소</span></p>
+                            <p><strong class="list-label">승인금액</strong><span>20,000원</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btns-bottom">
+                <button type="button" class="btns">포기</button>
+            </div>
+            <div class="top-info-group">
+                <h3>선정포기 신청내역</h3>
+                <p class="top-info-group-data">총 <strong>1</strong>건</p>
+            </div>
+            <div class="com-view-table lg-only">
+                <table>
+                    <caption>선정포기 신청내역 테이블</caption>
+                    <colgroup>
+                        <col style="width: 12%;">
+                        <col style="width: 12%;">
+                        <col style="width: 12%;">
+                        <col style="width: 7%;">
+                        <col style="width: 12%;">
+                        <col style="width: 12%;">
+                        <col>
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>선정일자</th>
+                            <th>지역</th>
+                            <th>이용권 구분</th>
                             <th>차수</th>
                             <th>성명</th>
                             <th>생년월일</th>
@@ -194,10 +258,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input type="radio" id="rd0101" name="rd01"></td>
-                            <td>2024-01-01</td>
+                            <td>2025-01-01</td>
                             <td>국가이용권</td>
-                            <td>&nbsp;</td>
+                            <td>지역특화</td>
                             <td>1</td>
                             <td>홍길동</td>
                             <td>1998-03-02</td>
@@ -207,8 +270,19 @@
                     </tbody>
                 </table>
             </div>
-            <div class="btns-bottom">
-                <button type="button" class="btns">포기</button>
+            <div class="table-list sm-show-800">
+                <ul>
+                    <li>
+                        <p><strong class="list-label">선정일자</strong><span>2025-01-01</span></p>
+                        <p><strong class="list-label">지역</strong><span>국가이용권</span></p>
+                        <p><strong class="list-label">이용권 구분</strong><span>지역특화</span></p>
+                        <p><strong class="list-label">차수</strong><span>1</span></p>
+                        <p><strong class="list-label">성명</strong><span>홍길동</span></p>
+                        <p><strong class="list-label">생년월일</strong><span>1998-03-02</span></p>
+                        <p><strong class="list-label">선정포기사유</strong><span>국가장학금 중복 수혜에 따른 취소</span></p>
+                        <p><strong class="list-label">처리상태</strong><span>처리중</span></p>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

@@ -197,7 +197,7 @@
         <div class="agree-box">
             <div class="agree">
                 <h5 class="agree-tit">평생교육이용권 신청을 위한 필수사항 및 이용자 준수사항 확인에 대한 확약동의서에 동의하시겠습니까?</h5>
-                <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-1]').show();">내용보기</button>
+                <button class="agree-btn layer-btn" onclick="$('[data-pop=commit-agree]').show();">내용보기</button>
                 <div class="agree-radio">
                     <span>확약동의서에 대한 안내 사항을 읽고 동의합니다.</span>
                     <div class="radio-box">
@@ -268,5 +268,100 @@
             </div>
         </div>
     </footer>
+    <div class="layer-pop" data-pop="commit-agree">
+        <div class="layer-content" style="--max-width: 1200px">
+            <div class="layer-scroll">
+                <span class="title">
+                    [평생교육이용권(평생교육이용권) 신청을 위한 필수 사항 및 이용자 
+                    준수사항 확인에 대한 확약 동의서]
+                </span>
+                <div class="info-area">
+                    <p class="bullet">평생교육이용권 신청을 위한 필수사항 확인에 관한 사항</p>
+                    <div class="com-write-table">
+                        <table>
+                            <caption>평생교육이용권 신청을 위한 필수사항 관련 확약</caption>
+                            <colgroup>
+                                <col style="width: 336px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>평생교육이용권 신청을 위한 필수사항 관련 확약</th>
+                                    <td>본인은 평생교육이용권 신청 공고를 고지받았으며, 필수적인 서류 누락 및 오제출, 공고 미확인에 따라 발생하는 불이익은 본인에게 있음을 확인하고 확약합니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="com-write-table">
+                        <table>
+                            <caption>확약동의서 신청자 동의</caption>
+                            <colgroup>
+                                <col style="width: 270px;">
+                                <col>
+                                <col style="width: 270px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="txt-c">신청인 성명</th>
+                                    <td class="txt-c">홍길동</td>
+                                    <th class="txt-c"><label for="confirm1">확인</label></th>
+                                    <td class="txt-c"><input type="checkbox" id="confirm1"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="bullet">확인(체크) 시, 본 확약동의서에 대한 서명으로 간주합니다.</p>
+                    <p class="bullet">평생교육이용권 이용자 준수사항에 관한 사항</p>
+                    <div class="agree-box">
+                        <div class="agree-detail">
+                            <h3 class="txt-c">[이용자 준수사항]</h3>
+                        </div>
+                        <div class="agree-detail">
+                            <ol>
+                                <li>
+                                    평생교육이용권은 이용자 본인 사용 및 수강 원칙이며, 가족(배우자, 자녀 포함)을 포함한 제 3자에게 판매·양도·대여할 수 없다.
+                                </li>
+                                <li>
+                                    2024년 개설(시작)하는 성인 대상 평생교육 강좌 수강이외의 다른 목적으로 부당하게 평생교육이용권을 사용해서는 아니된다
+                                    <ul class="bullet-list">
+                                        <li>유아 및 어린이, 청소년 등 만 19세 미만 대상 강좌 이용 불가</li>
+                                        <li>평생교육이용권을 사용한 강좌 수강 없이 교재 단독 구매 불가</li>
+                                        <li>유·무선 전자통신 기기 구매(패키지 및 사은품 등을 통한 제공 포함), 전자교재(PDF, e-book 등) 불가</li>
+                                        <li>이용권 사용처 : 평생교육이용권 사용기관 강좌 수강료 및 해당 강좌 교재비(재료비 사용 불가)</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="top-info-group flex-jc-i">
+                        <p>본인은 평생교육이용권 이용자 준수사항에 관한 사항을 고지받았으며, 이에 동의합니다.</p>
+                    </div>
+                    <div class="com-write-table">
+                        <table>
+                            <caption>확약동의서 신청자 동의</caption>
+                            <colgroup>
+                                <col style="width: 270px;">
+                                <col>
+                                <col style="width: 270px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="txt-c">신청인 성명</th>
+                                    <td class="txt-c">홍길동</td>
+                                    <th class="txt-c"><label for="confirm2">확인</label></th>
+                                    <td class="txt-c"><input type="checkbox" id="confirm2"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="bullet">확인(체크) 시, 본 확약동의서에 대한 서명으로 간주합니다.</p>
+                </div>
+                <img class="layer-top-logo" src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원 로고">
+                <button class="close-btn" onclick="$('[data-pop=study-plan]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

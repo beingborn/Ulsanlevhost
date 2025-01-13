@@ -92,10 +92,10 @@ input[type="radio"]:checked::after{display:block;box-sizing:initial}
 
 /* date 공통 */
 input[type="date"]{background: #fff url(../../images/biz2/ico/ico_calendar.svg) no-repeat right 16px center;}
-/* input[type=date]::-webkit-datetime-edit-text{-webkit-appearance:none;display:none;}
-input[type=date]::-webkit-datetime-edit-month-field{-webkit-appearance:none;display:none;}
-input[type=date]::-webkit-datetime-edit-day-field {-webkit-appearance: none;display:none;}
-input[type=date]::-webkit-datetime-edit-year-field {-webkit-appearance: none;display:none;} */
+
+/* textarea 커스텀 공통 */
+textarea.textarea-cus {height: 84px; overflow-y: scroll; }
+textarea.textarea-cus::placeholder {color: #999999;}
 
 /* placehorder 스타일 조정 */
 .placeholder-txt-99::placeholder {color: #999999;}
@@ -144,6 +144,7 @@ ul.txt-indent-14 > li {padding-left: 14px; text-indent: -14px;}
 .txt-box{display:flex;flex-direction:column;justify-content:space-between;min-height:380px;border:1px solid var(--gray-30-d8);font-size:18px}
 .txt-box .box{border:0}
 .txt-box .txt-byte{text-align:right;color:#A0ACB8;font-size:13px}
+.txt-view-box {min-height: 200px;}
 .blue-box{padding:40px 38px;border-radius:40px;background-color:#F7F9FC}
 
 /* paging 공통 */
@@ -454,6 +455,12 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .use-ticket .border-box .ordered-list{margin-top:4px;padding-left:0}
 .use-ticket .border-box .ordered-list li+li{margin-top:4px}
 
+/* LAP_103 학습계획서 팝업 */
+.study-plan.info-area .study-guide-tit {margin-top: 40px;}
+.study-plan .agree-box {counter-reset: number 0;}
+.study-plan .agree-box .chk-box + .chk-box {margin-top: 10px;}
+.study-plan .agree-box .chk-box label::before { counter-increment: number 1; content: '' counter(number) ')'; margin: 0 8px;}
+
 /* ILP_002 이용권 사용기관 신청_본인인증 */
 .steps.flex-ac{justify-content:space-between}
 .steps li{position:relative;color:var(--text-sub-33);text-align:center}
@@ -675,7 +682,17 @@ table .total td{background-color:#E9F9FA}
 .login-wrap .auth-form-tit{font-size:32px}
 .login-wrap .register-btn{background:#F5FBFF;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .login-wrap .register-btn-txt{font-size:38px;margin-top:40px}
-
+.find-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.find-info a:first-child::after {
+	content: "|";
+	display: inline-block;
+	margin: 0 10px;
+	color: var(--gray-50-8e);
+}
 /* LMP_001 지자체 메인 layer apply */
 .layer-apply-content .layer-btn-wrap{margin-top:40px}
 .layer-apply{display:flex;flex-direction:column;align-items:center}
@@ -708,6 +725,8 @@ table .total td{background-color:#E9F9FA}
 .layer-pop .search-box dl.search-view dd {flex: 1;}
 .layer-pop .search-box dl.search-view dd :where(input, select) {width: 100%;}
 
+/* 팝업 동의 라벨 공통 */
+.layer-pop .chk-box label {font-weight: 300;}
 
 /* 팝업 업로드 공통 */
 .layer-pop .filebox {padding: 20px; border-radius: 12px; border: 1px solid var(--gray-30-d8); background: #F8F8F8;} 
@@ -726,6 +745,10 @@ table .total td{background-color:#E9F9FA}
 {margin-left: 16px;}
 .layer-btn-wrap .btns.btn-bd {border: 1px solid #1c8a90; color: var(--primary-color-600); background: #fff;}
 
+/* 레이어 서브 타이틀 공통 */
+.layer-pop .layer-subtit-group {margin-top: 40px; margin-bottom: 20px;} 
+.layer-pop .layer-subtit-group .layer-sub-tit {font-size: 20px; font-weight: 700;}
+.layer-pop .layer-subtit-group .layer-sub-tit + .layer-sub-desc {margin-top: 8px;}
 
 .layer-pop .search-box .btns,
  .new-window-pop .search-box .btns{margin:0;font-size:18px} /* 기본 설정 마진 초기화 */
@@ -737,7 +760,8 @@ table .total td{background-color:#E9F9FA}
 .new-window-pop .com-view-table :where(th,td){height:44px;font-size:16px; padding: 10px 8px 10px 8px;}
 .layer-pop .com-write-table :where(th,td){height:44px;font-size:16px}
 .layer-pop .com-view-table th, .new-window-pop .com-view-table th{padding:10px 17px}
-/* .layer-pop .com-write-table th{padding:0} */
+.layer-pop .bullet + .com-write-table > table {margin-top: 20px;}
+.layer-pop .com-write-table + .com-write-table {margin-top: 20px;}
 
 /* layer-txt group */
 .layer-text-box{padding:20px;border:1px solid var(--gray-30-d8);background:var(--gray-05-f8);border-radius:12px;font-weight:300; margin-top: 40px;}
@@ -745,6 +769,7 @@ table .total td{background-color:#E9F9FA}
 .layer-text-list {display:flex;flex-direction:column;gap:10px; margin-top: 40px;}
 .layer-text-list .layer-text-tit{font-size:18px;}
 .layer-text-list .layer-text-desc{color:#666666}
+.layer-text-list .layer-text-desc .dash {margin-right: 10px;}
 /* layer notice list */
 .layer-notice-list {margin-top: 20px; font-size: 16px; color: #333333;}
 .layer-notice-list li + li {margin-top: 10px;}
@@ -757,9 +782,13 @@ table .total td{background-color:#E9F9FA}
 .layer-pop .agree-box h4{font-size:16px;color:#333333;font-weight:300;margin-bottom:10px}
 .layer-pop .agree-box :where(ol > li, ul > li){font-size:14px;color:#666666;font-weight:300;padding-left:10px} 
 .layer-pop .agree-box .agree-detail + .agree-detail{padding-top:30px}
-.layer-pop .top-info-group{margin-top:40px}
+.layer-pop .top-info-group{margin-top:40px; margin-bottom: 20px;}
+.layer-pop .top-info-group.vertical-info {flex-direction: column; align-items: flex-start; gap: 10px;}
 .layer-pop .top-info-group h3{font-size:20px}
+.layer-pop .top-info-group p {font-size: 16px;}
 .layer-pop .top-info-group .top-info-group-data {font-size: 18px;}
+
+
 .layer-pop .bottom-info-group{margin-top:4px;color:#333333;font-size:13px}
 /* layer 동의 radio box */
 .layer-agree-group{margin-top:20px}
@@ -768,6 +797,9 @@ table .total td{background-color:#E9F9FA}
 .layer-agree-group .radio-box label:not(:last-of-type){margin-right:40px}
 /* layer 상단 top info-group */
 .layer-pop select{color:#000000}
+
+/* 평생교육 프로그램 팝업 */
+.six-category.info-area .com-view-table tbody td {text-align: left;}
 
 /*  datalist 공통 자격검증 LAP_102.html */
 .data-list {font-size: 18px;}
@@ -779,7 +811,7 @@ table .total td{background-color:#E9F9FA}
 .data-radio-list > .flex-ac {gap: 16px;}
 
 /* 학습계획서 LAP_215.html */
-.study-plan-img {position: absolute; left: 60px; top: 20px; width: 140px; height: 24px;} 
+.layer-top-logo {position: absolute; left: 60px; top: 20px; width: 140px; height: 24px;} 
 
 .auth-res .border-box-20:has(>.auth-res-txt) {background-color: #f8f8f8; font-weight: 700; font-size: 20px;}
 .auth-res > .border-box-20 {display: flex; flex-direction: column; gap: 30px;}
@@ -1000,8 +1032,8 @@ table .total td{background-color:#E9F9FA}
 .cs-center .com-write-table table td.cont-area dd{padding:10px 20px;color:var(--text-primary-00);}
 .cs-center .com-write-table table td.add-file .attached-file{color:var(--text-sub-33);}
 .cs-center .com-write-table .btn-download{background-color:#4C85BA;}
-.cs-center .com-write-table .article-list li{border-left:1px solid #d8d8d8;border-right:1px solid #d8d8d8;border-bottom-color:#d8d8d8;}
-.cs-center .com-write-table .article-list li.prev-list{font-size:18px;color:var(--text-disabled-99);}
+.cs-center .com-write-table .article-list li{border-left:1px solid #d8d8d8;border-right:1px solid #d8d8d8;border-bottom-color:#d8d8d8; font-size: 18px;}
+.cs-center .com-write-table .article-list li.prev-list > a {color:var(--text-disabled-99);}
 .cs-center .com-write-table .article-list li span.ico::before{width:20px;height:20px;margin:-3px 3px 0 0;background:url(../../images/biz2/ico/ico_list_dis.svg) no-repeat center}
 .cs-center .com-write-table .article-list li .ico::after{width:1px;height:8px;margin:0 16px;background-color:var(--text-disabled-99);}
 /* LNP_202 자주하는질문 상세 */

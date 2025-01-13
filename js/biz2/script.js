@@ -6,14 +6,16 @@ $(document).ready(function () {
     if (!href || href === '#') { $(this).addClass('disabled-link'); }
   })
 
-  // 임시 비활성화
-  // $('table tr th').each(function(){
-  //   var hasMustType = $(this).hasClass('must-type')
-  //   $(this).attr('title', '필수입력')
-  // })
+  // readonly 전용 클래스 추가 // 테스트용
+  const readonlyInputs = document.querySelectorAll('input[readonly]:not([type="radio"]):not([type="checkbox"])');
+  if(readonlyInputs.length > 0) {    
+    readonlyInputs.forEach(input => {
+      input.classList.add('readonly-txt')
+    })
+    console.log("readonly 속성이 있습니다") // 테스트 코드용 개발 전달
+  }
 
   let desktop = window.matchMedia('(min-width: 1080px)').matches;
-
   /* js 미디어쿼리 */
   $(window).on('resize', function(){
     desktop = window.matchMedia('(min-width: 1080px)').matches;
