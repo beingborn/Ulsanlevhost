@@ -6,6 +6,14 @@ $(document).ready(function () {
     if (!href || href === '#') { $(this).addClass('disabled-link'); }
   })
 
+  // required 속성 추가
+  const dateInput = document.querySelectorAll('input[type="date"]')
+  if(dateInput.length > 0){
+    dateInput.forEach(input=> {
+      input.setAttribute('required', '')
+    })
+  }
+  
   // readonly 전용 클래스 추가 // 테스트용
   const readonlyInputs = document.querySelectorAll('input[readonly]:not([type="radio"]):not([type="checkbox"])');
   if(readonlyInputs.length > 0) {    
@@ -129,9 +137,8 @@ $(document).ready(function () {
   });
 
   let windowLocation = window.location.pathname;
-
   // location 문자열에 LCP_002.html과 LAP_101.html을 가지고 있지 않은경우 즉 없는 경우에만 해당 코드 실행
-  if(windowLocation.includes("LCP_001") == false && windowLocation.includes("LAP_101") == false ){
+  if(windowLocation.includes("LCP_001") == false && windowLocation.includes("LAP_101") == false && windowLocation.includes("reqCertification") == false){
     /* 본인인증 테이블 변환 */
     $('.birth-chk').hide();
     $('.auth-area-in button').on('click',function(){
@@ -146,6 +153,7 @@ $(document).ready(function () {
       }
     })
   }
+
 
   /* 아이디 찾기 인증 방식 */
   $("input:radio[name=searchGbn]").click(function() {

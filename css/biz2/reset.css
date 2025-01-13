@@ -148,12 +148,25 @@ input[type=date] {
 	font-size: 16px;
 	font-family: "KoPubDotum", sans-serif;
 }
+
+input[type="date"]:not(:focus):invalid::before{content: attr(placehorder);}
+input::-webkit-calendar-picker-indicator {cursor: pointer;}
+
+/* input type="date" 연도/월/일 초기화 */
+input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-text, 
+input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-month-field, 
+input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-day-field, 
+input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-year-field 
+{ -webkit-appearance: none; display: none;}
+
 input[type=date]:disabled, input[type=date]:read-only {
 	background: #F8F8F8;
 }
 input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-calendar-picker-indicator {
 	position: relative;
-	left: -11px;
+	left: 0px;
+	width: 24px;
+	height:24px;
 	opacity: 0;
 	-webkit-appearance: none;
 }
