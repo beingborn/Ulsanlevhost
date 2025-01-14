@@ -299,7 +299,7 @@
 
 	/* 레이어 팝업 공통 */
 	.layer-pop .layer-content{padding:0 20px}
-	.layer-pop .layer-content .layer-scroll {padding: 32px 16px;}
+	.layer-pop .layer-content .layer-scroll {padding: 48px 16px 32px 16px;}
 	.layer-top-logo {left: 16px;}
 
 
@@ -560,4 +560,5 @@
 	.data-list dl dt {width: 96px; margin-right: 8px;}
 	.auth-res .auth-res-detail {text-align: left;}
 	.auth-res .border-box-20:has(>.auth-res-txt) {padding: 16px; font-size: 18px;}
+	.auth-res-br {display: block;}
 }

@@ -109,6 +109,7 @@
 .layer-pop .hide-layer-content {display: none; border-radius: 20px;}
 
 
+
 .layer-content .layer-scroll .info-area > .tit { display: block; margin-bottom: 14px; font-size: 20px; font-weight: bold; color: #333; }
 .layer-content .layer-scroll .info-area .list-box { width: 267px; margin: 0 auto; }
 .layer-content .layer-scroll .info-area .list-box li { display: flex; align-items: center; }

@@ -84,10 +84,10 @@
                 <div class="sm-menu-in">
                     <div class="sm-menu-header">
                         <!-- 로그인 전 -->
-                        <a href="#" class="txt-bold"><span class="ico user"></span>로그인</a>
+                        <a href="#" class="txt-bold">로그인</a>
                         <!-- 로그인 후 -->
                         <!-- <p class="sm-info-user">
-                            <span class="ico user"></span>
+                            
                             <span class="user-name txt-bold">김국바</span>님 환영합니다
                         </p> -->
                         <button class="sm-close ico">
@@ -189,8 +189,95 @@
             <img src="https://img.freepik.com/premium-vector/discount-sale-promotion-event-horizontal-banner-design_554907-305.jpg" alt="이용자 이벤트">
         </div>
         <div class="btns-bottom">
-            <button type="button" class="btns">신청하기</button>
+            <button type="button" class="btns layer-btn" onclick="$('[data-pop=apply-info]').show();">신청하기</button>
         </div>
     </div>
+    <footer class="wrap">
+        <div class="info-content">
+            <div class="family-select-wrap">
+                <div class="family-select-lg custom-select-box" >
+                    <button class="custom-select-open">관련 사이트</button>
+                    <ul class="family-site-list custom-select-list">
+                        <li><a href="#">국가평생교육진흥원 독학학위제</a></li>
+                        <li><a href="#">학점은행제 정보공시제(알리미)</a></li>
+                        <li><a href="#">평생학습계좌제</a></li>
+                        <li><a href="#">학점은행제</a></li>
+                        <li><a href="#">평생학습포털 늘배움</a></li>
+                        <li><a href="#">국가평생진흥원</a></li>
+                        <li><a href="#">교육부</a></li>
+                        <li><a href="#">고용노동부</a></li>
+                        <li><a href="#">한국진흥원</a></li>
+                        <li><a href="#">관련사이트10</a></li>
+                        <li><a href="#">관련사이트11</a></li>
+                        <li><a href="#">관련사이트12</a></li>
+                        <li><a href="#">관련사이트13</a></li>
+                        <li><a href="#">관련사이트14</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
+            <address>
+                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
+                <span class="tel"><span class="txt-bold">대표전화</span><span><span class="txt-bold">1600-3005</span> (평일 09시~18시)</span></span>
+            </address>
+            <div class="link-area">
+                <div class="link-box">
+                    <a href="#">이용약관</a>
+                    <a href="#" class="on">개인정보처리방침</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">이메일무단수집거부</a>
+                </div>
+                <span class="copy">
+                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
+                    RESERVED.
+                </span>
+                <div class="support-box">
+                    <a href="http://www.moe.go.kr" target="_blank">
+                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                    </a>
+                    <a href="http://www.nile.or.kr" target="_blank">
+                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                    </a>
+                    <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
+                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                    </a>
+                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="layer-pop" data-pop="apply-info" style="display: block;">
+        <div class="layer-content" style="--max-width: 640px">
+            <div class="layer-scroll">
+                <span class="title">신청 정보 확인</span>
+                <div class="info-area">
+                    <div class="border-box-20">
+                        <div class="data-list">
+                            <dl>
+                                <dt>성명</dt>
+                                <dd>홍길동</dd>
+                            </dl>
+                            <dl>
+                                <dt>전화번호</dt>
+                                <dd>010-****-1212</dd>
+                            </dl>
+                            <dl>
+                                <dt>주소</dt>
+                                <dd>서울특별시 은평구 연신 1로 20</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <p class="bullet">회원정보가 다를 경우, 경품 배송이 어려우니 개인정보 수정에서 수정해주세요.</p>                    
+                    <div class="layer-btn-wrap">
+                        <button class="btns layer-close" onclick="$('[data-pop=apply-info]').hide();">
+                            확인
+                        </button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=apply-info]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

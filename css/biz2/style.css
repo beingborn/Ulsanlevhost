@@ -164,6 +164,26 @@ ul.txt-indent-14 > li {padding-left: 14px; text-indent: -14px;}
 /* 이민혁 개발 이슈로 임시 삭제 */
 /* .paging .empty { width: 40px; height: 40px; font-size: 18px; font-weight: 500; color: #333333; text-align: center; } */
 
+/* 레이어 및 이용약관 스크롤 공통 */
+.layer-content .layer-scroll::-webkit-scrollbar-button:start ,
+.layer-content .layer-scroll::-webkit-scrollbar-button:end,
+.agree-box::-webkit-scrollbar-button:start,
+.agree-box::-webkit-scrollbar-button:end
+{size: 0;}
+.layer-content .layer-scroll::-webkit-scrollbar,
+.agree-box::-webkit-scrollbar 
+{width: 16px;}
+.layer-content .layer-scroll::-webkit-scrollbar-track-piece,
+.agree-box::-webkit-scrollbar-track-piece
+{background-color: transparent;}
+.layer-content .layer-scroll::-webkit-scrollbar-thumb,
+.agree-box::-webkit-scrollbar-thumb
+{
+	background-color: #d9d9d9; 
+	border-radius: 10px;
+	background-clip: padding-box;
+	border: 6px solid transparent;
+}
 
 /* tooltip 공통 */
 .tooltip{position:relative}
@@ -210,6 +230,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .top-info-group h3{font-size:var(--txt-lv2)}
 .top-info-group-data{color:var(--gray-70-55);font-weight:500}
 .top-info-group-data strong{color:var(--text-primary-00);font-weight:500}
+.top-info-group .btn-wrap {font-size: 0;}
 .mapping-area .mapping{margin-top:30px}
 .mapping-area .mapping dl{width:100%;padding:40px;border:2px solid #1c8a90;border-radius:20px;text-align:center;font-size:24px}
 .mapping-area .mapping dl+dl{margin-left:30px}
@@ -239,7 +260,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .top-info-group .border-box p+p{margin-left:26px}
 .top-info-group .border-box p img{margin-right:8px}
 
-.top-info-group .btn-wrap .btns+.btns{margin-left:15px}
+.top-info-group .btn-wrap .btns+.btns{margin-left:16px}
 /* .com-view-table .ico{font-size:0;text-indent:-9999em} */
 .com-view-table .ico.map-no::before{width:40px;height:40px;border:0;background:url(../../images/biz2/ico/ico_unmapped.svg) no-repeat center}
 .com-view-table .ico.map-yes::before{width:40px;height:40px;border:0;background:url(../../images/biz2/ico/ico_complete.svg) no-repeat center}
@@ -813,6 +834,8 @@ table .total td{background-color:#E9F9FA}
 /* 학습계획서 LAP_215.html */
 .layer-top-logo {position: absolute; left: 60px; top: 20px; width: 140px; height: 24px;} 
 
+/* 해당 팝업 전용 br */
+.auth-res-br {display: none;} 
 .auth-res .border-box-20:has(>.auth-res-txt) {background-color: #f8f8f8; font-weight: 700; font-size: 20px;}
 .auth-res > .border-box-20 {display: flex; flex-direction: column; gap: 30px;}
 .auth-res-detail {font-size: 14px; font-weight: 300; text-align: center; padding: 0 8px;}

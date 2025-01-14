@@ -84,10 +84,10 @@
                 <div class="sm-menu-in">
                     <div class="sm-menu-header">
                         <!-- 로그인 전 -->
-                        <a href="#" class="txt-bold"><span class="ico user"></span>로그인</a>
+                        <a href="#" class="txt-bold">로그인</a>
                         <!-- 로그인 후 -->
                         <!-- <p class="sm-info-user">
-                            <span class="ico user"></span>
+                            
                             <span class="user-name txt-bold">김국바</span>님 환영합니다
                         </p> -->
                         <button class="sm-close ico">
@@ -211,7 +211,7 @@
                         <li>신청기간 : 2024-08-01 (10시) ~ 2024-11-30 (18시)</li>
                     </ul>
                 </div>
-                <button type="button" class="btns layer-btn bg-blue" onclick="$('[data-pop=is-auth]').show();">선택</button>
+                <button type="button" class="btns layer-btn bg-blue" onclick="modalPop()">선택</button>
             </li>
             <li>
                 <strong>충청남도<br> 평생교육이용권 3차</strong>
@@ -313,15 +313,15 @@
                                 <dd class="data-radio-list">
                                     <div class="flex-ac">
                                         <div class="data-radio">
-                                            <input type="radio" id="reg" checked>
+                                            <input type="radio" name="r" id="reg" checked>
                                             <label for="reg">지역특화</label>
                                         </div>
                                         <div class="data-radio">
-                                            <input type="radio" id="dig">
+                                            <input type="radio" name="r" id="dig">
                                             <label for="dig">디지털</label>
                                         </div>
                                         <div class="data-radio">
-                                            <input type="radio" id="old">
+                                            <input type="radio" name="r" id="old">
                                             <label for="old">노인</label>
                                         </div>
                                     </div>
@@ -348,15 +348,35 @@
                             </div>
                         </div>
                     </div>                    
-                    <div class="layer-btn-wrap">
-                        <button class="btns layer-close" onclick="$('[data-pop=is-auth]').hide();">
-                            확인
-                        </button>
+                    <div class="new-window-btn-wrap">
+                        <button class="btns" onclick="window.close()">닫기</button>
                     </div>
                 </div>
-                <button class="close-btn" onclick="$('[data-pop=is-auth]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
             </div>
         </div>
     </div>
+    <script>
+        /* 20241230 이민혁 임시 새창 팝업 제어 스크립트 */
+        function modalPop(){
+            popup = window.open('LAP_113.html', '기관 조회 팝업', 'status=no, toolbar=no, menubar=no, resizable=1,')   
+            popup.onload = function(){
+                localStorage.setItem('newWindow', 'true')
+                // 팝업 높이 setting
+                let contentHeight = popup.document.querySelector('.new-window-content').scrollHeight;
+                let browserUiHeight = popup.outerHeight - popup.innerHeight;
+                let resizeHeight = contentHeight + browserUiHeight;
+                // 팝업 넓이 세팅
+                let contentWidth = popup.document.querySelector('.new-window-content').scrollWidth;
+                let browserUiWidth = popup.outerWidth - popup.innerWidth;
+                let resizeWidth = contentWidth + browserUiWidth;
+                // 브라우저 ui 높이 넓이를 뺀 값으로 리사이징
+                popup.resizeTo(resizeWidth ,resizeHeight)
+                // 브라우저 스크린 기준으로 중앙 정렬
+                let left = Math.ceil((window.screen.width - resizeWidth)/2);
+                let top = Math.ceil((window.screen.height - resizeHeight)/2);
+                popup.moveTo(left, top)
+            }
+        }
+        </script>
 </body>
 </html>
