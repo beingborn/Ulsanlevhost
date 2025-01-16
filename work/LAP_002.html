@@ -197,7 +197,7 @@
                             <label for="a">신청자 이름</label>
                         </th>
                         <td>
-                            <input type="text" id="a" class="fixed-value" readonly>
+                            <input type="text" id="a" class="fixed-value" value="홍길동" readonly>
                         </td>
                     </tr>
                     <tr>
@@ -205,10 +205,10 @@
                             <label for="b">주민등록번호</label>
                         </th>
                         <td>
-                            <div class="flex-ac gap-10 fixed-value">
-                                <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" readonly>
+                            <div class="flex-ac fixed-value input-reset">
+                                <input type="text" id="b" maxlength="6" value="901231" readonly>
                                 -
-                                <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" readonly>
+                                <input type="text" id="c" maxlength="7" value="1******" readonly>
                             </div>
                         </td>
                     </tr>
@@ -217,7 +217,7 @@
                             <label for="d">대상 유형</label>
                         </th>
                         <td>
-                            <input type="text" id="d" class="fixed-value" readonly>
+                            <input type="text" id="d" class="fixed-value" value="기초생활수급자" readonly>
                         </td>
                     </tr>
                 </tbody>

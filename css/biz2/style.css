@@ -14,12 +14,21 @@
 input{width:100%;font-size:18px}
 .period input,
 select{color:#8e8e8e;font-size:18px;font-weight:500}
-input.readonly-txt[type=text]:read-only, input.readonly-txt[type=number]:read-only, input.readonly-txt {
-	background: #fff;
-	border: 0;
-	outline: 0;
-	cursor: default;
-}
+
+/* readonly 공통 */
+input.readonly-txt[type=text]:read-only, 
+input.readonly-txt[type=number]:read-only,
+input.readonly-txt{background: #fff; border: 0; outline: 0; cursor: default;}
+/* readonly disabled style (LAP_401.html 사용) */
+input.readonly-txt[type=text].disabled-style:read-only,
+input.readonly-txt.disabled-style[type=number]:read-only 
+{background-color: var(--gray-05-f8); border: 1px solid #D8D8D8;}
+
+/* readonly + 기본 보더 초기화 삭제 */
+input.readonly-txt.no-border-init {border: 1px solid #D8D8D8;} 
+/* 첨부파일용 보더 삭제 방지 */
+
+
 /* text 공통 */
 .txt-muted{font-size:14px;font-weight:500;color:#666}
 .txt-ss{font-size:16px;font-weight:500;color:var(--text-sub-33)}
@@ -29,6 +38,7 @@ input.readonly-txt[type=text]:read-only, input.readonly-txt[type=number]:read-on
 /* color 공통 */
 .color-primary{color:var(--primary-color-600) !important}
 .color-primary-1c{color:#1C8A90 !important}
+.color-darkblue {color: #4C85BA;}
 .color-red{color:#EA292E !important}
 .color-blue{color:#218CEF !important}
 .bg-blue{background-color:#4C85BA !important}
@@ -56,8 +66,9 @@ input.readonly-txt[type=text]:read-only, input.readonly-txt[type=number]:read-on
 .click-trigger {cursor: pointer;}
 
 /* button 공통 */
+[class*=btn]{font-weight: 700;}
 .btns{display:inline-block;height:56px;padding:11px 16px 8px;border-radius:8px;background-color:var(--primary-color-600);color:var(--white);font-size:20px;} /* 20241211 이민혁 수정된 디자인 시스템따라 좌우 패딩 16px, letter spacing 추가 */
-.btn-bd{display:inline-block;height:56px;padding:11px 16px 8px;border: 2px solid #555;border-radius:8px;background-color:var(--white);font-size:20px;}
+.btn-bd{display:inline-block;height:56px;padding:11px 16px 8px;border: 1px solid #555;border-radius:8px;background-color:var(--white);font-size:20px;}
 .btn-bd.green{border-color:var(--primary-color-600) !important;color:var(--primary-color-600)}
 .btn-bd.blue{border-color:#4C85BA !important;color:#4C85BA}
 .btn-bd.blue.small{height:44px;padding:10px 12px;font-size:16px}
@@ -68,6 +79,7 @@ input.readonly-txt[type=text]:read-only, input.readonly-txt[type=number]:read-on
 .btns-bottom{display:flex;justify-content:center;max-width:512px;margin:80px auto 0;gap:16px}
 .btns-bottom a,
 .btns-bottom button{width:100%;height:72px;padding:16px 10px;font-size:26px;font-weight:700;text-align:center}
+.btns-bottom :where(a, button) {border-width: 2px;} /* 신규 버튼 규칙 적용 (250115 이민혁) */
 
 /* 공통 더보기 버튼 */
 .more-info-btn::before{content:'';display:inline-block;vertical-align:middle;background:url(../../images/biz2/ico/ico_more_btn.svg) no-repeat center;width:24px;height:24px}
@@ -93,6 +105,10 @@ input[type="radio"]:checked::after{display:block;box-sizing:initial}
 /* date 공통 */
 input[type="date"]{background: #fff url(../../images/biz2/ico/ico_calendar.svg) no-repeat right 16px center;}
 
+/* readonly input 공통 */
+.input-reset {padding-left: 16px;}
+.input-reset input { width: 0; appearance: none; padding: 0; flex: 0!important;}
+
 /* textarea 커스텀 공통 */
 textarea.textarea-cus {height: 84px; overflow-y: scroll; }
 textarea.textarea-cus::placeholder {color: #999999;}
@@ -101,16 +117,17 @@ textarea.textarea-cus::placeholder {color: #999999;}
 .placeholder-txt-99::placeholder {color: #999999;}
 
 .chk-box,
-.radio-box{display:flex}
+.radio-box{display:flex; align-items: center;}
 .chk-box input,
 .radio-box input{margin-right:10px}
 .chk-box label,
-.radio-box label{display:flex;flex:1;font-size:18px;font-weight:500;color:#000} /* 20241209 이민혁 수정 신규 디자인 반영사항 */
+.radio-box label{display:flex;flex:1;font-size:18px;font-weight:500;color:#000; align-items: center;} /* 20241209 이민혁 수정 신규 디자인 반영사항 */
 
 /* 첨부파일 */
 /* 20241209 이민혁 수정 간격 및 패딩 값 디자인 맞춰 수정 */
 .filebox{display:flex;gap:10px}
 .filebox .upload-name{flex:1;display:inline-block;height:56px;padding:0 16px;border:1px solid var(--gray-30-d8);color:var(--text-primary-00)}
+
 /* 20241211 황현진 다른페이지에서 gap과 margin이 겹쳐 20px 띄어지는 경우가 있어 filebox에 gap으로 넣음 */
 /* .filebox input.upload-name{margin-right:10px} */
 .filebox label{padding:0 16px;line-height:58px;cursor:pointer}
@@ -152,7 +169,7 @@ ul.txt-indent-14 > li {padding-left: 14px; text-indent: -14px;}
 .paging { display: flex; justify-content: center; align-items: center; column-gap: 8px; margin-top: 40px; }
 .paging a{ display: inline-flex; align-items:center; justify-content:center;}
 .paging a:not(.prev, .next) { width: 40px; height: 40px; font-size: 18px; font-weight: 500; color: #666666;}
-.paging a.on { background: #00b3be; border-radius: 6px; color: #fff; }
+.paging a.on { background: #00ADB2; border-radius: 6px; color: #fff; }
 
 .paging a.prev {font-size: 18px; font-weight: 500; line-height: 40px; color: var(--text-primary-00); background: url(../../images/biz2/paging_arrow_left.png) no-repeat 0 9px; }
 .paging a.next {font-size: 18px; font-weight: 500; line-height: 40px; color: var(--text-primary-00); background: url(../../images/biz2/paging_arrow_right.png) no-repeat right 9px; }
@@ -227,6 +244,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 
 /* IIP_100 이용권 사용내역 */
 .top-info-group{margin-top:80px;font-size:18px}
+.top-info-group + .top-info-group {margin-top: 0;}
 .top-info-group h3{font-size:var(--txt-lv2)}
 .top-info-group-data{color:var(--gray-70-55);font-weight:500}
 .top-info-group-data strong{color:var(--text-primary-00);font-weight:500}
@@ -249,8 +267,11 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .search-box .search-list .period .btn-wrap .btn-bd{width:90px;padding:10px 20px}
 .search-box .search-list .period .btn-wrap .btn-bd+.btn-bd{margin-left:16px}
 .search-box .search-list .period .txt-s{margin-left:16px}
+.search-box .search-list .search-chk {padding: 20px 0; align-items: flex-start;}
 .period .dash{display:inline-block;margin:0 7px}
-.search-box .btns{display:block;width:120px; margin: 30px auto;}
+/* (20250114 이민혁 수정) 버튼 마진 상단만 30px */
+.search-box .btns{display:block;width:120px; margin: 30px auto 0;} 
+
 .search-box .r-btn .btns {margin: 0 auto;}
 .search-box .chk-box input[type="checkbox"]{width:24px;height:24px;margin-top:-2px}
 .search-box .chk-box label{font-size:16px}
@@ -317,10 +338,11 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .divide .chk-box{width:calc(80% / 3)}
 .com-write-table table td.type-wrap{padding:30px 20px;font-size:18px}
 .row-gap{display:flex;flex-direction:column;row-gap:26px}
-.chk-box .ico::after{width:34px;height:34px;margin:-5px 0 0 10px}
+/* .chk-box .ico::after{width:34px;height:34px;margin:-5px 0 0 10px} */
 .chk-box .organ01::after{background:url(../../images/biz2/ico/ico_organ01.svg) no-repeat center}
 .chk-box .organ02::after{background:url(../../images/biz2/ico/ico_organ02.svg) no-repeat center}
 .chk-box .organ03::after{background:url(../../images/biz2/ico/ico_organ03.svg) no-repeat center}
+.chk-box .ico {margin-left: 10px;}
 
 .program-process .fixed-value,
 .plan .fixed-value{width:320px;flex:none}
@@ -408,7 +430,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ic_arrow
 .agree-box .radio-box label{flex:auto;color:var(--black-90-1d)}
 .agree-box .radio-box label:not(:last-of-type){margin-right:16px}
 .agree-box .agree-tit{display: flex; align-items: center; justify-content: space-between;}
-.agree-box .agree-tit h5{font-size:22px}
+.agree-box h5.agree-tit {font-size:22px}
 .agree-btn{border:1px solid var(--gray-30-d8);color:#666666;border-radius:8px;min-width: 84px; max-width:84px;height:44px}
 
 /* LCP_002 본인인증 */
@@ -533,37 +555,20 @@ p.bullet,
 .bullet,
 
 /* 정보 info 공통 */
-.bullet{font-size:16px}
+.bullet{font-size:16px; color: #333333;}              
+ul.bullet-list {color: #333333;}
 ul.bullet-list.color-primary li::before {background: var(--primary-color-600);}
 ul.bullet-list.color-primary{font-size:18px; margin-top: 0;}
 ul.bullet-list li{padding-left:24px;text-indent:-24px}
 ul.bullet-list li::before,
-.bullet::before {
-	content:"";
-	display:inline-block;
-	width:4px;
-	height:4px;
-	margin:-2px 10px 0 10px;
-	border-radius:50%;
-	background-color:#333;
-	vertical-align:middle;
-}
-.bullet.error::before {
-	content: "";
-	display: inline-block;
-	width: 16px; height: 17px;
-	margin: 0 2.5px 0 0;
-	background: url(../../images/biz2/ico/ico_error.svg) no-repeat left center/16px 17px;
-	vertical-align: middle;
-}
+.bullet::before {content:""; display:inline-block; background-color: #333333; width:4px; height:4px; margin:-2px 10px 0 10px; border-radius:50%; vertical-align:middle;}
+.bullet.error::before { content: ""; display: inline-block; width: 16px; height: 17px; margin: 0 2.5px 0 0; background: url(../../images/biz2/ico/ico_error.svg) no-repeat left center/16px 17px; vertical-align: middle;}
 ul.bullet-list.add-notice {font-size: 18px; margin-top: 30px;}
 ul.add-notice li+li{margin-top:8px}
 /* LAP_003 우수이용자 신청 */
 .asterisk,
 ul.asterisk-list{margin-top:20px;font-size:18px;color:var(--text-sub-33)}
 ul.asterisk-list li+li{margin-top:8px}
-/* .asterisk,
-ul.asterisk-list li{padding-left:21px;text-indent:-21px} 임시 ㅏㅅㄱ제 */
 
 .row-gap .bullet,
 .row-gap .bullet-list{margin-top:0}
@@ -580,7 +585,7 @@ ul.asterisk-list li{padding-left:21px;text-indent:-21px} 임시 ㅏㅅㄱ제 */
 .chk-write label {flex: none; line-height: 28px;}
 .chk-write input[type="text"] {height: 28px; width: 400px; margin-left: 20px; border-width: 0 0 1px;}
 .chk-write input[type="text"]::placeholder {color: #999999; font-weight: 500;}
-.chk-write input[type="text"]:focus {outline: none;}
+.chk-write input[type="text"]:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      {outline: none;}
 
 .chk-write .chk-box {align-items: center;}
 
@@ -630,15 +635,22 @@ ul.asterisk-list li{padding-left:21px;text-indent:-21px} 임시 ㅏㅅㄱ제 */
 .available-tickets{border:1px solid #d8d8d8;border-top:2px solid #000}
 .available-tickets > li{display:flex;justify-content:space-between;align-items:center}
 .available-tickets > li+li{border-top:1px solid #d8d8d8}
-.available-tickets > li strong{width:24%;padding:20px;font-size:26px;text-align:center}
+.available-tickets > li strong:not(.list-label) {width:24%;padding:20px;font-size:26px;text-align:center}
 .available-tickets > li .disc{width:61%;padding:20px}
 .available-tickets > li .disc .price-wrap{display:flex;align-items:center;gap:10px;margin-top:16px}
 .available-tickets > li .disc .price{font-size:22px;font-weight:700}
 .available-tickets > li .disc .box{padding:8px 16px;border:1px solid var(--gray-30-d8);border-radius:12px;background-color:var(--gray-05-f8);font-size:16px}
 .available-tickets > li .disc .bullet-list{margin-top:16px;color:var(--text-sub-33)}
 .available-tickets > li .disc .bullet-list li+li{margin-top:8px}
+.available-tickets > li .disc .bullet-list li {text-indent: 0; padding-left: 0;}
+.available-tickets > li .disc .bullet-list li strong.list-label {font-weight: 500;}
+.available-tickets > li .disc .bullet-list li strong.list-label::after {content: ':'; display: inline-block; margin: 0 6px;}
+.available-tickets > li .disc .bullet-list li.apply-period {display: flex; align-items: center;}
+.available-tickets > li .disc .bullet-list li.apply-period span {flex: 1; word-break: break-word;}
+/* .available-tickets > li .disc .bullet-list li.flex::before {align-self: center;} */
+
 .available-tickets > li .btns{margin:0 auto}
-.available-tickets .color-primary{font-size:22px}
+.available-tickets .color-darkblue {font-size:22px}
 
 /* LAP_103 평생교육이용권 신청 3단계 */
 .agree-box.learning .agree-radio,
@@ -672,11 +684,13 @@ table .total td{background-color:#E9F9FA}
 .usage-guide .top-info-group select{color:var(--text-primary-00)}
 .usage-guide .com-view-table td{font-weight:700}
 .usage-guide .new{height:36px;margin-left:16px;padding:6px 12px;border:2px solid #EA292E;border-radius:8px;font-size:16px}
-.com-view-table .ico.map{background:url(../../images/biz2/ico/ico_map.svg) no-repeat center;}
 .com-view-table .ico.homepage {background:url(../../images/biz2/ico/ico_homepage.svg)}
-.com-view-table .ico.organ01 {background:url(../../images/biz2/ico/ico_organ01.svg)}
-.com-view-table .ico.organ02 {background:url(../../images/biz2/ico/ico_organ02.svg)}
-.com-view-table .ico.organ03 {background:url(../../images/biz2/ico/ico_organ03.svg) no-repeat center / cover;}
+
+.ico.map{background:url(../../images/biz2/ico/ico_map.svg) no-repeat center / contain;}
+/* 기관 연계 사업 아이콘 공통 */
+.ico.organ01 {background:url(../../images/biz2/ico/ico_organ01.svg) no-repeat center / cover;}
+.ico.organ02 {background:url(../../images/biz2/ico/ico_organ02.svg) no-repeat center / cover;}
+.ico.organ03 {background:url(../../images/biz2/ico/ico_organ03.svg) no-repeat center / cover;}
 
 /* ILP_024 이용권 사용기관 신청 > 사용기관 정보보안 서약서 팝업 */
 .layer-pop .layer-document .agree-box > ul > li{padding-left:16px;text-indent:-16px}
@@ -745,6 +759,8 @@ table .total td{background-color:#E9F9FA}
 .layer-pop .search-box dl.search-view dt {width: 80px;}
 .layer-pop .search-box dl.search-view dd {flex: 1;}
 .layer-pop .search-box dl.search-view dd :where(input, select) {width: 100%;}
+
+select option:hover{background: #00ADB2;}
 
 /* 팝업 동의 라벨 공통 */
 .layer-pop .chk-box label {font-weight: 300;}
@@ -836,9 +852,9 @@ table .total td{background-color:#E9F9FA}
 
 /* 해당 팝업 전용 br */
 .auth-res-br {display: none;} 
-.auth-res .border-box-20:has(>.auth-res-txt) {background-color: #f8f8f8; font-weight: 700; font-size: 20px;}
+.auth-res .border-box-20:has(>.auth-res-txt) {background-color: #f8f8f8; font-weight: 700; font-size: 18px; text-align: center;}
 .auth-res > .border-box-20 {display: flex; flex-direction: column; gap: 30px;}
-.auth-res-detail {font-size: 14px; font-weight: 300; text-align: center; padding: 0 8px;}
+.auth-res-detail {font-weight: 300; text-align: center; padding: 0 8px;}
 .auth-res .radio-wrap {justify-content: center; padding: 20px 0 20px 0;}
 
 /* 사업자등록번호 안내 ILP_030.html */
@@ -1094,6 +1110,7 @@ table .total td{background-color:#E9F9FA}
 .objection .agree-box02 .agree-sign{margin-top:20px;font-size:16px;color:var(--text-primary-00);font-weight:500;}
 .objection .agree-box02 .agree-sign .date{text-align:right;}
 .objection .agree-box02 .agree-sign .sign{display:flex;justify-content:flex-end;align-items:center;gap:12px;margin-top:8px;}
+.objection .agree-box02 .agree-sign .sign label {font-size: 16px;}
 .objection .agree-box02 .agree-sign .sign strong{font-weight:500;}
 .objection .agree-box02 .agree-sign .sign .chk-box input[type="checkbox"]{margin-left:10px;margin-right:0;}
 .objection .btns-bottom{padding-bottom:80px;}

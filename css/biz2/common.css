@@ -87,7 +87,6 @@
 .border-left-init {border-left: 0!important;}
 .border-right-init {border-right: 0!important;}
 
-
 /* display */
 .flex {display: flex;}
 .flex-ac { display: flex; align-items: center;}
@@ -101,6 +100,7 @@
 .hidden-i {display: none !important;}
 .flex-align-top {align-items: flex-start!important;}
 .flex-noWrap {flex-wrap: nowrap!important;}
+.ac-i {align-items: center!important;}
 
 /* display */
 .flex-col {display: flex; flex-direction: column;}

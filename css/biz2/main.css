@@ -40,7 +40,7 @@
 /* top info group */
 .top-info-group {display: flex; align-items: center; justify-content: space-between; margin-bottom:20px;}
 .top-info-group select {border-radius: 10px;}
-.top-info-group-data {font-size: 22px;}
+.top-info-group-data {font-size: 18px;} 
 
 /* btn styling */
 .before-24 {width: 24px; height: 24px; background-position: center center; background-size: cover; background-repeat: no-repeat;}

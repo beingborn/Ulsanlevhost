@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -14,9 +15,13 @@
     <script src="../js/biz2/jquery.1.8.2.min.js"></script>
     <script src="../js/biz2/swiper-bundle.min.js"></script>
     <script src="../js/biz2/script.js"></script>
-    <title>울산광역시 평생교육이용원</title>
+    <title>울산광역시 평생교육이용권</title>
 </head>
-<body>
+<body style="position: relative;">
+    <img class="hidden"
+        src="../images/biz2/임시/LIP_600_임시.jpg"
+        style="position: absolute; left: 0; top: 0; max-width: 1920px; opacity: .8; z-index: 999;"
+    >
     <header>
         <div class="logo-area multi-logo-area">
             <a href="LMP_001.html"><img src="../images/biz2/header_logo_horizontal.svg" alt="울산광역시"></a>
@@ -151,176 +156,102 @@
         <div class="top-location-area wrap">
             <span class="home"><span class="blind">홈</span></span>
             <div class="location-box">
-                <span class="arrow">평생교육이용권</span>
-                <span class="arrow">평생교육이용권 신청</span>
+                <span class="arrow">개명 및 개번 신청</span>
             </div>
         </div>
     </div>
     <div class="container wrap">
         <div class="page-header">
-            <h2 class="page-header-tit">평생교육이용권 신청</h2>
-            <p class="page-header-desc">평생교육이용권 이용을 위한 사용기관 신청 화면입니다. </p>
+            <h2 class="page-header-tit">개명 및 개번 신청</h2>
         </div>
-
-        <ul class="steps flex-acjc">
-            <li class="lg-only">
-                <span class="step01">1단계</span>
-                <strong>약관동의</strong>
-            </li>
-            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="lg-only">
-                <span class="step02">2단계</span>
-                <strong>본인인증 및<br>자격검증</strong>
-            </li>
-            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li>
-                <span class="step03">3단계</span>
-                <strong>신청서 작성</strong>
-            </li>
-            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li> 
-                <span class="step08">4단계</span>
-                <strong>이용자 서약</strong>
-            </li>
-            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="active">
-                <span class="step06">5단계</span>
-                <strong>신청완료</strong>
-            </li>
-        </ul>
-
-        <hr>
-
-        <div class="complete-area">
-            <div class="complete-wrap border-box">
-                <strong><span class="color-primary">홍길동</span>님의 평생교육이용권 신청이 완료되었습니다.</strong>
-                <p class="mssg">본인인증을 통해 접속하여 신청된 내용을 확인하세요.<br>학습계획서 제출은 선택 사항이나, 경합 시 학습계획서 제출자를 우선 선발합니다.</p>
+        <div class="contents">
+            <div class="top-info-group">
+                <h3>신청 이력</h3>
             </div>
-            <p class="bullet">온라인 신청과 오프라인 신청 중 하나만 신청하시기 바랍니다.</p>
-        </div>
-        <div class="page-header">
-            <h2 class="page-header-tit">신청내역</h2>
-        </div>
-        <div class="top-info-group">
-            <h3>신청인 정보</h3>
-        </div>
-        <div class="com-write-table">
-            <table class="lg-only">
-                <caption>신청인 정보 입력란</caption>
-                <colgroup>
-                    <col style="width: 200px;">
-                    <col>
-                    <col style="width: 200px;">
-                    <col>
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th class="txt-l">성명</th>
-                        <td>홍길동</td>
-                        <th class="txt-l">생년월일</th>
-                        <td>2000-01-01</td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">휴대전화번호</th>
-                        <td>010-1234-5678</td>
-                        <th class="txt-l">전자우편주소</th>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="sm-show-800">
-                <caption>신청인 정보 입력란</caption>
-                <colgroup>
-                    <col style="width: 200px;">
-                    <col>
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th class="txt-l">성명</th>
-                        <td>홍길동</td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">생년월일</th>
-                        <td>2000-01-01</td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">휴대전화번호</th>
-                        <td>010-1234-5678</td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">전자우편주소</th>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="top-info-group">
-            <h3>지원자대상 정보</h3>
-        </div>
-        <div class="com-view-table">
-            <table class="lg-only">
-                <caption>신청인 정보 입력란</caption>
-                <colgroup>
-                    <col style="width: 15%;">
-                    <col>
-                    <col style="width: 15%;">
-                    <col>
-                    <col style="width: 15%;">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>지역</th>
-                        <th>이용권 유형</th>
-                        <th>차수</th>
-                        <th>기간</th>
-                        <th>이용권 금액</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>서울</td>
-                        <td>지역특화이용권</td>
-                        <td>1</td>
-                        <td>2024-01-01 ~ 2024-01-12</td>
-                        <td>350,000원</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="com-write-table">
-            <table class="sm-show-800">
-                <caption>지원자대상 정보 입력란</caption>
-                <colgroup>
-                    <col style="width: 200px;">
-                    <col>
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th class="txt-l">지역</th>
-                        <td>서울</td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">이용권 유형</th>
-                        <td>지역특화이용권</td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">차수</th>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">기간</th>
-                        <td>2024-01-01 ~ 2024-01-12</td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l">이용권 금액</th>
-                        <td>350,000원</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="btns-bottom">
-            <a href="javascript:;" class="btn-bd green">신청 내역 확인</a>
-            <a href="javascript:;" class="btns">메인으로</a>
+            <div class="top-info-group">
+                <p class="top-info-group-data">총 <strong>6,234</strong>건</p>
+                <div class="btn-wrap">
+                    <button type="button" class="btns bg-blue">신청</button>
+                </div>
+            </div>
+            <div class="com-view-table">
+                <table>
+                    <caption>개명 및 개번 신청이력 테이블</caption>
+                    <colgroup>
+                        <col style="width: 9%;">
+                        <col style="width: 12%;">
+                        <col style="width: 12%;">
+                        <col style="width: 17%;">
+                        <col style="width: 17%;">
+                        <col style="width: 12%;">
+                        <col style="width: 10%;">
+                        <col style="width: 6%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>변경대상</th>
+                            <th>변경 전 성명</th>
+                            <th>변경 후 성명</th>
+                            <th>변경 전 주민등록번호</th>
+                            <th>변경 후 주민등록번호</th>
+                            <th>변경 신청일시</th>
+                            <th>첨부파일</th>
+                            <th>상태</th>
+                            <th>신청취소</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>개명</td>
+                            <td>홍길동</td>
+                            <td>홍길동</td>
+                            <td>001218-3******</td>
+                            <td>001218-3******</td>
+                            <td>2024-01-01<br class="lg-only">17:45</td>
+                            <td>oooo.img</td>
+                            <td>신청</td>
+                            <td>
+                                <button type="button" class="btns bg-blue w-auto">취소</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>개명</td>
+                            <td>홍길동</td>
+                            <td>홍길동</td>
+                            <td>001218-3******</td>
+                            <td>001218-3******</td>
+                            <td>2024-01-01<br class="lg-only">17:45</td>
+                            <td>oooo.img</td>
+                            <td>신청</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="9">신청 이력이 없습니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="bullet">신청취소는 신청 상태일 때만 가능합니다.</p>
+            <div class="paging ">
+                <span class="pg">
+                    <a href="#" class="prev">
+                        <span>이전</span>
+                    </a>
+                </span>
+                <span class="num">
+                    <a href="#" class="on">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                </span>
+                <span class="pg">
+                    <a href="#" class="next">
+                        <span>다음</span>
+                    </a>
+                </span>
+            </div>
         </div>
     </div>
     <footer class="wrap">

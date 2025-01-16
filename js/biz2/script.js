@@ -13,21 +13,35 @@ $(document).ready(function () {
       input.setAttribute('required', '')
     })
   }
-  
+
   // readonly 전용 클래스 추가 // 테스트용
   const readonlyInputs = document.querySelectorAll('input[readonly]:not([type="radio"]):not([type="checkbox"])');
   if(readonlyInputs.length > 0) {    
     readonlyInputs.forEach(input => {
-      input.classList.add('readonly-txt')
+        input.classList.add('readonly-txt')
     })
     console.log("readonly 속성이 있습니다") // 테스트 코드용 개발 전달
+  }
+
+  /* full 페이지 min-height 증가 */
+  function adjustContainerHeight(){
+    if($('.full-page').length){
+      var headerHeight = $('header').outerHeight()
+      var footerHeight = $('footer').outerHeight()
+      var totalHeight = headerHeight + footerHeight;
+      $('.full-page .container').css('min-height', 'calc(100vh - ' + totalHeight + 'px)');
+    }
   }
 
   let desktop = window.matchMedia('(min-width: 1080px)').matches;
   /* js 미디어쿼리 */
   $(window).on('resize', function(){
     desktop = window.matchMedia('(min-width: 1080px)').matches;
-    if (!desktop) {
+
+    if (desktop) {
+      adjustContainerHeight()
+    } else if (!desktop) {
+      $('.full-page .container').css('min-height', '');
       $('header .menu-area .open-btn').removeClass('on')
     }
   });
@@ -136,9 +150,42 @@ $(document).ready(function () {
     }
   });
 
+  /** 높이 변화 감지 */
+  const $targetList = document.querySelectorAll('.available-tickets .bullet-list > li.apply-period')
+  const observer = new ResizeObserver((entries)=> {
+    entries.forEach((entry) => {
+    })
+  })
+  $targetList.forEach($target => observer.observe($target))
+
+  /* readonly input 너비 초기화 */
+  function setInputWidth(){
+    const resetInput = document.querySelectorAll('.input-reset input')
+    resetInput.forEach(input => {
+      // 밸류 값을 복사한 후 span에 저장
+      const inputValue = input.getAttribute('value')
+      const fakeInput = document.createElement('span')
+
+      // 기본 input 값의 padding과 font 스타일 style 적용
+      fakeInput.style.font = getComputedStyle(input).font; // input 스타일 가져오기
+      fakeInput.textContent = inputValue;
+
+      // 가상 span 돔 등록 후 수치 값 확인
+      document.body.appendChild(fakeInput);
+      const fakeInputWidth = fakeInput.offsetWidth;
+
+      // 동적으로 input에 값 추가 * css 기본 값 0
+      input.style.width = `${fakeInputWidth}px`;
+      document.body.removeChild(fakeInput);
+    })
+  }
+  setInputWidth();
+
+  /* 윈도우 URL별 show hide 적용 */
   let windowLocation = window.location.pathname;
-  // location 문자열에 LCP_002.html과 LAP_101.html을 가지고 있지 않은경우 즉 없는 경우에만 해당 코드 실행
-  if(windowLocation.includes("LCP_001") == false && windowLocation.includes("LAP_101") == false && windowLocation.includes("reqCertification") == false){
+  let notAnimationWindow = ["LCP_001", "LCP_002", "LAP_101", "reqCertification", "crtfctPage"]
+  if(!notAnimationWindow.some(window => windowLocation.includes(window))){ 
+    // 해당 문자열을 가지고 있지 않은 경우에만 아래 코드 실행
     /* 본인인증 테이블 변환 */
     $('.birth-chk').hide();
     $('.auth-area-in button').on('click',function(){
@@ -153,7 +200,6 @@ $(document).ready(function () {
       }
     })
   }
-
 
   /* 아이디 찾기 인증 방식 */
   $("input:radio[name=searchGbn]").click(function() {
@@ -191,24 +237,9 @@ $(document).ready(function () {
       }
     }
   });
-
 });
 
-/* 페이지 min-height 증가 */
-function adjustContainerHeight(){
-  if($('.full-page').length){
-    var headerHeight = $('header').outerHeight()
-    var footerHeight = $('footer').outerHeight()
-    var totalHeight = headerHeight + footerHeight;
-    $('.full-page .container').css('min-height', 'calc(100vh - ' + totalHeight + 'px)');
-  }
-}
-$(function(){
-  adjustContainerHeight()
-})
-$(window).on('resize', function(){
-  adjustContainerHeight()
-})
+
 
 
 

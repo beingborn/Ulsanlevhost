@@ -79,7 +79,8 @@
 	footer .info-content address > span.txt span + span{margin-left:2px}
 	footer .info-content address > span.tel span + span{margin-left:2px}
 	/* 컨텐츠 공통 */
-	.container{padding:20px 20px 28px}
+	/* (250114 이민혁 수정) 하단 모바일 여백 80px 통일  */
+	.container{padding:20px 20px 80px}
 	.top-info-group{margin-top:40px;margin-bottom:12px}
 	.top-info-group h3{font-size:24px}
 	.page-header-tit{font-size:26px}
@@ -137,7 +138,8 @@
 	.steps li.active .step07::before{background-position:-639px -106px}
 	.steps li.active .step08::before{background-position:-745px -106px}
 
-	hr{margin:40px 0}
+	/* 구분선 공통 */
+	hr{margin:40px 0; border-bottom: 2px solid #D8D8D8;}
 
 	.btns-bottom{max-width:100%;margin-top:40px}
 	.btns-bottom a, 
@@ -189,13 +191,14 @@
 	/* LAM_102 평생교육이용권 신청 2단계 */
 	.available-tickets{margin-top:12px;border-left:0;border-right:0}
 	.available-tickets > li{flex-direction:column}
-	.available-tickets > li strong{display:block;width:100%;padding:26px 8px 6px;font-size:18px;text-align:left}
-	.available-tickets > li strong br{display:none}
-	.available-tickets .color-primary{font-size:16px}
+	.available-tickets > li strong:not(.list-label){display:block;width:100%;padding:26px 8px 6px;font-size:18px;text-align:left}
+	.available-tickets > li strong:not(.list-label) br{display:none}
+	.available-tickets .color-darkblue{font-size:16px}
 	.available-tickets > li .disc{width:100%;padding:10px 8px}
 	.available-tickets > li .disc .price{font-size:18px}
 	.available-tickets > li .disc .bullet-list{font-size:18px}
 	.available-tickets > li .btns{width:120px;margin:20px auto}
+	.available-tickets li.flex {padding-left: 0; text-indent: 0;}
 
 	/* LAM_103 평생교육이용권 신청 3단계 */			
 	.agree-box.learning .agree-radio, 
@@ -231,12 +234,9 @@
 	.usage-guide .divide .chk-box{width:100%}
 	.usage-guide .search-box .chk-box label{font-size:18px}
 	.usage-guide .asterisk-list{margin-top:40px}
-	.usage-guide .table-list{border-top:3px solid var(--gray-30-d8);font-size:18px}
-	.usage-guide .table-list ul{padding:20px 8px; border-bottom:1px solid var(--gray-30-d8)}
-	.usage-guide .table-list ul li{display:flex;align-items:center;margin-top:4px}
-	.usage-guide .table-list ul li strong+img{margin-left:10px}
-	.usage-guide .table-list ul li .new{margin-left:10px}
-	
+
+	/* 검색 영역 공통 */
+	.search-box {border-radius: 6px;}
 
 	/* 푸터 공통 */
 	footer .info-content{padding:20px 0}
@@ -518,7 +518,7 @@
 	.user-info-up .agree-box.learning .bullet-list .link{color:var(--text-sub-33);font-weight:500;}
 	.user-info-up .agree-box.learning .bullet-list .link::before{content:'(';display:inline-block;margin-right:1px;}
 	.user-info-up .agree-box.learning .bullet-list .link::after{content:')';display:inline-block;margin-left:2px;}
-	/* LNP_300 질의응답 */
+	/* LNP_200 질의응답 */
 	.cs-center .top-info-group .right-wrap.flex-ac{width:calc(100% - 100px);justify-content:flex-end;}
 	.cs-center .top-info-group .right-wrap.flex-ac .btns{width:auto;min-width:49px;height:36px;font-size:14px;font-weight:500;}
 	/* LNP_303 질의응답 */
@@ -558,7 +558,9 @@
 @media only screen and (max-width:800px){
 	/* dl dataset 자격검증 팝업 사용 */
 	.data-list dl dt {width: 96px; margin-right: 8px;}
+	.data-radio-list > .flex-ac {gap: 8px; flex-direction: column; align-items: flex-start;}
 	.auth-res .auth-res-detail {text-align: left;}
-	.auth-res .border-box-20:has(>.auth-res-txt) {padding: 16px; font-size: 18px;}
+	.auth-res .border-box-20:not(:has(>.auth-res-txt)) {padding: 20px 16px;}
+	.auth-res .border-box-20:has(>.auth-res-txt) {padding: 16px; font-size: 18px; text-align: left;}
 	.auth-res-br {display: block;}
 }
