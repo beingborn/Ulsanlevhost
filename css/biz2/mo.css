@@ -47,8 +47,10 @@
 }
 
 @media only screen and (max-width:1080px){
-	/* 임시 보고용 구분 텍스트 */
-	.temp-page-txt{display:none} 
+	/* 모바일 폰트 정렬 공통 */
+	.sm-txt-l {text-align: left!important;}
+	table th {font-size: var(--font-lv6);}
+	table td {font-size: var(--font-lv6);}
 
 	/* LMP_001 지자체 메인 상단 */
 	.main-cont{flex-direction:column}
@@ -109,6 +111,7 @@
 	}
 	.conts-header .search-areaa {
 		display: flex;
+		flex-direction: column;
 		gap: 10px;
 		width: 100%;
 		padding: 12px 10px;
@@ -118,6 +121,7 @@
 	}
 	.conts-header .search-areaa .ui-select {
 		width:  100px; height: 40px;
+		width: 100%;
 	}
 	.conts-header .search-areaa .search-input input {
 		width: 100%;
@@ -133,6 +137,7 @@
 	}
 	.conts-footer .post-data {
 		position: inherit;
+		font-size: var(--font-lv7);
 	}
 
 	.page-header-tit{font-size:26px}
@@ -166,7 +171,17 @@
 	.com-write-table colgroup col:nth-child(3){width:114px !important}
 	.com-view-table table th,
 	.com-view-table table td{height:56px;padding:8px}
+	.file-up-area .btns.reset {
+		width: auto;
+		margin-top: 10px;
+	}
 
+	.com-write-table colgroup col.sm-col-25 {width:25%!important;}
+
+	.step-title + .conts-header, .step-title + div {
+		margin-top: 12px;
+	}
+	.step-title {font-size: 26px;}
 	.step-list{margin-bottom:40px}
 	.step-list.flex-acjc{gap:2%}
 	.step-list .step {
@@ -186,11 +201,11 @@
 	.step-list .step .step-tit{font-size:18px}
 	.step-list li.step-arrow {
 		width: 24px;
-		margin-top: 10%;
+		margin-top: 15%;
 	}
 	.step-list .step-arrow img {
 		display: block;
-		width: 24px
+		max-width: 32px;
 	}
 	/* 구분선 공통 */
 	hr{margin:40px 0; border-bottom: 2px solid #D8D8D8;}
@@ -204,11 +219,22 @@
 	.basic-info .fixed-value input{flex:1}
 	.basic-info .space .chk-box{margin-left:0}
 	.basic-info .input-num{flex-direction:column;align-items:flex-start;width:100%}
+	.input-num {
+		display: inline-block;
+		margin-top: 0 !important;
+	}
+	.input-num .flex-ac {
+		display: inline-block;
+		margin-top: 10px;
+	}
 	.input-num input {
 		width: 33.3333%;
 	}
 	.basic-info .input-num select{width:auto}
 	.basic-info .input-num input {width:40%}
+	.basic-info .input-num + button {
+		margin-top: 5px;
+	}
 	.tel-num{width:100%}
 	.tel-num input{width:calc(50% - 15px)}
 	.basic-info .input-group .email,
@@ -298,6 +324,7 @@
 	.usage-guide .search-box .search-input .btn-search{top:0px;padding:20px}
 	.usage-guide .flex-ac.mw-set{gap:5px}	
 	.usage-guide .search-box .search-list dl{display:block}	
+	.search-box .search-list .search-chk {padding-bottom: 0;}
 	.usage-guide .search-box .search-list dt{margin-top:10px;padding-left:0;font-size:18px}
 	.usage-guide .search-box .search-list dt br{display:none}
 	.usage-guide .search-box .search-list dd{padding:5px 0}
@@ -354,7 +381,7 @@
 	.main-info-link.personal{justify-content:center}
 	.main-info-link.personal .ico.after-login::before{width:88px;height:88px}
 	.main-info-link.personal .ico.before-login::before{width:88px;height:88px}
-	.main-info-link.personal > a{height:auto;padding:8px 7px;font-size:21px;border-radius:4px}
+	.main-info-link.personal > a{height:auto;padding:8px 7px;font-size:18px;border-radius:4px}
 	.main-info-link.personal > a.login{margin-top:16px}
 
 	/* LMP_001 지차체 메인 공지사항 스와이퍼 버튼 */
@@ -372,8 +399,15 @@
 	/* 레이어 팝업 공통 */
 	.layer-pop .layer-content{padding:0 20px}
 	.layer-pop .layer-content .layer-scroll {padding: 48px 16px 32px 16px;}
-	.layer-top-logo {left: 16px;}
-
+	.layer-top-logo {left: 16px; width: 92px; height: 16px;}
+	.layer-pop .layer-agree-box {border-radius: 16px;}
+	.layer-pop .layer-agree-box .chk-box input[type="text"]{width: 100%; margin-left: 0; margin-top: 10px;}
+	.layer-pop .layer-agree-box.txt-indent-20 .agree-detail :where(ul, h4, ol){padding-left: 0;}
+	.layer-pop .layer-agree-box.txt-indent-20 .agree-detail > ol > li > ul.num-counter > li {padding-left: 20px; text-indent: -20px;}
+	.layer-pop .conts-header h3 {font-size: var(--font-lv5);}
+	.layer-pop .btns,
+	.new-window-pop .btns{width: 134px;}
+	.layer-content .layer-scroll .close-btn {right: 16px; top: 12px;}
 
 	/* LMP_001 지차체 평생교육 상담센터 */
 	.main-search-box > input::placeholder{ color:transparent}
@@ -568,7 +602,7 @@
 	.objection table.basic-info .filebox.flex-ac label.btns, 
 	.file-up-area .filebox.flex-ac label.btns{ position:absolute; top:50%; right:8px; min-width:24px; width:24px; height:24px; background: #fff url(../../images/biz2/ico/ico_file_up_mo.svg) no-repeat center!important;  text-indent: -999px; transform:translateY(-50%); }
 	.objection table.basic-info td button.file-reset.btns{min-width:61px;width:auto;height:36px;padding:9px 12px 8px;font-size:14px;border-radius:4px;}
-	.objection .btns-bottom{padding-bottom:60px;}
+	/* .objection .btns-bottom{padding-bottom:60px;} */
 	/* LAP_201 선정 포기 신청 */
 	.objection .com-write-table .basic-info td .row-gap{gap:10px;margin:0;}
 	.com-write-table + .info-box{margin-top:12px;}

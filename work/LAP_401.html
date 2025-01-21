@@ -211,7 +211,7 @@
                         <tr>
                             <th class="txt-l"><label for="srch02">제목</label></th>
                             <td colspan="3">
-                                <input type="text" placeholder="50자 이내로 작성해주세요." id="srch02" class="w-100">
+                                <input type="text" placeholder="50자 이내로 작성해주세요." id="srch02" class="w-100" maxlength="50">
                             </td>
                         </tr>
                         <tr>
@@ -248,19 +248,22 @@
                         <tr>
                             <th class="txt-l"><label for="tel">휴대전화번호</label></th>
                             <td>
-                                <span class="input-num">
-                                    <select id="tel">
-                                        <option value="none">선택</option>
-                                        <option value="1">010</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                    </select>
-                                    <span>
-                                        <input type="tel" title="전화번호 중간자리">
-                                        <span>-</span>
-                                        <input type="tel" title="전화번호 끝자리">
-                                    </span>
-                                </span>
+                                <div class="flex-ac">
+                                    <div class="input-num">
+                                        <select id="tel">
+                                            <option value="none">선택</option>
+                                            <option value="1">2</option>
+                                            <option value="1">3</option>
+                                            <option value="1">4</option>
+                                        </select>
+                                        <span class="lg-only">-</span>
+                                        <div class="flex-ac">
+                                            <input type="tel" title="전화번호 중간자리">
+                                            -
+                                            <input type="tel" title="전화번호 끝자리">
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -276,7 +279,7 @@
                         <tr>
                             <th class="txt-l"><label for="srch02">제목</label></th>
                             <td>
-                                <input type="text" placeholder="50자 이내로 작성해주세요." id="srch02"  class="w-100">
+                                <input type="text" placeholder="50자 이내로 작성해주세요." id="srch02"  class="w-100" maxlength="50">
                             </td>
                         </tr>
                         <tr>
@@ -299,7 +302,7 @@
                 <div class="agree">
                     <div class="agree-tit">
                         <h5>저작권 양도 확인서</h5>
-                        <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-1]').show();">내용보기</button>
+                        <button class="agree-btn layer-btn" onclick="$('[data-pop=confirm-copy]').show();">내용보기</button>
                     </div>
                     <div class="agree-radio">
                         <div class="radio-box">
@@ -370,5 +373,90 @@
             </div>
         </div>
     </footer>
+    <div class="layer-pop" data-pop="confirm-copy">
+        <div class="layer-content">
+            <div class="layer-scroll">
+                <span class="title">저작물 저작재산권 양도 동의서</span>
+                <div class="info-area">
+                    <div class="layer-agree-box txt-indent-20">
+                        <div class="layer-agree-body">
+                            <div class="agree-detail">
+                                <h3>저작재산권 양도 취지</h3>
+                                <ul class="bullet-list">
+                                    <li>
+                                        저작권법 제24조의 2(공공저작물 자유이용)가 2014.07.01부터 시행되고, 공공데이터의 제공 및 
+                                        이용활성화에 관한 법률이 2013.10.31부터 시행됨에 따라 공공기관이 저작재산권을 전부 확보한 
+                                        국민들이 자유롭게 변형하여 영리적으로도 이용할 수 있도록 하고 있습니다.
+                                    </li>
+                                    <li>
+                                        이러한 정책적인 취지에 따라 교육부·국가평생교육진흥원은 「년 평생교육이용권 이용자 우수사례 수기 공모전」 
+                                        수상(입상) 작품의 저작자로부터 저작재산권의 전부를 양도받아 국민의 공공정보 활용을 용이하게 하고 창조경제 
+                                        발전에 이바지하고자 합니다.
+                                    </li>
+                                    <li>
+                                        다만, 저작자가 저작재산권을 교육부·국가평생교육진흥원에게 양도하더라도 동일성유지권, 공표권, 성명표시권 등 
+                                        저작인격권은 양도되지 않습니다. (이하 ‘양도자’라 한다)은 ‘년 평생교육이용권 이용자 우수사례 수기 공모전’의 
+                                        수상(입상)작품과 관련하여 아래와 같이 저작재산권을 교육부·국가평생교육진흥원(이하 ‘양수자’라 한다)에게 양도한다.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="agree-detail">
+                                <h3>저작물 표시</h3>
+                                <ul class="bullet-list">
+                                    <li>저작물명 : 년 평생교육이용권 이용자 우수사례 수기 공모전 수상(입상) 작품</li>
+                                    <li>대상 저작물 상세정보</li>
+                                </ul>
+                            </div>
+                            <div class="agree-detail">
+                                <h3>저작물 표시</h3>
+                                <ul class="bullet-list">
+                                    <li>저작물명 : 년 평생교육이용권 이용자 우수사례 수기 공모전 수상(입상) 작품</li>
+                                    <li>대상 저작물 상세정보</li>
+                                </ul>
+                            </div>
+                            <div class="agree-detail">
+                                <h3>양수자</h3>
+                                <ul class="bullet-list">
+                                    <li>기관명 : 교육부 / 국가평생교육진흥원</li>
+                                    <li>주소 및 연락처</li>
+                                    <li>(교육부) 세종특별자치시 갈매로 408, 14동 / 1600-3005</li>
+                                    <li>(국가평생교육진흥원) 서울시 중구 청계천로 14 / 1600-3005</li>
+                                </ul>
+                            </div>
+                            <div class="agree-detail">
+                                <h3>양도자</h3>
+                                <ul class="bullet-list">
+                                    <li>성명 :</li>
+                                    <li>주소 및 연락처 : ()</li>
+                                </ul>
+                            </div>
+                            <div class="agree-detail">
+                                <h3>저작권의 양도 내용</h3>
+                                <h4>제 1조(공통)</h4>
+                                <ol>
+                                    <li>①’양도자’는 본 양도 동의 후 ‘양도자‘가 제작한 공모전 입상작에 대한 저작재산권 일체(복제권, 공연권, 공중송신권, 전시권, 배포권, 대여권 등) 및 2차 저작물 작성권을 ‘양수자‘에게 양도한다.
+                                        <ul class="num-counter">
+                                            <li>자신 또는 상대방에 대하여 주요재산에 대한 보전처분결정 및 강제집행, 국세 또는 지방세의 체납절차, 회사정리, 기타 본 계약을 수행하기 어려운 중대한 사유가 발생하는 경우</li>
+                                            <li>상대방이 정당한 사유 없이 본 합의 또는 합의에 따라 별도로 체결한 합의에서 정한 사항을 위반하여, 서면으로 그 이행을 최고하고, 그 후 상당기간을 정하여 그 이행 또는 시정을 요구하였는데도 불구하고 상대방이 이행하지 않는 경우</li>
+                                            <li>저작물의 내용에 심각한 하자가 있거나 타인의 권리를 침해하여 저작권을 양수하는 자에게 손해가 발생하는 경우</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                                <h4>제2조(양도비용)</h4>
+                                <ol>
+                                    <li>양도비용은 ‘년 평생교육이용권 이용자 우수사례 수기 공모전‘ 시상금으로 갈음한다.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="layer-agree-date txt-c">2024년 10월 11일</p>
+                    <div class="layer-btn-wrap">
+                        <button class="btns" onclick="$('[data-pop=confirm-copy]').hide();">확인</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="$('[data-pop=confirm-copy]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

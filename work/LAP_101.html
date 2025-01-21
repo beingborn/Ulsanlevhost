@@ -163,35 +163,39 @@
         <ul class="step-list flex-acjc">
             <li class="step step-prev">
                 <span class="step-icon step_terms_agreement"></span>
-                <span class="step-name">1단계</span>
+                <span class="step-name">01</span>
                 <strong class="step-tit">약관동의</strong>
             </li>
             <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-active">
                 <span class="step-icon step_identity_verification"></span>
-                <span class="step-name">2단계</span>
+                <span class="step-name">02</span>
                 <strong class="step-tit">본인인증 및 자격검증</strong>
             </li>
             <li class="step-arrow "><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-next">
                 <span class="step-icon step_application_form"></span>
-                <span class="step-name">3단계</span>
+                <span class="step-name">03</span>
                 <strong class="step-tit">신청서 작성</strong>
             </li>
             <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-next lg-only">
                 <span class="step-icon step_user_commitment"></span>
-                <span class="step-name">4단계</span>
+                <span class="step-name">04</span>
                 <strong class="step-tit">이용자 서약</strong>
             </li>
             <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-next lg-only">
                 <span class="step-icon step_completion"></span>
-                <span class="step-name">5단계</span>
+                <span class="step-name">05</span>
                 <strong class="step-tit">신청완료</strong>
             </li>
         </ul>
         <hr>
+        <h2 class="step-title">2. 본인인증</h2>
+        <div class="conts-header">
+            <h3>본인인증 수단 선택</h3>
+        </div>
         <div class="auth-area">
             <div class="auth-area-in flex-ac">
                 <button class="ico simple">간편인증</button>
@@ -224,9 +228,9 @@
                             <label for="b">주민등록번호</label>
                         </th>
                         <td>
-                            <div class="flex-ac gap-10 fixed-value">
+                            <div class="flex-ac gap-10 fixed-value input-idNum">
                                 <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                                -
+                                <span>-</span>
                                 <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                             </div>
                         </td>

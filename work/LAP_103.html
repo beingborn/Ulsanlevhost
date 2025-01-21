@@ -14,7 +14,6 @@
     <script src="../js/biz2/swiper-bundle.min.js"></script>
     <script src="../js/biz2/script.js"></script>
     <title>울산광역시 평생교육이용원</title>
-    <style>.layer-pop {display: none !important}</style>
 </head>
 <body>
     <header>
@@ -164,37 +163,37 @@
         <ul class="step-list flex-acjc">
             <li class="step step-prev lg-only">
                 <span class="step-icon step_terms_agreement"></span>
-                <span class="step-name">1단계</span>
+                <span class="step-name">01</span>
                 <strong class="step-tit">약관동의</strong>
             </li>
             <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-prev">
                 <span class="step-icon step_identity_verification"></span>
-                <span class="step-name">2단계</span>
+                <span class="step-name">02</span>
                 <strong class="step-tit">본인인증 및 자격검증</strong>
             </li>
             <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-active">
                 <span class="step-icon step_application_form"></span>
-                <span class="step-name">3단계</span>
+                <span class="step-name">03</span>
                 <strong class="step-tit">신청서 작성</strong>
             </li>
             <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-next">
                 <span class="step-icon step_user_commitment"></span>
-                <span class="step-name">4단계</span>
+                <span class="step-name">04</span>
                 <strong class="step-tit">이용자 서약</strong>
             </li>
             <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-next lg-only">
                 <span class="step-icon step_completion"></span>
-                <span class="step-name">5단계</span>
+                <span class="step-name">05</span>
                 <strong class="step-tit">신청완료</strong>
             </li>
         </ul>
 
         <hr>
-
+        <h2 class="step-title">3. 신청서 작성</h2>
         <div class="conts-header">
             <h3>신청정보</h3>
             <small><em class="col-red">*</em> 는 필수사항입니다.</small>
@@ -203,7 +202,7 @@
             <table class="basic-info">
                 <caption>신청정보 입력란</caption>
                 <colgroup>
-                    <col style="width: 200px;">
+                    <col style="width: 310px;">
                     <col>
                 </colgroup>
                 <tbody>
@@ -265,10 +264,12 @@
                                         <option value="1">3</option>
                                         <option value="1">4</option>
                                     </select>
-                                    -
-                                    <input type="tel" title="전화번호 중간자리">
-                                    -
-                                    <input type="tel" title="전화번호 끝자리">
+                                    <span class="lg-only">-</span>
+                                    <div class="flex-ac">
+                                        <input type="tel" title="전화번호 중간자리">
+                                        -
+                                        <input type="tel" title="전화번호 끝자리">
+                                    </div>
                                 </div>
                                 <button type="button" class="btns layer-btn bg-blue" onclick="$('[data-pop=message-auth]').show();">휴대번호 인증</button>
                             </div>
@@ -279,9 +280,11 @@
                         <td class="input-group space">
                             <div class="flex-ac">
                                 <div class="flex-ac">
-                                    <input type="text" id="email" class="email-id">
-                                    @
                                     <div class="flex-ac">
+                                        <input type="text" id="email" class="email-id">
+                                        @
+                                    </div>
+                                    <div class="flex-ac input-num">
                                         <input type="text" class="email">
                                         <select>
                                             <option value="none">직접입력</option>
@@ -398,52 +401,229 @@
     <div class="layer-pop" data-pop="study-plan">
         <div class="layer-content">
             <div class="layer-scroll">
-                <span class="title">[학습계획서]</span>
+                <span class="title">학습계획서</span>
                 <div class="study-plan info-area">
                     <ul class="bullet-list">
-                        <li>
-                            본 학습계획서는 반드시 작성하셔야 하는 서류는 아닙니다. <br>
-                            그러나 평생교육 이용권 신청자가 선정 인원 수 보다 많을 경우, 학습계획서를 작성하신 분을 우선 선정합니다.
-                        </li>
+                        <li>본 학습계획서는 반드시 작성하셔야 하는 서류는 아닙니다.</li>
+                        <li>그러나 평생교육 이용권 신청자가 선정 인원 수 보다 많을 경우, 학습계획서를 작성하신 분을 우선 선정합니다.</li>
                     </ul>
                     <div class="conts-header vertical-info">
                         <h3>수강 예정 과정</h3>
-                        <p>본 학습계획서는 반드시 작성하셔야 하는 서류는 아닙니다.</p>
+                        <p>평생교육 이용권을 활용하여 수강하고자 하는 교육과정을 선택해 주세요.(중복 선택 가능)</p>
                     </div>
-                    <div class="agree-box">
+                    <div class="layer-agree-box">
                         <div class="chk-box">
-                            <input type="checkbox" name="name1" id="1" >
-                            <label for="1">
-                                학력 취득 목적 교육(학력 취득 목적의 교육은 초등학교, 중학교, 고등학교, 대학교 졸업에 대항하는 학력을 인정받고자 참여하는 교육을 뜻함)
-                            </label>
+                            <input type="checkbox" id="1">
+                            <label for="1">학력 취득 목적 교육(학력 취득 목적의 교육은 초등학교, 중학교, 고등학교, 대학교 졸업에 대항하는 학력을 인정받고자 참여하는 교육을 뜻함)</label>
                         </div>
                         <div class="chk-box">
-                            <input type="checkbox" name="name2" id="2">
-                            <label for="2">
-                                학력 취득 목적 외 교육(학력을 취득하는 것 이외에 직업, 교양, 취미, 여가 등과 관련된 활동을 하기 위한 교육을 뜻함)
-                            </label>
+                            <input type="checkbox" id="2">
+                            <label for="2">학력 취득 목적 외 교육(학력을 취득하는 것 이외에 직업, 교양, 취미, 여가 등과 관련된 활동을 하기 위한 교육을 뜻함)</label>
                         </div>
                     </div>
-                    <div class="conts-header">
-                        <p>구체적으로 수강 예정 강좌가 있을 경우, 강좌명을 적어주세요.</p>
-                    </div>  
-                    <form>
-                        <div style="vertical-align: middle;">
-                            <div>
-                                <textarea name="courseName" class="textarea-cus" id="courseName" placeholder="강좌명을 적어주세요"></textarea>
-                            </div>
+                    <div class="conts-header vertical-info">
+                        <h3>수강 과정의 내용</h3>
+                        <p>평생교육이용권을 활용하여 수강하고자 하는 과정은 어떤 내용인지 선택해 주세요.(중복 선택 가능)</p>
+                    </div>
+                    <p class="layer-agree-header">1) 학력 취득 목적교육을 선택한 경우(1개 항목 선택가능)</p>
+                    <div class="layer-agree-box section-num-1">
+                        <div class="chk-box">
+                            <input type="checkbox" id="3">
+                            <label for="3">초등학교 또는 중·고등학교 졸업 학력(인정) 과정(예: 초·중등 졸업 학력인정 교육 등) </label>
                         </div>
-                        <div class="layer-btn-wrap">
-                            <button class="btns">등록</button>
+                        <div class="chk-box">
+                            <input type="checkbox" id="4">
+                            <label for="4">대학교 졸업 학력(인정) 과정(예: 학점은행제 등)</label>
                         </div>
-                    </form>
+                        <div class="chk-box">
+                            <input type="checkbox" id="5">
+                            <label for="5">기타</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <p class="layer-agree-header">2) 학력 취득 목적 외 교육 선택한 경우(중복 선택 가능)</p>
+                    <div class="layer-agree-box section-num-2">
+                        <div class="chk-box">
+                            <input type="checkbox" id="6">
+                            <label for="6">성인문자해득교육(문자해득 교육, 기초생활기술 교육, 기타 문해교육)</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="7">
+                            <label for="7">직업능력 향상교육(직업준비교육, 자격인증교육, 현직직무역량 향상교육)</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="8">
+                            <label for="8">인문교양교육(건강심성, 기능적 소양, 인문학적 교양교육)</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="9">
+                            <label for="9">문화예술교육(레저생활스포츠, 생활문화예술, 문화예술향상 교육)</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="10">
+                            <label for="10">시민참여교육(시민책무성, 시민리더역량, 시민참여활동 교육)</label>
+                        </div>
+                    </div>
+                    <div class="conts-header vertical-info">
+                        <h3>수강 목적</h3>
+                        <p>평생교육이용권을 이용하여 강좌를 수강하고자 하는 목적은 무엇입니까?(중복 선택 가능)</p>
+                    </div>
+                    <div class="layer-agree-box">
+                        <div class="chk-box">
+                            <input type="checkbox" id="11">
+                            <label for="11">새로운 지식이나 기술을 습득하기 위하여</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="12">
+                            <label for="12">직업(취.창업)이나 승진에 도움을 얻기 위하여</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="13">
+                            <label for="13">자격증 및 학위 취득을 위하여</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="14">
+                            <label for="14">학습하는 자체가 즐거워서</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="15">
+                            <label for="15">인간관계를 확대하기 위하여</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="16">
+                            <label for="16">여가시간을 활용하기 위하여</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="17">
+                            <label for="17">봉사활동이나 사회 기여활동을 하기 위하여</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="18">
+                            <label for="18">기타</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="conts-header vertical-info">
+                        <h3>수강 시작 시기</h3>
+                        <p>평생교육이용권을 이용하여 평생교육 강좌 수강은 언제부터 시작할 예정입니까?(1개 항목 선택 가능)</p>
+                    </div>
+                    <div class="layer-agree-box">   
+                        <div class="chk-box">
+                            <input type="checkbox" id="19">
+                            <label for="19">평생교육이용권 이용자로 선정 후 1개월 이내</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="20">
+                            <label for="20">평생교육이용권 이용자로 선정 후 1개월~2개월 이내</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="21">
+                            <label for="21">평생교육이용권 이용자로 선정 후 2개월~3개월 이내</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="22">
+                            <label for="22">기타</label>
+                            <input type="text">
+                        </div>
+                        <div class="layer-agree-input-group">
+                            <label for="date">구체적으로 수강 시기를 결정하신 경우, 수강 시작 날짜(또는 월)를 적어주세요.</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="conts-header vertical-info">
+                        <h3>교육 기관</h3>
+                        <p>평생교육 이용권을 어떤 기관에서 사용하고자 합니까?(중복 선택 가능)</p>
+                    </div>
+                    <div class="layer-agree-box">
+                        <div class="chk-box">
+                            <input type="checkbox" id="23">
+                            <label for="23">초·중등학교부설 평생교육기관</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="24">
+                            <label for="24">대학교(원)부설 평생교육기관</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="25">
+                            <label for="25">원격교육형태(인터넷 강의 등) 평생교육기관</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="26">
+                            <label for="26">사업장(문화센터, 산업체, 백화점 등) 부설 평생교육기관</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="27">
+                            <label for="27">시민사회단체부설 평생교육기관</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="28">
+                            <label for="28">언론기관(신문, 방송) 부설 평생교육기관</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="29">
+                            <label for="29">지식·인력개발형태(직장, 연수원, 산업교육기관, 학교실습기관으로 기업 또는 노동부와 연계하여 운영하는 시설 등) 평생교육기관</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="30">
+                            <label for="30">평생학습관(평생학습센터, 주민자치센터 등 포함)</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="31">
+                            <label for="31">장애인 평생교육시설</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="32">
+                            <label for="32">기타</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="conts-header vertical-info">
+                        <h3>학습 결과 활용 계획</h3>
+                        <p>평생교육이용권을 이용하여 학습한 결과를 어떻게 활용할 계획입니까?(중복 선택 가능)</p>
+                    </div>
+                    <div class="layer-agree-box">
+                        <div class="chk-box">
+                            <input type="checkbox" id="33">
+                            <label for="33">학교 진학 또는 학위 취득</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="34">
+                            <label for="34">취업, 이직, 창업에 활용</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="35">
+                            <label for="35">자격증 취득</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="36">
+                            <label for="36">자원 봉사활동이나 지역·사회적 활동 참여</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="37">
+                            <label for="37">친목 도모 증진</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="38">
+                            <label for="38">건강관리</label>
+                        </div>
+                        <div class="chk-box">
+                            <input type="checkbox" id="39">
+                            <label for="39">기타</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="layer-btn-wrap">
+                        <button class="btns layer-close" onclick="$('[data-pop=study-plan]').hide();">
+                            등록
+                        </button>
+                    </div>
                 </div>
-                <img class="layer-top-logo" src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원 로고">
+                <img class="layer-top-logo" src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원 로고">
                 <button class="close-btn" onclick="$('[data-pop=study-plan]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
             </div>
         </div>
     </div>
-    <div class="layer-pop" data-pop="message-auth" style="display: block;">
+    <div class="layer-pop" data-pop="message-auth">
         <div class="layer-content" style="--max-width: 640px;">
             <div class="layer-scroll">
                 <span class="title">알림톡(문자) 인증</span>

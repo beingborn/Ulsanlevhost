@@ -96,11 +96,12 @@ $(document).ready(function () {
   const gnbSubBox = $('header .menu-box')
   const gnbMobileCloseTrigger = $('header .sm-menu-header .sm-close')
 
-  // GNB 열기
+  windowSize.setWinSize(); // 초기값 설정
+
   gnbTrigger.on('click',function(){
-    const isPC = windowSize.getWinSize() === "pc"; // 디바이스 확인
+    let pc = windowSize.getWinSize() === "pc"; // 디바이스 확인
     // PC GNB 토글
-    if (isPC){
+    if (pc){
       $(this).toggleClass('on');
       $('.log-info').hide();
     // MO GNB 토글
