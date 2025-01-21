@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
     <link rel="stylesheet" href="../css/biz2/reset.css">
-    <link rel="stylesheet" href="../css/biz2/common.css">
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
@@ -19,8 +18,8 @@
 <body>
     <header>
         <div class="logo-area multi-logo-area">
-            <a href="LMP_001.html"><img src="../images/biz2/header_logo_horizontal.svg" alt="울산광역시"></a>
-            <a href="LMP_001.html"><img src="../images/biz2/header_logo_2.png" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/logo/header_logo_local_government.svg" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/logo/header_logo_2.png" alt="울산광역시"></a>
         </div>
         <div class="menu-area">
             <!-- 로그인 시 -->
@@ -159,51 +158,53 @@
     <div class="container wrap">
         <div class="page-header">
             <h2 class="page-header-tit">평생교육이용권 신청</h2>
-            <p class="page-header-desc">평생교육이용권 이용을 위한 사용기관 신청 화면입니다. </p>
+            <p class="page-header-desc">평생교육이용권 사용을 위한 이용권 신청 화면입니다. </p>
         </div>
-
-        <ul class="steps flex-acjc">
-            <li>
-                <span class="step01">1단계</span>
-                <strong>약관동의</strong>
+        <ul class="step-list flex-acjc">
+            <li class="step step-prev">
+                <span class="step-icon step_terms_agreement"></span>
+                <span class="step-name">1단계</span>
+                <strong class="step-tit">약관동의</strong>
             </li>
-            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="active">
-                <span class="step02">2단계</span>
-                <strong>본인인증 및<br>자격검증</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-active">
+                <span class="step-icon step_identity_verification"></span>
+                <span class="step-name">2단계</span>
+                <strong class="step-tit">본인인증 및 자격검증</strong>
             </li>
-            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step03">3단계</span>
-                <strong>신청서 작성</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_application_form"></span>
+                <span class="step-name">3단계</span>
+                <strong class="step-tit">신청서 작성</strong>
             </li>
-            <li class="step-arrow disabled lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled lg-only"> 
-                <span class="step08">4단계</span>
-                <strong>이용자 서약</strong>
+            <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next lg-only">
+                <span class="step-icon step_user_commitment"></span>
+                <span class="step-name">4단계</span>
+                <strong class="step-tit">이용자 서약</strong>
             </li>
-            <li class="step-arrow disabled lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled lg-only">
-                <span class="step06">5단계</span>
-                <strong>신청완료</strong>
+            <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next lg-only">
+                <span class="step-icon step_completion"></span>
+                <span class="step-name">5단계</span>
+                <strong class="step-tit">신청완료</strong>
             </li>
         </ul>
-
-        <hr>       
-        
-        <div class="top-info-group">
+        <hr>
+        <div class="conts-header">
             <h3>신청가능한 평생교육이용권</h3>
         </div>
         <ul class="available-tickets">
             <li>
                 <strong>충청남도<br> 평생교육이용권 3차</strong>
                 <div class="disc">
-                    <p class="color-darkblue">주민등록 상 충청남도 홍성군 거주</p>
+                    <p class="col-blue">주민등록 상 충청남도 홍성군 거주</p>
                     <div class="price-wrap">
                         <span class="price">100,000원</span>
                         <span class="box">1914-07-15~2005-07-15 출생</span>
                     </div> 
-                    <ul class="bullet-list">
+                    <ul class="bullet-list table-label-list">
                         <li><strong class="list-label">자격요건</strong><span>무관</span></li>
                         <li><strong class="list-label">장애 여부</strong><span>무관</span></li>
                         <li><strong class="list-label">장학재단 중복 수혜</strong><span>허용안함</span></li>
@@ -216,12 +217,12 @@
             <li>
                 <strong>충청남도<br> 평생교육이용권 3차</strong>
                 <div class="disc">
-                    <p class="color-darkblue">주민등록 상 충청남도 홍성군 거주</p>
+                    <p class="col-blue">주민등록 상 충청남도 홍성군 거주</p>
                     <div class="price-wrap">
                         <span class="price">100,000원</span>
                         <span class="box">1914-07-15~2005-07-15 출생</span>
                     </div> 
-                    <ul class="bullet-list">
+                    <ul class="bullet-list table-label-list">
                         <li><strong class="list-label">자격요건</strong><span>무관</span></li>
                         <li><strong class="list-label">장애 여부</strong><span>무관</span></li>
                         <li><strong class="list-label">장학재단 중복 수혜</strong><span>허용안함</span></li>
@@ -229,7 +230,7 @@
                         <li class="apply-period"><strong class="list-label">신청기간</strong><span>2024-08-01 (10시) ~ 2024-11-30 (18시)</span></li>
                     </ul>
                 </div>
-                <button type="button" class="btns bg-blue">선택</button>
+                <button type="button" class="btns layer-btn bg-blue" onclick="modalPop()">선택</button>
             </li>
         </ul>
         <div class="btns-bottom">
@@ -277,15 +278,15 @@
                 </span>
                 <div class="support-box">
                     <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
                     </a>
                     <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
                     </a>
                     <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
                     </a>
-                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
                 </div>
             </div>
         </div>

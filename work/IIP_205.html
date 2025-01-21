@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
     <link rel="stylesheet" href="../css/biz2/reset.css">
-    <link rel="stylesheet" href="../css/biz2/common.css">
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
@@ -21,7 +20,7 @@
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
-                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+                <img src="../images/biz2/logo/header_logo_2.png" alt="울산광역시">
             </a>
         </div>
         <div class="menu-area">
@@ -87,12 +86,12 @@
             <h2 class="page-header-tit">교육과정 정보</h2>
         </div>
         <div class="contents">
-            <div class="top-info-group">
+            <div class="conts-header">
                 <h3>강좌정보</h3>
                 <div class="flex-ac">
                     <div>
-                        <small><em class="color-red">*</em> 는 필수사항입니다.</small>
-                        <p class="color-blue">최초 등록일시 : 2024-09-12 11:12:11, 최종 수정일시 : 2024-12-12 12:11:12</p>                        
+                        <small><em class="col-red">*</em> 는 필수사항입니다.</small>
+                        <p class="col-blue">최초 등록일시 : 2024-09-12 11:12:11, 최종 수정일시 : 2024-12-12 12:11:12</p>                        
                     </div> 
                 </div>
             </div>
@@ -308,7 +307,7 @@
                     </tbody>
                 </table>
             </div>    
-            <div class="top-info-group">
+            <div class="conts-header">
                 <h3>학습자 정보</h3>
                 <div class="r-section">
                     <label for="aa">학습자 정렬 :</label>
@@ -424,15 +423,15 @@
                 </span>
                 <div class="support-box">
                     <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
                     </a>
                     <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
                     </a>
                     <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
                     </a>
-                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
                 </div>
             </div>
         </div>
@@ -449,14 +448,14 @@
                         <input type="text" id="2" placeholder="생년월일 8자리">
                         <label for="3">성명</label>
                         <input type="text" id="3">
-                        <button class="btns">검색</button>
+                        <button class="btns bg-blue">검색</button>
                     </div>
                     <div class="table-box ">
-                        <div class="top-info-group">
-                            <p class="top-info-group-data">
+                        <div class="conts-header">
+                            <p class="conts-header-data">
                                 총  <strong>1</strong>건
                             </p>
-                            <small><em class="color-red">*</em> 부분취소 결제건을 등록하는 경우 환불여부를 [예]로 선택해 주세요.</small>
+                            <small><em class="col-red">*</em> 부분취소 결제건을 등록하는 경우 환불여부를 [예]로 선택해 주세요.</small>
                         </div>
                         <div class="com-view-table">
                             <table class="mg-0">
@@ -502,28 +501,34 @@
                             </table>
                         </div>
                     </div>
-                    <div class="paging ">
+                    <div class="paging">
                         <span class="pg">
+                            <a href="#" class="first">
+                                <span class="blind">맨처음으로</span>
+                            </a>
                             <a href="#" class="prev">
-                                <span>이전</span>
+                                <span class="blind">이전으로</span>
                             </a>
                         </span>
                         <span class="num">
-                            <a href="#" class="on">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
+                            <a href="#" title="Go to page 1" class="on">1</a>
+                            <a href="#" title="Go to page 2">2</a>
+                            <a href="#" title="Go to page 3">3</a>
+                            <a href="#" title="Go to page 4">4</a>
+                            <a href="#" title="Go to page 5">5</a>
                         </span>
                         <span class="pg">
                             <a href="#" class="next">
-                                <span>다음</span>
+                                <span class="blind">다음</span>
+                            </a>
+                            <a href="#" class="last">
+                                <span class="blind">맨끝으로</span>
                             </a>
                         </span>
                     </div>
                     <ul class="layer-text-list">
-                        <li class="layer-text-tit color-red">※ 학습자 정보 추가 전 유의사항</li>
-                        <li class="layer-text-desc"><span class="dash">-</span> <em class="color-blue">이용권 카드 본인사용 확인</em>(카드결제 정보내 이름과 실제 수강자명 일치여부 확인)</li>
+                        <li class="layer-text-tit col-red">※ 학습자 정보 추가 전 유의사항</li>
+                        <li class="layer-text-desc"><span class="dash">-</span> <em class="col-blue">이용권 카드 본인사용 확인</em>(카드결제 정보내 이름과 실제 수강자명 일치여부 확인)</li>
                         <li class="layer-text-desc"><span class="dash">-</span> 평생교육강좌 수강료 및 이에 해당하는 교재 외 결제, 등록불가(교재 단독 결제 불가)</li>
                         <li class="layer-text-desc">평생교육이용권 본인외 사용 및 목적외 사용 확인시 이용자 안내 후 카드 취소 처리 요청</li>
                     </ul>
@@ -666,22 +671,28 @@
                             </table>
                         </div>
                     </div>
-                    <div class="paging ">
+                    <div class="paging">
                         <span class="pg">
+                            <a href="#" class="first">
+                                <span class="blind">맨처음으로</span>
+                            </a>
                             <a href="#" class="prev">
-                                <span>이전</span>
+                                <span class="blind">이전으로</span>
                             </a>
                         </span>
                         <span class="num">
-                            <a href="#" class="on">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
+                            <a href="#" title="Go to page 1" class="on">1</a>
+                            <a href="#" title="Go to page 2">2</a>
+                            <a href="#" title="Go to page 3">3</a>
+                            <a href="#" title="Go to page 4">4</a>
+                            <a href="#" title="Go to page 5">5</a>
                         </span>
                         <span class="pg">
                             <a href="#" class="next">
-                                <span>다음</span>
+                                <span class="blind">다음</span>
+                            </a>
+                            <a href="#" class="last">
+                                <span class="blind">맨끝으로</span>
                             </a>
                         </span>
                     </div>
@@ -710,7 +721,7 @@
                                         <th>7대영역</th>
                                         <th>정의</th>
                                         <th>하위영역</th>
-                                        <th class="border-d8-r">정의</th>
+                                        <th class="border-r">정의</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1032,22 +1043,28 @@
                             </table>
                         </div>
                     </div>
-                    <div class="paging ">
+                    <div class="paging">
                         <span class="pg">
+                            <a href="#" class="first">
+                                <span class="blind">맨처음으로</span>
+                            </a>
                             <a href="#" class="prev">
-                                <span>이전</span>
+                                <span class="blind">이전으로</span>
                             </a>
                         </span>
                         <span class="num">
-                            <a href="#" class="on">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
+                            <a href="#" title="Go to page 1" class="on">1</a>
+                            <a href="#" title="Go to page 2">2</a>
+                            <a href="#" title="Go to page 3">3</a>
+                            <a href="#" title="Go to page 4">4</a>
+                            <a href="#" title="Go to page 5">5</a>
                         </span>
                         <span class="pg">
                             <a href="#" class="next">
-                                <span>다음</span>
+                                <span class="blind">다음</span>
+                            </a>
+                            <a href="#" class="last">
+                                <span class="blind">맨끝으로</span>
                             </a>
                         </span>
                     </div>

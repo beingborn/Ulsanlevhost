@@ -1,0 +1,102 @@
+:root {
+	--primary-color : #27C2CB;
+	--primary-color-600 : #00ADB2;
+	--secondary-color : #F2FBFC;
+	--navy-12 : #124D83;
+	--white : #fff;
+	--gray-05-f8 : #f8f8f8; /* bg */
+	--gray-20-e4 : #e4e4e4; /* disabled */
+	--gray-30-d8 : #d8d8d8; /* border */
+	--gray-50-8e : #8e8e8e; /* Text-disabled */
+	--gray-60-71 : #717171;
+	--gray-70-55 : #555555; /* Text-body */
+	--gray-80-2d : #2d2d2d; 
+	/* text-color */
+	--text-primary-00: #000000;
+	--text-sub-33 : #333333;
+	--text-third-66 : #666666;
+	--text-disabled-99: #999999;
+	/* point-color */
+	--point-color-f7 : #F76767;
+	--point-color-73 : #73D75A;
+	/* txt size */
+	--txt-lv1 : 50px;
+	--txt-lv2 : 38px;
+	--txt-lv5 : 20px;
+}
+
+.txt-gray55 {color: var(--gray-70-55);}
+.txt-gray66 {color: #666666;}
+.txt-grayb5 {color: #b5b5b5;}
+.txt-gray99 {color: #999999!important;}
+
+/* common */
+.blind{display:block;overflow:hidden;font-size:0;line-height:0;position:absolute;text-indent:-9999px;width:1px;height:1px}
+
+input{width:100%;font-size:18px}
+
+.period input,
+select{color:#8e8e8e;font-size:18px;font-weight:500}
+
+
+/* color 공통 */
+.color-primary{color:var(--pri) !important}
+.color-primary-1c{color:#1C8A90 !important}
+.color-darkblue {color: #0E71A3;}
+.color-red{color:#EA292E !important}
+.color-blue{color:#218CEF !important}
+.bg-blue{background-color:#4C85BA !important}
+.bg-gray{background-color:#586377 !important}
+.bg-primary-600{background-color:var(--pri)!important}
+
+
+/* display 공통 */
+.sm-show-800{display:none}
+.v-hidden{visibility:hidden!important}
+.hidden-i{display:none!important}
+.d-show {display: block;}
+
+/* readonly 공통 */
+input.readonly-txt[type=text]:read-only, 
+input.readonly-txt[type=number]:read-only,
+input.readonly-txt{background: #fff; border: 0; outline: 0; cursor: default;}
+/* disabled style */
+input.readonly-txt[type=text].disabled-style:read-only,
+input.readonly-txt.disabled-style[type=number]:read-only 
+{background-color: var(--bg-color); border: 1px solid #D8D8D8;}
+
+/* checkbox,radio 공통 */
+input[type="checkbox"]{-webkit-appearance:none;-moz-appearance:none;appearance:none;display:inline-block;width:22px;height:22px;margin:2px 0 0 0;border:1px solid #999;border-radius:4px;cursor:pointer;background-color:var(--white);outline:0}
+input[type="checkbox"]::after{content:'';display:block;width:100%;height:100%;position:relative;background:url(../../images/biz2/ico/ico_checkbox.svg) no-repeat center}
+input[type="checkbox"]:checked{border:none;background-color:var(--pri)}
+input[type="checkbox"]:checked::after{display:block;box-sizing:initial}
+/* 비활성화 스타일 */
+input[type="checkbox"][disabled]{background-color:var(--bg-color)}
+input[type="checkbox"][disabled]::after{display:none}
+/* 비활성화된 상태에서 체크되었을 시 */
+input[type="checkbox"]:checked:disabled::after{background:url(../../images/biz2/ico/ico_checkbox_disabled.svg) no-repeat center}
+input[type="checkbox"]:checked:disabled{border:1px solid #999999}
+input[type="checkbox"]:checked:disabled::after{display:block}
+
+input[type="radio"]{-webkit-appearance:none;-moz-appearance:none;appearance:none;display:inline-block;width:22px;height:22px;margin:2px 0 0 0;border:1px solid #999;border-radius:50%;cursor:pointer;background-color:var(--white);outline:0}
+input[type="radio"]::after{content:'';display:none;position:relative;top:50%;left:50%;width:10px;height:10px;margin:-5px;background-color:var(--white);border-radius:50%}
+input[type="radio"]:checked{border:none;background-color:var(--pri)}
+input[type="radio"]:checked::after{display:block;box-sizing:initial}
+
+/* date 공통 */
+input[type="date"]{background: #fff url(../../images/biz2/ico/ico_calendar.svg) no-repeat right 16px center;}
+
+/* readonly 너비값 초기화 공통 */
+.input-reset {padding-left: 16px;}
+.input-reset input { width: 0; appearance: none; padding: 0; flex: 0!important;}
+
+/* textarea 커스텀 공통 */
+textarea.textarea-cus {height: 84px; overflow-y: scroll; }
+textarea.textarea-cus::placeholder {color: #999999;}
+
+.chk-box,
+.radio-box{display:flex; align-items: center;}
+.chk-box input,
+.radio-box input{margin-right:10px}
+.chk-box label,
+.radio-box label{display:flex;flex:1;font-size:18px;font-weight:500;color:#000; align-items: center;} /* 20241209 이민혁 수정 신규 디자인 반영사항 */

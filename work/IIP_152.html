@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
-    <link rel="stylesheet" href="../css/biz2/reset.css">
-    <link rel="stylesheet" href="../css/biz2/common.css">
+    <link rel="stylesheet" href="../css/biz2/reset.css">    
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
@@ -21,7 +20,7 @@
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
-                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+                <img src="../images/biz2/logo/header_logo_2.png" alt="울산광역시">
             </a>
         </div>
         <div class="menu-area">
@@ -87,7 +86,7 @@
             <h2 class="page-header-tit">교육결과 관리 등록</h2>
         </div>
         <div class="contents course-info">
-            <div class="top-info-group">
+            <div class="conts-header">
                 <h3>기관 정보</h3>
             </div>
             <div class="com-write-table">
@@ -125,7 +124,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="top-info-group">
+            <div class="conts-header">
                 <h3>과정 정보</h3>
             </div>
             <div class="com-write-table">
@@ -147,7 +146,7 @@
                         </tr>
                         <tr>
                             <th class="txt-l"><label for="srch04">온/오프<br>(교육방법)</label></th>
-                            <td class="border-right-init" colspan="3">
+                            <td colspan="3">
                                 <input type="text" id="srch04" class="readonly-txt" value="온라인" readonly />
                             </td>
                         </tr>
@@ -195,9 +194,9 @@
                     </tbody>
                 </table>
             </div>
-            <div class="top-info-group">
+            <div class="conts-header">
                 <h3>이수 현황</h3>
-                <small><em class="color-red">*</em> 예시 양식 확인 후 xlsx 파일 업로드가 필요합니다.</small>
+                <small><em class="col-red">*</em> 예시 양식 확인 후 xlsx 파일 업로드가 필요합니다.</small>
             </div>
             <div class="com-view-table">
                 <table>
@@ -226,7 +225,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="top-info-group">
+            <div class="conts-header">
                 <h3>세부 이수 현황</h3>
                 <div class="btn-wrap">
                     <div class="btn-wrap">
@@ -285,7 +284,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="top-info-group">
+            <div class="conts-header">
                 <h3>증빙자료 (출석부 등)</h3>
             </div>
             <div class="com-write-table">
@@ -357,15 +356,15 @@
                 </span>
                 <div class="support-box">
                     <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
                     </a>
                     <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
                     </a>
                     <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
                     </a>
-                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
                 </div>
             </div>
         </div>
@@ -382,11 +381,11 @@
                         <input type="text" id="2" placeholder="생년월일 8자리">
                         <label for="3">성명</label>
                         <input type="text" id="3">
-                        <button class="btns">검색</button>
+                        <button class="btns bg-blue">검색</button>
                     </div>
                     <div class="table-box">
-                        <div class="top-info-group">
-                            <p class="top-info-group-data">
+                        <div class="conts-header">
+                            <p class="conts-header-data">
                                 총<strong>1</strong>건
                             </p>
                         </div>
@@ -420,22 +419,28 @@
                             </table>
                         </div>
                     </div>
-                    <div class="paging ">
+                    <div class="paging">
                         <span class="pg">
+                            <a href="#" class="first">
+                                <span class="blind">맨처음으로</span>
+                            </a>
                             <a href="#" class="prev">
-                                <span>이전</span>
+                                <span class="blind">이전으로</span>
                             </a>
                         </span>
                         <span class="num">
-                            <a href="#" class="on">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
+                            <a href="#" title="Go to page 1" class="on">1</a>
+                            <a href="#" title="Go to page 2">2</a>
+                            <a href="#" title="Go to page 3">3</a>
+                            <a href="#" title="Go to page 4">4</a>
+                            <a href="#" title="Go to page 5">5</a>
                         </span>
                         <span class="pg">
                             <a href="#" class="next">
-                                <span>다음</span>
+                                <span class="blind">다음</span>
+                            </a>
+                            <a href="#" class="last">
+                                <span class="blind">맨끝으로</span>
                             </a>
                         </span>
                     </div>

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
     <link rel="stylesheet" href="../css/biz2/reset.css">
-    <link rel="stylesheet" href="../css/biz2/common.css">
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
@@ -21,8 +20,8 @@
             <div class="new-window-scroll">
                 <span class="title">평생교육프로그램 운영과정</span>
                 <div class="info-area">
-                    <div class="top-info-group">
-                        <p class="top-info-group-data">총 <strong>19</strong>건</p>
+                    <div class="conts-header">
+                        <p class="conts-header-data">총 <strong>19</strong>건</p>
                         <select id="select-view">
                             <option value="1">10건 보기</option>
                             <option value="2">20건 보기</option>
@@ -48,7 +47,7 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th class="wh-nowrap">순번</th>
+                                    <th>순번</th>
                                     <th>강좌명</th>
                                     <th>대상자</th>
                                     <th>강좌분류</th>
@@ -122,22 +121,28 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="paging ">
+                    <div class="paging">
                         <span class="pg">
+                            <a href="#" class="first">
+                                <span class="blind">맨처음으로</span>
+                            </a>
                             <a href="#" class="prev">
-                                <span>이전</span>
+                                <span class="blind">이전으로</span>
                             </a>
                         </span>
                         <span class="num">
-                            <a href="#" class="on">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
+                            <a href="#" title="Go to page 1" class="on">1</a>
+                            <a href="#" title="Go to page 2">2</a>
+                            <a href="#" title="Go to page 3">3</a>
+                            <a href="#" title="Go to page 4">4</a>
+                            <a href="#" title="Go to page 5">5</a>
                         </span>
                         <span class="pg">
                             <a href="#" class="next">
-                                <span>다음</span>
+                                <span class="blind">다음</span>
+                            </a>
+                            <a href="#" class="last">
+                                <span class="blind">맨끝으로</span>
                             </a>
                         </span>
                     </div>

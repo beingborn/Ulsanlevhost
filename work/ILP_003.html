@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
     <link rel="stylesheet" href="../css/biz2/reset.css">
-    <link rel="stylesheet" href="../css/biz2/common.css">
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
@@ -19,7 +18,7 @@
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
-                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+                <img src="../images/biz2/logo/header_logo_2.png" alt="울산광역시">
             </a>
         </div>
         <div class="menu-area">
@@ -90,17 +89,17 @@
                 <span class="step01">1단계</span>
                 <strong>약관동의</strong>
             </li>
-            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
             <li>
                 <span class="step02">2단계</span>
                 <strong>본인인증</strong>
             </li>
-            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
             <li class="active">
                 <span class="step03">3단계</span>
                 <strong>신청서 작성</strong>
             </li>
-            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
+            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
             <li class="disabled">
                 <span class="step04">4단계</span>
                 <strong>담당자 등록</strong>
@@ -119,7 +118,7 @@
 
         <hr>
 
-        <div class="top-info-group">
+        <div class="conts-header">
             <h3>신청정보</h3>
         </div>
         <div class="com-write-table">
@@ -152,9 +151,9 @@
                 </tbody>
             </table>
         </div>
-        <div class="top-info-group">
+        <div class="conts-header">
             <h3>기관 기본 정보</h3>
-            <small><em class="color-red">*</em> 는 필수사항입니다.</small> 
+            <small><em class="col-red">*</em> 는 필수사항입니다.</small> 
         </div>
         <div class="com-write-table">
             <table class="basic-info">
@@ -266,15 +265,15 @@
                         <th class="txt-l must-type"><label for="chk07">주소</label></th>
                         <td class="input-group space">
                             <div class="flex-ac">
-                                <input type="text" id="chk07" class="fixed-width">
+                                <input type="text" id="chk07" class="fixed-width no-border-init" readonly>
                                 <button type="button" class="btns bg-blue">주소검색</button>
                                 <div class="chk-box">
-                                    <input type="checkbox" id="chk-3">
+                                    <input type="checkbox" id="chk-3" readonly>
                                     <label for="chk-3">지도 서비스 제공</label>
                                 </div>
                                 <small class="txt-s">(오프라인 교육기관 체크시 선택 가능합니다.)</small>
                             </div>
-                            <p class="flex-ac"><input type="text" class="fixed-value"></p>
+                            <p class="flex-ac"><input type="text" class="fixed-value no-border-init" readonly></p>
                             <p class="flex-ac"><input type="text" class="fixed-value"></p>
                         </td>
                     </tr>
@@ -482,7 +481,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="top-info-group">
+        <div class="conts-header">
             <h3>평생교육프로그램 운영과정</h3>
         </div>
         <div class="com-write-table">
@@ -565,20 +564,20 @@
                 </span>
                 <div class="support-box">
                     <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
                     </a>
                     <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
                     </a>
                     <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
                     </a>
-                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
                 </div>
             </div>
         </div>
     </footer>
-    <div class="layer-pop" data-pop="busynum-guide">
+    <div class="layer-pop" data-pop="busynum-guide" >
         <div class="layer-content">
             <div class="layer-scroll">
                 <span class="title">사업자등록번호 안내</span>
@@ -589,8 +588,8 @@
                             확인 후 필요한 경우만 추가 신청하시기 바랍니다.
                         </p>
                     </div>
-                    <div class="top-info-group">
-                        <p class="top-info-group-data">
+                    <div class="conts-header">
+                        <p class="conts-header-data">
                             총 <strong>1</strong>건                            
                         </p>
                     </div>
@@ -626,22 +625,28 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="paging ">
+                    <div class="paging">
                         <span class="pg">
+                            <a href="#" class="first">
+                                <span class="blind">맨처음으로</span>
+                            </a>
                             <a href="#" class="prev">
-                                <span>이전</span>
+                                <span class="blind">이전으로</span>
                             </a>
                         </span>
                         <span class="num">
-                            <a href="#" class="on">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
+                            <a href="#" title="Go to page 1" class="on">1</a>
+                            <a href="#" title="Go to page 2">2</a>
+                            <a href="#" title="Go to page 3">3</a>
+                            <a href="#" title="Go to page 4">4</a>
+                            <a href="#" title="Go to page 5">5</a>
                         </span>
                         <span class="pg">
                             <a href="#" class="next">
-                                <span>다음</span>
+                                <span class="blind">다음</span>
+                            </a>
+                            <a href="#" class="last">
+                                <span class="blind">맨끝으로</span>
                             </a>
                         </span>
                     </div>
@@ -660,10 +665,10 @@
                 <div class="info-area upload-res">
                     <p class="upload-res-txt">총 
                         <strong>0</strong>건 중
-                        <strong class="color-red">0</strong>건 까지 확인 되었습니다.
+                        <strong class="col-red">0</strong>건 까지 확인 되었습니다.
                     </p>
                     <p class="upload-res-detail">
-                        오류 : <strong class="color-red">제공된 양식의 엑셀이 아닙니다.</strong>
+                        오류 : <strong class="col-red">제공된 양식의 엑셀이 아닙니다.</strong>
                     </p>
                     <ul class="bullet-list add-notice">
                         <li>다운로드한 양식의 가이드[입력 가이드] 시트를 확인 해주세요.</li>

@@ -81,12 +81,64 @@
 	/* 컨텐츠 공통 */
 	/* (250114 이민혁 수정) 하단 모바일 여백 80px 통일  */
 	.container{padding:20px 20px 80px}
-	.top-info-group{margin-top:40px;margin-bottom:12px}
-	.top-info-group h3{font-size:24px}
+
+	.conts-header{margin-top:40px;margin-bottom:12px}
+	.conts-header h3{font-size:24px}
+
+	/* 리스트 뷰 스타일(공지사항, 자료실 등) */
+	.conts-header {
+		/* flex-direction: column; */
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 40px;
+		margin-top: 40px;
+		margin-bottom: 12px;
+	}
+	.conts-header .search-areaa { order: 1;}
+	.conts-header .select-view { order: 2 }
+	.conts-header > .btns {
+		order: 3;
+		width: auto;
+	}
+
+	.conts-header .select-view select {
+		/* width: 104px;  */
+		padding-right: 35px;
+		font-size: var(--font-lv7);
+		background-position: right 8px center;
+	}
+	.conts-header .search-areaa {
+		display: flex;
+		gap: 10px;
+		width: 100%;
+		padding: 12px 10px;
+		background-color: var(--bg-color);
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	.conts-header .search-areaa .ui-select {
+		width:  100px; height: 40px;
+	}
+	.conts-header .search-areaa .search-input input {
+		width: 100%;
+	}
+	.conts-header .search-areaa .search-input button {
+		
+		max-height: 40px;
+		padding: 0;
+		background-size: 100% auto;
+	}
+	.conts-footer {
+		flex-direction: column;
+	}
+	.conts-footer .post-data {
+		position: inherit;
+	}
+
 	.page-header-tit{font-size:26px}
 	.page-header-desc{margin-top:12px;text-align:left}
 	.page-header{margin-bottom:40px}
-	.top-info-group-data{font-size:14px}
+	.conts-header-data{font-size:14px}
 
 	.asterisk, 
 	.asterisk-list li{padding-left:19px;text-indent:-19px}
@@ -107,8 +159,7 @@
 	.btns.w-auto {width: auto;}
 
 	/* table 공통 */
-	table{font-size:18px}	
-	table.sm-show-800{display:table}
+	table.sm-show-800{display:table !important}
 	.com-write-table table th,
 	.com-write-table table td{height:56px;padding:8px}
 	.com-write-table colgroup col:nth-child(1),
@@ -116,28 +167,31 @@
 	.com-view-table table th,
 	.com-view-table table td{height:56px;padding:8px}
 
-	.steps{margin-bottom:40px}
-	.steps.flex-acjc{gap:2%}
-	.steps li span{font-size:15px}
-	.steps li strong{font-size:18px}
-	.steps li span::before{width:82px;height:82px;margin-bottom:3px;background-size:auto 188px}
-	.steps .step02::before{background-position:-106px 0}
-	.steps .step03::before{background-position:-213px 0px}
-	.steps .step04::before{background-position:-321px 0}
-	.steps .step05::before{background-position:-428px 0}
-	.steps .step06::before{background-position:-532px 0}
-	.steps .step07::before{background-position:-639px 0px}
-	.steps .step08::before{background-position:-745px 0px}
-	/* 활성화 */
-	.steps li.active .step01::before{background-position:0 -106px}
-	.steps li.active .step02::before{background-position:-106px -106px}
-	.steps li.active .step03::before{background-position:-213px -106px}
-	.steps li.active .step04::before{background-position:-321px -106px}
-	.steps li.active .step05::before{background-position:-428px -106px}
-	.steps li.active .step06::before{background-position:-535px -106px}
-	.steps li.active .step07::before{background-position:-639px -106px}
-	.steps li.active .step08::before{background-position:-745px -106px}
-
+	.step-list{margin-bottom:40px}
+	.step-list.flex-acjc{gap:2%}
+	.step-list .step {
+		width: calc(33.3333% - 48px);
+		flex: 1 1 auto;
+	}
+	.step-list .step .step-icon {
+		/* max-width: 82px; height: 82px; */
+		max-width: 148px; max-height: 148px;
+		width: 100%; height: 100%;
+		background-size: 50%;
+		object-fit: cover;
+		height: 0;
+		padding-top: 100%; /* calc (이미지 높이 ÷ 이미지 가로 × 100 %) */
+	}
+	.step-list .step .step-name{font-size:15px}
+	.step-list .step .step-tit{font-size:18px}
+	.step-list li.step-arrow {
+		width: 24px;
+		margin-top: 10%;
+	}
+	.step-list .step-arrow img {
+		display: block;
+		width: 24px
+	}
 	/* 구분선 공통 */
 	hr{margin:40px 0; border-bottom: 2px solid #D8D8D8;}
 
@@ -150,7 +204,11 @@
 	.basic-info .fixed-value input{flex:1}
 	.basic-info .space .chk-box{margin-left:0}
 	.basic-info .input-num{flex-direction:column;align-items:flex-start;width:100%}
+	.input-num input {
+		width: 33.3333%;
+	}
 	.basic-info .input-num select{width:auto}
+	.basic-info .input-num input {width:40%}
 	.tel-num{width:100%}
 	.tel-num input{width:calc(50% - 15px)}
 	.basic-info .input-group .email,
@@ -161,9 +219,10 @@
 	
 	/* 완료 공통 */
 	.complete-area{margin-top:0}
-	.complete-wrap{font-size:18px}
-	.complete-wrap::before{margin-bottom:40px}
+	.complete-wrap{font-size:18px; margin: 120px auto;}
+	.complete-wrap::before{margin-bottom:40px; width: 80px; height: 80px;}
 	.complete-wrap strong{font-size:24px}
+	.complete-wrap.border-box strong {font-size: 20px;}
 	.complete-wrap .mssg{margin-top:26px}
 
 	/* 인증구분 공통 */	
@@ -175,13 +234,17 @@
 	.auth-area-in button:not(.simple)::before{width:56px}		
 
 	/* 동의박스 공통 */
-	.agree-box{padding:20px 16px}	
+	.agree-box{padding:20px 16px}
 	.agree-box .agree-tit h5{font-size:20px}
 	.agree-box .agree{gap:12px}
 	.agree-box .agree-radio{flex-wrap:wrap;padding:16px;gap:16px}
 	.agree-box .agree-radio > span{font-size:20px}
 	.agree-box .agree + .agree{padding-top:26px}
 	.asterisk-list .agree-btn{display:block;margin-top:8px;margin-left:-21px}
+	.agree-box > div, .agree-box .agree, .agree-box .agree-tit, .agree > div { 
+		display: flex; flex-direction: column; align-items: flex-start; gap: 16px;
+	}
+	.agree-box .agree-radio {padding-left: 0; padding: 0;}
 
 	/* 주소 공통 */
 	.address .input-group .flex-ac{flex-wrap:nowrap}
@@ -199,10 +262,19 @@
 	.available-tickets > li .disc .bullet-list{font-size:18px}
 	.available-tickets > li .btns{width:120px;margin:20px auto}
 	.available-tickets li.flex {padding-left: 0; text-indent: 0;}
-
+	.available-tickets > li .disc .price-wrap {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 4px;
+	}
+	.available-tickets > li .disc .bullet-list li.apply-period {
+		align-items: flex-start;
+	}
+	ul.bullet-list.table-label-list li::before {
+		display: none;
+	}
 	/* LAM_103 평생교육이용권 신청 3단계 */			
-	.agree-box.learning .agree-radio, 
-	.agree-box.learning .btn-bd{margin-top:16px}
 	.agree-box.learning .radio-box label:not(:last-of-type){margin-right:16px}	
 
 	/* LAM_105 평생교육이용권 신청 완료 */
@@ -211,8 +283,8 @@
 	.complete-area+.page-header{margin-top:40px}
 
 	/* LAM_400 수기공모 신청 */
-	.contest .top-info-group .btns{width:auto}
-	/* .contest .sm-show-800{padding:20px 8px;border-top:3px solid var(--gray-30-d8);border-bottom:1px solid var(--gray-30-d8)} */
+	.contest .conts-header .btns{width:auto}
+	/* .contest .sm-show-800{padding:20px 8px;border-top:3px solid var(--bd-color);border-bottom:1px solid var(--bd-color)} */
 	.contest .sm-show-800 li{display:flex;align-items:center}
 	.contest .sm-show-800 li+li{margin-top:4px}
 	.contest .sm-show-800 li p{margin-left:6px}
@@ -248,18 +320,18 @@
 	footer .info-content .family-select-lg > button{width:100%}
 
 	/* 페이지네이션 공통 */
-	.paging {gap:6.4px;padding:0 9.2px}
-	.paging a, .paging .empty{width:32px;height:32px}
-	.paging a.next, .paging a.prev{font-size:15px;width:51.6px}
-	.paging a:not(.next, .prev){font-size:16px; width: 32px; height: 32px;}
-	.paging a.next::after, .paging a.prev::after{width:16px;height:16px}
+	.conts-footer .paging {margin-top: 40px;}
+	.paging a {width: 32px; height: 32px; font-size: 16px;}
+	.paging .pg > a {width: 28px;}
+	.paging .pg > a::before {background-size: 16px auto;}
+	.paging .pg , .paging .num {gap: 6px;}
 
 	/* PC 전용 콘텐츠 */
 	.lg-only{display:none}
 	.lg-only-i{display:none!important}
 
 	/* 모바일 전용 콘텐츠 */
-	.sm-show-800{display:block}
+	.sm-show-800{display:block !important}
 
 	/* LMP_001 지차체 메인 배경 */
 	.main-cont{padding:0}
@@ -293,9 +365,9 @@
 	.more-link-area > a .ico{position:absolute;right:14px;bottom:14px}
 	.more-link-one{line-height:54px}
 	.main-info-right .more-link-area > a .ico::before{width:40px;height:40px}
-	.more-link-area .more-link-ticket .ico::before{background:url(../../images/biz2/ic_main_link_4_mo.png) no-repeat center;background-size:cover}
-	.more-link-area .more-link-login .ico::before{background:url(../../images/biz2/ic_main_link_5_mo.png) no-repeat center;background-size:cover}
-	.more-link-area .more-link-archive .ico::before{background:url(../../images/biz2/ic_main_link_7_mo.png) no-repeat center;background-size:cover}
+	.more-link-area .more-link-ticket .ico::before{background:url(../../images/biz2/ico/ico_main_link_4_mo.png) no-repeat center;background-size:cover}
+	.more-link-area .more-link-login .ico::before{background:url(../../images/biz2/ico/ico_main_link_5_mo.png) no-repeat center;background-size:cover}
+	.more-link-area .more-link-archive .ico::before{background:url(../../images/biz2/ico/ico_main_link_7_mo.png) no-repeat center;background-size:cover}
 
 	/* 레이어 팝업 공통 */
 	.layer-pop .layer-content{padding:0 20px}
@@ -332,8 +404,7 @@
 	/* 탭 공통 */
 	.tab-list{gap:0;font-size:20px;margin-bottom:40px;}
 	.tab-list > li{flex:1;width:auto;height:76px;}
-	.tab-list > li > a{overflow:hidden;display:block;height:100%;padding:8px 20px;border-radius:20px 20px 0 0;border:1px solid var(--gray-30-d8);border-bottom:none;background:var(--gray-05-f8);text-align:center;}
-	.tab-list > li > a.show{background:var(--primary-color-600);color:var(--white);border:none;}
+	.tab-list > li > a{overflow:hidden;display:block;height:100%;padding:8px 20px;border-radius:20px 20px 0 0;border:1px solid var(--bd-color);border-bottom:none;background:var(--bg-color);text-align:center;}
 	.tab-list > li > a > span{display:inline-block;line-height:1.5;vertical-align:super;}
 	/* LGP_001 평생교육이용권이란? */
 	.ticket.flex-ac{justify-content:center;gap:40px;}
@@ -352,7 +423,7 @@
 	.use-ticket .blue-box.bg{position:relative;padding:40px 0 29px 0;background-color:#F7F9FC;}
 	.use-ticket .blue-box.bg::before{content:"";display:block;width:100%;padding:53.22% 0 0 0;background:url(../../images/biz2/bg/bg_edu_mo.svg) no-repeat right top;background-size:100%;}
 	.use-ticket .blue-box.bg::after{content:"";position:absolute;top:40px;right:0;bottom:auto;display:none;width:100%;background:url(../../images/biz2/bg/bg_edu_mo.svg) no-repeat right top;background-size:100%;}
-	.use-ticket .blue-box.bg .top-info-group{margin-top:0;margin-left:25px;}
+	.use-ticket .blue-box.bg .conts-header{margin-top:0;margin-left:25px;}
 	.use-ticket .blue-box.bg .txt{position:relative;margin-left:25px;padding-right:23px;z-index:1}
 	.use-ticket .use-edu.ordered-list{padding-left:0;}
 	.use-ticket .ordered-list li+li{margin-top:16px}
@@ -414,39 +485,38 @@
 	.search-area input[type="text"]{border-radius:6px;}
 	.search-area .ui-select {width: auto;} /* pc ver. 200px 제거 */
 	.cs-center .search-area .search-input .btn-search{top:50%;background-size:24px;transform:translateY(-50%);}
-	.table-list{border-top:3px solid var(--gray-30-d8);font-size:18px}
-	/* .cs-center .table-list ul{padding:20px 8px; border-bottom:1px solid var(--gray-30-d8)} */
+	.table-list{border-top:3px solid var(--bd-color);font-size:18px}
+	.table-list > ul > li > p:has([class*=organ]),
+	.table-list > ul > li > p:has([class*=map], .category-label) {display: flex; align-items: center;}
+	.table-list > ul > li > p:has([class*=map], .category-label) {gap: 10px;}
+	.table-list > ul > li > p:has([class*=map], .category-label) .category-label {margin: 0;}
+	.table-list > ul > li [class*=organ].ico + span {margin-left: 6px;}
+
+	/* .cs-center .table-list ul{padding:20px 8px; border-bottom:1px solid var(--bd-color)} */
 	.cs-center .table-list ul li{display:flex;align-items:center;margin-top:4px}
 	.cs-center .table-list ul li strong+img{margin-left:10px}
 	.cs-center .table-list ul li .new{margin-left:10px}
+	.table-list ul li,
 	.contest .sm-show-800 ul li, .cs-center .table-list ul li,
 	.contest .sm-show-800 ul li div, .cs-center .table-list ul li div {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 4px;
-		padding: 20px 8px; border-bottom:1px solid var(--gray-30-d8)
+		margin-top: 4px;
+		padding: 20px 8px; 
+		border-bottom:1px solid var(--bd-color);
 	}
 	.contest .sm-show-800 ul li div, .cs-center .table-list ul li div {
 		padding: 0;
 		border-bottom: 0;
 	}
 	.contest .table-list ul li p strong.list-label::after,
-	.cs-center .table-list ul li p strong.list-label::after {
+	.cs-center .table-list ul li p strong.list-label::after,
+	p strong.list-label::after {
 		content: ":";
 		display: inline-block;
 		margin: 0 6px;
-	}
-	.contest .table-list ul li a,
-	.cs-center .table-list ul li a { width: 100%;}
-	.contest .table-list ul li a strong.list-title,
-	.cs-center .table-list ul li a strong.list-title {
-		width: 100%;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		display: inline-block;
-		vertical-align: middle;
 	}
 	.contest .table-list ul li p span.list-bold,
 	.cs-center .table-list ul li p span.list-bold { font-weight: 700; }
@@ -459,22 +529,22 @@
 	/* LNP_001 공지사항 상세 */
 	.cs-center .com-write-table table{border-left:none;border-right:none;}
 	.cs-center .com-write-table table tr th:first-child, 
-	.cs-center .com-write-table table tr td:not(.cont-area):first-child{border-left:1px solid var(--gray-30-d8);}
-	.cs-center .com-write-table table tr td:not(.cont-area):last-child{border-right:1px solid var(--gray-30-d8);}
+	.cs-center .com-write-table table tr td:not(.cont-area):first-child{border-left:1px solid var(--bd-color);}
+	.cs-center .com-write-table table tr td:not(.cont-area):last-child{border-right:1px solid var(--bd-color);}
 	.cs-center .com-write-table table td.cont-area dt{display:none;}
-	.cs-center .com-write-table table td.add-file .attached-file{height:56px;line-height:56px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;font-size:16px;color:var(--text-sub-33);}
+	.cs-center .com-write-table table td.add-file .attached-file{height:56px;line-height:56px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;font-size:16px;color:#000;}
 	.cs-center .com-write-table table td.add-file .attached-file .ico-pdf{padding-left:16px;margin-right:4px;vertical-align:middle;}
 	.cs-center .com-write-table .btn-download{width:40px;min-width:40px;height:56px;background-color:transparent;}
 	.cs-center .com-write-table .btn-download > span{display:block;overflow:hidden;font-size:0;line-height:0;position:absolute;text-indent:-9999px;width:1px;height:1px;}
 	.cs-center .com-write-table .btn-download::after{margin-left:0;margin-right:8px;background-image:url(../../images/biz2/ico/ico_download_black.svg);}
 	.cs-center .com-write-table .article-list li{height:48px;line-height:48px;padding:0 0 0 16px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;}
 	/* LNP_202 자주하는질문 상세 */
-	.qna .top-info-group{margin-bottom:20px;}
-	.qna .top-info-group h3.ico::before{width:36px;height:36px;margin-right:10px;background-size:cover;}
+	.qna .conts-header{margin-bottom:20px;}
+	.qna .conts-header h3.ico::before{width:36px;height:36px;margin-right:10px;background-size:cover;}
 	.qna .qna-answer.ico::before{background-size:cover;width:36px;height:36px;margin-right:16px}
-	.qna .top-info-group > span{font-size:14px;}
+	.qna .conts-header > span{font-size:14px;}
 	.qna .qna-table table{border:none;}
-	.qna .qna-table table thead{display:block;border-radius:20px;border:1px solid #D8D8D8;background:var(--gray-05-f8);}
+	.qna .qna-table table thead{display:block;border-radius:20px;border:1px solid #D8D8D8;background:var(--bg-color);}
 	.qna .qna-table table thead th{padding:16px;background:none;border:none;}
 	.qna .qna-table table tbody{position:relative;display:block;margin-top:97px;border:1px solid #D8D8D8;border-radius:20px;}
 	.qna .qna-table table tbody .ico.qna-answer{position:absolute;top:-58px;left:0;font-size:24px;color:var(--text-primary-00);font-weight:700;}
@@ -483,11 +553,12 @@
 	.qna-table tbody tr:last-of-type td{padding:4px 24px 32px 24px;border:none;}
 	.qna .qna-table table td.qna-attach .qna-attached{display:inline-block;padding-left:8px;}
 	.qna .qna-table table td.qna-attach .add-file{display:inline-flex;width:calc(100% - 83px);}
-	.qna .qna-table table td.qna-attach .attached-file{height:56px;line-height:56px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;font-size:16px;color:var(--text-sub-33);}
+	.qna .qna-table table td.qna-attach .attached-file{height:56px;line-height:56px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;font-size:16px;color:#000;}
 	.qna .qna-table table td.qna-attach .attached-file .ico-pdf{padding-left:16px;margin-right:4px;vertical-align:middle;}
 	.qna .qna-table table .btn-download{width:40px;min-width:40px;height:56px;margin:0;padding-top:0;background-color:transparent;}
 	.qna .qna-table table .btn-download > span{display:block;overflow:hidden;font-size:0;line-height:0;position:absolute;text-indent:-9999px;width:1px;height:1px;}
-	.qna .qna-table table .btn-download::after{margin-left:0;margin-right:0;background-image:url(../../images/biz2/ico/ico_download_black.svg);}
+	.qna .qna-table table .btn-download::after{
+		content:'';display:inline-block; margin-left:0;margin-right:0;background-image:url(../../images/biz2/ico/ico_download_black.svg); width: 24px; height: 24px;}
 	/* LAP_201 이의제기 신청 */
 	.objection table.basic-info input[type=date]{width:100%;height:40px;}
 	.objection table.basic-info .filebox.flex-ac, 
@@ -495,7 +566,7 @@
 	.objection table.basic-info .filebox.flex-ac .upload-name, 
 	.file-up-area .filebox.flex-ac .upload-name{min-width:auto;max-width:unset;width:100%;height:40px;}
 	.objection table.basic-info .filebox.flex-ac label.btns, 
-	.file-up-area .filebox.flex-ac label.btns{position:absolute;top:50%;right:8px;min-width:24px;width:24px;height:24px;background:url(../../images/biz2/ico/ico_file_up_mo.svg) no-repeat 50%;background-color:transparent !important;background-size:20px;text-indent: -999px;transform:translateY(-50%);}
+	.file-up-area .filebox.flex-ac label.btns{ position:absolute; top:50%; right:8px; min-width:24px; width:24px; height:24px; background: #fff url(../../images/biz2/ico/ico_file_up_mo.svg) no-repeat center!important;  text-indent: -999px; transform:translateY(-50%); }
 	.objection table.basic-info td button.file-reset.btns{min-width:61px;width:auto;height:36px;padding:9px 12px 8px;font-size:14px;border-radius:4px;}
 	.objection .btns-bottom{padding-bottom:60px;}
 	/* LAP_201 선정 포기 신청 */
@@ -509,34 +580,34 @@
 	/* LLIP_001 개인정보 수정 */
 	.user-info-up .asterisk{font-size:16px;}
 	.user-info-up .agree-box.learning{padding:0;border:none;border-radius:0;}
-	.user-info-up .agree-box.learning .chk-cont{padding:16px;border:1px solid var(--gray-30-d8);background-color:var(--gray-05-f8);border-radius:16px;}
+	.user-info-up .agree-box.learning .chk-cont{padding:16px;border:1px solid var(--bd-color);background-color:var(--bg-color);border-radius:16px;}
 	.user-info-up .agree-box.learning .chk-cont .agree-tit{font-weight:500;}
 	.user-info-up .agree-box.learning .chk-cont .agree-radio{padding-left:0;padding-bottom:0;padding-top:0;}
 	.user-info-up .agree-box.learning .bullet-list{margin-top:10px;font-size:16px;}
 	.user-info-up .agree-box.learning .bullet-list li{padding-left:0;text-indent:0;}
 	.user-info-up .agree-box.learning .bullet-list li::before{content:'※ ';width:auto;height:auto;background-color:transparent;margin:0 1px 0 0;}
-	.user-info-up .agree-box.learning .bullet-list .link{color:var(--text-sub-33);font-weight:500;}
+	.user-info-up .agree-box.learning .bullet-list .link{color:#000;font-weight:500;}
 	.user-info-up .agree-box.learning .bullet-list .link::before{content:'(';display:inline-block;margin-right:1px;}
 	.user-info-up .agree-box.learning .bullet-list .link::after{content:')';display:inline-block;margin-left:2px;}
 	/* LNP_200 질의응답 */
-	.cs-center .top-info-group .right-wrap.flex-ac{width:calc(100% - 100px);justify-content:flex-end;}
-	.cs-center .top-info-group .right-wrap.flex-ac .btns{width:auto;min-width:49px;height:36px;font-size:14px;font-weight:500;}
+	.cs-center .conts-header .right-wrap.flex-ac{width:calc(100% - 100px);justify-content:flex-end;}
+	.cs-center .conts-header .right-wrap.flex-ac .btns{width:auto;min-width:49px;height:36px;font-size:14px;font-weight:500;}
 	/* LNP_303 질의응답 */
 	.qna .add-file .attached-file.file-name-area{width:100%;}
 	.qna .add-file .attached-file.file-name-area .ico-pdf{padding-left:16px;margin-right:4px;vertical-align:middle;}
-	.qna .add-file .attached-file.file-name-area .file-name{display:inline-block;max-width:calc(100% - 150px);height:56px;line-height:56px;overflow:hidden;text-overflow:ellipsis;display:-webkit-inline-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;font-size:16px;color:var(--text-sub-33);vertical-align:middle;}	
-	.qna .add-file .attached-file.file-name-area .byte{font-size:16px;color:var(--text-sub-33);}
+	.qna .add-file .attached-file.file-name-area .file-name{display:inline-block;max-width:calc(100% - 150px);height:56px;line-height:56px;overflow:hidden;text-overflow:ellipsis;display:-webkit-inline-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;font-size:16px;color:#000;vertical-align:middle;}	
+	.qna .add-file .attached-file.file-name-area .byte{font-size:16px;color:#000;}
 	/* LIP_500 이용권 선정결과 */
 	.ticket-result .border-box02{padding:32px 24px;}
 	.ticket-result .border-box02 .txt{font-size:24px;font-weight:500;}
 	.ticket-result .border-box02+.asterisk{margin-top:12px;font-size:16px;}
 	/* LIP_200 평생교육이용권 이용 내역 */
-	.ticket-use-history.search-box{padding:12px 10px;background-color:#00B3BE;border-radius:6px;}    
+	.ticket-use-history.search-box{padding:12px 10px;background-color:var(--bg-color);border-radius:6px;}    
 	.ticket-use-history.search-box .search-list{align-items:center;}
-	.ticket-use-history.search-box .search-list dt{width:auto;padding-left:0;font-size:18px;color:var(--white);}
+	.ticket-use-history.search-box .search-list dt{width:auto;padding-left:0;font-size:18px;}
 	.ticket-use-history.search-box .search-list dd{padding:0 10px;}
 	.ticket-use-history.search-box .search-list dd select{width:100%;}
-	.ticket-use-history.search-box .btns{width:auto;height:40px;padding:7px 10px 6px 10px;margin:0;background-color:#383838;font-size:18px;}
+	.ticket-use-history.search-box .btns{width:auto;height:40px;padding:7px 10px 6px 10px;margin:0;background-color:var(--blue);font-size:18px;}
 	.ticket-use-history.search-box .btns span.lg-only{display:none;}
 
 	.adjust-sm.search-box{padding:12px 10px;background-color:#00B3BE;border-radius:6px;}    
@@ -547,8 +618,8 @@
 	.adjust-sm.search-box .btns span.lg-only{display:none;}
 		
 
-	.cs-center .top-info-group .btns.w-auto{width:auto;min-width:100px;}	
-	.cs-center .top-info-group .btns.w-auto{width:auto;min-width:100px;}
+	.cs-center .conts-header .btns.w-auto{width:auto;min-width:100px;}	
+	.cs-center .conts-header .btns.w-auto{width:auto;min-width:100px;}
 	.cs-center .com-view-table+.asterisk{font-size:16px;}
 	.cs-center .table-list.class-list ul li{align-items:baseline;}
 	.cs-center .table-list.class-list ul li > strong{white-space:nowrap;}

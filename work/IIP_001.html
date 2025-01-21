@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
-    <link rel="stylesheet" href="../css/biz2/reset.css">
-    <link rel="stylesheet" href="../css/biz2/common.css">
+    <link rel="stylesheet" href="../css/biz2/reset.css">    
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
@@ -21,7 +20,7 @@
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
-                <img src="../images/biz2/header_logo_2.png" alt="울산광역시">
+                <img src="../images/biz2/logo/header_logo_2.png" alt="울산광역시">
             </a>
         </div>
         <div class="menu-area">
@@ -86,31 +85,30 @@
             <h2 class="page-header-tit">공지사항</h2>
         </div>        
         <div class="contents">
-            <div class="search-area">
-                <div class="flex-ac">
+            <div class="conts-header">
+                <div class="select-view">
+                    <label for="select-view" class="blind">노출 건수 선택</label>
+                    <select id="select-view">
+                        <option value="1">10건 보기</option>
+                        <option value="2">20건 보기</option>
+                        <option value="3">30건 보기</option>
+                    </select>
+                </div>
+                <div class="search-areaa">
                     <label for="select-box" class="blind">검색조건 선택</label>
                     <select id="select-box" class="ui-select">
-                        <option value="1">전체</option>
+                        <option value="1" class="all-option">전체</option>
                         <option value="1">제목</option>
                         <option value="1">내용</option>
                     </select>
                     <div class="search-input">
-                        <label for="search-bar" class="blind"> 공지사항 검색어 입력</label>
+                        <label for="search-bar" class="blind">공지사항 검색어 입력</label>
                         <input type="text" id="search-bar">
                         <button type="button" class="btn-search">검색</button>
                     </div>
                 </div>
             </div>
-            <div class="top-info-group">
-                <p class="top-info-group-data">총 <strong>6,234</strong>건</p>
-                <label for="select-view" class="blind">노출 조건 선택</label>
-                <select id="select-view">
-                    <option value="1">10건 보기</option>
-                    <option value="2">20건 보기</option>
-                    <option value="3">30건 보기</option>
-                </select>
-            </div>
-            <div class="com-view-table">
+            <div class="com-view-table com-list-table">
                 <table>
                     <caption>공지사항 안내 테이블</caption>
                     <colgroup>
@@ -126,54 +124,54 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="fixed-post">
                             <td>10</td>
-                            <td class="txt-l"><a href="#" class="com-view-title"><span class="category-label notice">공지</span>지자체 평생교육이용권 시스템 일시중단 안내(9.27~9.28)</a></td>
+                            <td class="txt-l"><a href="#"><span class="category-label notice">공지</span>지자체 평생교육이용권 시스템 일시중단 안내(9.27~9.28)</a></td>
                             <td>2024-10-02</td>
                         </tr>
                         <tr>
                             <td>9</td>
-                            <td class="txt-l"><a href="#" class="com-view-title"><span class="category-label apply">신청·접수</span>[울산광역시] 2024년 울산 평생교육이용권(이용권) 2차 신청 접수 공고</a></td>
+                            <td class="txt-l"><a href="#"><span class="category-label apply">신청·접수</span>[울산광역시] 2024년 울산 평생교육이용권(이용권) 2차 신청 접수 공고</a></td>
                             <td>2024-10-02</td>
                         </tr>
                         <tr>
                             <td>8</td>
-                            <td class="txt-l"><a href="#" class="com-view-title"><span class="category-label lottery">추첨·선정</span>[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
+                            <td class="txt-l"><a href="#"><span class="category-label lottery">추첨·선정</span>[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
                             <td>2024-10-02</td>
                         </tr>
                         <tr>
                             <td>7</td>
-                            <td class="txt-l"><a href="#" class="com-view-title"><span class="category-label system">시스템</span>[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
+                            <td class="txt-l"><a href="#"><span class="category-label system">시스템</span>[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
                             <td>2024-10-02</td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td class="txt-l"><a href="#" class="com-view-title"><span class="category-label user-agency">사용기관</span>[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
+                            <td class="txt-l"><a href="#"><span class="category-label user-agency">사용기관</span>[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
                             <td>2024-10-02</td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td class="txt-l"><a href="#" class="com-view-title">[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
+                            <td class="txt-l"><a href="#">[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
                             <td>2024-10-02</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td class="txt-l"><a href="#" class="com-view-title">[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
+                            <td class="txt-l"><a href="#">[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
                             <td>2024-10-02</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td class="txt-l"><a href="#" class="com-view-title">[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
+                            <td class="txt-l"><a href="#">[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
                             <td>2024-10-02</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td class="txt-l"><a href="#" class="com-view-title">[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
+                            <td class="txt-l"><a href="#">[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
                             <td>2024-10-02</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td class="txt-l"><a href="#" class="com-view-title">[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
+                            <td class="txt-l"><a href="#">[울산광역시] 2024년 울산 평생교육이용권(이용권) 1차 선정자 알림 및 사용 안내</a></td>
                             <td>2024-10-02</td>
                         </tr>
                         <tr>
@@ -182,22 +180,28 @@
                     </tbody>
                 </table>
             </div>
-            <div class="paging ">
+            <div class="paging">
                 <span class="pg">
+                    <a href="#" class="first">
+                        <span class="blind">맨처음으로</span>
+                    </a>
                     <a href="#" class="prev">
-                        <span>이전</span>
+                        <span class="blind">이전으로</span>
                     </a>
                 </span>
                 <span class="num">
-                    <a href="#" class="on">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
+                    <a href="#" title="Go to page 1" class="on">1</a>
+                    <a href="#" title="Go to page 2">2</a>
+                    <a href="#" title="Go to page 3">3</a>
+                    <a href="#" title="Go to page 4">4</a>
+                    <a href="#" title="Go to page 5">5</a>
                 </span>
                 <span class="pg">
                     <a href="#" class="next">
-                        <span>다음</span>
+                        <span class="blind">다음</span>
+                    </a>
+                    <a href="#" class="last">
+                        <span class="blind">맨끝으로</span>
                     </a>
                 </span>
             </div>
@@ -244,15 +248,15 @@
                 </span>
                 <div class="support-box">
                     <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
                     </a>
                     <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
                     </a>
                     <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
                     </a>
-                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
                 </div>
             </div>
         </div>

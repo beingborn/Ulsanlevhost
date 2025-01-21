@@ -79,7 +79,7 @@ address,caption,em,var {
 }
 
 /* a style */
-a {text-decoration: none; color: #000;}
+a {text-decoration: none; color: inherit;}
 a[href^=tel] { font-style: normal;}
 
  /* input */
@@ -89,7 +89,7 @@ input[type="search"], input[type="email"], input[type="number"]
 textarea, option {
 	height: 56px;
 	background: #fff;
-	border: 1px solid var(--gray-30-d8);
+	border: 1px solid var(--bd-color);
 	padding: 0 16px;
 	font-size: inherit;
 }
@@ -101,8 +101,8 @@ select {
 	-moz-appearance: none; 
 	appearance: none; 
 	padding: 0 61px 0 16px; 
-	background: #fff url('../../images/biz2/ic_arrow_down.svg') 
-	no-repeat right 16px center; border: 1px solid var(--gray-30-d8); 
+	background: #fff url('../../images/biz2/ico/ico_arrow_down.svg') 
+	no-repeat right 16px center; border: 1px solid var(--bd-color); 
 	font-size: inherit;
 }
 
@@ -121,32 +121,10 @@ select::-webkit-inner-spin-button {
 	margin: 0;
 }
 
-textarea {
-	width: 100%;
-	border-radius: 12px;
-	border: 1px solid #ddd;
-	padding: 10px 15px;
-	resize: none;
-}
-
-
-input[type=text]:disabled, input[type=text]:read-only, input[type=number]:disabled, input[type=number]:read-only {
-	background: #F8F8F8;
-}
-
+textarea { width: 100%; padding: 16px; resize: none; }
 
 input[type=text].full, input[type=number].full {
 	width: 100%;
-}
-input[type=date] {
-	width: 200px;
-	height: 44px;
-	padding-left: 10px;
-	border-radius: 8px;
-	border: 1px solid #DDDDDD;
-	background: #fff url(../../images/biz2/ic_calendar.png) no-repeat right 12px center;
-	font-size: 16px;
-	font-family: "KoPubDotum", sans-serif;
 }
 
 input[type="date"]:not(:focus):invalid::before{content: attr(placehorder);}
@@ -159,9 +137,6 @@ input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-day-field,
 input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-year-field 
 { -webkit-appearance: none; display: none;}
 
-input[type=date]:disabled, input[type=date]:read-only {
-	background: #F8F8F8;
-}
 input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-calendar-picker-indicator {
 	position: relative;
 	left: 0px;
@@ -218,11 +193,11 @@ legend {
 html {
 	font-family: "KoPubDotum", sans-serif;
 	font-weight: 300;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 1.5;
-	color: var(--text-primary-00);
 	overflow: hidden;
 	overflow-y: scroll;
+	height: 100%;
 }
 
 

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
     <link rel="stylesheet" href="../css/biz2/reset.css">
-    <link rel="stylesheet" href="../css/biz2/common.css">
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
@@ -19,8 +18,8 @@
 <body>
     <header>
         <div class="logo-area multi-logo-area">
-            <a href="LMP_001.html"><img src="../images/biz2/header_logo_horizontal.svg" alt="울산광역시"></a>
-            <a href="LMP_001.html"><img src="../images/biz2/header_logo_2.png" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/logo/header_logo_local_government.svg" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/logo/header_logo_2.png" alt="울산광역시"></a>
         </div>
         <div class="menu-area">
             <!-- 로그인 시 -->
@@ -159,38 +158,40 @@
     <div class="container wrap">
         <div class="page-header">
             <h2 class="page-header-tit">평생교육이용권 신청</h2>
-            <p class="page-header-desc">평생교육이용권 이용을 위한 사용기관 신청 화면입니다.</p>
+            <p class="page-header-desc">평생교육이용권 사용을 위한 이용권 신청 화면입니다.</p>
         </div>
-
-        <ul class="steps flex-acjc">
-            <li class="active">
-                <span class="step01">1단계</span>
-                <strong>약관동의</strong>
+        <ul class="step-list flex-acjc">
+            <li class="step step-active">
+                <span class="step-icon step_terms_agreement"></span>
+                <span class="step-name">1단계</span>
+                <strong class="step-tit">약관동의</strong>
             </li>
-            <li class="step-arrow"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step02">2단계</span>
-                <strong>본인인증 및<br>자격검증</strong>
+            <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_identity_verification"></span>
+                <span class="step-name">2단계</span>
+                <strong class="step-tit">본인인증 및 자격검증</strong>
             </li>
-            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step03">3단계</span>
-                <strong>신청서 작성</strong>
+            <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_application_form"></span>
+                <span class="step-name">3단계</span>
+                <strong class="step-tit">신청서 작성</strong>
             </li>
-            <li class="step-arrow disabled lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled lg-only"> 
-                <span class="step08">4단계</span>
-                <strong>이용자 서약</strong>
+            <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next lg-only">
+                <span class="step-icon step_user_commitment"></span>
+                <span class="step-name">4단계</span>
+                <strong class="step-tit">이용자 서약</strong>
             </li>
-            <li class="step-arrow disabled lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled lg-only">
-                <span class="step06">5단계</span>
-                <strong>신청완료</strong>
+            <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next lg-only">
+                <span class="step-icon step_completion"></span>
+                <span class="step-name">5단계</span>
+                <strong class="step-tit">신청완료</strong>
             </li>
         </ul>
-
         <hr>
-
         <div class="agree-box">
             <div class="agree">
                 <div class="agree-tit">
@@ -198,7 +199,6 @@
                     <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-1]').show();">내용보기</button>
                 </div>
                 <div class="agree-radio">
-                    <span>이용약관에 대한 안내 사항을 읽고 동의합니다.</span>
                     <div class="radio-box">
                         <input type="radio" id="agree1" name="agree1" value="no">
                         <label for="agree1">동의안함</label>
@@ -213,7 +213,6 @@
                     <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-2]').show();">내용보기</button>
                 </div>
                 <div class="agree-radio">
-                    <span>이용약관에 대한 안내 사항을 읽고 동의합니다.</span>
                     <div class="radio-box">
                         <input type="radio" id="agree3" name="agree2" value="no">
                         <label for="agree3">동의안함</label>
@@ -228,7 +227,6 @@
                     <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-3]').show();">내용보기</button>
                 </div>
                 <div class="agree-radio">
-                    <span>이용약관에 대한 안내 사항을 읽고 동의합니다.</span>
                     <div class="radio-box">
                         <input type="radio" id="agree5" name="agree3" value="no">
                         <label for="agree5">동의안함</label>
@@ -283,15 +281,15 @@
                 </span>
                 <div class="support-box">
                     <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
                     </a>
                     <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
                     </a>
                     <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
                     </a>
-                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
                 </div>
             </div>
         </div>
@@ -375,7 +373,7 @@
                         평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집,유출,오용,남용으로부터 사생활의 비밀 등을 보호하도록 한 
                         개인정보보호법 규정에 따라 다음과 같이 수집·이용·제공됩니다.
                     </p>
-                    <div class="top-info-group">
+                    <div class="conts-header">
                         <h3>평생교육이용권 사용기관 업무담당자 개인정보 수집 · 이용 동의</h3>
                     </div>
                     <div class="com-view-table">
@@ -403,7 +401,7 @@
                                     <td rowspan="2">3년, 회원탈퇴 시까지</td>
                                 </tr>
                                 <tr>
-                                    <td class="border-d8-r">문자서비스 수신동의, 전자우편 수신동의</td>
+                                    <td class="border-r">문자서비스 수신동의, 전자우편 수신동의</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -430,7 +428,7 @@
                         평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집,유출,오용,남용으로부터 사생활의 비밀 등을 보호하도록 한 
                         개인정보보호법 규정에 따라 다음과 같이 수집·이용·제공됩니다.
                     </p>
-                    <div class="top-info-group">
+                    <div class="conts-header">
                         <h3>평생교육이용권 사용기관 업무담당자 개인정보 수집 · 이용 동의</h3>
                     </div>
                     <div class="com-view-table">

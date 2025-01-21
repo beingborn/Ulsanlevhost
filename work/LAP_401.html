@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
     <link rel="stylesheet" href="../css/biz2/reset.css">
-    <link rel="stylesheet" href="../css/biz2/common.css">
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
@@ -21,8 +20,8 @@
 <body>
     <header>
         <div class="logo-area multi-logo-area">
-            <a href="LMP_001.html"><img src="../images/biz2/header_logo_horizontal.svg" alt="울산광역시"></a>
-            <a href="LMP_001.html"><img src="../images/biz2/header_logo_2.png" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/logo/header_logo_local_government.svg" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/logo/header_logo_2.png" alt="울산광역시"></a>
         </div>
         <div class="menu-area">
             <!-- 로그인 시 -->
@@ -155,7 +154,7 @@
             <div class="location-box">
                 <span class="arrow">평생교육이용권</span>
                 <span class="arrow">수기 공모 신청</span>
-                <span class="arrow">수기공모신청 등록</span>
+                <span class="arrow">수기 공모 신청 등록</span>
             </div>
         </div>
     </div>
@@ -185,47 +184,43 @@
                             <td>(04520) 서울특별시 중구 청계천로 14 7층</td>
                             <th class="txt-l"><label for="tel">휴대전화번호</label></th>
                             <td>
-                                <div class="input-num">
+                                <span class="input-num">
                                     <select id="tel">
                                         <option value="none">선택</option>
                                         <option value="1">010</option>
                                         <option value="1">3</option>
                                         <option value="1">4</option>
                                     </select>
-                                    -
+                                    <span>-</span>
                                     <input type="tel" title="전화번호 중간자리">
-                                    -
+                                    <span>-</span>
                                     <input type="tel" title="전화번호 끝자리">
-                                </div>
+                                </span>
                             </td>
                         </tr>
                         <tr>
                             <th class="txt-l"><label for="srch01">공모주제</label></th>
                             <td colspan="3">
-                                <div class="flex-dc">
+                                <div class="flex-col gap-10">
                                     <select id="srch01" class="fixed-value">
                                         <option value="">전체</option>
                                     </select>
-                                    <input type="text" class="disabled-style" readonly>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th class="txt-l"><label for="srch02">제목</label></th>
                             <td colspan="3">
-                                <input type="text" placeholder="50자 이내로 작성해주세요." id="srch02">
+                                <input type="text" placeholder="50자 이내로 작성해주세요." id="srch02" class="w-100">
                             </td>
                         </tr>
                         <tr>
-                            <th class="txt-l"><label for="srch03">내용</label></th>
+                            <th class="txt-l"><label for="attatch01">파일첨부</label></th>
                             <td colspan="3">
-                                <div class="timer">
-                                    <strong>남은시간 : 23:57</strong>
-                                    <p>[<span class="color-red">25분</span> 이내 저장(등록) 후 재수정 해주시기 바랍니다.]</p>
-                                </div>
-                                <div class="txt-box">                                    
-                                    <textarea id="srch03" class="box"></textarea>
-                                    <p class="txt-byte">5/200</p>
+                                <div class="filebox flex-ac">
+                                    <input class="upload-name fixed-value" readonly>
+                                    <label for="file01" class="btns bg-blue">파일첨부</label> 
+                                    <input type="file" id="file01" class="file">
                                 </div>
                             </td>
                         </tr>
@@ -253,52 +248,71 @@
                         <tr>
                             <th class="txt-l"><label for="tel">휴대전화번호</label></th>
                             <td>
-                                <div class="input-num">
+                                <span class="input-num">
                                     <select id="tel">
                                         <option value="none">선택</option>
                                         <option value="1">010</option>
                                         <option value="1">3</option>
                                         <option value="1">4</option>
                                     </select>
-                                    -
-                                    <input type="tel" title="전화번호 중간자리">
-                                    -
-                                    <input type="tel" title="전화번호 끝자리">
-                                </div>
+                                    <span>
+                                        <input type="tel" title="전화번호 중간자리">
+                                        <span>-</span>
+                                        <input type="tel" title="전화번호 끝자리">
+                                    </span>
+                                </span>
                             </td>
                         </tr>
                         <tr>
                             <th class="txt-l"><label for="srch01">공모주제</label></th>
                             <td>
-                                <div class="flex-dc">
+                                <div class="flex-col">
                                     <select id="srch01" class="fixed-value">
                                         <option value="">전체</option>
                                     </select>
-                                    <input type="text" readonly>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th class="txt-l"><label for="srch02">제목</label></th>
                             <td>
-                                <input type="text" placeholder="50자 이내로 작성해주세요." id="srch02">
+                                <input type="text" placeholder="50자 이내로 작성해주세요." id="srch02"  class="w-100">
                             </td>
                         </tr>
                         <tr>
-                            <th class="txt-l"><label for="srch03">글내용</label></th>
-                            <td>
-                                <div class="timer">
-                                    <strong>남은시간 : 23:57</strong>
-                                    <p>[<span class="color-red">25분</span> 이내 저장(등록) 후 재수정 해주시기 바랍니다.]</p>
-                                </div>
-                                <div class="txt-box">                                    
-                                    <textarea id="srch03" class="box"></textarea>
-                                    <p class="txt-byte">내용 0/3000</p>
+                            <th class="txt-l">파일첨부</th>
+                            <td class="file-up-area">
+                                <div class="filebox flex-ac">
+                                    <input class="upload-name fixed-value" readonly>
+                                    <label for="file02" class="btns bg-blue">파일첨부</label> 
+                                    <input type="file" id="file02" class="file">
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="conts-header">
+                <h3>저작권 양도 확인서</h3>
+            </div>
+            <div class="agree-box">
+                <div class="agree">
+                    <div class="agree-tit">
+                        <h5>저작권 양도 확인서</h5>
+                        <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-1]').show();">내용보기</button>
+                    </div>
+                    <div class="agree-radio">
+                        <div class="radio-box">
+                            <input type="radio" id="agree1" name="agree1" value="no">
+                            <label for="agree1">동의안함</label>
+                            <input type="radio" id="agree2" name="agree1" value="yes">
+                            <label for="agree2">동의함</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btns-bottom">
+                <a href="javascript:;" class="btns">등록</a>
             </div>
         </div>
     </div>
@@ -343,15 +357,15 @@
                 </span>
                 <div class="support-box">
                     <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
                     </a>
                     <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
                     </a>
                     <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
                     </a>
-                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
                 </div>
             </div>
         </div>

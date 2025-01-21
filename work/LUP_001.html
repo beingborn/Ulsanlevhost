@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
     <link rel="stylesheet" href="../css/biz2/reset.css">
-    <link rel="stylesheet" href="../css/biz2/common.css">
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
@@ -19,8 +18,8 @@
 <body>
     <header>
         <div class="logo-area multi-logo-area">
-            <a href="LMP_001.html"><img src="../images/biz2/header_logo_horizontal.svg" alt="울산광역시"></a>
-            <a href="LMP_001.html"><img src="../images/biz2/header_logo_2.png" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/logo/header_logo_local_government.svg" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/logo/header_logo_2.png" alt="울산광역시"></a>
         </div>
         <div class="menu-area">
             <!-- 로그인 시 -->
@@ -306,8 +305,8 @@
                 <li>검색하기를 통해 조회된 기관에서만 평생교육이용권 카드 이용이 가능합니다</li>
                 <li>본 화면의 정보는 현재 정보와 다를 수 있습니다. 평생교육이용권 카드 이용 전 반드시 기관에 직접 확인하시기 바랍니다.</li>
             </ul>
-            <div class="top-info-group">
-                <p class="top-info-group-data">총 <strong>3,101</strong>건</p>
+            <div class="conts-header">
+                <p class="conts-header-data">총 <strong>3,101</strong>건</p>
                 <label for="select-view" class="blind">노출 건수 선택</label>
                 <select id="select-view">
                     <option value="1">10건 보기</option>
@@ -338,7 +337,10 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="txt-l">(주)중앙자동차운전전문학원 <span class="new">NEW</span></td>
+                            <td class="txt-l">
+                                (주)중앙자동차운전전문학원
+                                <span class="category-label new-label">N</span>
+                            </td>
                             <td class="txt-l">인천광역시 서구</td>
                             <td>오프라인</td>
                             <td>&nbsp;</td>
@@ -347,10 +349,11 @@
                                     <span class="blind">홈페이지</span>
                                 </a>
                             </td>
-                            <td>
+                            <td class="txt-l">
                                 <i class="ico-cont-32 ico organ01">
                                     <span class="blind">기관 연계사업 유형</span>
                                 </i>
+                                <span>학점은행제</span>
                             </td>
                         </tr>
                         <tr>
@@ -368,10 +371,11 @@
                                     <span class="blind">홈페이지</span>
                                 </a>
                             </td>
-                            <td>
+                            <td class="txt-l">
                                 <i class="ico-cont-32 ico organ02">
                                     <span class="blind">기관 연계사업 유형</span>
                                 </i>
+                                <span>평생학습계좌제</span>
                             </td>
                         </tr>
                         <tr>
@@ -388,10 +392,11 @@
                                     <span class="blind">홈페이지</span>
                                 </a>
                             </td>
-                            <td>
+                            <td class="txt-l">
                                 <i class="ico-cont-32 ico organ03">
                                     <span class="blind">기관 연계사업 유형</span>
                                 </i>
+                                <span>성인문화교육</span>
                             </td>
                         </tr>
                     </tbody>
@@ -403,74 +408,140 @@
                         <p>
                             <strong>(주)중앙자동차운전전문학원</strong>
                             <span class="ico-cont-24 ico map"></span>
-                            <span class="new">NEW</span>
+                            <span class="category-label new-label">N</span>
                         </p>
-                        <p><strong class="list-label">주소</strong><span>인천광역시 서구</span></p>
-                        <p><strong class="list-label">기관구분</strong><span>오프라인</span></p>
-                        <p><strong class="list-label">홈페이지 주소</strong><span>www.test.co.kr</span></p>
+                        <p>
+                            <strong class="list-label">주소</strong>
+                            <span>인천광역시 서구</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">기관구분</strong>
+                            <span>오프라인</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">홈페이지 주소</strong><span>www.test.co.kr</span>
+                        </p>
                     </li>
                     <li>
                         <p>
                             <strong>노원발달장애인평생교육센터</strong>
                             <span class="ico-cont-24 ico map"></span>
                         </p>
-                        <p><strong class="list-label">주소</strong><span>서울특별시 노원구</span></p>
-                        <p><strong class="list-label">기관구분</strong><span>오프라인</span></p>
-                        <p><strong class="list-label">홈페이지 주소</strong><span>www.test.co.kr</span></p>
-                        <p><strong class="list-label">기관 연계사업 유형</strong><span class="ico-cont-32 ico organ02"></span></p>
+                        <p>
+                            <strong class="list-label">주소</strong>
+                            <span>서울특별시 노원구</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">기관구분</strong>
+                            <span>오프라인</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">홈페이지 주소</strong>
+                            <span>www.test.co.kr</span>
+                        </p>
+                        <p class="flex-ac">
+                            <strong class="list-label">기관 연계사업 유형</strong>
+                            <span class="ico-cont-32 ico organ01"></span>
+                            <span>학점은행제</span>
+                        </p>
                     </li>
                     <li>
                         <p>
                             <strong>롯데마트문화센터안산점</strong>
                             <span class="ico-cont-24 ico map"></span>
                         </p>
-                        <p><strong class="list-label">주소</strong><span>서울특별시 노원구</span></p>
-                        <p><strong class="list-label">기관구분</strong><span>오프라인</span></p>
-                        <p><strong class="list-label">홈페이지 주소</strong><span>www.test.co.kr</span></p>
-                        <p><strong class="list-label">기관 연계사업 유형</strong><span class="ico-cont-32 ico organ02"></span></p>
+                        <p>
+                            <strong class="list-label">주소</strong>
+                            <span>서울특별시 노원구</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">기관구분</strong>
+                            <span>오프라인</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">홈페이지 주소</strong>
+                            <span>www.test.co.kr</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">기관 연계사업 유형</strong>
+                            <span class="ico-cont-32 ico organ02"></span>
+                            <span>평생학습계좌제</span>
+                        </p>
                     </li>
                     <li>
                         <p>
                             <strong>사당위드피아노학원</strong>
                             <span class="ico-cont-24 ico map"></span>
                         </p>
-                        <p><strong class="list-label">주소</strong><span>광주광역시 북구</span></p>
-                        <p><strong class="list-label">기관구분</strong><span>오프라인</span></p>
-                        <p><strong class="list-label">홈페이지 주소</strong><span>www.test.co.kr</span></p>
-                        <p><strong class="list-label">기관 연계사업 유형</strong><span class="ico-cont-32 ico organ02"></span></p>
+                        <p>
+                            <strong class="list-label">주소</strong>
+                            <span>광주광역시 북구</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">기관구분</strong>
+                            <span>오프라인</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">홈페이지 주소</strong>
+                            <span>www.test.co.kr</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">기관 연계사업 유형</strong>
+                            <span class="ico-cont-32 ico organ02"></span>
+                            <span>성인문해교육</span>
+                        </p>
                     </li>
                     <li>
                         <p>
                             <strong>얼라이브필라테스불로점평생교육원</strong>
                             <span class="ico-cont-24 ico map"></span>
                         </p>
-                        <p><strong class="list-label">주소</strong><span>경기도 용인시</span></p>
-                        <p><strong class="list-label">기관구분</strong><span>오프라인</span></p>
-                        <p><strong class="list-label">홈페이지 주소</strong><span>www.test.co.kr</span></p>
-                        <p><strong class="list-label">기관 연계사업 유형</strong><span class="ico-cont-32 ico organ02"></span></p>
+                        <p>
+                            <strong class="list-label">주소</strong>
+                            <span>경기도 용인시</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">기관구분</strong>
+                            <span>오프라인</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">홈페이지 주소</strong>
+                            <span>www.test.co.kr</span>
+                        </p>
+                        <p>
+                            <strong class="list-label">기관 연계사업 유형</strong>
+                            <span class="ico-cont-32 ico organ02"></span>
+                            <span>성인문해교육</span>
+                        </p>
                     </li>
                     <!-- 검색 결과 데이터가 없을 경우 -->
-                    <li class="ac-i">
+                    <li class="ac-c-i">
                         <p>검색 결과가 없습니다.</p>
                     </li>
                 </ul>
             </div>
-            <div class="paging ">
+            <div class="paging">
                 <span class="pg">
+                    <a href="#" class="first">
+                        <span class="blind">맨처음으로</span>
+                    </a>
                     <a href="#" class="prev">
-                        <span>이전</span>
+                        <span class="blind">이전으로</span>
                     </a>
                 </span>
                 <span class="num">
-                    <a href="#" class="on">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
+                    <a href="#" title="Go to page 1" class="on">1</a>
+                    <a href="#" title="Go to page 2">2</a>
+                    <a href="#" title="Go to page 3">3</a>
+                    <a href="#" title="Go to page 4">4</a>
+                    <a href="#" title="Go to page 5">5</a>
                 </span>
                 <span class="pg">
                     <a href="#" class="next">
-                        <span>다음</span>
+                        <span class="blind">다음</span>
+                    </a>
+                    <a href="#" class="last">
+                        <span class="blind">맨끝으로</span>
                     </a>
                 </span>
             </div>
@@ -517,15 +588,15 @@
                 </span>
                 <div class="support-box">
                     <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
                     </a>
                     <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
                     </a>
                     <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
                     </a>
-                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
                 </div>
             </div>
         </div>

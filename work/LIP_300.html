@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css js inject -->
     <link rel="stylesheet" href="../css/biz2/reset.css">
-    <link rel="stylesheet" href="../css/biz2/common.css">
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
@@ -21,8 +20,8 @@
 <body>
     <header>
         <div class="logo-area multi-logo-area">
-            <a href="LMP_001.html"><img src="../images/biz2/header_logo_horizontal.svg" alt="울산광역시"></a>
-            <a href="LMP_001.html"><img src="../images/biz2/header_logo_2.png" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/logo/header_logo_local_government.svg" alt="울산광역시"></a>
+            <a href="LMP_001.html"><img src="../images/biz2/logo/header_logo_2.png" alt="울산광역시"></a>
         </div>
         <div class="menu-area">
             <!-- 로그인 시 -->
@@ -192,8 +191,8 @@
                     </fieldset>
                 </form> 
             </div>
-            <div class="top-info-group">
-                <p class="top-info-group-data">총 <strong>2</strong>건</p>
+            <div class="conts-header">
+                <p class="conts-header-data">총 <strong>2</strong>건</p>
             </div>
             <div class="com-view-table lg-only">
                 <table>
@@ -274,30 +273,36 @@
                         <p><strong class="list-label">계좌제연계</strong><span class="list-point">전송대기</span></p>
                         <p><strong class="list-label">승인번호</strong><span>72344234</span></p>
                     </li>
-                    <li class="ac-i">
+                    <li class="ac-c-i">
                         <p>검색 결과가 없습니다.</p>
                     </li>
-                    <li class="ac-i">
+                    <li class="ac-c-i">
                         <p>이수 정보가 없습니다.</p>
                     </li>
                 </ul>
             </div>
-            <div class="paging ">
+            <div class="paging">
                 <span class="pg">
+                    <a href="#" class="first">
+                        <span class="blind">맨처음으로</span>
+                    </a>
                     <a href="#" class="prev">
-                        <span>이전</span>
+                        <span class="blind">이전으로</span>
                     </a>
                 </span>
                 <span class="num">
-                    <a href="#" class="on">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
+                    <a href="#" title="Go to page 1" class="on">1</a>
+                    <a href="#" title="Go to page 2">2</a>
+                    <a href="#" title="Go to page 3">3</a>
+                    <a href="#" title="Go to page 4">4</a>
+                    <a href="#" title="Go to page 5">5</a>
                 </span>
                 <span class="pg">
                     <a href="#" class="next">
-                        <span>다음</span>
+                        <span class="blind">다음</span>
+                    </a>
+                    <a href="#" class="last">
+                        <span class="blind">맨끝으로</span>
                     </a>
                 </span>
             </div>
@@ -344,15 +349,15 @@
                 </span>
                 <div class="support-box">
                     <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_1.png" alt="교육부">
+                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
                     </a>
                     <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/footer_link_2.svg" alt="국가평생교육진흥원">
+                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
                     </a>
                     <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/footer_link_3.png" alt="wa">
+                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
                     </a>
-                    <img src="../images/biz2/footer_link_4.png" alt="청렴세상">
+                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
                 </div>
             </div>
         </div>
@@ -362,8 +367,8 @@
             <div class="layer-scroll">
                 <span class="title">평생교육프로그램 운영과정</span>
                 <div class="info-area">
-                    <div class="top-info-group">
-                        <p class="top-info-group-data">총 <strong>19</strong>건</p>
+                    <div class="conts-header">
+                        <p class="conts-header-data">총 <strong>19</strong>건</p>
                         <select id="select-view">
                             <option value="1">10건 보기</option>
                             <option value="2">20건 보기</option>
@@ -389,7 +394,7 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th class="wh-nowrap">순번</th>
+                                    <th>순번</th>
                                     <th>강좌명</th>
                                     <th>대상자</th>
                                     <th>강좌분류</th>
@@ -463,22 +468,28 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="paging ">
+                    <div class="paging">
                         <span class="pg">
+                            <a href="#" class="first">
+                                <span class="blind">맨처음으로</span>
+                            </a>
                             <a href="#" class="prev">
-                                <span>이전</span>
+                                <span class="blind">이전으로</span>
                             </a>
                         </span>
                         <span class="num">
-                            <a href="#" class="on">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
+                            <a href="#" title="Go to page 1" class="on">1</a>
+                            <a href="#" title="Go to page 2">2</a>
+                            <a href="#" title="Go to page 3">3</a>
+                            <a href="#" title="Go to page 4">4</a>
+                            <a href="#" title="Go to page 5">5</a>
                         </span>
                         <span class="pg">
                             <a href="#" class="next">
-                                <span>다음</span>
+                                <span class="blind">다음</span>
+                            </a>
+                            <a href="#" class="last">
+                                <span class="blind">맨끝으로</span>
                             </a>
                         </span>
                     </div>
