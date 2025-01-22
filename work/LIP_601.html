@@ -161,11 +161,15 @@
             <h2 class="page-header-tit">개명 및 개번 신청</h2>
         </div>
         <div class="contents objection">
+            <div class="conts-header">
+                <h3>신청 정보</h3>
+                <small><em class="col-red">*</em> 평생교육이용권 신청 시 입력한 성명, 주민등록번호를 작성해주세요.</small>
+            </div>
             <div class="com-write-table">
                 <table class="basic-info lg-only">
                     <caption>개명 및 개번 신청 입력란</caption>
                     <colgroup>
-                        <col style="width: 200px;">
+                        <col style="width: 260px;">
                         <col>
                     </colgroup>
                     <tbody>
@@ -193,24 +197,24 @@
                         <tr>
                             <th class="txt-l">변경 전 주민등록번호</th>
                             <td>
-                                <div class="input-reset">
-                                    <input type="number" value="000101" size="6" readonly />
+                                <div class="flex-ac input-reset">
+                                    <input type="text" id="b" maxlength="6" value="901231" readonly="" class="readonly-txt" style="width: 68px;">
                                     <span>-</span>
-                                    <input type="number" value="3******" size="7" readonly />
+                                    <input type="text" id="c" maxlength="7" value="1******" readonly="" class="readonly-txt" style="width: 63px;">
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th class="txt-l must-type">변경 후 주민등록번호</th>
                             <td>
-                                <div class="input-idNum">
-                                    <input type="number" value="" />
-                                    <span>-</span>
-                                    <input type="number" value="" />
-                                </div>
+                                <div class="flex-ac gap-10 fixed-value input-idNum">
+                                <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                <span>-</span>
+                                <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                            </div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="hidden">
                             <th class="txt-l">변경희망일</th>
                             <td><input type="date" id="date01"></td>
                         </tr>
@@ -265,20 +269,20 @@
                         <tr>
                             <th class="txt-l">변경 전 주민등록번호</th>
                             <td>
-                                <div class="input-reset">
-                                    <input type="number" value="000101" size="6" readonly />
+                                <div class="flex-ac input-reset">
+                                    <input type="text" id="b" maxlength="6" value="901231" readonly="" class="readonly-txt" style="width: 68px;">
                                     <span>-</span>
-                                    <input type="number" value="3******" size="7" readonly />
+                                    <input type="text" id="c" maxlength="7" value="1******" readonly="" class="readonly-txt" style="width: 63px;">
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th class="txt-l must-type">변경 후 주민등록번호</th>
                             <td>
-                                <div class="input-idNum">
-                                    <input type="number" value="" />
+                                <div class="flex-ac gap-10 fixed-value input-idNum">
+                                    <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                     <span>-</span>
-                                    <input type="number" value="" />
+                                    <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                 </div>
                             </td>
                         </tr>

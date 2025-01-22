@@ -72,9 +72,9 @@
 .layer-pop.simple-type .layer-content { width: 606px; }
 .layer-pop.simple-type .layer-content .layer-scroll { padding: 60px 118px; background: #fff; }
 .layer-content { overflow: hidden; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); max-width: var(--max-width, 840px); width: 100%; box-shadow: 0px 6px 16px rgba(15, 21, 34, 0.06);}
-.layer-content .layer-scroll { overflow-y: auto; position: relative; max-height: calc(100vh - 40px); padding: 60px 40px 40px 40px; background: #FFF; border-radius: 20px;}
+.layer-content .layer-scroll { overflow-y: auto; position: relative; max-height: calc(100vh - 40px); background: #FFF; border-radius: 20px; padding: 60px 40px 40px 40px; }
 .layer-content .layer-scroll > .title { display: block; position: relative; font-size: 24px; text-align: center; font-weight: 700;}
-.layer-content .layer-scroll .desc {color: #000;}
+.layer-content .layer-scroll .desc {font-size: 20px; font-weight: 700;}
 .layer-content .layer-scroll > .title .ic-edu { position: absolute; left: 0; top: 0; width: 176px; height: 34px; background: url(../../images/biz2/ico/ico_pop_edu.png) no-repeat 0 0; }
 .layer-content .layer-scroll .close-btn { position: absolute; right: 20px; top: 18px; width: 24px; height: 24px; background: url(../../images/biz2/ico/ico_pop_close.svg) no-repeat center center; }
 /* 레이어 하단 정보 영역 */

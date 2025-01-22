@@ -163,10 +163,10 @@
                     </div>
                     <div class="main-info-mo-wrap">
                         <div class="main-info-link apply-ticket">
-                            <a href="LAP_100.html">
+                            <a href="#" class="layer-btn" onclick="$('[data-pop=layer-apply]').show();">
                                 <span class="ico"></span>
                                 <div class="main-info-group">
-                                    <span class="main-info-tit">평생교육<br class="sm-show-800">이용권 신청</span>
+                                    <span class="main-info-tit">이용권 <br class="sm-show-800">신청</span>
                                 </div>
                             </a>
                         </div>
@@ -174,7 +174,7 @@
                             <a href="LUP_001.html">
                                 <span class="ico"></span>
                                 <div class="main-info-group">
-                                    <span class="main-info-tit">사용기관<br class="sm-show-800">안내</span>                            
+                                    <span class="main-info-tit">사용기관 <br class="sm-show-800">안내</span>                            
                                 </div>
                             </a>
                         </div>
@@ -229,13 +229,13 @@
                 <div class="more-link-area">
                     <a href="LGP_001.html" class="more-link-ticket">
                         <span>
-                            평생교육이용권<br class="sm-show-800">이란?     
+                            평생교육<br class="lg-only">이용권<br class="sm-show-800">이란?     
                         </span>
                         <span class="ico"></span>
                     </a>
                     <a href="IMP_001.html" class="more-link-login">
-                        <span>
-                            사용기관 로그인 <br>
+                        <span class="letter-spacing-10">
+                            사용기관<br class="lg-only">로그인<br class="sm-show-800">
                             및 등록 신청
                         </span>
                         <!-- 로그인 시 -->
@@ -253,7 +253,7 @@
                     </a>
                     <a href="LNP_200.html" class="more-link-qna">
                         <span class="more-link-one">
-                            자주하는 질문
+                            온라인 상담
                         </span>
                         <span class="ico"></span>
                     </a>
@@ -483,7 +483,7 @@
             </div>
         </div>
     </footer>
-    <div class="layer-pop" data-pop="pop-1">
+    <div class="layer-pop" data-pop="layer-apply">
         <div class="layer-content layer-apply-content" style="--max-width: 640px">
             <div class="layer-scroll">
                 <div class="info-area layer-apply-yes layer-apply mt-0">
@@ -494,13 +494,14 @@
                         클릭하여 사업내용을 충분히 숙지하신 후 신청 바랍니다
                     </p>
                     <div class="layer-btn-wrap">
-                        <button class="btns" onclick="$('[data-pop=pop-1]').hide();">확인</button>
+                        <button class="btns" onclick="window.location.href='LAP_100.html'">확인</button>
                     </div>
                 </div>
-                <button class="close-btn" onclick="$('[data-pop=pop-1]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
+                <button class="close-btn" onclick="$('[data-pop=layer-apply]').hide();"><span class="blind">레이어 팝업 닫기</span></button>
             </div>
         </div>
     </div>
+    <!-- 신청 기간 아닐 시 팝업 (trigger X) -->
     <div class="layer-pop" data-pop="pop-2">
         <div class="layer-content layer-apply-content" style="--max-width: 640px">
             <div class="layer-scroll">
