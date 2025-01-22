@@ -358,6 +358,9 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ico/ico_
 .custom-select-box.is-open .custom-select-list::-webkit-scrollbar{width:12px;height:70px}
 .custom-select-box.is-open .custom-select-list::-webkit-scrollbar-thumb{background:#e4e4e4;border:3px solid transparent;background-clip:padding-box;border-radius:6px}
 
+/* 레이어 정보 박스 공통 */
+.layer-border-box {}
+
 /* sub */
 /* page-header */
 .page-header {text-align: center; margin-bottom: 40px;}
@@ -1073,7 +1076,7 @@ table .total td{background-color:#E9F9FA}
 .new-window-pop :where(.com-view-table, .com-write-table) table th {font-size: 20px; padding: 10px;}
 .layer-pop :where(.com-view-table, .com-write-table) td,
 .new-window-pop :where(.com-view-table, .com-write-table) td {font-size: 18px;}
-.layer-pop .com-view-table th, .new-window-pop .com-view-table th{padding:10px 17px}
+.layer-pop .com-view-table th, .new-window-pop .com-view-table th{padding:10px}
 .conts-header ~ .com-view-table > table {margin-top: 0;} /* top info group이 먼저 올 경우 마진 초기화 */
 .layer-pop .bullet + .com-write-table > table {margin-top: 20px;}
 .layer-pop .com-write-table + .com-write-table {margin-top: 20px;}
@@ -1147,7 +1150,9 @@ table .total td{background-color:#E9F9FA}
 .layer-top-logo {position: absolute; left: 40px; top: 20px; width: 140px; height: 24px;} 
 
 /* 레이어 라디오 동의 공통 */
-.layer-pop table .radio-wrap {gap: 16px;}
+.layer-pop table .radio-wrap,
+.new-window-pop table .radio-wrap
+{gap: 16px;}
 .layer-agree-group{margin-top:20px}
 .layer-agree-group .radio-box{display:inline-flex;margin-top:20px}
 .layer-agree-group .radio-box label{flex:auto}
@@ -1470,3 +1475,12 @@ table .total td{background-color:#E9F9FA}
 
 /* // Parkjm */
 
+
+
+/* 사업안내 Style */
+.info-tit-box {
+	margin-bottom: 40px;
+}
+.info-tit-box .info-tit {
+	font-size: var(--font-lv0);
+}

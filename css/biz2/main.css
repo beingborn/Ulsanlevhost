@@ -423,5 +423,3 @@ tr.fixed-post > td {font-weight: 700;}
 .agree-info-area .agree-box .agree-group { display: flex; justify-content: space-between; align-items: center; width: 100%; min-height: 80px; margin-top: 26px; padding: 20px 58px 20px 20px; border: 1px solid #DDDDDD; border-radius: 12px; background: #F8F8F8; }
 .agree-info-area .agree-box .agree-group > .txt { font-size: 16px; color: #797979; }
 .agree-info-area .agree-box .agree-group .check-item { display: flex; align-items: center; }
-
-					
