@@ -33,6 +33,7 @@
 	--pri: #00ADB2;
 	--skyblue: #218CEF;
 	--blue: #4C85BA;
+	--deepblue: #003675;
 	--green: #56CA00;
 	--red: #EA292E;
 
@@ -91,6 +92,7 @@
 .col-sub-txt{color: var(--sub-txt-color);}
 .col-pri 	{color: var(--pri);}
 .col-blue 	{color: var(--blue);}
+.col-deepblue 	{color: var(--deepblue);}
 .col-green 	{color: var(--green);}
 .col-red 	{color: var(--red);}
 
@@ -110,6 +112,7 @@
 /* Background Style */
 .bg-pri { background: var(--pri);}
 .bg-blue {background: var(--blue) !important;}
+.bg-dark {background: #383838 !important;}
 .bg-init {background: transparent !important;}
 
 /* Form Style (input, checkbox, radio, select, option, textarea */
@@ -352,11 +355,12 @@ ul.txt-indent-14 > li {padding-left: 14px; text-indent: -14px;}
 .custom-select-box{color:var(--text-primary-00)}
 .custom-select-list{display:none;border-radius:10px;padding-top:10px;padding-bottom:10px;overflow-y:auto}
 .custom-select-list > li > a{display:block;line-height:36px;font-size:15px;font-weight:500;padding:0 16px}
+.custom-select-list > li > a{line-height:inherit; padding:7px 16px}
 .custom-select-list > li > a:hover{background:var(--pri);color:var(--white)}
 button.custom-select-open{display:flex;align-items:center;justify-content:space-between;padding:0 16px;width:100%;font-weight:700;height:44px;font-size:16px;border:1px solid var(--bd-color);background:#fff url(../../images/biz2/ico/ico_arrow_big.png) no-repeat right 16px center;border-radius:10px}
 button.custom-select-open.is-open{background:#fff url(../../images/biz2/ico/ico_arrow_big_top.png) no-repeat right 16px center}
 /* custom select 오픈 스타일 */
-.custom-select-box.is-open{position:relative}
+.custom-select-box.is-open{position:relative; z-index: 999;}
 .custom-select-box.is-open .custom-select-list{display:block;position:absolute;z-index:-1;width:100%;left:0;bottom:calc(100% - 11.5px);background:#fff;border:1px solid #c5c5c5}
 .custom-select-box.is-open .custom-select-list::-webkit-scrollbar{width:12px;height:70px}
 .custom-select-box.is-open .custom-select-list::-webkit-scrollbar-thumb{background:#e4e4e4;border:3px solid transparent;background-clip:padding-box;border-radius:6px}
@@ -451,7 +455,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ico/ico_
 .search-box .search-list{display:flex;flex-wrap:wrap; align-items: center;}
 .search-box .search-list dl{display:flex;align-items:center;width:50%}
 .search-box .search-list dt{width:144px;padding-left:20px;color:#111;font-size:20px;font-weight:700}
-.search-box .search-list dd{flex:1;padding:10px 20px;color:#8e8e8e}
+.search-box .search-list dd{flex:1;padding:10px 20px;}
 .search-box .search-list dd select{width:262px;}
 .search-box .search-list .period{width:100%}
 .search-box .search-list .period .date{width:198px}
@@ -462,7 +466,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ico/ico_
 .search-box .search-list .search-chk {padding: 20px 0; align-items: flex-start;}
 .period .dash{display:inline-block;margin:0 7px}
 /* (20250114 이민혁 수정) 버튼 마진 상단만 30px */
-.search-box .btns{display:block;width:120px; margin: 30px auto 0; background: var(--blue);} 
+.search-box .btns{display:block;width:120px; margin: 30px auto 0; background: var(--blue);}
 
 .search-box .r-btn .btns {margin: 0 auto;}
 .search-box .chk-box input[type="checkbox"]{width:24px;height:24px;margin-top:-2px}
@@ -508,7 +512,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ico/ico_
 .flex-ae{display:flex;align-items:end;gap:16px}
 
 /* IIP_400 기관 정보 수정 */
-.conts-header small{font-size:16px;color:var(--text-third-66)}
+.conts-header small{font-size:16px;color:var(--text-third-66); margin-left: auto;}
 .com-write-table td .btn-search{width:36px;height:36px;margin-left:6px;background-size:100%}
 .mail-agree{margin-top:10px}
 .mail-agree .ico::before{width:22px;height:22px;margin-left:3px;background:url(../../images/biz2/ico/ico_checkbox.svg) no-repeat center}
@@ -917,6 +921,7 @@ ul.asterisk-list li+li{margin-top:8px}
 .available-tickets > li+li{border-top:1px solid var(--bd-color)}
 .available-tickets > li strong:not(.list-label) {width:24%;padding:20px;font-size:26px;text-align:center}
 .available-tickets > li .disc{width:61%;padding:20px}
+.available-tickets > li .disc .add-info{font-weight: 500;}
 .available-tickets > li .disc .price-wrap{display:flex;align-items:center;gap:10px;margin-top:16px}
 .available-tickets > li .disc .price{font-size:22px;font-weight:700}
 .available-tickets > li .disc .box{padding:8px 16px;border:1px solid var(--bd-color);border-radius:12px;background-color: var(--bg-color);font-size:16px}

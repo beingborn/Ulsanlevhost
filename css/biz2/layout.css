@@ -18,7 +18,7 @@
 
 /* header style */
 header { display: flex; align-items: center; justify-content: space-between; position: relative; height: 116px;  max-width: 1320px; margin: 0px auto; padding:0 20px;}
-header::after { content: ""; position: absolute; left: -9999px; right: -9999px; bottom: 0; height: 1px; background: #d8d8d8; }
+header::after { content: ""; position: absolute; left: -9999px; right: -9999px; bottom: 0; height: 1px; background: #AAA; }
 header .logo-area { display: flex; align-items: center;}
 /* 로고가 여러개일 경우 */
 header .multi-logo-area a:nth-child(1){position: relative; padding-right: 20px;}
@@ -42,7 +42,7 @@ header .menu-area .menu-box .link-group li {
 	display: flex; 
 	flex-direction: column;
 	padding-left: 16px;  
-	border-left: 1px solid #D8D8D8;
+	border-left: 1px solid #AAA;
 }
 header .menu-area .menu-box .link-group li:not(:last-child){
 	width: 100%; 
@@ -78,7 +78,7 @@ header .open-btn.sm-on ~ .sm-menu-box {display: block; position: fixed; top: 0; 
 /* footer */
 footer { position: relative; }
 footer .fixed-banner-content { position: fixed; left: 50%; top: 210px; margin-left: 670px; z-index: 10; }
-footer .fixed-banner-content .banner-area { display: flex; flex-direction: column; row-gap: 24px; width: 100px; border: 1px solid #d8d8d8; background: #fff; padding: 9px 9px 22px; border-radius: 18px; }
+footer .fixed-banner-content .banner-area { display: flex; flex-direction: column; row-gap: 24px; width: 100px; border: 1px solid #AAA; background: #fff; padding: 9px 9px 22px; border-radius: 18px; }
 footer .fixed-banner-content .banner-area a { display: flex; position: relative; width: 100%; padding-top: 87px; font-size: 16px; color: #1d1d1d; text-align: center; justify-content: center; letter-spacing: -1px; font-weight: 500; line-height: 23px; }
 footer .fixed-banner-content .banner-area a.guide::before { background: #f7faff url(../../images/biz2/ico/ico_fixed_1.png) no-repeat center center; }
 footer .fixed-banner-content .banner-area a.edu::before { background: #f7faff url(../../images/biz2/ico/ico_fixed_2.png) no-repeat center center; }
@@ -86,12 +86,12 @@ footer .fixed-banner-content .banner-area a.blog::before { background: #f7faff u
 footer .fixed-banner-content .banner-area a.report::before { background: #f7faff url(../../images/biz2/ico/ico_fixed_4.png) no-repeat center center; }
 footer .fixed-banner-content .banner-area a::before { content: ""; position: absolute; left: 0; top: 0; width: 80px; height: 80px; border: 1px solid #d3dce5; border-radius: 18px; }
 footer .favorite-content { display: flex; position: relative; }
-footer .favorite-content::before { content: ""; position: absolute; left: -9999px; right: -9999px; top: 0; height: 1px; background: #d8d8d8; }
-footer .favorite-content::after { content: ""; position: absolute; left: -9999px; right: -9999px; bottom: 0; height: 1px; background: #d8d8d8; }
-footer .favorite-content .link-area:first-child .open-btn { border-left: 1px solid #d8d8d8; }
-footer .favorite-content .link-area .open-btn { width: 320px; height: 56px; padding-left: 20px; border-right: 1px solid #d8d8d8; text-align: left; font-size: 17px; font-weight: 500;  background: url(../../images/biz2/ic_link_plus.png) no-repeat right 28px center; }
-footer .info-content { display: flex; flex-direction: column; position: relative; padding: 42px 0 41px; }
-footer .info-content::before { content: ""; position: absolute; top: 0; bottom: 0; left: -9999px; right: -9999px; background: #F2FBFC; border-top: 1px solid #D8D8D8; z-index: -1;}
+footer .favorite-content::before { content: ""; position: absolute; left: -9999px; right: -9999px; top: 0; height: 1px; background: #AAA; }
+footer .favorite-content::after { content: ""; position: absolute; left: -9999px; right: -9999px; bottom: 0; height: 1px; background: #AAA; }
+footer .favorite-content .link-area:first-child .open-btn { border-left: 1px solid #AAA; }
+footer .favorite-content .link-area .open-btn { width: 320px; height: 56px; padding-left: 20px; border-right: 1px solid #AAA; text-align: left; font-size: 17px; font-weight: 500;  background: url(../../images/biz2/ic_link_plus.png) no-repeat right 28px center; }
+footer .info-content { display: flex; flex-direction: column; position: relative; padding: 40px 0}
+footer .info-content::before { content: ""; position: absolute; top: 0; bottom: 0; left: -9999px; right: -9999px; background: #F2FBFC; border-top: 1px solid #AAA; z-index: -1;}
 footer .info-content .ui-select {color: var(--text-primary-00);  font-weight: 700; position: absolute; right: 0; top: 118px; width: 240px; height: 50px; padding: 0 20px; border-radius: 10px; border-color: #CACACA; background: #fff url(../../images/biz2/logo/ico_arrow_big.png) no-repeat right 20px center; }
 footer .info-content .footer-logo { position: relative; width: 192px; height: 51px; background: url(../../images/biz2/logo/footer_logo.png) no-repeat 0 0; }
 /* footer .info-content address { position: relative; margin-top: 23px; font-size: 17px; font-weight: 500; line-height: 30px;  } */
@@ -99,11 +99,11 @@ footer .info-content address > span { display: flex; font-size: 17px; line-heigh
 footer .info-content address > span.txt span + span { margin-left: 8px; }
 footer .info-content address > span.tel { margin-top: 4px; }
 footer .info-content address > span.tel span + span { margin-left: 11px; }
-footer .info-content .link-area { position: relative; margin-top: 25px; border-top: 1px solid #d8d8d8; padding: 15px 0 0 0; }
+footer .info-content .link-area { position: relative; margin-top: 20px; border-top: 1px solid #AAA; padding: 20px 0 0 0; }
 footer .info-content .link-area .link-box { display: flex; column-gap: 26px; }
-footer .info-content .link-area .link-box a { font-size: 17px; font-weight: 500; line-height: 27px;  }
+footer .info-content .link-area .link-box a { font-size: 16px; font-weight: 500; line-height: 27px;  }
 footer .info-content .link-area .link-box a.on { font-weight: bold; color: #003675; }
-footer .info-content .link-area .copy { display: block; margin-top: 11px; font-size: 17px; font-weight: 500; line-height: 27px;  }
+footer .info-content .link-area .copy { display: block; margin-top: 11px; font-size: 16px; font-weight: 500; line-height: 27px;  }
 footer .info-content .link-area .support-box { display: flex; column-gap: 22px; position: absolute; right: 0; bottom: 0; }
 footer .info-content .link-area .support-box > img {height: 100%;}
 
@@ -118,7 +118,7 @@ footer .info-content .family-select-lg .family-site-list {height: 282px;}
 
 /* PC용 footer 관련 사이트 셀렉트 (* 접두어 sm) */
 footer .family-select-sm {display: none;}
-footer .family-select-sm {width: 100vw; margin-left: calc(-50vw + 50%); padding: 0 20px; border: 1px solid #d8d8d8; position: relative;}
+footer .family-select-sm {width: 100vw; margin-left: calc(-50vw + 50%); padding: 0 20px; border: 1px solid #AAA; position: relative;}
 footer .family-select-sm > button {height: 56px; font-size: 20px; font-weight: 700;}
 footer .family-select-sm > button::after {content : ''; display: inline-block; vertical-align: middle; width: 20px; height: 20px; border: 1px solid blue;}
 footer .family-select-sm .family-site-list {padding: 0 20px; padding-top: 12px; padding-bottom: 12px;}
@@ -139,8 +139,9 @@ footer .info-content > div address {
 	flex-direction: column;
 	gap: 6px;
 }
-footer .info-content > div address span { display: block }
-footer .info-content > div address span::before {
+footer .info-content > div address > span { display: block }
+footer .info-content > div address > span > span { margin-left: 10px;}
+footer .info-content > div address > span::before {
 	content: "";
 	display: inline-block;
 	width: 5px; height: 5px;

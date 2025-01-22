@@ -148,164 +148,16 @@
         <div class="top-location-area wrap">
             <span class="home"><span class="blind">홈</span></span>
             <div class="location-box">
-                <span class="arrow">개명 및 개번 신청</span>
-                <span class="arrow">개명 및 개번 신청서 작성</span>
+                <span class="arrow">메인</span>
+                <span class="arrow">이용약관</span>
             </div>
         </div>
     </div>
     <div class="container wrap">
         <div class="page-header">
-            <h2 class="page-header-tit">개명 및 개번 신청</h2>
+            <h2 class="page-header-tit">이용약관</h2>
         </div>
-        <div class="contents objection">
-            <div class="conts-header no-gap">
-                <h3>신청 정보</h3>
-                <small><em class="col-red">*</em> 평생교육이용권 신청 시 입력한 성명, 주민등록번호를 작성해주세요.</small>
-            </div>
-            <div class="com-write-table">
-                <table class="basic-info lg-only">
-                    <caption>개명 및 개번 신청 입력란</caption>
-                    <colgroup>
-                        <col style="width: 260px;">
-                        <col>
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th class="txt-l">신청구분</th>
-                            <td>
-                                <div class="radio-box fixed-value">
-                                    <input type="radio" id="rd0101" name="rd01">
-                                    <label for="rd0101">전체</label>
-                                    <input type="radio" id="rd0102" name="rd01">
-                                    <label for="rd0102">개명</label>
-                                    <input type="radio" id="rd0103" name="rd01">
-                                    <label for="rd0103">개번</label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l">변경 전 성명</th>
-                            <td><input type="text" value="홍길동" readonly /></td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l must-type">변경 후 성명</th>
-                            <td><input type="text" value="" class="fixed-value" /></td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l">변경 전 주민등록번호</th>
-                            <td>
-                                <div class="flex-ac input-reset">
-                                    <input type="text" id="b" maxlength="6" value="901231" readonly="" class="readonly-txt" style="width: 68px;">
-                                    <span>-</span>
-                                    <input type="text" id="c" maxlength="7" value="1******" readonly="" class="readonly-txt" style="width: 63px;">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l must-type">변경 후 주민등록번호</th>
-                            <td>
-                                <div class="flex-ac gap-10 fixed-value input-idNum">
-                                <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                                <span>-</span>
-                                <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                            </div>
-                            </td>
-                        </tr>
-                        <tr class="hidden">
-                            <th class="txt-l">변경희망일</th>
-                            <td><input type="date" id="date01"></td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l">파일첨부</th>
-                            <td>
-                                <div class="filebox flex-ac fixed-value">
-                                    <input class="upload-name fixed-value readonly-txt" readonly="">
-                                    <label for="file01" class="btns bg-blue">파일첨부</label> 
-                                    <input type="file" id="file01" class="file">
-                                </div>
-                                <p class="bullet-txt">증빙자료가 있는 경우 첨부파일 탑재(호적변경의 경우 증빙자료 필수)</p>
-                                <p class="bullet-txt">HWP, PDF, IMG, ZIP 파일 형식만 업로드 가능</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="basic-info sm-show-800">
-                    <caption>개명 및 개번 신청 입력란</caption>
-                    <colgroup>
-                        <col style="width: auto;">
-                        <col>
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th class="txt-l">신청구분</th>
-                            <td>
-                                <div class="row-gap">
-                                    <div class="radio-box">
-                                        <input type="radio" id="rd0101" name="rd01">
-                                        <label for="rd0101">전체</label>
-                                    </div>
-                                    <div class="radio-box">
-                                        <input type="radio" id="rd0102" name="rd01">
-                                        <label for="rd0102">개명</label>
-                                    </div>
-                                    <div class="radio-box">
-                                        <input type="radio" id="rd0103" name="rd01">
-                                        <label for="rd0103">개번</label>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l">변경 전 성명</th>
-                            <td><input type="text" value="홍길동" class="fixed-value" readonly /></td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l must-type">변경 후 성명</th>
-                            <td><input type="text" value="" class="fixed-value" /></td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l">변경 전<br>주민등록번호</th>
-                            <td>
-                                <div class="flex-ac input-reset">
-                                    <input type="text" id="b" maxlength="6" value="901231" readonly="" class="readonly-txt" style="width: 68px;">
-                                    <span>-</span>
-                                    <input type="text" id="c" maxlength="7" value="1******" readonly="" class="readonly-txt" style="width: 63px;">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l must-type">변경 후<br>주민등록번호</th>
-                            <td>
-                                <div class="flex-ac gap-10 fixed-value input-idNum">
-                                    <input type="number" id="b" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                                    <span>-</span>
-                                    <input type="password" id="c" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="hidden">
-                            <th class="txt-l">변경희망일</th>
-                            <td><input type="date" id="date01"></td>
-                        </tr>
-                        <tr>
-                            <th class="txt-l">파일첨부</th>
-                            <td>
-                                <div class="filebox flex-ac fixed-value">
-                                    <input class="upload-name fixed-value readonly-txt" readonly="">
-                                    <label for="file01" class="btns bg-blue">파일첨부</label> 
-                                    <input type="file" id="file01" class="file">
-                                </div>
-                                <p class="bullet-txt">증빙자료가 있는 경우 첨부파일 탑재(호적변경의 경우 증빙자료 필수)</p>
-                                <p class="bullet-txt">HWP, PDF, IMG, ZIP 파일 형식만 업로드 가능</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="btns-bottom">
-                <button type="button" class="btns btn-bd">취소</button>
-                <button type="button" class="btns">변경신청</button>
-            </div>
+        <div class="contents contest">
         </div>
     </div>
     <footer class="wrap">
