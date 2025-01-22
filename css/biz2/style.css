@@ -77,6 +77,7 @@
 .mt-40   { margin-top: 40px; }
 .mt-80   { margin-top: 80px; }
 .mg-0    { margin: 0 !important; }
+.mt-0	 { margin-top: 0 !important;}
 
 /* Text & Font Style */
 .txt-c 		{ text-align: center!important;}
@@ -279,7 +280,7 @@ table td .radio-box label
 .com-view-table table.hasClick tbody tr.is-clicked {background: #F2FBFB;}
 .com-view-table table.hasClick tbody tr {cursor: pointer;}
 /* td has organ ico */
-.com-view-table table td:has([class*=organ]) {display: flex; align-items: center; gap: 6px;}
+.com-view-table table td .ico[class*=organ] {margin-right: 6px;}
 
 /* 들여쓰기 공통 */
 ul.txt-indent-14 > li {padding-left: 14px; text-indent: -14px;}
@@ -313,8 +314,10 @@ ul.txt-indent-14 > li {padding-left: 14px; text-indent: -14px;}
 .paging .num {display: flex; align-items: center; gap: 8px;}
 
 /* 레이어 및 이용약관 스크롤 공통 */
-.layer-content .layer-scroll,
-.layer-agree-box { scrollbar-gutter: stable both-edges} /* 스크롤바가 생겨도 그 공간만큼 여백 확보를 하지않음 */
+/* 스크롤바가 생겨도 그 공간만큼 여백 확보를 하지않음 (확인 필요) */
+/* .layer-content .layer-scroll,
+.layer-agree-box { scrollbar-gutter: stable both-edges}  */
+
 .layer-content .layer-scroll::-webkit-scrollbar-button:start ,
 .layer-content .layer-scroll::-webkit-scrollbar-button:end,
 .layer-agree-box::-webkit-scrollbar-button:start,
@@ -359,7 +362,9 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ico/ico_
 .custom-select-box.is-open .custom-select-list::-webkit-scrollbar-thumb{background:#e4e4e4;border:3px solid transparent;background-clip:padding-box;border-radius:6px}
 
 /* 레이어 정보 박스 공통 */
-.layer-border-box {}
+:where(.com-view-table, .com-write-table) + .layer-border-box {margin-top: 20px;}
+.layer-border-box {padding: 20px; border-radius: 12px; font-size: 20px; font-weight: 700; border: 1px solid var(--bd-color); background: #EEE; text-align: center;}
+.layer-auth-agree .radio-wrap {justify-content: end;}
 
 /* sub */
 /* page-header */
@@ -373,11 +378,10 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ico/ico_
 .search-input .btn-search{position:absolute;
 	right: 0; top: 50%;
 	transform: translateY(-50%);
-	width: 36px;
-	max-width: 36px;
-	height: 100%;
-	margin-right: 8px;
-	background-size: auto 75%;
+	width: 24px; max-width: 24px;
+	height: 24px; max-height: 100%;
+	margin-right: 16px;
+	background-size: cover;
 }
 
 /* IIP_002 사용기관 공지사항 상세 */
@@ -448,7 +452,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ico/ico_
 .search-box .search-list dl{display:flex;align-items:center;width:50%}
 .search-box .search-list dt{width:144px;padding-left:20px;color:#111;font-size:20px;font-weight:700}
 .search-box .search-list dd{flex:1;padding:10px 20px;color:#8e8e8e}
-.search-box .search-list dd select{width:262px; border-radius: 8px;}
+.search-box .search-list dd select{width:262px;}
 .search-box .search-list .period{width:100%}
 .search-box .search-list .period .date{width:198px}
 .search-box .search-list .period .btn-wrap{display:inline-block;margin-left:30px} 
@@ -957,7 +961,7 @@ table .total td{background-color:#E9F9FA}
 .usage-guide .flex-ac.mw-set{gap:16px}
 .usage-guide .conts-header select{color:var(--text-primary-00)}
 .usage-guide .new{height:36px;margin-left:16px;padding:6px 12px;border:2px solid #EA292E;border-radius:8px;font-size:16px}
-.usage-guide table td:has(.category-label){display: flex; align-items: center; gap: 16px;}
+.usage-guide td .category-label {margin-left: 8px;}
 
 .com-view-table .ico.homepage {background-image :url(../../images/biz2/ico/ico_homepage.svg)}
 
@@ -1007,8 +1011,8 @@ table .total td{background-color:#E9F9FA}
 	vertical-align: middle;
 }
 /* LMP_001 지자체 메인 layer apply */
-.layer-apply-content .layer-btn-wrap{margin-top:40px}
-.layer-apply{display:flex;flex-direction:column;align-items:center}
+.layer-apply-content .layer-btn-wrap{margin-top:20px}
+.layer-apply{display:flex; flex-direction:column; align-items:center;}
 .layer-apply-yes .ico::before{width:120px;height:120px;background:url(../../images/biz2/img/img_apply01.png) no-repeat center}
 .layer-apply-no .ico::before{width:120px;height:120px;background:url(../../images/biz2/img/img_apply02.png) no-repeat center}
 .layer-apply .desc{margin-top:20px;font-size:20px;letter-spacing:-0.4px;text-align:center;width:100%}
@@ -1170,11 +1174,15 @@ table .total td{background-color:#E9F9FA}
 .data-radio-list > .flex-ac {gap: 16px;}
 
 /* 해당 팝업 전용 br */
+.layer-auth-agree {margin-top: 20px;}
+.layer-auth-agree .radio-wrap {margin-top: 20px; gap: 40px;}
+.layer-auth-agree > p {text-align: center; font-size: 20px;}
+
 .auth-res-br {display: none;} 
 .auth-res .border-box-20:has(>.auth-res-txt) {background-color: var(--bg-color); font-weight: 700; font-size: 18px; text-align: center;}
 .auth-res > .border-box-20 {display: flex; flex-direction: column; gap: 30px;}
 .auth-res-detail {font-weight: 300; text-align: center; padding: 0 8px;}
-.auth-res .radio-wrap {justify-content: center; padding: 20px 0 20px 0;}
+
 
 /* 사업자등록번호 안내 ILP_030.html */
 .busynum-guide .border-box-20 {background: var(--bg-color); color: #EA292E; text-align: center;}
@@ -1182,7 +1190,7 @@ table .total td{background-color:#E9F9FA}
 /* modal-pop */
 .new-window-pop .title{display:block;position:relative;font-size:24px;text-align:center;font-weight:700}
 .new-window-pop .new-window-content{overflow:hidden;max-width:var(--max-width, 840px);width:100%}
-.new-window-pop .new-window-scroll{overflow-y:auto;position:relative;padding:60px;background:#fff;border-radius:20px}
+.new-window-pop .new-window-scroll{overflow-y:auto;position:relative;padding: 60px 40px 40px 40px; background:#fff;border-radius:20px}
 .new-window-pop .info-area{margin-top:30px}
 .new-window-pop .new-window-scroll .close-btn{position:absolute;right:20px;height:18px;width:24px;height:24px;background:url(../../images/biz2/ic_pop_close.svg) no-repeat center center}
 .new-window-pop .search-box{margin:0;padding:20px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
@@ -1479,8 +1487,105 @@ table .total td{background-color:#E9F9FA}
 
 /* 사업안내 Style */
 .info-tit-box {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 	margin-bottom: 40px;
 }
 .info-tit-box .info-tit {
+	margin-bottom: 20px;
 	font-size: var(--font-lv0);
+}
+.info-box {
+	padding: 40px;
+	border-radius: 20px;
+	background-color: #F7F9FC;
+	border: 1px solid var(--bd-color);
+}
+.info-tit-box .info-box p {
+	font-size: var(--font-lv3);
+	font-weight: 700;
+	text-align: center;
+}
+.info-conts > img {
+	display: block;
+	margin: 0 auto;
+}
+.info-conts {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.info-inner-conts {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.info-inner-conts h3 { font-size: var(--font-lv2);}
+.info-inner-conts h4 { font-size: 26px}
+.info-inner-conts p.sub-txt-box { 
+	font-size: 24px;
+	text-align: left;
+	font-weight: 500;
+}
+.info-inner-conts p.bullet {
+	margin-top: 0;
+	font-size: var(--font-lv4);
+}
+.info-inner-conts ol {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.info-inner-conts ol li {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: var(--font-lv4);
+	list-style: decimal;
+}
+.info-inner-conts ol li p.bullet {
+	padding-left: 30px;
+}
+.info-inner-conts * > .bullet {margin-bottom: 8px;}
+.info-inner-conts * > .bullet:last-child { margin-bottom: 0;}
+/* 등록절차 */
+.info-inner-conts .reg-step {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.info-inner-conts .reg-step li {
+	flex: 1;
+}
+.info-inner-conts .reg-step li.step-arrow {
+	text-align: center;
+	margin-bottom: 25px;
+}
+.info-inner-conts .reg-step li span.step-img {
+	display: block;
+	width: 148px; height: 148px;
+	margin: 0 auto 6px;
+	font-size: 0;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50% auto;
+	border: 1px solid #27C2CB;
+	border-radius: 15px;
+}
+.info-inner-conts .reg-step li.step1 span.step-img {background-image: url(../../images/biz2/step/step_terms_agreement.svg);}
+.info-inner-conts .reg-step li.step2 span.step-img {background-image: url(../../images/biz2/step/step_identity_verification.svg);}
+.info-inner-conts .reg-step li.step3 span.step-img {background-image: url(../../images/biz2/step/step_application_form.svg);}
+.info-inner-conts .reg-step li.step4 span.step-img {background-image: url(../../images/biz2/step/step_manager_registration.svg);}
+.info-inner-conts .reg-step li.step5 span.step-img {background-image: url(../../images/biz2/step/step_attachment.svg);}
+.info-inner-conts .reg-step li.step6 span.step-img {background-image: url(../../images/biz2/step/step_completion.svg);}
+.info-inner-conts .reg-step li .step-num,
+.info-inner-conts .reg-step li .step-tit  {
+	display: block;
+	text-align: center;
+}
+.info-inner-conts .reg-step li .step-tit {
+	font-size: 24px;
 }

@@ -97,6 +97,9 @@
 		margin-top: 40px;
 		margin-bottom: 12px;
 	}
+	.conts-header.no-gap {
+		gap: 0;
+	}
 	.conts-header .search-areaa { order: 1;}
 	.conts-header .select-view { order: 2 }
 	.conts-header > .btns {
@@ -144,8 +147,8 @@
 
 	.page-header-tit{font-size:26px}
 	.page-header-desc{margin-top:12px;text-align:left}
-	.page-header{margin-bottom:40px}
-	.conts-header-data{font-size:14px}
+	.page-header{margin-bottom:40px;}
+	.conts-header-data{font-size:16px;}
 
 	.asterisk, 
 	.asterisk-list li{padding-left:19px;text-indent:-19px}
@@ -169,6 +172,10 @@
 
 	/* table 공통 */
 	table.sm-show-800{display:table !important}
+
+	.layer-pop :where(.com-view-table, .com-write-table) table th, 
+	.new-window-pop :where(.com-view-table, .com-write-table) table th {font-size: 18px;}
+
 	.com-write-table table th,
 	.com-write-table table td{height:56px;padding:8px}
 	.com-write-table colgroup col:nth-child(1),
@@ -191,6 +198,10 @@
 	.step-list .step {
 		width: calc(33.3333% - 48px);
 		flex: 1 1 auto;
+	}
+	.step-list.two-step .step {
+		width: auto;
+		flex: 0;
 	}
 	.step-list .step .step-icon {
 		max-width: 82px; height: 82px;
@@ -288,6 +299,7 @@
 	.available-tickets > li strong:not(.list-label) br{display:none}
 	.available-tickets .color-darkblue{font-size:16px}
 	.available-tickets > li .disc{width:100%;padding:10px 8px}
+	.available-tickets > li .disc .add-info {font-size: 16px;}
 	.available-tickets > li .disc .price{font-size:18px}
 	.available-tickets > li .disc .bullet-list{font-size:18px}
 	.available-tickets > li .btns{width:120px;margin:20px auto}
@@ -329,6 +341,8 @@
 	.usage-guide .flex-ac.mw-set{gap:5px}	
 	.usage-guide .search-box .search-list dl{display:block}	
 	.search-box .search-list .search-chk {padding-bottom: 0;}
+	.search-box .search-list :where(input[type="text"], select){border-radius: 6px;}
+
 	.usage-guide .search-box .search-list dt{margin-top:10px;padding-left:0;font-size:18px}
 	.usage-guide .search-box .search-list dt br{display:none}
 	.usage-guide .search-box .search-list dd{padding:5px 0}
@@ -402,7 +416,7 @@
 
 	/* 레이어 팝업 공통 */
 	.layer-pop .layer-content{padding:0 20px}
-	.layer-pop .layer-content .layer-scroll {padding: 48px 16px;}
+	.layer-pop .layer-content .layer-scroll {padding: 48px 16px 32px 16px;}
 
 	/* 레이어 내부 동의 박스 공통 */
 	.layer-pop .layer-agree-box {border-radius: 16px;}
@@ -423,6 +437,9 @@
 	.new-window-pop :where(.com-view-table, .com-write-table) th {font-size: 18px;}
 	.layer-pop :where(.com-view-table, .com-write-table) td,
 	.new-window-pop :where(.com-view-table, .com-write-table) td {font-size: 16px;}
+
+	/* 레이어 신청 정보 팝업 공통 */
+	.layer-pop [class*=layer-apply] .ico::before {width: 100px; height: 100px; background-size: cover;}
 
 	/* 레이어 상단 로고 공통 */
 	.layer-top-logo {left: 16px; width: 92px; height: 16px;}
@@ -657,7 +674,7 @@
 	.ticket-use-history.search-box{padding:12px 10px;background-color:var(--bg-color);border-radius:6px;}    
 	.ticket-use-history.search-box .search-list{align-items:center;}
 	.ticket-use-history.search-box .search-list dt{width:auto;padding-left:0;font-size:18px;}
-	.ticket-use-history.search-box .search-list dd{padding:0 10px;}
+	.ticket-use-history.search-box .search-list dd{padding:0 0 0 10px;}
 	.ticket-use-history.search-box .search-list dd select{width:100%;}
 	.ticket-use-history.search-box .btns{width:auto;height:40px;padding:7px 10px 6px 10px;margin:0;background-color:var(--blue);font-size:18px;}
 	.ticket-use-history.search-box .btns span.lg-only{display:none;}
@@ -694,16 +711,23 @@
 	.cs-center .conts-header .btns.w-auto{width:auto;min-width:100px;}
 	.cs-center .com-view-table+.asterisk{font-size:16px;}
 	.cs-center .table-list.class-list ul li{align-items:baseline;}
-	.cs-center .table-list.class-list ul li > strong{white-space:nowrap;}
-	/* // Parkjm */
+	.cs-center .table-list.class-list ul li > strong{white-space:nowrap;}	
+
+	.layer-border-box {padding: 16px; font-size: 18px; text-align: left;}
+	.layer-auth-agree > p {font-size: 14px; text-align: left;}
+	.layer-auth-agree .radio-wrap {justify-content: center; gap: 80px;}
+	.auth-res.info-area table .radio-wrap {flex-direction: column; gap: 10px;}
 }
 
 @media only screen and (max-width:800px){
+	.layer-pop table td .flex-ac.auth-num {justify-content: end;}
+	.layer-pop table td .flex-ac.auth-num input[type="number"]{width: 100%; flex: auto;}
+
 	/* dl dataset 자격검증 팝업 사용 */
-	.data-list dl dt {width: 96px; margin-right: 8px;}
+	/* .data-list dl dt {width: 96px; margin-right: 8px;}
 	.data-radio-list > .flex-ac {gap: 8px; flex-direction: column; align-items: flex-start;}
 	.auth-res .auth-res-detail {text-align: left;}
 	.auth-res .border-box-20:not(:has(>.auth-res-txt)) {padding: 20px 16px;}
 	.auth-res .border-box-20:has(>.auth-res-txt) {padding: 16px; font-size: 18px; text-align: left;}
-	.auth-res-br {display: block;}
+	.auth-res-br {display: block;} */
 }
