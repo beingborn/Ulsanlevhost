@@ -50,6 +50,7 @@ $(document).ready(function () {
     })
   }
 
+
   // 페이지 꽉차게 컨테이너 높이값 증가
   function adjustContainerHeight(){
     const fullWindowLocation = window.location.href;
