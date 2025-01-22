@@ -399,15 +399,29 @@
 	/* 레이어 팝업 공통 */
 	.layer-pop .layer-content{padding:0 20px}
 	.layer-pop .layer-content .layer-scroll {padding: 48px 16px 32px 16px;}
-	.layer-top-logo {left: 16px; width: 92px; height: 16px;}
+
+	/* 레이어 내부 동의 박스 공통 */
 	.layer-pop .layer-agree-box {border-radius: 16px;}
-	.layer-pop .layer-agree-box .chk-box input[type="text"]{width: 100%; margin-left: 0; margin-top: 10px;}
+	.layer-pop .layer-agree-box .chk-box input[type="text"]{max-width: none; margin-left: 0; margin-top: 10px;}
 	.layer-pop .layer-agree-box.txt-indent-20 .agree-detail :where(ul, h4, ol){padding-left: 0;}
 	.layer-pop .layer-agree-box.txt-indent-20 .agree-detail > ol > li > ul.num-counter > li {padding-left: 20px; text-indent: -20px;}
+
+	/* 레이어 상단 공통 */
 	.layer-pop .conts-header h3 {font-size: var(--font-lv5);}
+
+	/* 레이어 버튼 공통 */
 	.layer-pop .btns,
 	.new-window-pop .btns{width: 134px;}
 	.layer-content .layer-scroll .close-btn {right: 16px; top: 12px;}
+
+	/* 레이어 테이블 공통 */
+	.layer-pop :where(.com-view-table, .com-write-table) th,
+	.new-window-pop :where(.com-view-table, .com-write-table) th {font-size: 18px;}
+	.layer-pop :where(.com-view-table, .com-write-table) td,
+	.new-window-pop :where(.com-view-table, .com-write-table) td {font-size: 16px;}
+
+	/* 레이어 상단 로고 공통 */
+	.layer-top-logo {left: 16px; width: 92px; height: 16px;}
 
 	/* LMP_001 지차체 평생교육 상담센터 */
 	.main-search-box > input::placeholder{ color:transparent}

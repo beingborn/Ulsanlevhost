@@ -368,7 +368,7 @@
                         </tr>
                         <tr>
                             <th class="txt-l">소명자료 입력</th>
-                            <td colspan="3" class="txt-l"><button type="button" class="btns">소명자료 입력</button></td>
+                            <td colspan="3" class="txt-l"><button type="button" class="btns layer-btn" onclick="$('[data-pop=health-status]').show();">소명자료 입력</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -477,7 +477,7 @@
                         </tr>
                         <tr>
                             <th class="txt-l">소명자료 입력</th>
-                            <td class="txt-l"><button type="button" class="btns bg-blue">소명자료 입력</button></td>
+                            <td class="txt-l"><button type="button" class="btns bg-blue layer-btn" onclick="$('[data-pop=health-status]').show();">소명자료 입력</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -563,7 +563,7 @@
             </ul>
         </div>
         <div class="btns-bottom">
-            <a href="javascript:;" class="btns layer-btn green btn-list" onclick="$('[data-pop=health-status]').show();">목록</a>
+            <a href="javascript:;" class="btns green btn-list">목록</a>
             <a href="javascript:;" class="btns btn-bd green btn-list">삭제</a>
             <a href="javascript:;" class="btns btn-bd green btn-list">선정취소</a>
         </div>
@@ -632,12 +632,33 @@
                             <caption>건강보험료 소명결과 테이블</caption>
                             <colgroup>
                                 <col style="width: 190px;">
-                                <col style="width: 190px;">
+                                <col>
                             </colgroup>
                             <tbody>
                                 <tr>
                                     <th class="txt-c">가구원수</th>
                                     <td>3</td>
+                                </tr>
+                                <tr>
+                                    <th class="txt-c">가구원수</th>
+                                    <td>
+                                        <div class="radio-wrap">
+                                            <div class="radio-box">
+                                                <input type="radio" id="1" name="1" value="y" checked>
+                                                <label for="1">직장</label>
+                                            </div>
+                                            <div class="radio-box">
+                                                <input type="radio" id="2" name="1" value="n">
+                                                <label for="2">지역</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="txt-c">건강보험료 납부금액</th>
+                                    <td>
+                                        <input type="text" class="fixed-value">
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
