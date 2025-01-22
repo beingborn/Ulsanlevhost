@@ -1050,11 +1050,13 @@ table .total td{background-color:#E9F9FA}
 .layer-pop .filebox label {line-height: 48px;}
 .layer-pop .filebox .btns {height: 48px; width: auto;}
 
-/* 팝업 버튼 공통 */
-.layer-pop .btns,
-.new-window-pop .btns{padding:0 20px;width:120px;background:var(--pri)} /* 기본 버튼 고정값 초기화 */
-.layer-pop .search-box .btns, .layer-pop .com-view-table .btns {width: auto;}
-.layer-pop .com-view-table .btns {height: 40px; font-size: 15px;}
+/* 레이어 버튼 공통 */
+.layer-pop .layer-btn-wrap .btns,
+.new-window-pop .new-window-btn-wrap .btns{padding:0 20px;width:120px;background:var(--pri)} /* 기본 버튼 고정값 초기화 */
+.layer-pop .search-box .btns, 
+.layer-pop table .btns 
+{height: 48px; font-size: 18px;}
+
 .layer-btn-wrap, 
 .new-window-btn-wrap{text-align:center;margin-top:40px}
 .layer-btn-wrap .btns + .btns,
@@ -1092,8 +1094,14 @@ table .total td{background-color:#E9F9FA}
 .layer-pop .search-box.list .flex-ac{gap:20px;width:100%}
 
 /* 레이어 인풋 공통 */
-.layer-pop input[type="text"] {height: 40px;}
+.layer-pop input[type="text"], 
+.layer-pop input[type="number"],
+.layer-pop input[type="email"]
+{height: 40px;}
 .layer-pop .fixed-value {max-width: 230px; width: 100%;}
+.layer-pop table td .flex-ac {gap: 10px;}
+.layer-pop table td .flex-ac :where( input[type="text"], input[type="number"] ),
+.layer-pop table td .flex-ac :where( input[type="text"], input[type="number"] ) {flex: 1; min-width: 0;}
 
 /* 레이어 내부 테두리 박스 공통 */
 .layer-pop .layer-agree-box { padding: 20px; border: 1px solid var(--bd-color);  border-radius: 20px;}
@@ -1102,7 +1110,7 @@ table .total td{background-color:#E9F9FA}
 .layer-pop .layer-agree-box .chk-box label {align-items: flex-start;}
 .layer-pop .layer-agree-box .chk-box:has(input[type="text"]) label {flex: unset;}
 .layer-pop .layer-agree-box .chk-box input[type="text"] {margin-left: 8px;}
-.layer-pop .layer-agree-box + .layer-agree-header {margin-top: 20px;}
+.layer-pop .layer-agree-box + .layer-agree-header {margin-top: 20px; margin-bottom: 10px;}
 .layer-pop .layer-agree-box + :where(.com-view-table, .com-write-table) {margin-top: 20px;}
 
 /* 레이어 내부 테두리 박스 > 테이블 */

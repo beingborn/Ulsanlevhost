@@ -162,6 +162,8 @@
 	select, 
 	option{height:40px}
 	
+	.layer-pop .btns,
+	.new-window-pop .btns {width: auto;}
 	.btns{width:100%;height:40px;padding:9px 16px 8px;font-size:16px}
 	.btns.w-auto {width: auto;}
 
@@ -412,8 +414,8 @@
 	.layer-pop .conts-header h3 {font-size: var(--font-lv5);}
 
 	/* 레이어 버튼 공통 */
-	.layer-pop .btns,
-	.new-window-pop .btns{width: 134px;}
+	.layer-pop .layer-btn-wrap .btns,
+	.new-window-pop .new-window-btn-wrap .btns{width: 134px;}
 	.layer-content .layer-scroll .close-btn {right: 16px; top: 12px;}
 
 	/* 레이어 테이블 공통 */
@@ -660,6 +662,26 @@
 	.ticket-use-history.search-box .btns{width:auto;height:40px;padding:7px 10px 6px 10px;margin:0;background-color:var(--blue);font-size:18px;}
 	.ticket-use-history.search-box .btns span.lg-only{display:none;}
 
+	.ticket-use-history.search-box .search-list.search-list-col {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.ticket-use-history.search-box .search-list.search-list-col > dl {
+		display: flex;
+		gap: 10px;
+		width: 100%;
+	}
+	.ticket-use-history.search-box .search-list.search-list-col dt {
+		flex: 1 1 66px;
+	}
+	.ticket-use-history.search-box .search-list.search-list-col dd {
+		flex: 1 1 calc(100% - 66px);
+	}
+	.ticket-use-history.search-box .search-list.search-list-col button {
+		width: 100%;
+		text-align: center;
+		background-color: #383838;
+	}
 	.adjust-sm.search-box{padding:12px 10px;background-color:#00B3BE;border-radius:6px;}    
 	.adjust-sm.search-box .search-list {align-items: center;}
 	.adjust-sm.search-box .search-list dt{width:auto;padding-left:0;font-size:18px;color:var(--white);}
