@@ -102,7 +102,7 @@ footer .info-content address > span.tel { margin-top: 4px; }
 footer .info-content address > span.tel span + span { margin-left: 11px; }
 footer .info-content .link-area { position: relative; margin-top: 20px; border-top: 1px solid #AAA; padding: 20px 0 0 0; }
 footer .info-content .link-area .link-box { display: flex; column-gap: 26px; }
-footer .info-content .link-area .link-box a { font-size: 16px; font-weight: 500; line-height: 27px;  }
+footer .info-content .link-area .link-box a { font-size: 16px; font-weight: 500; line-height: 27px; text-decoration: none;}
 footer .info-content .link-area .link-box a.on { font-weight: bold; color: #003675; }
 footer .info-content .link-area .copy { display: block; margin-top: 11px; font-size: 16px; font-weight: 500; line-height: 27px;  }
 footer .info-content .link-area .support-box { display: flex; column-gap: 22px; position: absolute; right: 0; bottom: 0; }

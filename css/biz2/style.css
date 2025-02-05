@@ -283,7 +283,8 @@ input.readonly-txt[type="number"].no-border-init:read-only {
 .btns-bottom a,
 .btns-bottom button{width:100%;height:72px;padding:16px 10px;font-size:26px;font-weight:700;text-align:center}
 .btns-bottom :where(a, button) {border-width: 2px;} /* 신규 버튼 규칙 적용 (250115 이민혁) */
-
+.btn-download,
+.btn-download:hover, .btn-download:focus, .btn-download:active {background-color: transparent !important;}
 /* 공통 더보기 버튼 */
 .more-info-btn::before{content:'';display:inline-block;vertical-align:middle;background:url(../../images/biz2/ico/ico_more_btn.svg) no-repeat center;width:24px;height:24px}
 
@@ -390,10 +391,10 @@ ul.txt-indent-14 > li {padding-left: 14px; text-indent: -14px;}
 
 /* tooltip 공통 */
 .tooltip{position:relative}
-.tooltip-content{display:none;z-index:1;position:absolute;width:var(--width, 192px);text-align:left;padding:10px;color:#fff;background:#4C85BA;border-radius:10px;font-size:14px;font-weight:500;top:var(--y-pos, 100%);right:var(--x-pos, -10px);margin-top:12px}
-.tooltip-content::before{content:'';display:inline-block;width:14px;height:12px;position:absolute;right:34px;top:-10px;background:url(../../images/biz2/ico/ico_tooltip_arrow.svg) no-repeat center} 
-.tooltip-content .bullet-list{margin-top:0}
-.tooltip-content .bullet-list li{font-size:14px;padding-left:20px}
+.tooltip-content{display:none; z-index:1; position:absolute; width:var(--width, 246px); text-align:left; padding:12px; color:#fff; background:#4C85BA; border-radius:10px; font-weight:500; top:var(--y-pos, 100%); right:var(--x-pos, -28px); margin-top:12px;}
+.tooltip-content::before{content:''; display:inline-block; width:14px; height:12px; position:absolute; right:34px; top:-10px; background:url(../../images/biz2/ico/ico_tooltip_arrow.svg) no-repeat center;} 
+.useVc .tooltip-content .bullet-list{margin-top:0}
+.tooltip-content .bullet-list li{font-size:18px;padding-left:20px}
 .tooltip-content .bullet-list li::before{background-color:#fff}   
 .tooltip .tooltip-txt::after{content:'';display:inline-block;width:24px;height:24px;background:url(../../images/biz2/ico/ico_tooltip.svg) no-repeat center;vertical-align:middle;margin-left:10px}
 .tooltip:hover .tooltip-content{display:block} 
@@ -1258,10 +1259,11 @@ body(:not(.useVc)) .layer-pop :is(.com-view-table, .com-write-table) input[type=
 /* .layer-pop .layer-agree-box .conts-header:nth-of-type(1){margin-top: 0;} */
 
 
-.layer-pop .layer-agree-body {font-size: 16px;}
-.layer-pop .layer-agree-body .agree-detail li {font-size: 18px;}
-.layer-pop .layer-agree-input-group label {font-size: 14px;}
-.layer-pop .layer-agree-input-group input[type="text"] {width: 100%; max-width: 420px;}
+.layer-pop .layer-agree-body {font-size: var(--font-lv7);;}
+.layer-pop .layer-agree-body .agree-detail li {font-size: var(--font-lv6);}
+.layer-pop .layer-agree-input-group {margin-top: 20px;}
+.layer-pop .layer-agree-input-group label {font-size: var(--font-lv6);}
+.layer-pop .layer-agree-input-group input[type="text"] {width: 100%; max-width: 420px; margin-top: 8px;}
 .layer-pop .layer-agree-desc {margin-top: 10px;}
 .layer-pop .layer-agree-date {display: flex; justify-content: end; margin-top: 20px;}
 .layer-pop .layer-agree-sign {display: flex; justify-content: end; align-items: center; gap: 10px; margin-top: 20px;}
@@ -1627,7 +1629,7 @@ body(:not(.useVc)) .layer-pop :is(.com-view-table, .com-write-table) input[type=
 .user-event-box img {object-fit: cover; height: auto; width: 100%;}
 /* LIP_500 이용권 선정결과 */
 .ticket-result .border-box02{padding:60px 40px;border:1px solid var(--bd-color);border-radius:20px;}
-.ticket-result .border-box02 .txt{font-size:32px;font-weight:300;text-align:center;}
+.ticket-result .border-box02 .txt{font-size:32px;text-align:center;}
 .ticket-result .border-box02 .txt .name{margin-right:8px;}
 .ticket-result .color-blue02{color:#0CA2FF;}
 /* LIP_200 평생교육이용권 이용 내역 */

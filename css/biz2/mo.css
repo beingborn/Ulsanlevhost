@@ -27,8 +27,6 @@
 @media only screen and (min-width:1441px) and (max-width:1580px){
 	.fixed-quick{right:-50px}
 	.main-cont{justify-content:flex-start;gap:22px;}
-	.main-info-right{width:260px}
-	.more-link-area > a{font-size:23px}
 }
 
 @media only screen and (max-width:1440px){
@@ -667,6 +665,11 @@
 		display: inline-block;
 		margin: 0 6px;
 	}
+	.cs-center p strong.list-label::after,
+	.cs-center(:not(.online-cs)) p strong {
+		font-weight: 500;
+	}
+	.cs-center p strong.list-title {font-weight: 700;}
 	.contest .table-list ul li p span.list-bold,
 	.cs-center .table-list ul li p span.list-bold { font-weight: 700; }
 	.contest .table-list ul li p span.list-point,
@@ -684,11 +687,17 @@
 	.cs-center .com-write-table table tr td:not(.cont-area):first-child{border-left:1px solid var(--bd-color);}
 	.cs-center .com-write-table table tr td:not(.cont-area):last-child{border-right:1px solid var(--bd-color);}
 	.cs-center .com-write-table table td.cont-area dt{display:none;}
-	.cs-center .com-write-table table td.add-file .attached-file{height:56px;line-height:56px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;font-size:16px;color:#000;}
-	.cs-center .com-write-table table td.add-file .attached-file .ico-pdf{padding-left:16px;margin-right:4px;vertical-align:middle;}
+	.cs-center .com-write-table table td .attached-file{height:56px;line-height:56px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;font-size:16px;color:#000;}
+	.cs-center .com-write-table table td .attached-file .ico-pdf{padding-left:16px;margin-right:4px;vertical-align:middle;}
+	.btn-download,
 	.cs-center .com-write-table .btn-download{width:40px;min-width:40px;height:56px;background-color:transparent;}
+	.btn-download > span,
 	.cs-center .com-write-table .btn-download > span{display:block;overflow:hidden;font-size:0;line-height:0;position:absolute;text-indent:-9999px;width:1px;height:1px;}
-	.cs-center .com-write-table .btn-download::after{margin-left:0;margin-right:8px;background-image:url(../../images/biz2/ico/ico_download_black.svg);}
+	.btn-download::after,
+	.cs-center .com-write-table .btn-download::after{
+		content: ""; width: 24px; height: 24px; display: block;
+		margin-left:0; margin-right:8px;
+		background:url(../../images/biz2/ico/ico_download_black.svg) no-repeat center/cover }
 	.cs-center .com-write-table .article-list li{height:48px;line-height:48px;padding:0 0 0 16px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;}
 	/* LNP_202 자주하는질문 상세 */
 	.qna .conts-header{margin-bottom:20px;}
