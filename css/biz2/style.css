@@ -81,6 +81,7 @@
 .mw-set { max-width: var(--mw-set, 400px);}	/* fixed value set */
 
 /* Margin Style */
+.mt-20   { margin-top: 20px; }
 .mt-40   { margin-top: 40px; }
 .mt-80   { margin-top: 80px; }
 .mg-0    { margin: 0 !important; }
@@ -277,7 +278,7 @@ input.readonly-txt[type="number"].no-border-init:read-only {
 .btn-bd.black:active{border-color:#333 !important; background-color: #F7F9FC;}
 .btn-bd.blue.small{height:44px;padding:10px 12px;font-size:16px}
 .btn-search{display:inline-block;width:24px;height:24px;background:url(../../images/biz2/ico/ico_search.svg) no-repeat center;font-size:0}
-.btn-list{max-width:140px}
+.btn-list{max-width:160px}
 .btns-bottom{display:flex;justify-content:center;max-width:512px;margin:40px auto 0;gap:16px; width: 100%;}
 .btns-bottom a,
 .btns-bottom button{width:100%;height:72px;padding:16px 10px;font-size:26px;font-weight:700;text-align:center}
@@ -357,9 +358,6 @@ ul.txt-indent-14 > li {padding-left: 14px; text-indent: -14px;}
 .paging .num {display: flex; align-items: center; gap: 8px;}
 
 /* 레이어 및 이용약관 스크롤 공통 */
-/* 스크롤바가 생겨도 그 공간만큼 여백 확보를 하지않음 (확인 필요) */
-/* .layer-content .layer-scroll,
-.layer-agree-box { scrollbar-gutter: stable both-edges}  */
 .sm-table-scroll::-webkit-scrollbar-button:start,
 .sm-table-scroll::-webkit-scrollbar-button:end,
 .table-scroll::-webkit-scrollbar-button:start,
@@ -843,6 +841,7 @@ button.custom-select-open.is-open{background:#fff url(../../images/biz2/ico/ico_
 /* LAP_103 학습계획서 팝업 */
 .study-plan.info-area .study-guide-tit {margin-top: 40px;}
 .study-plan.info-area .conts-header:nth-of-type(1){margin-top: 20px;} 
+.study-plan .layer-agree-box .chk-box input {margin-right: 0;}
 .study-plan .layer-agree-box {counter-reset: number 0;}
 .study-plan .layer-agree-box .chk-box + .chk-box {margin-top: 10px;}
 .study-plan .layer-agree-box .chk-box label::before {white-space: nowrap; counter-increment: number 1; content: '' counter(number) ')'; margin: 0 8px;}
@@ -1143,6 +1142,8 @@ table .total td{background-color:#E9F9FA}
 
 
 /* layer style */
+.layer-pop p {font-size: 18px;}
+
 /* 레이어 bullet , ul, ol 공통 */
 .layer-pop :where(.bullet, .bullet-list) { font-size: 18px;}
 .layer-pop .layer-agree-box.txt-indent-20 .agree-detail :where(ul, h4, ol) {padding-left: 20px;}
@@ -1175,9 +1176,6 @@ table .total td{background-color:#E9F9FA}
 .layer-pop .search-box dl.search-view dt {width: 80px;}
 .layer-pop .search-box dl.search-view dd {flex: 1;}
 .layer-pop .search-box dl.search-view dd :where(input, select) {width: 100%;}
-
-/* 팝업 동의 라벨 공통 */
-.layer-pop .chk-box label {font-weight: 300;}
 
 /* 팝업 업로드 공통 */
 .layer-pop .filebox {padding: 20px; border-radius: 12px; border: 1px solid var(--bd-color); background: var(--bg-color);} 
@@ -1231,6 +1229,7 @@ table .total td{background-color:#E9F9FA}
 .layer-pop .search-box.list .flex-ac{gap:20px;width:100%}
 
 /* 레이어 인풋 공통 */
+body(:not(.useVc)) .layer-pop :is(.com-view-table, .com-write-table) input[type="text"], 
 .layer-pop :is(.com-view-table, .com-write-table) input[type="text"], 
 .layer-pop :is(.com-view-table, .com-write-table) select 
 {height: 40px;}
@@ -1245,6 +1244,7 @@ table .total td{background-color:#E9F9FA}
 
 /* 레이어 내부 테두리 박스 공통 */
 .layer-pop .layer-agree-box { padding: 20px; border: 1px solid var(--bd-color);  border-radius: 20px;}
+.layer-pop .layer-agree-box :is(input[type="text"], select) {height: 40px;}
 .layer-pop .layer-agree-box.agree-list { margin: 40px auto; background-color: var(--bg-color);}
 .layer-pop .layer-agree-box.layer-scroll-box {max-height: 540px; overflow: auto;}
 .layer-pop .layer-agree-box .chk-box {align-items: flex-start; flex-wrap: wrap;}
@@ -2041,3 +2041,12 @@ img.screenshot {
 .useVc .layer-search-box.single-line dl:not(.w-100) {flex: none;}
 .useVc .layer-search-box.single-line dl:not(.w-100) dd :is(input,select) {width: 252px;}
 .useVc .layer-search-box.single-line dl.w-100 dd :is(input,select) {width: 100%;}
+
+
+.type-wrap .chk-box input:checked ~ input[type="text"] {display: block !important;}
+.list-btn-box {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.list-btn-box .bullet-list {font-weight: 500;}

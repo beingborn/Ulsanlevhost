@@ -60,6 +60,12 @@
 	.button-layer {position: fixed; transform: translate(-50%, -50%); left: 50%!important; top: 50%!important; right: auto!important; width: calc(100% - 40px); min-height: fit-content;}
 }
 
+
+@media only screen and (max-width: 1240px){
+	/* Max-width 1200px Content */
+	.layer-pop .layer-content {padding: 0 20px;}
+}
+
 @media only screen and (max-width:1080px){
 	p.bullet, .basic-info th .btn-bd, .basic-info button+.flex-ac, .basic-info .flex-ac+.flex-ac {
 		margin-top: 12px;
@@ -195,7 +201,7 @@
 	textarea,
 	select, 
 	option{height:40px}
-	
+	.layer-pop .com-write-table .auth-num input {height: 40px!important;}
 	.layer-pop .btns,
 	.new-window-pop .btns {width: auto;}
 	.btns{width:100%;height:40px;padding:9px 16px 8px;font-size:16px}
@@ -256,8 +262,9 @@
 	}
 	/* 구분선 공통 */
 	hr{margin:40px 0; border-bottom: 2px solid var(--bd-color);}
+	.result-chk {margin: 120px auto 80px;}
 
-	.btns-bottom{max-width:100%;margin-top:40px}
+	.btns-bottom{max-width:100%;margin-top:40px; gap: 8px;}
 	.btns-bottom a, 
 	.btns-bottom button{height:48px;padding:10px;font-size:20px; padding: 0; line-height: 48px;}
 
@@ -457,7 +464,6 @@
 	.term-box p + p {margin-top: 8px;}
 
 	/* 레이어 팝업 공통 */
-	.layer-pop .layer-content{padding:0 20px}
 	.layer-pop .layer-content .layer-scroll {padding: 48px 16px 32px 16px;}
 	.layer-content .layer-scroll > .title {font-size: 24px;}
 	/* .layer-pop .layer-agree-body .agree-detail li {font-size: 16px;} */
@@ -465,7 +471,7 @@
 	.layer-pop :is(.chk-box, .radio-box) label {font-size: var(--font-lv6);}
 	.layer-pop :is(.com-view-table, .com-write-table) td p.bullet {font-size: var(--font-lv6)!important;}
 	/* 레이어 내부 동의 박스 공통 */
-	.layer-pop .layer-agree-box {border-radius: 16px; padding: 20px 5px 20px 20px;}
+	.layer-pop .layer-agree-box {border-radius: 16px; padding: 20px;}
 	.layer-pop .layer-agree-box .chk-box input[type="text"]{max-width: none; margin-left: 0; margin-top: 10px;}
 	.layer-pop .layer-agree-box.txt-indent-20 .agree-detail :where(ul, h4, ol){padding-left: 0;}
 	.layer-pop .layer-agree-box.txt-indent-20 .agree-detail > ol > li > ul.num-counter > li {padding-left: 20px; text-indent: -20px;}
@@ -942,6 +948,19 @@
 	}
 	.info-inner-conts .use-rule-list li span.step-img {
 		max-width: 80px;
+	}
+	.list-btn-box {
+		margin-top: 12px;
+		flex-direction: column;
+		gap: 12px;
+	}
+	.list-btn-box button {
+		width: auto !important;
+		order: 1;
+		margin-left: auto;
+	}
+	.list-btn-box .bullet-list {
+		order: 2;
 	}
 }
 

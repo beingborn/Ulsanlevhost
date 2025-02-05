@@ -129,7 +129,7 @@ $.fn.hasScrollBar = function(){
   || (this.prop("scrollHeight") > this.prop("clientHeight"));
 }
 
-// 레이어 스크롤바 제외 패딩 셋
+// 레이어 스크롤바 제외 패딩 셋팅
 function layerPaddingSet(onClickPop){
   let targetEl = $(`[data-pop="${onClickPop}"]`);
   let $targetElScroll = targetEl.find('.layer-scroll')
