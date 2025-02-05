@@ -16,7 +16,7 @@
     <title>울산광역시 평생교육이용권</title>
 </head>
 
-<body>
+<body class="useVc">
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
@@ -24,11 +24,10 @@
             </a>
         </div>
         <div class="menu-area">
-            <!-- 로그인 시 -->
             <a href="#" class="log-info">
-                <span class="log-info-txt">로그아웃</span>
+                <span class="log-info-txt"><strong>홍길동</strong>님 로그아웃</span>
             </a>
-            <a href="#" class="log-info">
+            <a href="IMP_012.html" class="log-info">
                 <span class="log-info-txt">담당자 정보 수정</span>
             </a>
             <button class="open-btn">
@@ -48,7 +47,7 @@
                         <div class="link-item">
                             <a href="IIP_800.html">사용기관 등록 신청 현황</a>
                             <a class="hidden" href="#">이용권 사용내역</a>
-                            <a href="#">교육결과 관리</a>
+                            <a href="IIP_150.html">교육결과 관리</a>
                             <a class="hidden" href="#">교육과정 정보</a>
                             <a class="hidden" href="#">학습자 정보</a>
                             <a class="hidden" href="IIP_400.html">기관 정보 수정</a>
@@ -92,7 +91,7 @@
                 <li><strong>참여목적 : </strong>평생교육이용권 사용기관 업무 효율성 및 정보보호 인식 제고</li>
                 <li><strong>참여일정 : </strong>2024-11-14(월)~2024-12-30(금)</li>
                 <li><strong>참여방법 : </strong>아래 교육프로그램 바로가기 클릭</li>
-                <li><strong>참고사항 : </strong>바로가기 버튼을 클릭해도 이동하지 않을 경우 <a class="color-primary" href="https:/www.test.co.kr" target="_blank" >https:/www.test.co.kr</a>로 이동해주세요.</li>
+                <li><strong>참고사항 : </strong>바로가기 버튼을 클릭해도 이동하지 않을 경우 <a class="col-pri" href="https:/www.test.co.kr" target="_blank" >https:/www.test.co.kr</a>로 이동해주세요.</li>
             </ul>
             <div class="conts-header">
                 <h3>교육 프로그램</h3>
@@ -101,9 +100,9 @@
                 <table class="table-edu">
                     <caption>교육 프로그램 안내 테이블</caption>
                     <colgroup>
-                        <col style="width: 30%;">
+                        <col style="width: 340px;">
                         <col>
-                        <col style="width: 20%;">
+                        <col style="width: 180px;">
                     </colgroup>
                     <thead>
                         <tr>
@@ -154,69 +153,92 @@
                         <small class="ico">관련내용 : 개인정보보호법이란?</small>
                     </p>
                     <div class="flex-ac">
-                        <button type="button" class="btns bg-pri">맞아요</button>
-                        <button type="button" class="btns bg-gray no-sign">아니에요</button>
+                        <button type="button" class="btns bg-gray">맞아요</button>
+                        <button type="button" class="btns no-sign">아니에요</button>
                     </div>
                 </dd>
             </dl>
+            <!-- 20250131 :: 추가 -->
+            <div class="quz-box">
+                <p><span class="col-blue">영상 N편 모두 시청 후</span> 퀴즈 응모 가능합니다.</p>
+            </div>
             <div class="btns-bottom">
                 <button type="submit" class="btns mw-140">정답제출</button>
-            </div>      
+            </div>
+            <!-- 20250203 :: 응모 결과 추가 -->
+            <dl class="quiz-area quiz-result">
+                <dt>O/X 퀴즈 정답확인<span class="quiz-date">퀴즈 응모일 : <span>2024-12-04</span></span></dt>
+                <dd class="flex-acjs">
+                    <p>
+                        <span>Q1 .</span> 개인정보보호법은 사용기관에서 지켜야 할 필요가 없다.
+                        <small class="ico">관련내용 : 개인정보보호법이란?</small>
+                    </p>
+                    <div class="flex-ac">
+                        <button type="button" class="btns bg-pri">정답</button>
+                    </div>
+                </dd>
+                <dd class="flex-acjs">
+                    <p>
+                        <span>Q2 .</span> 개인정보보호법은 사용기관에서 지켜야 할 필요가 없다.
+                        <small class="ico">관련내용 : 개인정보보호법이란?</small>
+                    </p>
+                    <div class="flex-ac">
+                        <button type="button" class="btns bg-pri">정답</button>
+                    </div>
+                </dd>
+                <dd class="flex-acjs">
+                    <p>
+                        <span>Q3 .</span> 개인정보보호법은 사용기관에서 지켜야 할 필요가 없다.
+                        <small class="ico">관련내용 : 개인정보보호법이란?</small>
+                    </p>
+                    <div class="flex-ac">
+                        <button type="button" class="btns no-sign">오답</button>
+                    </div>
+                </dd>
+            </dl>
+            <strong class="result-tlt">아쉬워요! 4개의 퀴즈를 모두 틀리셨습니다.</strong>
+            <!-- // 20250203 :: 응모 결과 추가 -->
         </div>
     </div>
     <footer class="wrap">
-        <div class="info-content">
-            <div class="family-select-wrap">
-                <div class="family-select-lg custom-select-box" >
-                    <button class="custom-select-open">관련 사이트</button>
-                    <ul class="family-site-list custom-select-list">
-                        <li><a href="#">국가평생교육진흥원 독학학위제</a></li>
-                        <li><a href="#">학점은행제 정보공시제(알리미)</a></li>
-                        <li><a href="#">평생학습계좌제</a></li>
-                        <li><a href="#">학점은행제</a></li>
-                        <li><a href="#">평생학습포털 늘배움</a></li>
-                        <li><a href="#">국가평생진흥원</a></li>
-                        <li><a href="#">교육부</a></li>
-                        <li><a href="#">고용노동부</a></li>
-                        <li><a href="#">한국진흥원</a></li>
-                        <li><a href="#">관련사이트10</a></li>
-                        <li><a href="#">관련사이트11</a></li>
-                        <li><a href="#">관련사이트12</a></li>
-                        <li><a href="#">관련사이트13</a></li>
-                        <li><a href="#">관련사이트14</a></li>
+            <div class="info-content">
+                <div>
+                    <ul class="foot-logo">
+                        <li><img src="../images/biz2/logo/footer_logo_2.svg" alt="평생교육이용권 로고"></li>
                     </ul>
+                    <address>
+                        <div>
+                            <strong>대표전화 : 1600-3005</strong>
+                            <span>(04520) 서울특별시 중구 청계천로 14 (무교동77)</span>
+                        </div>
+                        <div class="flex-col gap-8">
+                            <span>평일 09시~18시 운영(점심시간 12:00~13:00 제외)</span>
+                            <span>주말 및 공휴일 휴무</span>
+                        </div>
+                    </address>
+                    <div class="family-select-lg custom-select-box">
+                        <button class="custom-select-open">관련 사이트</button>
+                        <ul class="family-site-list custom-select-list">
+                            <li><a href="https://www.moe.go.kr/main.do?s=moe" target="_blank">교육부</a></li>
+                            <li><a href="https://www.nile.or.kr/index.do" target="_blank">국가평생교육진흥원</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">온국민평생배움터</a></li>
+                            <li><a href="https://www.cb.or.kr/creditbank/base/cdMain.do" target="_blank">학점은행제</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">평생학습계좌제</a></li>
+                            <li><a href="https://www.cbinfo.or.kr" target="_blank">학점은행제 정보공시제(알리미)</a></li>
+                            <li><a href="https://bdes.nile.or.kr:444/nile/base/bdesMain.do" target="_blank">국가평생교육진흥원 독학학위제</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-area gap-10">
+                    <div class="link-box">
+                        <a href="ITP_001.html">이용약관</a>
+                        <a href="ITP_002.html" class="on">개인정보처리방침</a>
+                    </div>
+                    <span class="copy">
+                        COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS RESERVED.
+                    </span>
                 </div>
             </div>
-            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
-            <address>
-                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
-                <span class="tel"><span class="txt-bold">대표전화</span><span><span class="txt-bold">1600-3005</span> (평일 09시~18시)</span></span>
-            </address>
-            <div class="link-area">
-                <div class="link-box">
-                    <a href="#">이용약관</a>
-                    <a href="#" class="on">개인정보처리방침</a>
-                    <a href="#">저작권정책</a>
-                    <a href="#">이메일무단수집거부</a>
-                </div>
-                <span class="copy">
-                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
-                    RESERVED.
-                </span>
-                <div class="support-box">
-                    <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
-                    </a>
-                    <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
-                    </a>
-                    <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
-                    </a>
-                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 </html>

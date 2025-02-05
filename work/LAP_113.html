@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/biz2/layout.css">
     <link rel="stylesheet" href="../css/biz2/main.css">
     <link rel="stylesheet" href="../css/biz2/style.css">
-    <link rel="stylesheet" href="../css/biz2/mo.css">
     <link rel="stylesheet" href="../css/biz2/swiper-bundle.min.css">
     <script src="../js/biz2/jquery.1.8.2.min.js"></script>
     <script src="../js/biz2/swiper-bundle.min.js"></script>
@@ -60,12 +59,21 @@
                         </table>
                     </div>
                     <div class="layer-border-box">
-                        홍길동님은 선택하신 충청남도 <span class="col-pri">평생교육이용권(디지털형)</span>을 <br class="lg-only">신청하실 수 있습니다.
+                        <!-- 20250205 :: 구조 추가 -->
+                        <!-- 자격 상태 -->
+                        <div>
+                            <strong>홍길동님은 선택하신 충청남도 <span class="col-pri">평생교육이용권(디지털형)</span>을 <br class="lg-only">신청하실 수 있습니다.</strong>
+                        </div>
+                        <!-- 미자격 상태 -->
+                        <div class="flex-col gap-12">
+                            <strong>홍길동님은 선택하신 서울시 성동구 <span class="col-pri">평생교육이용권(디지털형)</span>을 <br class="lg-only">3차는 아래와 같은 사유로 대상자에 해당되지 않습니다.</strong>
+                            <hr>
+                            <strong class="col-red">*사유 : 자격요건 : 장애 여부, 출생연도</strong>
+                        </div>
                     </div>
                     <div class="layer-auth-agree">
                         <p>
-                            위 신청 자격을 확인하였으며, 이에 동의하고 신청을 진행합니다. <br class="lg-only">
-                            지금부터 작성하는 서류는 해당 지자체장 및 국가평생교육진흥원장에게 귀속됩니다.
+                            위 신청 자격을 확인하였으며, 이에 동의하고 신청을 진행합니다. <br class="lg-only">지금부터 작성하는 서류는 해당 지자체장 및 국가평생교육진흥원장에게 귀속됩니다.
                         </p>
                         <div class="radio-wrap">
                             <div class="radio-box">

@@ -23,10 +23,13 @@
         </div>
         <div class="menu-area">
             <!-- 로그인 시 -->
-            <!-- <a href="#" class="log-info">
-                <img src="../images/biz2/ico/ico_loguser.svg" alt="로그인 유저 아이콘, 로그아웃 아이콘">
+            <!-- <a href="#" class="log-info">                
                 <span class="log-info-txt">로그아웃</span>
             </a> -->
+            <!-- 20250204 :: 로그인 전 텍스트 추가 -->
+            <!-- <a href="#" class="log-info">
+                <span class="log-info-txt">로그인</span>
+            </a> -->            
             <button class="open-btn">
                 <span class="blind">메뉴 열기</span>
             </button>
@@ -51,8 +54,8 @@
                             <a href="LAP_100.html">평생교육이용권 신청</a>
                             <a href="LAP_002.html">우수이용자 신청</a>
                             <a class="hidden" href="#">이의제기 신청</a>
-                            <a href="LAP_300.html">선정 포기 신청</a>
-                            <a href="LAP_400.html">수기 공모 신청</a>
+                            <a href="LAP_300.html">선정포기 신청</a>
+                            <a href="LAP_400.html">수기공모 신청</a>
                         </div>
                     </li>
                     <li>
@@ -115,7 +118,7 @@
                                 <li><a href="LAP_002.html">우수이용자 신청</a></li>
                                 <li><a href="#" class="hidden">이의제기신청</a></li>
                                 <li><a href="LAP_300.html">선정 취소 신청</a></li>
-                                <li><a href="LAP_400.html">수기 공모 신청</a></li>
+                                <li><a href="LAP_400.html">수기공모 신청</a></li>
                             </ul>
                         </div> 
                         <div class="sm-sub-menu">
@@ -160,31 +163,31 @@
         <ul class="step-list flex-acjc">
             <li class="step step-prev lg-only">
                 <span class="step-icon step_terms_agreement"></span>
-                <span class="step-name">01</span>
+                <span class="step-name">1단계</span>
                 <strong class="step-tit">약관동의</strong>
             </li>
             <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-prev lg-only">
                 <span class="step-icon step_identity_verification"></span>
-                <span class="step-name">02</span>
-                <strong class="step-tit">본인인증 및 자격검증</strong>
+                <span class="step-name">2단계</span>
+                <strong class="step-tit">본인인증 및 <br class="lg-only">자격검증</strong>
             </li>
             <li class="step-arrow lg-only"><img src="../images/biz2/step/step_arrow.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-prev">
                 <span class="step-icon step_application_form"></span>
-                <span class="step-name">03</span>
+                <span class="step-name">3단계</span>
                 <strong class="step-tit">신청서 작성</strong>
             </li>
             <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-active">
                 <span class="step-icon step_user_commitment"></span>
-                <span class="step-name">04</span>
+                <span class="step-name">4단계</span>
                 <strong class="step-tit">이용자 서약</strong>
             </li>
             <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
             <li class="step step-next">
                 <span class="step-icon step_completion"></span>
-                <span class="step-name">05</span>
+                <span class="step-name">5단계</span>
                 <strong class="step-tit">신청완료</strong>
             </li>
         </ul>
@@ -196,10 +199,11 @@
             <h5 class="agree-tit">평생교육이용권 신청을 위한 필수사항 및 이용자 준수사항 확인에 대한 확약동의서에 동의하시겠습니까?</h5>
             <div class="agree">
                 <div>
-                    <span>확약동의서</span>
-                    <button class="agree-btn layer-btn" onclick="$('[data-pop=commit-agree]').show();">내용보기</button>
+                    <strong>확약동의서</strong>
                 </div>
                 <div class="agree-radio">
+                    <!-- 20250205 :: 위치 변경 -->
+                    <button class="agree-btn layer-btn" onclick="$('[data-pop=commit-agree]').show();">내용보기</button>
                     <div class="radio-box">
                         <input type="radio" id="agree1" name="agree1" value="no">
                         <label for="agree1">동의안함</label>
@@ -218,7 +222,7 @@
         <div class="info-content">
             <div>
                 <ul class="foot-logo">
-                    <li><img src="../images/biz2/logo/footer_logo_local_government.svg" alt="울산광역시 로고"></li>
+                    <!-- 20250204 :: 로고 요소 삭제  -->
                     <li><img src="../images/biz2/logo/footer_logo_2.svg" alt="평생교육이용권 로고"></li>
                 </ul>
                 <address>

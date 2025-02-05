@@ -15,7 +15,7 @@
     <script src="../js/biz2/script.js"></script>
     <title>울산광역시 평생교육이용권</title>
 </head>
-<body>
+<body class="useVc">
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
@@ -23,11 +23,10 @@
             </a>
         </div>
         <div class="menu-area">
-            <!-- 로그인 시 -->
             <a href="#" class="log-info">
-                <span class="log-info-txt">로그아웃</span>
+                <span class="log-info-txt"><strong>홍길동</strong>님 로그아웃</span>
             </a>
-            <a href="#" class="log-info">
+            <a href="IMP_012.html" class="log-info">
                 <span class="log-info-txt">담당자 정보 수정</span>
             </a>
             <button class="open-btn">
@@ -47,7 +46,7 @@
                         <div class="link-item">
                             <a href="IIP_800.html">사용기관 등록 신청 현황</a>
                             <a class="hidden" href="#">이용권 사용내역</a>
-                            <a href="#">교육결과 관리</a>
+                            <a href="IIP_150.html">교육결과 관리</a>
                             <a class="hidden" href="#">교육과정 정보</a>
                             <a class="hidden" href="#">학습자 정보</a>
                             <a class="hidden" href="IIP_400.html">기관 정보 수정</a>
@@ -118,22 +117,31 @@
                                 </dd>                    
                             </dl>
                             <dl>
-                                <dt><label for="srch02">평생교육이용권 유형</label></dt>
+                                <!-- 20250131 :: 명칭 변경 -->
+                                <dt><label for="srch02">이용권 유형</label></dt>
                                 <dd>
                                     <select name="" id="srch02">
                                         <option value="">전체</option>
+                                        <option value="">01</option>
+                                        <option value="">02</option>
+                                        <option value="">03</option>
+                                        <option value="">04</option>
                                     </select>
                                 </dd>                    
                             </dl>
+                            <!-- 20250131 :: 구조 변경 -->
                             <dl class="period">
                                 <dt><label for="srch03">승인기간</label></dt>                            
-                                <dd>
-                                    <input type="date" id="srch03" class="date" placeholder="확인차"> <span class="dash">~</span> <input type="date" class="date">
-                                    <span class="btn-wrap">
-                                        <button type="button" class="btn-bd">2024</button>
-                                        <button type="button" class="btn-bd">2023</button>
+                                <dd class="flex-ac gap-10">
+                                    <input type="date" id="srch03" class="date">
+                                    <span class="dash">~</span>
+                                    <input type="date" class="date">
+                                    <span class="flex-ac gap-10">
+                                        <!-- 활성화된 버튼에 클래스 is-active 추가하면 스타일이 적용됩니다. -->
+                                        <button type="button" class="btn-bd black is-active">2024</button>
+                                        <button type="button" class="btn-bd black">2023</button>
                                     </span>
-                                    <small class="txt-s">(연도별 전체 검색시)</small>
+                                    <small class="txt-s mg-0">(연도별 전체 검색 시)</small>
                                 </dd>                 
                             </dl>
                             <dl>
@@ -295,59 +303,45 @@
         </div>
     </div>     
     <footer class="wrap">
-        <div class="info-content">
-            <div class="family-select-wrap">
-                <div class="family-select-lg custom-select-box" >
-                    <button class="custom-select-open">관련 사이트</button>
-                    <ul class="family-site-list custom-select-list">
-                        <li><a href="#">국가평생교육진흥원 독학학위제</a></li>
-                        <li><a href="#">학점은행제 정보공시제(알리미)</a></li>
-                        <li><a href="#">평생학습계좌제</a></li>
-                        <li><a href="#">학점은행제</a></li>
-                        <li><a href="#">평생학습포털 늘배움</a></li>
-                        <li><a href="#">국가평생진흥원</a></li>
-                        <li><a href="#">교육부</a></li>
-                        <li><a href="#">고용노동부</a></li>
-                        <li><a href="#">한국진흥원</a></li>
-                        <li><a href="#">관련사이트10</a></li>
-                        <li><a href="#">관련사이트11</a></li>
-                        <li><a href="#">관련사이트12</a></li>
-                        <li><a href="#">관련사이트13</a></li>
-                        <li><a href="#">관련사이트14</a></li>
+            <div class="info-content">
+                <div>
+                    <ul class="foot-logo">
+                        <li><img src="../images/biz2/logo/footer_logo_2.svg" alt="평생교육이용권 로고"></li>
                     </ul>
+                    <address>
+                        <div>
+                            <strong>대표전화 : 1600-3005</strong>
+                            <span>(04520) 서울특별시 중구 청계천로 14 (무교동77)</span>
+                        </div>
+                        <div class="flex-col gap-8">
+                            <span>평일 09시~18시 운영(점심시간 12:00~13:00 제외)</span>
+                            <span>주말 및 공휴일 휴무</span>
+                        </div>
+                    </address>
+                    <div class="family-select-lg custom-select-box">
+                        <button class="custom-select-open">관련 사이트</button>
+                        <ul class="family-site-list custom-select-list">
+                            <li><a href="https://www.moe.go.kr/main.do?s=moe" target="_blank">교육부</a></li>
+                            <li><a href="https://www.nile.or.kr/index.do" target="_blank">국가평생교육진흥원</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">온국민평생배움터</a></li>
+                            <li><a href="https://www.cb.or.kr/creditbank/base/cdMain.do" target="_blank">학점은행제</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">평생학습계좌제</a></li>
+                            <li><a href="https://www.cbinfo.or.kr" target="_blank">학점은행제 정보공시제(알리미)</a></li>
+                            <li><a href="https://bdes.nile.or.kr:444/nile/base/bdesMain.do" target="_blank">국가평생교육진흥원 독학학위제</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-area gap-10">
+                    <div class="link-box">
+                        <a href="ITP_001.html">이용약관</a>
+                        <a href="ITP_002.html" class="on">개인정보처리방침</a>
+                    </div>
+                    <span class="copy">
+                        COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS RESERVED.
+                    </span>
                 </div>
             </div>
-            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
-            <address>
-                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
-                <span class="tel"><span class="txt-bold">대표전화</span><span><span class="txt-bold">1600-3005</span> (평일 09시~18시)</span></span>
-            </address>
-            <div class="link-area">
-                <div class="link-box">
-                    <a href="#">이용약관</a>
-                    <a href="#" class="on">개인정보처리방침</a>
-                    <a href="#">저작권정책</a>
-                    <a href="#">이메일무단수집거부</a>
-                </div>
-                <span class="copy">
-                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
-                    RESERVED.
-                </span>
-                <div class="support-box">
-                    <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
-                    </a>
-                    <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
-                    </a>
-                    <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
-                    </a>
-                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
     <div class="layer-pop" data-pop="learn-info">
         <div class="layer-content">
             <div class="layer-scroll">
@@ -382,9 +376,8 @@
                     </div>
                     <ul class="bullet-list add-notice">
                         <li>등록된 개명정보의 경우 성명란에 (개명후 성명) 으로 조회됩니다.</li>
-                        <li>미등록된 개명정보의 경우 "<em class="col-red">개명확인필요</em>"로 조회됩니다.
-                        <br>이 경우 해당 사용자를 통해 평생교육바우처정보를 갱신하도록 요청하시기 바랍니다.
-                        </li>
+                        <li>미등록된 개명정보의 경우 "<em class="col-blue">개명확인필요</em>"로 조회됩니다.</li>
+                        <li>이 경우 해당 사용자를 통해 평생교육이용권 정보를 갱신하도록 요청하시기 바랍니다.</li>
                     </ul>
                     <div class="layer-btn-wrap">
                         <button class="btns" onclick="$('[data-pop=learn-info]').hide();">닫기</button>
@@ -399,10 +392,21 @@
             <div class="layer-scroll">
                 <span class="title">교육과정 매핑</span>
                 <div class="info-area">
-                    <div class="search-box">
-                        <label for="name">교육과정명</label>
-                        <input type="text" id="name">
-                        <button class="btns bg-blue">검색</button>
+                    <!-- 20250131 :: 클래스 추가 -->
+                    <!-- 20250203 :: 구조 변경 -->
+                    <div class="search-box layer-search-box single-line">
+                        <form class="w-100">
+                            <fieldset>
+                                <legend>교육과정명 검색</legend>
+                                <div class="search-list">
+                                    <dl class="w-100">
+                                        <dt class="fixed-value"><label for="1">교육과정명</label></dt>
+                                        <dd><input type="text" id="1"></dd>
+                                        <button class="btns w-auto">검색</button>
+                                    </dl>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                     <ul class="bullet-list layer-notice-list">
                         <li class="layer-notice-desc">선택한 학습자 결제 승인일 이전의 종료일을 가진 강좌만 검색 됩니다.</li>
@@ -421,7 +425,7 @@
                                 <col style="width: 112px;">
                                 <col style="width: 110px;">
                                 <col style="width: 110px;">
-                                <col style="width: 160px;">
+                                <col style="width: 100px;">
                             </colgroup>
                             <thead>
                                 <tr>
@@ -470,12 +474,13 @@
                             </tbody>
                         </table>
                     </div>
+                    <!-- 20250131 :: 클래스 추가 -->
                     <div class="layer-text-box">
                         <ul class="layer-text-list">
                             <li class="layer-text-tit col-red"><strong>※ 학습자 정보 추가 전 유의사항</strong></li>
-                            <li class="layer-text-desc"><span class="dash">-</span> <em class="col-blue"> 이용권 카드 본인사용 확인</em>(카드결제 정보내 이름과 실제 수강자명 일치여부 확인)</li>
-                            <li class="layer-text-desc"><span class="dash">-</span> 평생교육강좌 수강료 및 이에 해당하는 교재 외 결제, 등록불가(교재 단독 결제 불가)</li>
-                            <li class="layer-text-desc">※ 평생교육이용권 본인외 사용 및 목적외 사용 확인시 이용자 안내 후 카드 취소 처리 요청</li>
+                            <li class="layer-text-desc bullet"><em class="col-blue">이용권 카드 본인사용 확인</em>(카드결제 정보내 이름과 실제 수강자명 일치여부 확인)</li>
+                            <li class="layer-text-desc bullet">평생교육강좌 수강료 및 이에 해당하는 교재 외 결제, 등록불가(교재 단독 결제 불가)</li>
+                            <li class="layer-text-desc bullet">평생교육이용권 본인외 사용 및 목적외 사용 확인시 이용자 안내 후 카드 취소 처리 요청</li>
                         </ul>
                     </div>
                     <div class="layer-btn-wrap">
@@ -496,11 +501,12 @@
                             <table>
                                 <caption></caption>
                                 <colgroup>
-                                    <col>
-                                    <col style="width: auto;">
-                                    <col>
-                                    <col>
-                                    <col>
+                                    <!-- 20250131 :: 컬럼 길이 수정 -->
+                                    <col style="width: 132px;">
+                                    <col style="width: 245px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 110px;">
                                 </colgroup>
                                 <thead>
                                     <tr>

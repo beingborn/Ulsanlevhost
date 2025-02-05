@@ -16,7 +16,7 @@
     <title>울산광역시 평생교육이용권</title>
 </head>
 
-<body>
+<body class="useVc">
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
@@ -24,11 +24,10 @@
             </a>
         </div>
         <div class="menu-area">
-            <!-- 로그인 시 -->
             <a href="#" class="log-info">
-                <span class="log-info-txt">로그아웃</span>
+                <span class="log-info-txt"><strong>홍길동</strong>님 로그아웃</span>
             </a>
-            <a href="#" class="log-info">
+            <a href="IMP_012.html" class="log-info">
                 <span class="log-info-txt">담당자 정보 수정</span>
             </a>
             <button class="open-btn">
@@ -48,7 +47,7 @@
                         <div class="link-item">
                             <a href="IIP_800.html">사용기관 등록 신청 현황</a>
                             <a class="hidden" href="#">이용권 사용내역</a>
-                            <a href="#">교육결과 관리</a>
+                            <a href="IIP_150.html">교육결과 관리</a>
                             <a class="hidden" href="#">교육과정 정보</a>
                             <a class="hidden" href="#">학습자 정보</a>
                             <a class="hidden" href="IIP_400.html">기관 정보 수정</a>
@@ -85,10 +84,11 @@
             <h2 class="page-header-tit">교육결과 관리</h2>
         </div>
         <div class="contents">
+            <!-- 20250131 :: 구조 변경 -->
             <div class="search-box">
                 <form>
                     <fieldset>
-                        <legend>교육결과 관리 검색영역</legend>
+                        <legend>교육결과 관리 정보 및 검색영역</legend>
                         <div class="search-list">
                             <dl class="search-view">
                                 <dt><label>사용기관명</label></dt>
@@ -99,7 +99,7 @@
                                 <dd>ooooo</dd>
                             </dl>
                             <dl class="search-view">
-                                <dt><label>사업자등록번호</label></dt>
+                                <dt><label>사업자등록<br>번호</label></dt>
                                 <dd>000-00-00000</dd>
                             </dl>
                             <dl class="search-view">
@@ -108,11 +108,11 @@
                             </dl>
                             <dl>
                                 <dt><label for="srch01">과정명</label></dt>
-                                <dd><input type="text" id="srch01"></dd>                  
+                                <dd><input type="text" id="srch01" class="w-100"></dd>                  
                             </dl>
                             <dl>
                                 <dt><label for="srch02">온/오프<br>(교육방법)</label></dt>
-                                <dd class="flex-ac">
+                                <dd class="flex-ac period">
                                     <select id="srch02" class="w-100">
                                         <option value="none">전체</option>
                                         <option value="1">온라인</option>
@@ -123,7 +123,7 @@
                             </dl>
                             <dl>
                                 <dt><label for="srchA">교육 시작일</label></dt>
-                                <dd class="flex-ac period flexible-width">
+                                <dd class="flex-ac period">
                                     <input type="date" class="date">
                                     -
                                     <input type="date" class="date" placeholder="">
@@ -137,29 +137,6 @@
                                     <input type="date" class="date" placeholder="">
                                 </dd>
                             </dl>
-
-                            <dl>
-                                <dt><label for="srch03">교육년도</label></dt>                            
-                                <dd class="flex-ac">
-                                    <select id="srch03" class="w-100">
-                                        <option value="none">2024</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2021">2021</option>
-                                    </select>
-                                </dd>                 
-                            </dl>
-                            <dl>
-                                <dt><label for="srch04">교육차수</label></dt>
-                                <dd class="flex-ac">
-                                    <select id="srch04" class="w-100">
-                                        <option value="none">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                    </select>
-                                </dd>      
-                            </dl>
                             <dl>
                                 <dt><label for="srch05">이수현황</label></dt>
                                 <dd class="flex-ac">
@@ -172,7 +149,7 @@
                                 </dd>                
                             </dl>
                             <dl>
-                                <dt><label for="srch06">평생교육이용권 유형</label></dt>
+                                <dt><label for="srch06">이용권 유형</label></dt>
                                 <dd class="flex-ac">
                                     <select id="srch06" class="w-100">
                                         <option value="none">전체</option>
@@ -182,42 +159,40 @@
                                     </select>
                                 </dd>                
                             </dl>
-                            <dl class="exception-area has-chk-inner">
+                            <dl>
                                 <dt>7대 영역</dt>
-                                <dd class="flex-ac">
-                                    <div class="chk-wrap flex-ac">
-                                        <div class="chk-box">
-                                            <input type="checkbox" id="chk-0">
-                                            <label for="chk-0">전체</label>
-                                        </div>
-                                        <div class="chk-box">
-                                            <input type="checkbox" id="chk-1">
-                                            <label for="chk-1">학력보완교육</label>
-                                        </div>
-                                        <div class="chk-box">
-                                            <input type="checkbox" id="chk-2">
-                                            <label for="chk-2">성인 문해교육</label>
-                                        </div>
-                                        <div class="chk-box">
-                                            <input type="checkbox" id="chk-3">
-                                            <label for="chk-3">직업능력 향상교육</label>
-                                        </div>
-                                        <div class="chk-box">
-                                            <input type="checkbox" id="chk-4">
-                                            <label for="chk-4">성인 진로개발역량 향상교육</label>
-                                        </div>
-                                        <div class="chk-box">
-                                            <input type="checkbox" id="chk-5">
-                                            <label for="chk-5">인문교양교육</label>
-                                        </div>
-                                        <div class="chk-box">
-                                            <input type="checkbox" id="chk-6">
-                                            <label for="chk-6">문화예술교육</label>
-                                        </div>
-                                        <div class="chk-box">
-                                            <input type="checkbox" id="chk-7">
-                                            <label for="chk-7">시민참여교육</label>
-                                        </div>
+                                <dd class="flex-ac full-value bg-white chk-box">
+                                    <div>
+                                        <input type="checkbox" id="chk-0">
+                                        <label for="chk-0">전체</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="chk-1">
+                                        <label for="chk-1">학력보완교육</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="chk-2">
+                                        <label for="chk-2">성인 문해교육</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="chk-3">
+                                        <label for="chk-3">직업능력 향상교육</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="chk-5">
+                                        <label for="chk-5">인문교양교육</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="chk-6">
+                                        <label for="chk-6">문화예술교육</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="chk-7">
+                                        <label for="chk-7">시민참여교육</label>
+                                    </div>
+                                    <div class="max-size">
+                                        <input type="checkbox" id="chk-4">
+                                        <label for="chk-4">성인 진로개발역량 향상교육</label>
                                     </div>
                                 </dd>                 
                             </dl>
@@ -230,7 +205,6 @@
                 <div class="conts-header">
                     <p class="conts-header-data">총 <strong>6,456</strong>건</p>
                     <div class="btn-wrap">
-                        <button type="button" class="btns bg-blue">등록</button>
                         <button type="button" class="btns bg-blue">엑셀 다운로드</button>
                     </div>
                 </div>
@@ -311,6 +285,9 @@
                                 <td>교육완료</td>
                             </tr>
                             <tr>
+                                <td colspan="9">검색 결과가 없습니다.</td>
+                            </tr>
+                            <tr>
                                 <td colspan="9">교육 과정이 없습니다.</td>
                             </tr>
                         </tbody>
@@ -345,59 +322,45 @@
         </div>
     </div>    
     <footer class="wrap">
-        <div class="info-content">
-            <div class="family-select-wrap">
-                <div class="family-select-lg custom-select-box" >
-                    <button class="custom-select-open">관련 사이트</button>
-                    <ul class="family-site-list custom-select-list">
-                        <li><a href="#">국가평생교육진흥원 독학학위제</a></li>
-                        <li><a href="#">학점은행제 정보공시제(알리미)</a></li>
-                        <li><a href="#">평생학습계좌제</a></li>
-                        <li><a href="#">학점은행제</a></li>
-                        <li><a href="#">평생학습포털 늘배움</a></li>
-                        <li><a href="#">국가평생진흥원</a></li>
-                        <li><a href="#">교육부</a></li>
-                        <li><a href="#">고용노동부</a></li>
-                        <li><a href="#">한국진흥원</a></li>
-                        <li><a href="#">관련사이트10</a></li>
-                        <li><a href="#">관련사이트11</a></li>
-                        <li><a href="#">관련사이트12</a></li>
-                        <li><a href="#">관련사이트13</a></li>
-                        <li><a href="#">관련사이트14</a></li>
+            <div class="info-content">
+                <div>
+                    <ul class="foot-logo">
+                        <li><img src="../images/biz2/logo/footer_logo_2.svg" alt="평생교육이용권 로고"></li>
                     </ul>
+                    <address>
+                        <div>
+                            <strong>대표전화 : 1600-3005</strong>
+                            <span>(04520) 서울특별시 중구 청계천로 14 (무교동77)</span>
+                        </div>
+                        <div class="flex-col gap-8">
+                            <span>평일 09시~18시 운영(점심시간 12:00~13:00 제외)</span>
+                            <span>주말 및 공휴일 휴무</span>
+                        </div>
+                    </address>
+                    <div class="family-select-lg custom-select-box">
+                        <button class="custom-select-open">관련 사이트</button>
+                        <ul class="family-site-list custom-select-list">
+                            <li><a href="https://www.moe.go.kr/main.do?s=moe" target="_blank">교육부</a></li>
+                            <li><a href="https://www.nile.or.kr/index.do" target="_blank">국가평생교육진흥원</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">온국민평생배움터</a></li>
+                            <li><a href="https://www.cb.or.kr/creditbank/base/cdMain.do" target="_blank">학점은행제</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">평생학습계좌제</a></li>
+                            <li><a href="https://www.cbinfo.or.kr" target="_blank">학점은행제 정보공시제(알리미)</a></li>
+                            <li><a href="https://bdes.nile.or.kr:444/nile/base/bdesMain.do" target="_blank">국가평생교육진흥원 독학학위제</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-area gap-10">
+                    <div class="link-box">
+                        <a href="ITP_001.html">이용약관</a>
+                        <a href="ITP_002.html" class="on">개인정보처리방침</a>
+                    </div>
+                    <span class="copy">
+                        COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS RESERVED.
+                    </span>
                 </div>
             </div>
-            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
-            <address>
-                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
-                <span class="tel"><span class="txt-bold">대표전화</span><span><span class="txt-bold">1600-3005</span> (평일 09시~18시)</span></span>
-            </address>
-            <div class="link-area">
-                <div class="link-box">
-                    <a href="#">이용약관</a>
-                    <a href="#" class="on">개인정보처리방침</a>
-                    <a href="#">저작권정책</a>
-                    <a href="#">이메일무단수집거부</a>
-                </div>
-                <span class="copy">
-                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
-                    RESERVED.
-                </span>
-                <div class="support-box">
-                    <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
-                    </a>
-                    <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
-                    </a>
-                    <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
-                    </a>
-                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
     <div class="layer-pop" data-pop="pop-1">
         <div class="layer-content" style="--max-width: 840px">
             <div class="layer-scroll">

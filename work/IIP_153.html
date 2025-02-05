@@ -16,7 +16,7 @@
     <title>울산광역시 평생교육이용권</title>
 </head>
 
-<body>
+<body class="useVc">
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
@@ -26,9 +26,9 @@
         <div class="menu-area">
             <!-- 로그인 시 -->
             <a href="#" class="log-info">
-                <span class="log-info-txt">로그아웃</span>
+                <span class="log-info-txt"><strong>홍길동</strong>님 로그아웃</span>
             </a>
-            <a href="#" class="log-info">
+            <a href="IMP_012.html" class="log-info">
                 <span class="log-info-txt">담당자 정보 수정</span>
             </a>
             <button class="open-btn">
@@ -48,7 +48,7 @@
                         <div class="link-item">
                             <a href="IIP_800.html">사용기관 등록 신청 현황</a>
                             <a class="hidden" href="#">이용권 사용내역</a>
-                            <a href="#">교육결과 관리</a>
+                            <a href="IIP_150.html">교육결과 관리</a>
                             <a class="hidden" href="#">교육과정 정보</a>
                             <a class="hidden" href="#">학습자 정보</a>
                             <a class="hidden" href="IIP_400.html">기관 정보 수정</a>
@@ -77,14 +77,12 @@
             <div class="location-box">
                 <span class="arrow">사용기관</span>
                 <span class="arrow">교육결과 관리</span>
-                <span class="arrow">교육결과 관리 상세</span>
-                <span class="arrow">교육결과 관리 수정</span>
             </div>
         </div>
     </div>
     <div class="container wrap">
         <div class="page-header">
-            <h2 class="page-header-tit">교육결과 관리 수정</h2>
+            <h2 class="page-header-tit">교육결과 관리</h2>
         </div>
         <div class="contents course-info">
             <div class="conts-header">
@@ -142,10 +140,12 @@
                             <th class="txt-l"><label for="srch02">과정명</label></th>
                             <td><input type="text" id="srch02" class="readonly-txt" value="과정명" readonly /></td>
                             <th class="txt-l"><label for="srch03">교육기간</label></th>
-                            <td class="input-reset flex-ac">
-                                <input type="text" id="srch03" class="readonly-txt" value="2024-12-12" readonly />
-                                ~
-                                <input type="text" class="readonly-txt" value="2024-12-12" readonly />
+                            <td>
+                                <div class="input-reset flex-ac gap-10">
+                                    <input type="text" id="srch03" class="readonly-txt" value="2024-12-12" readonly />
+                                    <span>~</span>
+                                    <input type="text" class="readonly-txt" value="2024-12-12" readonly />
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -320,92 +320,73 @@
         </div>
     </div>
     <footer class="wrap">
-        <div class="info-content">
-            <div class="family-select-wrap">
-                <div class="family-select-lg custom-select-box" >
-                    <button class="custom-select-open">관련 사이트</button>
-                    <ul class="family-site-list custom-select-list">
-                        <li><a href="#">국가평생교육진흥원 독학학위제</a></li>
-                        <li><a href="#">학점은행제 정보공시제(알리미)</a></li>
-                        <li><a href="#">평생학습계좌제</a></li>
-                        <li><a href="#">학점은행제</a></li>
-                        <li><a href="#">평생학습포털 늘배움</a></li>
-                        <li><a href="#">국가평생진흥원</a></li>
-                        <li><a href="#">교육부</a></li>
-                        <li><a href="#">고용노동부</a></li>
-                        <li><a href="#">한국진흥원</a></li>
-                        <li><a href="#">관련사이트10</a></li>
-                        <li><a href="#">관련사이트11</a></li>
-                        <li><a href="#">관련사이트12</a></li>
-                        <li><a href="#">관련사이트13</a></li>
-                        <li><a href="#">관련사이트14</a></li>
+            <div class="info-content">
+                <div>
+                    <ul class="foot-logo">
+                        <li><img src="../images/biz2/logo/footer_logo_2.svg" alt="평생교육이용권 로고"></li>
                     </ul>
+                    <address>
+                        <div>
+                            <strong>대표전화 : 1600-3005</strong>
+                            <span>(04520) 서울특별시 중구 청계천로 14 (무교동77)</span>
+                        </div>
+                        <div class="flex-col gap-8">
+                            <span>평일 09시~18시 운영(점심시간 12:00~13:00 제외)</span>
+                            <span>주말 및 공휴일 휴무</span>
+                        </div>
+                    </address>
+                    <div class="family-select-lg custom-select-box">
+                        <button class="custom-select-open">관련 사이트</button>
+                        <ul class="family-site-list custom-select-list">
+                            <li><a href="https://www.moe.go.kr/main.do?s=moe" target="_blank">교육부</a></li>
+                            <li><a href="https://www.nile.or.kr/index.do" target="_blank">국가평생교육진흥원</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">온국민평생배움터</a></li>
+                            <li><a href="https://www.cb.or.kr/creditbank/base/cdMain.do" target="_blank">학점은행제</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">평생학습계좌제</a></li>
+                            <li><a href="https://www.cbinfo.or.kr" target="_blank">학점은행제 정보공시제(알리미)</a></li>
+                            <li><a href="https://bdes.nile.or.kr:444/nile/base/bdesMain.do" target="_blank">국가평생교육진흥원 독학학위제</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-area gap-10">
+                    <div class="link-box">
+                        <a href="ITP_001.html">이용약관</a>
+                        <a href="ITP_002.html" class="on">개인정보처리방침</a>
+                    </div>
+                    <span class="copy">
+                        COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS RESERVED.
+                    </span>
                 </div>
             </div>
-            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
-            <address>
-                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
-                <span class="tel"><span class="txt-bold">대표전화</span><span><span class="txt-bold">1600-3005</span> (평일 09시~18시)</span></span>
-            </address>
-            <div class="link-area">
-                <div class="link-box">
-                    <a href="#">이용약관</a>
-                    <a href="#" class="on">개인정보처리방침</a>
-                    <a href="#">저작권정책</a>
-                    <a href="#">이메일무단수집거부</a>
-                </div>
-                <span class="copy">
-                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
-                    RESERVED.
-                </span>
-                <div class="support-box">
-                    <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
-                    </a>
-                    <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
-                    </a>
-                    <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
-                    </a>
-                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
     <div class="layer-pop" data-pop="detail-com">
         <div class="layer-content" style="--max-width: 1200px">
             <div class="layer-scroll">
                 <span class="title">이수현황 학습자 정보 추가</span>
                 <div class="info-area">
-                    <div class="search-box search-multi">
-                        <dl class="search-view">
-                            <dt>
-                                <label for="">성명</label>
-                            </dt>
-                            <dd>
-                                <input type="text">
-                            </dd>
-                        </dl>
-                        <dl class="search-view">
-                            <dt>
-                                <label for="">승인일자</label>
-                            </dt>
-                            <dd>
-                                <input type="date" placeholder="이용권 선정(날짜)">
-                            </dd>
-                        </dl>
-                        <dl class="search-view">
-                            <dt>
-                                <label for="">승인번호</label>
-                            </dt>
-                            <dd>
-                                <input type="date" placeholder="이용권 선정(날짜)">
-                            </dd>
-                        </dl>
-                        <div class="search-btn-group">
-                            <button class="btns bg-blue">검색</button>
-                        </div>
+                    <!-- 20250131 :: 구조 수정 -->
+                    <!-- 20250203 :: 구조 변경 -->
+                    <div class="search-box layer-search-box single-line">
+                        <form>
+                            <fieldset>
+                                <legend>이수현황 학습자 정보 검색영역</legend>
+                                <div class="search-list">
+                                    <dl>
+                                        <dt><label for="1">성명</label></dt>
+                                        <dd><input type="text" id="1"></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><label for="1">승인일자</label></dt>
+                                        <dd class="date"><input type="date" placeholder="이용권 선정(날짜)" /></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><label for="3">승인번호</label></dt>
+                                        <dd><input type="number" /></dd>
+                                        <button class="btns w-auto">검색</button>
+                                    </dl>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                     <div class="table-box">
                         <div class="conts-header">
@@ -414,30 +395,48 @@
                             </p>
                         </div>
                         <div class="com-view-table">
+                            <!-- 20250131 :: 구조 수정 -->
                             <table>
                                 <colgroup>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
+                                    <col style="width: 75px">
+                                    <col style="width: 90px">
+                                    <col style="width: 138px">
+                                    <col style="width: 130px">
+                                    <col style="width: 140px">
+                                    <col style="width: 140px">
+                                    <col style="width: auto">
+                                    <col style="width: 206px">
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th>카드번호</th>
-                                        <th>승인금액</th>
-                                        <th>승인일시</th>
+                                        <th>선택</th>
                                         <th>성명</th>
                                         <th>생년월일</th>
+                                        <th>지역</th>
+                                        <th>이용권 유형</th>
+                                        <th>승인금액</th>
+                                        <th>승인일시</th>
+                                        <th>이수현황</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1111-****-****-1212</td>
-                                        <td>20,000</td>
-                                        <td>2024-09-12 14:12:22</td>
+                                        <td><input type="radio" /></td>
                                         <td>홍길동</td>
-                                        <td>99.12.12</td>
+                                        <td>1975-12-31</td>
+                                        <td>부산광역시</td>
+                                        <td>노인</td>
+                                        <td>20,000원</td>
+                                        <td>2024-09-12 14:12:22</td>
+                                        <td>
+                                            <select class="ui-select">
+                                                <option value="y">이수</option>
+                                                <option value="n">미이수</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="8">검색된 데이터가 없습니다.</td>
                                     </tr>
                                 </tbody>
                             </table>

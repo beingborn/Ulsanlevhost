@@ -16,7 +16,7 @@
     <title>울산광역시 평생교육이용권</title>
 </head>
 
-<body>
+<body class="useVc">
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
@@ -26,9 +26,9 @@
         <div class="menu-area">
             <!-- 로그인 시 -->
             <a href="#" class="log-info">
-                <span class="log-info-txt">로그아웃</span>
+                <span class="log-info-txt"><strong>홍길동</strong>님 로그아웃</span>
             </a>
-            <a href="#" class="log-info">
+            <a href="IMP_012.html" class="log-info">
                 <span class="log-info-txt">담당자 정보 수정</span>
             </a>
             <button class="open-btn">
@@ -48,7 +48,7 @@
                         <div class="link-item">
                             <a href="IIP_800.html">사용기관 등록 신청 현황</a>
                             <a class="hidden" href="#">이용권 사용내역</a>
-                            <a href="#">교육결과 관리</a>
+                            <a href="IIP_150.html">교육결과 관리</a>
                             <a class="hidden" href="#">교육과정 정보</a>
                             <a class="hidden" href="#">학습자 정보</a>
                             <a class="hidden" href="IIP_400.html">기관 정보 수정</a>
@@ -84,245 +84,314 @@
         <div class="tab-area">
             <ul class="tab-list">
                 <li role="tab" aria-selected="true" aria-controls="tab-1" data-tab="tab-1">
-                    <a href="#tab-1">평생교육이용권이란?</a>
+                    <a href="LGP_001.html?#tab-1"><span>평생교육이용권이란?</span></a>
                 </li>
-                <li role="tab" aria-selected="false" aria-controls="tab-2" data-tab="tab-2" >
-                    <a href="#tab-2">평생교육이용권 사용하기</a>
+                <li role="tab" aria-selected="false" aria-controls="tab-2" data-tab="tab-2">
+                    <a href="LGP_001.html?#tab-2"><span>평생교육이용권 사용하기</span></a>
                 </li>
             </ul>
             <div class="tab-conts-wrap">
-                <div id="tab-1" role="tab-panel" class="tab-cont">
-                    <div class="page-header">
-                        <h2 class="page-header-tit">평생교육이용권이란?</h2>
-                        <p class="page-header-desc">평생교육이용권에서는 신청 자격에 따라 디지털 이용권, 노인이용권, 지자체 이용권 3개의 이용권을 제공하고 있습니다.</p>
+                <div id="tab-1" role="tab-panel" class="tab-cont relative">
+                    <div class="info-tit-box">
+                        <h2 class="info-tit">평생교육이용권이란?</h2>
+                        <div class="info-box sub-txt"><p>평생교육법 제2조 등에 따라 학습자 본인의 학습 요구에 따라 자율적으로 학습 활동을 결정하고 참여할 수 있도록 정부가 제공하는 평생교육이용권입니다.</p></div>
                     </div>
-                    <div class="ticket flex-ac">
-                        <img src="./../images/biz2/img/img_graph.png" alt="평생교육이용권 1인당 연간  35만원 (우수이용자 70만원) 지원 그래프">
-                        <div class="ticket-desc">
-                            <dl class="list01">
-                                <dt>이용권 유형</dt>
-                                <dd>지역특화 (저소득층) 이용권</dd>
-                                <dd>디지털 이용권</dd>
-                                <dd>노인 이용권</dd>
-                            </dl>
-                            <dl class="list02">
-                                <dt>지원 인원</dt>
-                                <dd>102명</dd>
-                                <dd>102명</dd>
-                                <dd>102명</dd>
-                            </dl>
-                            <dl class="list03">
-                                <dt>지원 금액</dt>
-                                <dd>1인당 35만원</dd>
-                                <dd>1인당 35만원</dd>
-                                <dd>1인당 35만원</dd>
-                            </dl>
-                            <dl class="list04">
-                                <dt>사용처</dt>
-                                <dd class="txt-l">평생교육이용권 사용기관으로 등록된 기관의 수강료, 해당 강좌의 교재비</dd>
-                                <dd class="txt-l">평생교육이용권 사용기관으로 등록된 기관의 수강료, 해당 강좌의 교재비</dd>
-                                <dd class="txt-l">평생교육이용권 사용기관으로 등록된 기관의 수강료, 해당 강좌의 교재비</dd>
-                            </dl>
-                            <dl class="list05">
-                                <dt>신청자격 확인</dt>
-                                <dd>30대 이상 성인</dd>
-                                <dd>30대 이상 성인</dd>
-                                <dd>30대 이상 성인</dd>
-                            </dl>
+                    <div class="info-conts">
+                        <div class="info-inner-conts">
+                            <div class="img-conts">
+                                <img src="../images/biz2/lgp001.png" alt="평생교육이용권 유형" class="lg-only">
+                                <img src="../images/biz2/lgp001.png" alt="평생교육이용권 유형" class="sm-show-800">
+                                <div class="button-conts">
+                                    <button type="button" class="btn-1" data-popup="region" >
+                                        <span class="blind">지역특화형</span>
+                                    </button>
+                                    <div class="flex-ac">
+                                        <button type="button" class="btn-2" data-popup="digital"><span class="blind">디지털형</span></button>
+                                        <button type="button" class="btn-3" data-popup="oldman"><span class="blind">노인형</span></button>
+                                    </div>
+                                    <div class="btn-center"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-inner-conts">
+                            <div class="mo-info-box">
+                                <h3>평생교육이용권 사용기관이란?</h3>
+                                <div class="info-box sub-txt">
+                                    <p>평생교육이용권 카드를 사용하여 수강료를 결제할 수 있는 기관을 의미합니다.<br><br class="sm-show-800">평생교육이용권 이용자에게 우수한 평생교육 강좌 참여기회를 제공하고, 지속적인 학습 참여를 독려하는 역할을 수행합니다.</p>
+                                </div>
+                            </div>
+                            <p class="bullet">세부 자격 및 지원 내용은 주민등록등본상 주소지용권 홈페이지에서 확인하시기 바랍니다.</p>
+                        </div>
+                        <div class="info-inner-conts">
+                            <h3>평생교육이용권 사용기관 유형</h3>
+                            <ul class="num-counter">
+                                <li>「평생교육법」에 따라 인가·등록·신고된 시설·법인 또는 단체</li>
+                                <li>「학원의 설립ㆍ운영 및 과외교습에 관한 법률」에 따른 학원 중 교과교습학원을 제외한 평생직업교육을 실시하는 학원</li>
+                                <li>그 밖에 다른 법령에 따라 평생교육을 주된 목적으로 하는 시설·법인 또는 단체기관<p class="bullet">「평생교육법」 제2조에 따른 평생교육기관</p></li>
+                            </ul>
+                        </div>
+                        <div class="info-inner-conts">
+                            <h3>평생교육이용권 사용기관으로 등록하기</h3>
+                            <h4>등록절차</h4>
+                            <ul class="info-box reg-step">
+                                <li class="step step1">
+                                    <span class="step-img">약관동의</span>
+                                    <span class="step-num">1단계</span>
+                                    <strong class="step-tit">약관동의</strong>
+                                </li>
+                                <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음단계"></li>
+                                <li class="step step2">
+                                    <span class="step-img">본인인증</span>
+                                    <span class="step-num">2단계</span>
+                                    <strong class="step-tit">본인인증</strong>
+                                </li>
+                                <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음단계"></li>
+                                <li class="step step3">
+                                    <span class="step-img">신청서 작성</span>
+                                    <span class="step-num">3단계</span>
+                                    <strong class="step-tit">신청서 작성</strong>
+                                </li>
+                                <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음단계"></li>
+                                <li class="step step4">
+                                    <span class="step-img">담당자 등록</span>
+                                    <span class="step-num">4단계</span>
+                                    <strong class="step-tit">담당자 등록</strong>
+                                </li>
+                                <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음단계"></li>
+                                <li class="step step5">
+                                    <span class="step-img">첨부</span>
+                                    <span class="step-num">5단계</span>
+                                    <strong class="step-tit">첨부</strong>
+                                </li>
+                                <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음단계"></li>
+                                <li class="step step6">
+                                    <span class="step-img">작성완료</span>
+                                    <span class="step-num">6단계</span>
+                                    <strong class="step-tit">작성완료</strong>
+                                </li>
+                            </ul>
+                            <div>
+                                <p class="bullet">신청 기간 및 방법 : 온라인 상시접수</p>
+                                <p class="bullet">평생교육시설 신고증을 발급받은 광역지자체의 평생교육이용권 홈페이지 내 사용기관 등록 메뉴</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="conts-header">
-                        <h3>우수이용자</h3>
+                    <div class="button-layer" data-pop="region" style="display: none;">
+                        <h2 class="button-layer-tit">지역특화형</h2>
+                        <div class="flex-col">
+                            <h3>신청자격</h3>
+                            <p class="bullet">19세 이상 성인 중 기초생활수급자, 차상위계층</p>
+                            <p class="bullet">19세 이상 성인 중 주민등록등본 주소지 상의 광역 지자체가 공고하는 조건에 부합하는 사람</p>
+                        </div>
+                        <div class="flex-col">
+                            <h3>지원내용</h3>
+                            <p>1인당 35만원</p>
+                        </div>
+                        <div class="flex-col">
+                            <h3>사용처</h3>
+                            <p>평생교육이용권 사용기관의 강좌 수강료, 해당 강좌의 교재비</p>
+                        </div>
+                        <button class="button-layer-close" onclick="$('[data-pop=region]').hide();">
+                            <span class="blind">버튼 레이어 닫기</span>
+                        </button>
+                    </div>
+                    <div class="button-layer" data-pop="digital" style="display: none;">
+                        <h2 class="button-layer-tit">디지털형(AID 커리어 점프 패스)</h2>
+                        <div class="flex-col">
+                            <h3>신청자격</h3>
+                            <p class="bullet">30세 이상 성인 중 기초생활수급자, 차상위계층</p>
+                            <p class="bullet">30세 이상 성인 중 주민등록등본 주소지 상의 광역 지자체가 공고하는 조건에 부합하는 사람</p>
+                        </div>
+                        <div class="flex-col">
+                            <h3>지원내용</h3>
+                            <p>1인당 35만원</p>
+                        </div>
+                        <div class="flex-col">
+                            <h3>사용처</h3>
+                            <p><span class="col-red">디지털 평생교육이용권 사용기관</span>의 강좌 수강료, 해당 강좌의 교재비</p>
+                        </div>
+                        <button class="button-layer-close" onclick="$('[data-pop=digital]').hide();">
+                            <span class="blind">버튼 레이어 닫기</span>
+                        </button>
+                    </div>
+                    <div class="button-layer" data-pop="oldman" style="display: none;">
+                        <h2 class="button-layer-tit">노인형</h2>
+                        <div class="flex-col">
+                            <h3>신청자격</h3>
+                            <p class="bullet">65세 이상 성인 중 기초생활수급자, 차상위계층</p>
+                            <p class="bullet">65세 이상 성인 중 주민등록등본 주소지 상의 광역 지자체가 공고하는 조건에 부합하는 사람</p>
+                        </div>
+                        <div class="flex-col">
+                            <h3>지원내용</h3>
+                            <p>1인당 35만원</p>
+                        </div>
+                        <div class="flex-col">
+                            <h3>사용처</h3>
+                            <p>평생교육이용권 사용기관의 강좌 수강료, 해당 강좌의 교재비</p>
+                        </div>
+                        <button class="button-layer-close" onclick="$('[data-pop=oldman]').hide();">
+                            <span class="blind">버튼 레이어 닫기</span>
+                        </button>
                     </div>
                 </div>
                 <div id="tab-2" role="tab-panel" class="tab-cont">
-                    <div class="page-header">
-                        <h2 class="page-header-tit">이용권 사용방법</h2>
+                    <div class="info-tit-box">
+                        <h2 class="info-tit">평생교육이용권 사용방법</h2>
+                        <div class="info-box sub-txt">
+                            <p>세부 일정 및 결과 통지는 광역 지자체에서 선정하므로 관련 문의는 광역 지자체로 하시기 바랍니다.</p>
+                        </div>
                     </div>
-                    <div class="use-ticket">
-                        <div class="blue-box bg">
-                            <div class="conts-header">
-                                <h3>평생교육이용권 사용방법</h3>                            
+                    <div class="info-conts">
+                        <div class="info-inner-conts arrow-down">
+                            <div class="mo-info-box">
+                                <h3>평생교육이용권 사용방법</h3>
+                                <div class="info-box sub-txt">
+                                    <h4>① 공고 확인</h4>
+                                    <p>평생교육이용권 주소지 광역 지자체 홈페이지에서 공고 확인<br>(예: 주민등록등본상의 주소지가 강원특별자치도 00시인 32세 기초생활수급자 A는 강원평생교육이용권 홈페이지에서 확인)</p>
+                                </div>
                             </div>
-                            <p class="txt">학습자가 평생교육이용권 카드를 발급 받아<br>
-                                온/오프라인으로 평생교육이용권에 등록된 사용기관의 강좌를<br>
-                                신청할 수 있습니다.</p>
-                        </div>                    
-                        <div class="conts-header">
-                            <h3>평생교육이용권 카드 신청</h3>
                         </div>
-                        <p class="txt">선정된 이용자는 NH농협체크카드(평생교육희망카드) 발급 신청 필수</p>
-                        <p class="txt-muted">※ 카드발급을 위한 NH농협은행 계좌 개설 필요</p>
-                        <div class="conts-header">
-                            <h3>카드 발급 방법</h3>
+                        <div class="info-inner-conts arrow-down">
+                            <div class="mo-info-box">
+                                <div class="info-box">
+                                    <h4>② 이용권 신청 및 자격요건 조사·확인</h4>
+                                    <ul class="use-step">
+                                        <li class="step step1">
+                                            <span class="step-img">약관동의</span>
+                                            <span class="step-num">1단계</span>
+                                            <strong class="step-tit">약관동의</strong>
+                                        </li>
+                                        <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음단계"></li>
+                                        <li class="step step2 step-active">
+                                            <span class="step-img">본인인증 및 자격검증</span>
+                                            <span class="step-num">2단계</span>
+                                            <strong class="step-tit col-pri">본인인증 및 <br class="lg-only">자격검증</strong>
+                                        </li>
+                                        <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음단계"></li>
+                                        <li class="step step3 step-next">
+                                            <span class="step-img">신청서 작성</span>
+                                            <span class="step-num">3단계</span>
+                                            <strong class="step-tit">신청서 작성</strong>
+                                        </li>
+                                        <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음단계"></li>
+                                        <li class="step step4 step-next">
+                                            <span class="step-img">이용자 서약</span>
+                                            <span class="step-num">4단계</span>
+                                            <strong class="step-tit">이용자 서약</strong>
+                                        </li>
+                                        <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음단계"></li>
+                                        <li class="step step5 step-next">
+                                            <span class="step-img">신청완료</span>
+                                            <span class="step-num">5단계</span>
+                                            <strong class="step-tit">신청완료</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="bullet">신청하신 평생교육이용권에 따라 자격검증이 이루어지므로 공고 및 요건 확인 후 신청</p>
                         </div>
-                        <ul class="ordered-list">
-                            <li>1. NH농협은행(농ㆍ축협 포함) 영업점 방문
-                                <p class="txt-muted">※ 영업점 방문 시, 신분증 및 선정 안내 통지서(문자, 이메일, 서면) 지참</p>
-                            </li>
-                            <li>2. NH농협카드 홈페이지(card.nonghyup.com)를 통한 온라인 신청
-                                <p class="txt-muted">※ 신청 페이지로 바로가려면 NH농협카드 홈페이지 통합 검색에서 "평생교육희망카드" 작성 검색</p>
-                            </li>
-                        </ul>
-                        <div class="conts-header">
-                            <h3>평생교육이용권 사용</h3>
+                        <div class="info-inner-conts arrow-down">
+                            <div class="mo-info-box">
+                                <div class="info-box">
+                                    <h4>③ 선정 결과 확인</h4>
+                                    <img src="../images/biz2/screenshot/LAP_105_pc.png" alt="선정결과 확인 화면" class="screenshot lg-only">
+                                    <img src="../images/biz2/screenshot/LAP_105_mo.png" alt="선정결과 확인 화면" class="screenshot sm-show-800">
+                                    <p class="bullet">평생교육이용권 이용자 선정결과 및 평생교육이용권 사용기간 확인</p>
+                                </div>
+                            </div>
+                            <p class="bullet">해당 화면 하단에서 신청서 작성 내역 확인 가능</p>
                         </div>
-                        <ul class="txt-list">
-                            <li>평생교육이용권 카드 사용 기간은 별도 공지 예정</li>
-                            <li>공지한 기간 동안 사용하지 않은 금액은 자동 소멸되며, 다음 년도 이월이나 현금 인출 불가</li>
-                        </ul>
-                        <div class="conts-header">
-                            <h3>이용 가능 기관</h3>
+                        <div class="info-inner-conts arrow-down">
+                            <div class="mo-info-box">
+                                <div class="info-box sub-txt">
+                                    <h4>④ 카드 발급</h4>
+                                    <p>NH농협은행(농‧축협 포함) 영업점 방문 또는 NH농협카드 홈페이지(card.nonghyup.com)를 통해 NH농협카드(채움) 발급</p>
+                                </div>
+                            </div>
+                            <p class="bullet">이용권 사용 시작일에 맞춰 지원금이 자동 충전되며, 채움카드 기존 소지자의 경우 재발급 없이 기존 카드 사용 가능</p>
                         </div>
-                        <ul class="txt-list">
-                            <li>평생교육이용권 사용기관으로 등록된 평생교육기관</li>
-                            <li>평생교육이용권 홈페이지에서 지역별 이용 가능한 기관 확인</li>
-                        </ul>
-                        <div class="conts-header">
-                            <h3>수강료 결제 방법</h3>
+                        <div class="info-inner-conts arrow-down">
+                            <div class="mo-info-box">
+                                <div class="info-box sub-txt">
+                                    <h4>⑤ 사용기관 확인</h4>
+                                    <p>지자체별 홈페이지에서 평생교육이용권 사용기관 확인</p>
+                                </div>
+                            </div>
+                            <p class="bullet">평생교육바우처 카드는 등록된 기관에서만 사용 가능</p>
                         </div>
-                        <ul class="txt-list">
-                            <li>평생교육이용권 사용기관 방문 후 현장 결제</li>
-                            <li>해당기관 결제시 평생교육이용권 한도 자동 차감</li>
-                            <li>온라인 평생교육이용권 사용기관의 경우, 해당 기관 홈페이지에서 결제</li>
-                            <li>강좌 수강료가 35만원을 넘을 경우, 초과 비용에 대해서는 본인부담</li>
-                            <li>강좌 수강료에 사용하는 것을 원칙으로 하되, 평생교육이용권 사용 강좌의 교재비에 한하여 사용 가능
-                                <p class="txt-muted">※ 해당 연도 개설(시작)강좌에 사용할 수 있으며, 본인 사용 및 본인 수강 원칙(유아, 어린이 등 만19세 미만 대상 강좌 사용 불가)</p>
-                                <p class="txt-muted">※ 교재 단독 결제 및 재료비 사용 불가, 유무선 전자 통신기기 등 구매 불가(패키지 및 사은품을 통한 제공 포함)</p>
-                            </li>
-                        </ul>
-                        <div class="conts-header">
-                            <h3>수강료 결제 기간</h3>
+                        <div class="info-inner-conts">
+                            <div class="mo-info-box">
+                                <div class="info-box sub-txt">
+                                    <h4>⑥ 평생교육이용권 사용</h4>
+                                    <p>평생교육이용권 사용기간 내에 NH농협카드(채움)로 결제 및 강좌 수강</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="bullet">오프라인 기관은 기관 방문하여 결제하며, 온라인 기관은 온라인 결제</p>
+                                <p class="bullet">사용기간 내 사용하지 않은 금액은 자동으로 국고로 환수되며, 이월되거나 현금화 불가</p>
+                            </div>
                         </div>
-                        <ul class="txt-list">
-                            <li>평생교육희망카드 발급 이후 국가평생교육진흥원에서 공지하는 날까지</li>
-                            <li>기간 내 미사용 금액은 자동소멸되며, 다음 연도 이월이나 현금일출 불가</li>
-                        </ul>
-                        <div class="conts-header">
-                            <h3>이용절차</h3>
+                        <div class="info-inner-conts">
+                            <h2 class="info-tit">평생교육이용권 사용 준수 사항</h2>
+                            <div class="info-box sub-txt">
+                                <p>평생교육이용권 이용자 준수사항을 위반할 경우, <span class="col-red">평생교육법 제16조의3(평생교육이용권의 사용 등), 동법 제45조의3(벌칙) 등 관련 법에 따른 처벌, 평생교육바우처 사용 중지, 부정사용액 등 회수 또는 환수가 이루어지며, 차년도 사업참여가 제한될 수 있습니다.</span></p>
+                            </div>
                         </div>
-                        <div class="blue-box">
-                            <ul class="order">
-                                <li>
-                                    <img src="../images/biz2/img/img_order01.png" alt="">1. 평생교육이용권 신청
+                        <div class="info-inner-conts">
+                            <ul class="use-rule-list">
+                                <li class="use-rule use-rule01">
+                                    <b>본인 사용</b>
+                                    <span class="bullet">평생교육이용권은 이용자 본인만 사용할 수 있으며, 가족(배우자, 자녀 포함)을 포함한 제 3자에게 판매·양도·대여할 수 없습니다.</span>
                                 </li>
-                                <li class="arrow"><img src="../images/biz2/ico/ico_arrow.svg" alt="다음"></li>
-                                <li>
-                                    <img src="../images/biz2/img/img_order02.png" alt="">2. 자격심사
+                                <li class="use-rule use-rule02">
+                                    <b>평생교육이용권 사용기관으로 등록된 교육기관에서 개설하는 교육강좌 수강료*(해당 강좌 교재비 포함**)에 사용할 수 있습니다.</b>
+                                    <span>
+                                        <span>*2025년에 개설(시작)하는 평생교육 강좌에 한해 결제</span>
+                                        <span>**교재를 포함하여 수강료를 결제하는 경우에만 가능(교재만 구매 불가)</span>
+                                    </span>
                                 </li>
-                                <li class="arrow"><img src="../images/biz2/ico/ico_arrow.svg" alt="다음"></li>
-                                <li>
-                                    <img src="../images/biz2/img/img_order03.png" alt="">3. 이용자 선정
+                                <li class="use-rule use-rule03">
+                                    <b>평생교육강좌 수강 이외에 다른 목적으로 부당하게 평생교육이용권을 사용해서는 안됩니다.</b>
                                 </li>
-                                <li class="arrow"><img src="../images/biz2/ico/ico_arrow.svg" alt="다음"></li>
-                                <li>
-                                    <img src="../images/biz2/img/img_order04.png" alt="">4. 카드 발급 신청, 수령
+                                <li class="use-rule use-rule04">
+                                    <b>평생교육이용권 기간 내 미사용액은 추가 사용 및 이월 불가합니다.</b>
+                                    <span class="bullet">카드 결제 가능 기간은 별도 공지</span>
+                                </li>
+                                <li class="use-rule use-rule05">
+                                    <b>평생교육이용권 환불은 카드(전체·부분) 취소로만 가능하며, 환불 금액을 현금 또는 물품으로 수령하실 수 없습니다.</b>
+                                    <span class="bullet">카드 취소하면 한도 복원에 최대 7일이 소요되므로, 결제 마감일이 임박해 취소할 경우 이용권을 사용하지 못하는 상황이 발생할 수 있으므로 주의</span>
                                 </li>
                             </ul>
-                            <ul class="order">
-                                <li>        
-                                    <img src="../images/biz2/img/img_order05.png" alt="">5. 평생교육이용권<br>
-                                    사용기관 및 강좌 검색
-                                </li>
-                                <li class="arrow"><img src="../images/biz2/ico/ico_arrow.svg" alt="다음"></li>
-                                <li>
-                                    <img src="../images/biz2/img/img_order06.png" alt="">6. 강좌 신청 및 수강
-                                </li>
-                                <li class="arrow"><img src="../images/biz2/ico/ico_arrow.svg" alt="다음"></li>
-                                <li>
-                                    <img src="../images/biz2/img/img_order07.png" alt="">7. 수강 결과 확인
-                                </li>
-                                <li class="arrow"><img src="../images/biz2/ico/ico_arrow.svg" alt="다음"></li>
-                                <li>
-                                    <img src="../images/biz2/img/img_order08.png" alt="">8. 이용 완료!
-                                </li>
-                            </ul>
                         </div>
-                        <div class="conts-header">
-                            <h3>이용권 이용 준수사항</h3>
+                        <div class="info-inner-conts">
+                            <div class="info-box sub-txt">
+                                <h4 class="warning">결제 불가 항목</h4>
+                                <ul class="num-counter notPay-list">
+                                    <li>재료비, 강의를 제외한 (전자)교재(PDF, e-book 포함)</li>
+                                    <li>유아 및 어린이, 청소년 등 만 19세 미만 대상 강좌(부모 동반 포함)</li>
+                                    <li>유·무선 전자·통신 기기 구매(패키지 및 사은품 등을 통한 제공 포함)</li>
+                                    <li>기타 물품, 입회비, 가입비, 자격증 응시/발급료, 검정료, 보험료, 택배비, 각종 수수료 등</li>
+                                </ul>
+                            </div>
+                            <p class="bullet col-red">구매 불가한 내역의 결제행위에 대한 책임은 이용자 본인에게 있습니다.</p>
                         </div>
-                        <div class="border-box">                            
-                            <p>
-                                평생교육이용권 이용자 준수사항을 위반할 경우, 평생교육법 제16조의3(평생교육이용권의 사용 등), 동법 제45조의3(벌칙) 등 관련
-                                법에 따른 처벌, 평생교육이용권 사용 중지, 부정사용액 등 회수 또는 환수가 이루어지며, 차년도 사업참여가 제한될 수 있습니다.</p>
-                        </div>
-                        <div class="conts-header">
-                            <h3>평생교육이용권 사용</h3>
-                        </div>
-                        <ul class="use-edu voucher">
-                            <li>
-                                <img src="../images/biz2/img/img_terms01.png" alt="">
-                                <div class="txt-area">
-                                    <p class="txt">평생교육이용권은 <span class="col-blue">사용기관으로 등록된 교육기관에서 개설하는 교육강좌 수강료*와 해당 강좌에 필요한 교재비**에 사용</span>할 수 있습니다.</p>
-                                    <p class="txt-muted">※ 2024년에 개설(시작)하는 평생교육 강좌에 한해 결제할 수 있으며, 유아·아동 및 청소년 대상 강좌에는 이용이 불가합니다.</p>
-                                    <p class="txt-muted">※ 강좌를 수강하지 않고 교재만 구매할 수 없습니다. 또한 수강에 필요한 교재비 사용 시 수강료와 함께 결제해야 합니다.</p>
+                        <div class="info-inner-conts">
+                            <h2 class="info-tit">평생교육법</h2>
+                            <div class="info-box sub-txt">
+                                <h4>제16조의3(평생교육이용권의 사용 등)</h4>
+                                <div>
+                                    <p>③ 누구든지 평생교육이용권을 판매ㆍ대여하거나 부정한 방법으로 사용하여서는 아니 된다.</p>
+                                    <p>④ 국가 및 지방자치단체는 이용자가 평생교육이용권을 판매ㆍ대여하거나 부정한 방법으로 사용한 경우에는 그 평생교육이용권을 회수하거나 평생교육이용권 기재금액에 상당하는 금액의 전부 또는 일부를 환수할 수 있다.</p>
                                 </div>
-                            </li>
-                            <li>
-                                <img src="../images/biz2/img/img_terms02.png" alt="">
-                                <div class="txt-area">
-                                    <p class="txt">평생교육이용권은 <span class="col-blue">24년 8월 30일(금)까지 결제 가능</span>하며, 기간 내 미사용액은 추가 사용 및 이월 불가합니다.</p>
-                                    <p class="txt-muted">※ 평생교육희망카드 결제 가능 기간은 사업 운영 상황에 따라 변경될 수 있습니다.</p>
-                                    <p class="txt-muted">※ 결제마감일이 임박해 카드 취소(환불) 시, 한도 복원에 2~5일이 소요되므로, 이용권을 사용하지 못하는 상황이 발생할 수 있습니다.</p>
-                                </div>                                
-                            </li>
-                            <li>
-                                <img src="../images/biz2/img/img_terms03.png" alt="">
-                                <div class="txt-area">
-                                    <p class="txt">평생교육이용권으로 <span class="col-blue">결제한 교육강좌는 80% 이상 수강</span>을 권고드립니다.</p>
-                                    <p class="txt-muted">※ 평생교육이용권으로 이용한 교육강좌의 이수 여부는 사용기관에서 등록·관리합니다.</p>
-                                    <p class="txt-muted">※ 이수 기준 및 입력 관련 사항은 사용기관에 문의하여 주시기 바랍니다.</p>
+                            </div>
+                            <div class="info-box sub-txt">
+                                <h4>제45조의3(벌칙)</h4>
+                                <div>
+                                    <p>다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.&lt;개정 2021. 6. 8.&gt;</p>
+                                    <p>거짓 또는 그 밖의 부정한 방법으로 평생교육이용권을 발급받거나 다른 사람으로 하여금 평생교육이용권을 발급받게 한 자</p>
+                                    <p>제16조의3제3항을 위반하여 평생교육이용권을 판매ㆍ대여하거나 부정한 방법으로 사용한 자</p>
                                 </div>
-                            </li>
-                        </ul>
-                        <div class="conts-header">
-                            <h3>평생교육이용권 이용자 준수사항</h3>
-                        </div>
-                        <ul class="use-edu ordered-list">
-                            <li>
-                                <img src="../images/biz2/img/img_user01.png" alt="">
-                                <div class="txt-area">
-                                    <p class="txt">1. 평생교육이용권은 이용자 본인만 사용할 수 있으며, 가족(배우자, 자녀 포함)을 포함한 제 3자에게 판매·양도·대여할 수 없습니다.</p>
-                                    <p class="txt-muted">※ 해당 연도 개설(시작)강좌에 사용할 수 있으며, 본인 사용 및 본인 수강 원칙(유아, 어린이 등 만19세 미만 대상 강좌 사용 불가)</p>
-                                    <p class="txt-muted">※ 교재 단독 결제 및 재료비 사용 불가, 유무선 전자 통신기기 등 구매 불가(패키지 및 사은품을 통한 제공 포함)</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../images/biz2/img/img_user02.png" alt="">
-                                <div class="txt-area">
-                                    <p class="txt">2. 평생교육강좌 수강 이외에 다른 목적으로 부당하게 평생교육이용권을 사용해서는 안됩니다.</p>
-                                    <p class="txt-muted">※ 유아 및 어린이, 청소년 등 만 19세 미만 대상 강좌는 수강하실 수 없습니다(부모 동반 포함).</p>
-                                    <p class="txt-muted">※ 재료비는 이용권으로 결제할 수 없습니다.</p>
-                                    <p class="txt-muted">※ 유·무선 전자·통신 기기 구매(패키지 및 사은품 등을 통한 제공 포함), 전자교재(PDF, e-book)는 불가합니다.</p>
-                                    <p class="txt-muted">※ 기타 물품, 입회비, 가입비, 자격증 응시/발급료, 검정료, 보험료, 택배비, 각종 수수료 등에는 사용이 불가합니다.</p>
-                                    <p class="txt-muted">※ 구매 불가한 내역의 결제행위에 대한 책임은 이용자 본인에게 있습니다.</p>
-                                </div>                                
-                            </li>
-                            <li>
-                                <img src="../images/biz2/img/img_user03.png" alt="">
-                                <div class="txt-area">
-                                    <p class="txt">3. 평생교육이용권을 사용할 때, 평생교육강좌 수강을 대신하여 대가성 있는 금전, 물품 등을 제공자로부터 받아서는 안 됩니다</p>
-                                    <p class="txt-muted">※ 평생교육이용권 환불은 ‘평생교육희망카드’의 카드(전체·부분) 취소로 가능하며, 환불 금액을 현금 또는 물품으로 지급 받아서는 안 됩니다.</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="conts-header">
-                            <h3>평생교육법</h3>
-                        </div>
-                        <div class="border-box">                            
-                            <strong>제16조의3(평생교육이용권의 사용 등)</strong>
-                            <ul class="ordered-list">
-                                <li>③ 누구든지 평생교육이용권을 판매ㆍ대여하거나 부정한 방법으로 사용하여서는 아니 된다.</li>
-                                <li>④ 국가 및 지방자치단체는 이용자가 평생교육이용권을 판매ㆍ대여하거나 부정한 방법으로 사용한 경우에는 그 평생교육이용권을 회수하거나 평생교육이용권 기재금액에 상당하는 금액의 전부 또는 일부를 환수할 수 있다.</li>
-                            </ul>
-                        </div>
-                        <div class="border-box">                            
-                            <strong>제45조의3(벌칙)</strong>
-                            <p>다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.<개정 2021. 6. 8.></p>
-                            <ul class="ordered-list">
-                                <li>1. 거짓 또는 그 밖의 부정한 방법으로 평생교육이용권을 발급받거나 다른 사람으로 하여금 평생교육이용권을 발급받게 한 자</li>
-                                <li>2. 제16조의3제3항을 위반하여 평생교육이용권을 판매ㆍ대여하거나 부정한 방법으로 사용한 자</li>
-                            </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -330,59 +399,45 @@
         </div>
     </div>
     <footer class="wrap">
-        <div class="info-content">
-            <div class="family-select-wrap">
-                <div class="family-select-lg custom-select-box" >
-                    <button class="custom-select-open">관련 사이트</button>
-                    <ul class="family-site-list custom-select-list">
-                        <li><a href="#">국가평생교육진흥원 독학학위제</a></li>
-                        <li><a href="#">학점은행제 정보공시제(알리미)</a></li>
-                        <li><a href="#">평생학습계좌제</a></li>
-                        <li><a href="#">학점은행제</a></li>
-                        <li><a href="#">평생학습포털 늘배움</a></li>
-                        <li><a href="#">국가평생진흥원</a></li>
-                        <li><a href="#">교육부</a></li>
-                        <li><a href="#">고용노동부</a></li>
-                        <li><a href="#">한국진흥원</a></li>
-                        <li><a href="#">관련사이트10</a></li>
-                        <li><a href="#">관련사이트11</a></li>
-                        <li><a href="#">관련사이트12</a></li>
-                        <li><a href="#">관련사이트13</a></li>
-                        <li><a href="#">관련사이트14</a></li>
+            <div class="info-content">
+                <div>
+                    <ul class="foot-logo">
+                        <li><img src="../images/biz2/logo/footer_logo_2.svg" alt="평생교육이용권 로고"></li>
                     </ul>
+                    <address>
+                        <div>
+                            <strong>대표전화 : 1600-3005</strong>
+                            <span>(04520) 서울특별시 중구 청계천로 14 (무교동77)</span>
+                        </div>
+                        <div class="flex-col gap-8">
+                            <span>평일 09시~18시 운영(점심시간 12:00~13:00 제외)</span>
+                            <span>주말 및 공휴일 휴무</span>
+                        </div>
+                    </address>
+                    <div class="family-select-lg custom-select-box">
+                        <button class="custom-select-open">관련 사이트</button>
+                        <ul class="family-site-list custom-select-list">
+                            <li><a href="https://www.moe.go.kr/main.do?s=moe" target="_blank">교육부</a></li>
+                            <li><a href="https://www.nile.or.kr/index.do" target="_blank">국가평생교육진흥원</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">온국민평생배움터</a></li>
+                            <li><a href="https://www.cb.or.kr/creditbank/base/cdMain.do" target="_blank">학점은행제</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">평생학습계좌제</a></li>
+                            <li><a href="https://www.cbinfo.or.kr" target="_blank">학점은행제 정보공시제(알리미)</a></li>
+                            <li><a href="https://bdes.nile.or.kr:444/nile/base/bdesMain.do" target="_blank">국가평생교육진흥원 독학학위제</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-area gap-10">
+                    <div class="link-box">
+                        <a href="ITP_001.html">이용약관</a>
+                        <a href="ITP_002.html" class="on">개인정보처리방침</a>
+                    </div>
+                    <span class="copy">
+                        COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS RESERVED.
+                    </span>
                 </div>
             </div>
-            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
-            <address>
-                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
-                <span class="tel"><span class="txt-bold">대표전화</span><span><span class="txt-bold">1600-3005</span> (평일 09시~18시)</span></span>
-            </address>
-            <div class="link-area">
-                <div class="link-box">
-                    <a href="#">이용약관</a>
-                    <a href="#" class="on">개인정보처리방침</a>
-                    <a href="#">저작권정책</a>
-                    <a href="#">이메일무단수집거부</a>
-                </div>
-                <span class="copy">
-                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
-                    RESERVED.
-                </span>
-                <div class="support-box">
-                    <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
-                    </a>
-                    <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
-                    </a>
-                    <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/footer_link_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
-                    </a>
-                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 
 </html>

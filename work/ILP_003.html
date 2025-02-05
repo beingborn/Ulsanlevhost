@@ -14,7 +14,7 @@
     <script src="../js/biz2/script.js"></script>
     <title>울산광역시 평생교육이용원</title>
 </head>
-<body>
+<body class="useVc">
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
@@ -22,11 +22,10 @@
             </a>
         </div>
         <div class="menu-area">
-            <!-- 로그인 시 -->
             <a href="#" class="log-info">
-                <span class="log-info-txt">로그아웃</span>
+                <span class="log-info-txt"><strong>홍길동</strong>님 로그아웃</span>
             </a>
-            <a href="#" class="log-info">
+            <a href="IMP_012.html" class="log-info">
                 <span class="log-info-txt">담당자 정보 수정</span>
             </a>
             <button class="open-btn">
@@ -46,7 +45,7 @@
                         <div class="link-item">
                             <a href="IIP_800.html">사용기관 등록 신청 현황</a>
                             <a class="hidden" href="#">이용권 사용내역</a>
-                            <a href="#">교육결과 관리</a>
+                            <a href="IIP_150.html">교육결과 관리</a>
                             <a class="hidden" href="#">교육과정 정보</a>
                             <a class="hidden" href="#">학습자 정보</a>
                             <a class="hidden" href="IIP_400.html">기관 정보 수정</a>
@@ -73,8 +72,8 @@
         <div class="top-location-area wrap">
             <span class="home"><span class="blind">홈</span></span>
             <div class="location-box">
-                <span class="arrow">사용기관</span>
-                <span class="arrow">사용기관 신청</span>
+                <span class="arrow">로그인</span>
+                <span class="arrow">평생교육이용권 사용기관 신청</span>
             </div>
         </div>
     </div>
@@ -83,43 +82,49 @@
             <h2 class="page-header-tit">이용권 사용기관 신청</h2>
             <p class="page-header-desc">평생교육이용권 이용을 위한 사용기관 신청 화면입니다.</p>
         </div>
-
-        <ul class="steps flex-ac">
-            <li>
-                <span class="step01">01</span>
-                <strong>약관동의</strong>
+        <!-- 20250131 :: 변경 -->
+        <ul class="step-list flex-acjc">
+            <li class="step step-prev">
+                <span class="step-icon step_terms_agreement"></span>
+                <span class="step-name">1단계</span>
+                <strong class="step-tit">약관동의</strong>
             </li>
-            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li>
-                <span class="step02">02</span>
-                <strong>본인인증</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-prev">
+                <span class="step-icon step_identity_verification"></span>
+                <span class="step-name">2단계</span>
+                <strong class="step-tit">본인인증</strong>
             </li>
-            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="active">
-                <span class="step03">03</span>
-                <strong>신청서 작성</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-active">
+                <span class="step-icon step_application_form"></span>
+                <span class="step-name">3단계</span>
+                <strong class="step-tit">신청서 작성</strong>
             </li>
-            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step04">04</span>
-                <strong>담당자 등록</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_manager_registration"></span>
+                <span class="step-name">4단계</span>
+                <strong class="step-tit">담당자 등록</strong>
             </li>
-            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step05">05</span>
-                <strong>첨부</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_attachment"></span>
+                <span class="step-name">5단계</span>
+                <strong class="step-tit">첨부</strong>
             </li>
-            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step06">06</span>
-                <strong>작성완료</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_completion"></span>
+                <span class="step-name">6단계</span>
+                <strong class="step-tit">작성완료</strong>
             </li>
         </ul>
-
         <hr>
-
+        <!-- 20250131 :: 타이틀 추가 -->
+        <h2 class="step-title">3. 신청서 작성</h2>
         <div class="conts-header">
-            <h3>신청정보</h3>
+            <h3>신청 정보</h3>
         </div>
         <div class="com-write-table">
             <table>
@@ -165,27 +170,29 @@
                 <tbody>
                     <tr>
                         <th class="txt-l must-type"><label for="a">기관명</label></th>
-                        <td class="input-group">
-                            <div class="flex-ac">
+                        <!-- 20250131 :: 구조 변경 -->
+                        <td>
+                            <div class="input-group">
                                 <input type="text" id="a" class="fixed-value">                                                            
-                                <button type="button" class="btns bg-blue" onclick="modalPop()">기관 조회</button>
-                                <button type="button" class="btns bg-blue">초기화</button>
+                                <button type="button" class="btns bg-blue btn-fixed" onclick="modalPop()">기관 조회</button>
+                                <button type="button" class="btns bg-blue btn-fixed">초기화</button>
                             </div>
                             <p class="bullet">기관조회되지 않는 경우 기관명을 직접 작성 바랍니다.(학점은행제 평가인정기관만 [기관조회] 바랍니다.)</p>
                         </td>
                     </tr>
                     <tr>
                         <th class="txt-l must-type"><label for="b">사업자등록번호</label></th>
-                        <td class="input-group">
-                            <div class="flex-ac">
+                        <!-- 20250131 :: 구조 변경 -->
+                        <td>
+                            <div class="input-group">
                                 <div class="input-num">
-                                    <input type="text" title="사업자등록번호 첫번째자리" id="b">
+                                    <input type="number" title="사업자등록번호 첫번째자리" id="b" />
                                     -
-                                    <input type="text" title="사업자등록번호 중간자리">
+                                    <input type="number" title="사업자등록번호 중간자리" />
                                     -
-                                    <input type="text" title="사업자등록번호 끝자리">
+                                    <input type="number" title="사업자등록번호 끝자리" />
                                 </div>
-                                <button type="button" class="btns layer-btn bg-blue" onclick="$('[data-pop=busynum-guide]').show();">사업자인증</button>
+                                <button type="button" class="btns layer-btn bg-blue btn-fixed" onclick="$('[data-pop=busynum-guide]').show();">사업자인증</button>
                             </div>
                             <p class="bullet">사업자인증 실패 시 나이스(niceid.co.kr 또는 1600-1522)로 문의하시기 바랍니다.</p>
                         </td>
@@ -263,63 +270,69 @@
                     </tr>
                     <tr>
                         <th class="txt-l must-type"><label for="chk07">주소</label></th>
-                        <td class="input-group space">
-                            <div class="flex-ac">
-                                <input type="text" id="chk07" class="fixed-width no-border-init" readonly>
-                                <button type="button" class="btns bg-blue">주소검색</button>
-                                <div class="chk-box">
-                                    <input type="checkbox" id="chk-3" readonly>
-                                    <label for="chk-3">지도 서비스 제공</label>
+                        <!-- 20250131 :: 구조 변경 -->
+                        <td>
+                            <div class="input-group col-group">
+                                <div class="flex-ac">
+                                    <input type="text" id="chk07" class="fixed-width no-border-init" readonly />
+                                    <button type="button" class="btns bg-blue mr-80">주소검색</button>
+                                    <div class="chk-box">
+                                        <input type="checkbox" id="chk-3" readonly />
+                                        <label for="chk-3">지도 서비스 제공 (오프라인 교육기관 체크시 선택 가능합니다.)</label>
+                                    </div>
                                 </div>
-                                <small class="txt-s">(오프라인 교육기관 체크시 선택 가능합니다.)</small>
+                                <input type="text" class="fixed-value no-border-init" readonly />
+                                <input type="text" class="fixed-value" />
                             </div>
-                            <p class="flex-ac"><input type="text" class="fixed-value no-border-init" readonly></p>
-                            <p class="flex-ac"><input type="text" class="fixed-value"></p>
                         </td>
                     </tr>
                     <tr>
                         <th class="txt-l must-type"><label for="tel">전화번호</label></th>
-                        <td class="input-group">
-                            <div class="flex-ac">
+                        <!-- 20250131 :: 구조 변경 -->
+                        <td>
+                            <div class="input-group">
                                 <div class="input-num">
-                                    <select id="tel">
-                                        <option value="none">선택</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
+                                    <select id="areaHpNo" name="areaHpNo">
+                                        <option value>선택</option>
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="012">012</option>
                                     </select>
                                     -
                                     <input type="tel" title="전화번호 중간자리">
                                     -
                                     <input type="tel" title="전화번호 끝자리">
                                 </div>
-                                <small class="bullet">입력된 전화번호는 홈페이지를 통해 공개됩니다.</small>
                             </div>
+                            <p class="bullet">입력된 전화번호는 홈페이지를 통해 공개됩니다.</p>
                         </td>
                     </tr>
                     <tr>
                         <th class="txt-l must-type"><label for="email">전자우편주소</label></th>
-                        <td class="input-group">
-                            <div class="flex-ac">
-                                <input type="text" id="email">
-                                @
-                                <input type="text" class="email">
-                                <select>
-                                    <option value="none">직접입력</option>
-                                    <option value="1">2</option>
-                                    <option value="1">3</option>
-                                    <option value="1">4</option>
-                                </select>                                
-                            </div>                         
-                        </td>                                    
+                        <!-- 20250131 :: 구조 변경 -->
+                        <td>
+                            <div class="input-group">
+                                <div class="input-mail">
+                                    <input type="text" id="email" />
+                                    <span>@</span>
+                                    <input type="text" class="mail-domain" />
+                                    <select>
+                                        <option value="none">선택</option>
+                                        <option value="1">2</option>
+                                        <option value="1">3</option>
+                                        <option value="1">4</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <th class="txt-l"><label for="addr">대표 홈페이지 주소</label></th>
-                        <td class="input-group">
-                            <div class="flex-ac">
-                                <input type="text" id="addr" class="fixed-value">                                                            
-                                <button type="button" class="btns bg-blue">확인</button>
-                                <button type="button" class="btns bg-blue">수정</button>
+                        <!-- 20250131 :: 구조 변경 -->
+                        <td>
+                            <div class="input-group">
+                                <input type="text" id="addr" class="fixed-value">
+                                <button type="button" class="btns bg-blue">유효성체크</button>
                             </div>
                         </td>
                     </tr>
@@ -327,34 +340,42 @@
                         <th class="txt-l">
                             <label for="num01" class="must-type">가맹점 번호</label>
                             <small>(최대 10개 등록 가능)</small> 
-                            <button type="button" class="btn-bd blue small">가맹점 번호 추가</button>
                         </th>
-                        <td class="input-group">
-                            <button type="button" class="btn-bd blue small">가맹점 번호 조회</button>
-                            <div class="flex-ac">
-                                <input type="text" id="num01" class="fixed-value">                                                            
-                                <p class="chk-box">
-                                    <input type="checkbox" id="chk08">
-                                    <label for="chk08">PG사 가맹번호인 경우 체크</label>
-                                </p>
+                        <!-- 20250131 :: 구조 변경 -->
+                        <td>
+                            <div class="input-group col-group">
+                                <div class="flex-ac gap-10">
+                                    <button type="button" class="btn-bd blue small">가맹점 번호 추가</button>
+                                    <button type="button" class="btn-bd blue small">가맹점 번호 조회</button>
+                                    <span class="bullet ico-warning-blue">가맹점 번호를 모르신다면 조회 후 아래 가맹점 번호 입력란에 기입해주세요.</span>
+                                </div>
+                                <!-- uncheckd state(default) -->
+                                <div class="flex-ac">
+                                    <input type="text" id="num01" class="one-value" />
+                                    <!-- checkd state -->
+                                    <select class="one-value">
+                                        <option value="none">선택</option>
+                                        <option value="1">22</option>
+                                        <option value="1">33</option>
+                                        <option value="1">44</option>
+                                    </select>
+                                    <p class="chk-box">
+                                        <input type="checkbox" id="chk08" checked />
+                                        <label for="chk08">PG사 가맹번호인 경우 체크</label>
+                                    </p>
+                                    <button type="button" class="btns bg-blue">삭제</button>
+                                </div>
+                                <ul class="bullet-list">
+                                    <li>평생교육이용권 카드 사용을 위해서는 반드시 BC카드 가맹점 등록 후 정확한 가맹점 번호 제공 바랍니다.</li>
+                                    <li>PG사 가맹번호인 경우, PG사측에 평생교육이용권 사용가능 가맹번호를 확인하여 기재 바랍니다.</li>
+                                </ul>
+                                <div class="filebox flex-ac">
+                                    <input class="upload-name fixed-value" readonly>
+                                    <label for="file01" class="btns bg-blue">파일첨부</label> 
+                                    <input type="file" id="file01" class="file">
+                                </div>
+                                <p class="bullet">jpg, jpeg, png, gif, tif, tiff, bmp, pdf 파일만 업로드가 가능합니다.</p>
                             </div>
-                            <div class="flex-ac">
-                                <input type="text" id="num01" class="fixed-value">                                                            
-                                <p class="chk-box">
-                                    <input type="checkbox" id="chk09">
-                                    <label for="chk09">PG사 가맹번호인 경우 체크</label>
-                                </p>
-                                <button type="button" class="btns bg-blue">삭제</button>
-                            </div>
-                            <div class="filebox flex-ac">
-                                <input class="upload-name fixed-value" readonly>
-                                <label for="file01" class="btns bg-blue">파일첨부</label> 
-                                <input type="file" id="file01" class="file">
-                            </div>
-                            <ul class="bullet-list">
-                                <li>평생교육이용권 카드 사용을 위해서는 반드시 BC카드 가맹점 등록 후 정확한 가맹점 번호 제공 바랍니다.</li>
-                                <li>PG사 가맹번호인 경우, PG사측에 평생교육이용권 사용가능 가맹번호를 확인하여 기재 바랍니다.</li>
-                            </ul>
                         </td>
                     </tr>
                     <tr>
@@ -436,7 +457,8 @@
                                 <div class="chk-box">
                                     <input type="checkbox" id="chk-16">
                                     <label for="chk-16">성인 문해교육</label>
-                                    <input type="text">
+                                    <!-- 20250131 :: placeholder 추가 -->
+                                    <input type="text" placeholder="강좌 종류 입력" />
                                 </div>
                                 <div class="chk-box">
                                     <input type="checkbox" id="chk-17">
@@ -469,11 +491,12 @@
                     </tr>
                     <tr>
                         <th class="txt-l"><label for="aa">검색 키워드</label></th>
-                        <td class="input-group">
-                            <div class="flex-ac">
-                                <input type="text" id="aa" class="fixed-width">
-                                <input type="text" class="fixed-width">
-                                <input type="text" class="fixed-width">
+                        <!-- 20250131 :: 구조 변경 -->
+                        <td>
+                            <div class="input-group">
+                                <input type="text" id="aa" class="keyword" maxlength="10" />
+                                <input type="text" class="keyword" maxlength="10" />
+                                <input type="text" class="keyword" maxlength="10" />
                             </div>
                             <p class="bullet">최대 10자까지 입력가능하며, 비속어 등 입력 시, 이용이 제한됩니다.</p>
                         </td>
@@ -483,37 +506,29 @@
         </div>
         <div class="conts-header">
             <h3>평생교육프로그램 운영과정</h3>
+            <small><em class="col-red">*</em> xlsx 파일만 업로드가 가능합니다.</small>
         </div>
         <div class="com-write-table">
             <table>
                 <caption>평생교육프로그램 운영과정 입력란</caption>
                 <colgroup>
                     <col style="width: 200px;">
-                    <col>
-                    <col style="width: 200px;">
-                    <col>
                 </colgroup>
                 <tbody>
                     <tr>
                         <th class="txt-l must-type">평생교육프로그램<br>운영과정</th>
-                        <td colspan="3" class="input-group">
-                            <div class="flex-ac">
-                                <div class="filebox">
-                                    <input class="upload-name fixed-width" readonly>
-                                    <label for="file02" class="btns bg-blue">파일첨부</label> 
-                                    <input type="file" id="file02" class="file">
+                        <!-- 20250131 :: 구조 변경 -->
+                        <td>
+                            <div class="input-group col-group">
+                                <div class="filebox flex-ac">
+                                    <input class="upload-name fixed-value readonly-txt" readonly />
+                                    <label for="file01" class="btns bg-blue">파일첨부</label> 
+                                    <input type="file" id="file01" class="file">
+                                    <!-- <button type="button" class="btns bg-blue layer-btn" onclick="$('[data-pop=excel-res]').show();">업로드</button> -->
+                                    <button type="button" class="btns bg-blue btn-download">양식 다운로드</button>
                                 </div>
-                                <button type="button" class="btns bg-blue layer-btn" onclick="$('[data-pop=excel-res]').show();">업로드</button>
-                                <button type="button" class="btns bg-blue btn-download">양식 다운로드</button>
                             </div>
-                            <p class="bullet">xlsx 파일만 업로드가 가능합니다.</p>
                         </td>
-                    </tr>
-                    <tr>
-                        <th class="txt-l"><label for="y">등록 일자</label></th>
-                        <td><input type="text" id="y"></td>
-                        <th class="txt-l"><label for="z">등록 건수</label></th>
-                        <td><input type="text" id="z"></td>
                     </tr>
                 </tbody>
             </table>
@@ -524,69 +539,53 @@
         </div>
     </div>
     <footer class="wrap">
-        <div class="info-content">
-            <div class="family-select-wrap">
-                <div class="family-select-lg custom-select-box" >
-                    <button class="custom-select-open">관련 사이트</button>
-                    <ul class="family-site-list custom-select-list">
-                        <li><a href="#">국가평생교육진흥원 독학학위제</a></li>
-                        <li><a href="#">학점은행제 정보공시제(알리미)</a></li>
-                        <li><a href="#">평생학습계좌제</a></li>
-                        <li><a href="#">학점은행제</a></li>
-                        <li><a href="#">평생학습포털 늘배움</a></li>
-                        <li><a href="#">국가평생진흥원</a></li>
-                        <li><a href="#">교육부</a></li>
-                        <li><a href="#">고용노동부</a></li>
-                        <li><a href="#">한국진흥원</a></li>
-                        <li><a href="#">관련사이트10</a></li>
-                        <li><a href="#">관련사이트11</a></li>
-                        <li><a href="#">관련사이트12</a></li>
-                        <li><a href="#">관련사이트13</a></li>
-                        <li><a href="#">관련사이트14</a></li>
+            <div class="info-content">
+                <div>
+                    <ul class="foot-logo">
+                        <li><img src="../images/biz2/logo/footer_logo_2.svg" alt="평생교육이용권 로고"></li>
                     </ul>
+                    <address>
+                        <div>
+                            <strong>대표전화 : 1600-3005</strong>
+                            <span>(04520) 서울특별시 중구 청계천로 14 (무교동77)</span>
+                        </div>
+                        <div class="flex-col gap-8">
+                            <span>평일 09시~18시 운영(점심시간 12:00~13:00 제외)</span>
+                            <span>주말 및 공휴일 휴무</span>
+                        </div>
+                    </address>
+                    <div class="family-select-lg custom-select-box">
+                        <button class="custom-select-open">관련 사이트</button>
+                        <ul class="family-site-list custom-select-list">
+                            <li><a href="https://www.moe.go.kr/main.do?s=moe" target="_blank">교육부</a></li>
+                            <li><a href="https://www.nile.or.kr/index.do" target="_blank">국가평생교육진흥원</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">온국민평생배움터</a></li>
+                            <li><a href="https://www.cb.or.kr/creditbank/base/cdMain.do" target="_blank">학점은행제</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">평생학습계좌제</a></li>
+                            <li><a href="https://www.cbinfo.or.kr" target="_blank">학점은행제 정보공시제(알리미)</a></li>
+                            <li><a href="https://bdes.nile.or.kr:444/nile/base/bdesMain.do" target="_blank">국가평생교육진흥원 독학학위제</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-area gap-10">
+                    <div class="link-box">
+                        <a href="ITP_001.html">이용약관</a>
+                        <a href="ITP_002.html" class="on">개인정보처리방침</a>
+                    </div>
+                    <span class="copy">
+                        COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS RESERVED.
+                    </span>
                 </div>
             </div>
-            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
-            <address>
-                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
-                <span class="tel"><span class="txt-bold">대표전화</span><span><span class="txt-bold">1600-3005</span> (평일 09시~18시)</span></span>
-            </address>
-            <div class="link-area">
-                <div class="link-box">
-                    <a href="#">이용약관</a>
-                    <a href="#" class="on">개인정보처리방침</a>
-                    <a href="#">저작권정책</a>
-                    <a href="#">이메일무단수집거부</a>
-                </div>
-                <span class="copy">
-                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
-                    RESERVED.
-                </span>
-                <div class="support-box">
-                    <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
-                    </a>
-                    <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
-                    </a>
-                    <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
-                    </a>
-                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
     <div class="layer-pop" data-pop="busynum-guide" >
-        <div class="layer-content">
+        <div class="layer-content" style="--max-width: 840px">
             <div class="layer-scroll">
                 <span class="title">사업자등록번호 안내</span>
                 <div class="info-area busynum-guide">
                     <div class="border-box-20">
-                        <p>
-                            동일한 사업자등록번호의 신청서가 존재합니다. <br>
-                            확인 후 필요한 경우만 추가 신청하시기 바랍니다.
-                        </p>
+                        <!-- 20250131 :: 클래스 추가 -->
+                        <p class="font-lv7">동일한 사업자등록번호의 신청서가 존재합니다. 확인 후 필요한 경우만 추가 신청하시기 바랍니다.</p>
                     </div>
                     <div class="conts-header">
                         <p class="conts-header-data">
@@ -596,12 +595,12 @@
                     <div class="com-view-table">
                         <table>
                             <colgroup>
-                                <col style="width: 20%">
+                                <col style="width: 135px">
                                 <col style="width: auto">
-                                <col style="width: 12.5%">
-                                <col style="width: 15%">
-                                <col style="width: 15%">
-                                <col style="width: 10%">
+                                <col style="width: 90px">
+                                <col style="width: 110px">
+                                <col style="width: 100px">
+                                <col style="width: 80px">
                             </colgroup>
                             <thead>
                                 <tr>

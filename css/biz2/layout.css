@@ -37,6 +37,7 @@ header .menu-area .menu-box .link-group { display: flex; position: relative; z-i
 header .menu-area .menu-box .link-group:not(.login) { justify-content: space-between; }
 header .menu-area .menu-box .link-group:not(.login) li {width: 200px;}
 header .menu-area .log-info {display: flex; align-items: center; gap: 8px; font-size: 14px;}
+.useVc header .menu-area .log-info {margin-top: 2px;}
 header .menu-area .log-info-txt {font-weight: 500;}
 header .menu-area .menu-box .link-group li { 
 	display: flex; 
@@ -53,7 +54,6 @@ header .menu-area .menu-box .link-group li > .tit { display: block; font-size: 2
 header .menu-area .menu-box .link-group li .link-item { display: flex; flex-direction: column; margin-top: 31px; }
 header .menu-area .menu-box .link-group li .link-item a { font-size: 24px; font-weight: 500; line-height: 48px; white-space: nowrap;  }
 header .menu-area .menu-box .link-group li .link-item a:hover { color: #00ADB2; text-decoration: underline; font-weight: bold; }
-header .menu-area .menu-box .link-group li .link-item a.disabled-link:hover {color: darkgray;} 
 
 /* 모바일 GNB */
 .sm-menu-box {display: none;}
@@ -72,6 +72,7 @@ header .open-btn.sm-on ~ .sm-menu-box {display: block; position: fixed; top: 0; 
 /* body container */
 .container { position: relative; padding-top: 40px; padding-bottom: 60px;}
 .container { min-height: calc(100vh - 116px - 60px - 246px);}
+.useVc .container.wrap-center {display: flex; flex-direction: column; justify-content: center;}
 .container > .sub-title { display: block; margin-top: 64px; font-size: 30px; font-weight: bold; color: #000; }
 .container > .sub-title + .agree-info-area { margin-top: 32px; }
 
@@ -139,8 +140,8 @@ footer .info-content > div address {
 	flex-direction: column;
 	gap: 6px;
 }
-footer .info-content > div address > span { display: block }
-footer .info-content > div address > span > span { margin-left: 10px;}
+footer .info-content > div address span { display: block }
+footer .info-content > div address span > span { margin-left: 10px;}
 footer .info-content > div address > span::before {
 	content: "";
 	display: inline-block;
@@ -150,3 +151,13 @@ footer .info-content > div address > span::before {
 	border-radius: 5px;
 	vertical-align: middle;
 }
+footer .info-content > div address strong + span::before {display: none;}
+.useVc footer .info-content {padding: 28px 0;}
+.useVc footer .info-content > div address { display: flex; flex-direction: row; gap: 10px; max-width: 770px; width: 100%;}
+.useVc footer .info-content > div address > * { flex: 1 0 50%; font-size: 16px;}
+.useVc footer .info-content > div address strong { font-size: 22px;}
+.useVc footer .info-content > .link-area {
+	flex-direction: column;
+	gap: 10px;
+}
+footer .info-content .link-area .copy { margin: 0; }

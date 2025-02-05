@@ -14,7 +14,7 @@
     <script src="../js/biz2/script.js"></script>
     <title>울산광역시 평생교육이용원</title>
 </head>
-<body>
+<body class="useVc">
     <header>
         <div class="logo-area">
             <a href="IMP_002.html">
@@ -22,11 +22,10 @@
             </a>
         </div>
         <div class="menu-area">
-            <!-- 로그인 시 -->
             <a href="#" class="log-info">
-                <span class="log-info-txt">로그아웃</span>
+                <span class="log-info-txt"><strong>홍길동</strong>님 로그아웃</span>
             </a>
-            <a href="#" class="log-info">
+            <a href="IMP_012.html" class="log-info">
                 <span class="log-info-txt">담당자 정보 수정</span>
             </a>
             <button class="open-btn">
@@ -46,7 +45,7 @@
                         <div class="link-item">
                             <a href="IIP_800.html">사용기관 등록 신청 현황</a>
                             <a class="hidden" href="#">이용권 사용내역</a>
-                            <a href="#">교육결과 관리</a>
+                            <a href="IIP_150.html">교육결과 관리</a>
                             <a class="hidden" href="#">교육과정 정보</a>
                             <a class="hidden" href="#">학습자 정보</a>
                             <a class="hidden" href="IIP_400.html">기관 정보 수정</a>
@@ -73,8 +72,8 @@
         <div class="top-location-area wrap">
             <span class="home"><span class="blind">홈</span></span>
             <div class="location-box">
-                <span class="arrow">사용기관</span>
-                <span class="arrow">사용기관 신청</span>
+                <span class="arrow">로그인</span>
+                <span class="arrow">평생교육이용권 사용기관 신청</span>
             </div>
         </div>
     </div>
@@ -84,57 +83,53 @@
             <p class="page-header-desc">평생교육이용권 이용을 위한 사용기관 신청 화면입니다.</p>
         </div>
 
-        <ul class="steps flex-acjc">
-            <li class="active">
-                <span class="step01">01</span>
-                <strong>약관동의</strong>
+        <!-- 20250131 :: 변경 -->
+        <ul class="step-list flex-acjc">
+            <li class="step step-active">
+                <span class="step-icon step_terms_agreement"></span>
+                <span class="step-name">1단계</span>
+                <strong class="step-tit">약관동의</strong>
             </li>
-            <li class="step-arrow lg-only"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step02">02</span>
-                <strong>본인인증</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_identity_verification"></span>
+                <span class="step-name">2단계</span>
+                <strong class="step-tit">본인인증</strong>
             </li>
-            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step03">03</span>
-                <strong>신청서 작성</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_application_form"></span>
+                <span class="step-name">3단계</span>
+                <strong class="step-tit">신청서 작성</strong>
             </li>
-            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step04">04</span>
-                <strong>담당자 등록</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_manager_registration"></span>
+                <span class="step-name">4단계</span>
+                <strong class="step-tit">담당자 등록</strong>
             </li>
-            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step05">05</span>
-                <strong>첨부</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_attachment"></span>
+                <span class="step-name">5단계</span>
+                <strong class="step-tit">첨부</strong>
             </li>
-            <li class="step-arrow disabled"><img src="../images/biz2/ico/ico_step_arrow.svg" alt="다음 단계"></li>
-            <li class="disabled">
-                <span class="step06">06</span>
-                <strong>작성완료</strong>
+            <li class="step-arrow"><img src="../images/biz2/step/step_arrow_next.svg" alt="다음 단계 아이콘"></li>
+            <li class="step step-next">
+                <span class="step-icon step_completion"></span>
+                <span class="step-name">6단계</span>
+                <strong class="step-tit">작성완료</strong>
             </li>
         </ul>
-
+        <hr>
+        <!-- 20250131 :: 타이틀 추가 -->
+        <h2 class="step-title">1. 약관동의</h2>
         <div class="agree-box mt-80">
             <div class="agree">
                 <h5 class="agree-tit">[필수] 이용약관</h5>
-                <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-1]').show();">내용보기</button>
-                <div class="agree-radio">
-                    <span>이용약관에 대한 안내 사항을 읽고 동의합니다.</span>
-                    <div class="radio-box">
-                        <input type="radio" id="agree1" name="agree1" value="no">
-                        <label for="agree1">동의안함</label>
-                        <input type="radio" id="agree2" name="agree1" value="yes">
-                        <label for="agree2">동의함</label>
-                    </div>
-                </div>
-            </div>
-            <div class="agree">
-                <h5 class="agree-tit">[필수] 개인정보 수집 · 이용 내역</h5>
-                <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-2]').show();">내용보기</button>
-                <div class="agree-radio">
-                    <span>이용약관에 대한 안내 사항을 읽고 동의합니다.</span>
+                <!-- 20250131 :: 구조변경 -->
+                <div class="flex-ac gap-10 ml-auto">
+                    <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-1]').show();">내용보기</button>
                     <div class="radio-box">
                         <input type="radio" id="agree3" name="agree2" value="no">
                         <label for="agree3">동의안함</label>
@@ -144,15 +139,28 @@
                 </div>
             </div>
             <div class="agree">
-                <h5 class="agree-tit">[선택] 개인정보 수집 · 이용 내역</h5>
-                <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-3]').show();">내용보기</button>
-                <div class="agree-radio">
-                    <span>이용약관에 대한 안내 사항을 읽고 동의합니다.</span>
+                <h5 class="agree-tit">[필수] 개인정보 수집 · 이용 내역</h5>
+                <!-- 20250131 :: 구조변경 -->
+                <div class="flex-ac gap-10 ml-auto">
+                    <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-2]').show();">내용보기</button>
                     <div class="radio-box">
-                        <input type="radio" id="agree5" name="agree3" value="no">
+                        <input type="radio" id="agree5" name="agree2" value="no">
                         <label for="agree5">동의안함</label>
-                        <input type="radio" id="agree6" name="agree3" value="yes">
+                        <input type="radio" id="agree6" name="agree2" value="yes">
                         <label for="agree6">동의함</label>
+                    </div>
+                </div>
+            </div>
+            <div class="agree">
+                <h5 class="agree-tit">[선택] 개인정보 수집 · 이용 내역</h5>
+                <!-- 20250131 :: 구조변경 -->
+                <div class="flex-ac gap-10 ml-auto">
+                    <button class="agree-btn layer-btn" onclick="$('[data-pop=pop-3]').show();">내용보기</button>
+                    <div class="radio-box">
+                        <input type="radio" id="agree7" name="agree3" value="no">
+                        <label for="agree7">동의안함</label>
+                        <input type="radio" id="agree8" name="agree3" value="yes">
+                        <label for="agree8">동의함</label>
                     </div>
                 </div>
             </div>
@@ -162,121 +170,112 @@
         </div>
     </div>
     <footer class="wrap">
-        <div class="info-content">
-            <div class="family-select-wrap">
-                <div class="family-select-lg custom-select-box" >
-                    <button class="custom-select-open">관련 사이트</button>
-                    <ul class="family-site-list custom-select-list">
-                        <li><a href="#">국가평생교육진흥원 독학학위제</a></li>
-                        <li><a href="#">학점은행제 정보공시제(알리미)</a></li>
-                        <li><a href="#">평생학습계좌제</a></li>
-                        <li><a href="#">학점은행제</a></li>
-                        <li><a href="#">평생학습포털 늘배움</a></li>
-                        <li><a href="#">국가평생진흥원</a></li>
-                        <li><a href="#">교육부</a></li>
-                        <li><a href="#">고용노동부</a></li>
-                        <li><a href="#">한국진흥원</a></li>
-                        <li><a href="#">관련사이트10</a></li>
-                        <li><a href="#">관련사이트11</a></li>
-                        <li><a href="#">관련사이트12</a></li>
-                        <li><a href="#">관련사이트13</a></li>
-                        <li><a href="#">관련사이트14</a></li>
+            <div class="info-content">
+                <div>
+                    <ul class="foot-logo">
+                        <li><img src="../images/biz2/logo/footer_logo_2.svg" alt="평생교육이용권 로고"></li>
                     </ul>
+                    <address>
+                        <div>
+                            <strong>대표전화 : 1600-3005</strong>
+                            <span>(04520) 서울특별시 중구 청계천로 14 (무교동77)</span>
+                        </div>
+                        <div class="flex-col gap-8">
+                            <span>평일 09시~18시 운영(점심시간 12:00~13:00 제외)</span>
+                            <span>주말 및 공휴일 휴무</span>
+                        </div>
+                    </address>
+                    <div class="family-select-lg custom-select-box">
+                        <button class="custom-select-open">관련 사이트</button>
+                        <ul class="family-site-list custom-select-list">
+                            <li><a href="https://www.moe.go.kr/main.do?s=moe" target="_blank">교육부</a></li>
+                            <li><a href="https://www.nile.or.kr/index.do" target="_blank">국가평생교육진흥원</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">온국민평생배움터</a></li>
+                            <li><a href="https://www.cb.or.kr/creditbank/base/cdMain.do" target="_blank">학점은행제</a></li>
+                            <li><a href="https://www.all.go.kr" target="_blank">평생학습계좌제</a></li>
+                            <li><a href="https://www.cbinfo.or.kr" target="_blank">학점은행제 정보공시제(알리미)</a></li>
+                            <li><a href="https://bdes.nile.or.kr:444/nile/base/bdesMain.do" target="_blank">국가평생교육진흥원 독학학위제</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link-area gap-10">
+                    <div class="link-box">
+                        <a href="ITP_001.html">이용약관</a>
+                        <a href="ITP_002.html" class="on">개인정보처리방침</a>
+                    </div>
+                    <span class="copy">
+                        COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS RESERVED.
+                    </span>
                 </div>
             </div>
-            <span class="footer-logo"><span class="blind">평생교육이용권</span></span>
-            <address>
-                <span class="txt"><span>(04520)</span><span>서울특별시 중구 청계천로 14 (무교동77)</span></span>
-                <span class="tel"><span class="txt-bold">대표전화</span><span><span class="txt-bold">1600-3005</span> (평일 09시~18시)</span></span>
-            </address>
-            <div class="link-area">
-                <div class="link-box">
-                    <a href="#">이용약관</a>
-                    <a href="#" class="on">개인정보처리방침</a>
-                    <a href="#">저작권정책</a>
-                    <a href="#">이메일무단수집거부</a>
-                </div>
-                <span class="copy">
-                    COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS
-                    RESERVED.
-                </span>
-                <div class="support-box">
-                    <a href="http://www.moe.go.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_1.png" alt="교육부">
-                    </a>
-                    <a href="http://www.nile.or.kr" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_2.svg" alt="국가평생교육진흥원">
-                    </a>
-                    <a href="http://wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
-                        <img src="../images/biz2/logo/footer_familylogo_3.png" alt="한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크 새창으로 열림">
-                    </a>
-                    <img src="../images/biz2/logo/footer_familylogo_4.png" alt="청렴세상">
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
     <div class="layer-pop" data-pop="pop-1">
         <div class="layer-content" style="--max-width: 840px">
             <div class="layer-scroll">
                 <span class="title">평생교육이용권 홈페이지 이용약관</span>
                 <div class="info-area">
-                    <div class="agree-box">
-                        <h3>제 1장 총칙</h3>
-                        <div class="agree-detail">
-                            <h4>제 1조 (목적)</h4>
-                            <ol>
-                                <li>
-                                    이 약관은 국가평생교육진흥원(이하 'NILE')이 운영하는 평생교육바우처 지원 시스템(이하 ‘당 사이트’)이 
-                                    제공하는 모든 회원정보 서비스(이하 '서비스')를 이용하는 고객(이하 ‘회원’)과 ‘당 사이트’가 ‘서비스’의 
-                                    이용에 관한 사항을 전기통신사업법 및 동법 시행령, '개인정보처리방침'에서 정하는 바를 준수하고 약정하는 
-                                    것을 그 목적으로 합니다.
-                                </li>
-                            </ol>  
-                        </div>
-                        <div class="agree-detail">
-                            <h4>제 2조 (약관의 효력과 변경)</h4>
-                            <ol>
-                                <li>
-                                    이 약관은 국가평생교육진흥원(이하 ‘NILE’)이 운영하는 평생교육이용권 지원 시스템(이하 “당 사이트“)이 제공하는 모든 회원정보 서비스
-                                    (이하 ‘서비스‘)를 이용하는 고객(이하＇회원‘)과 ‘당 사이트＇가 ‘서비스＇의 이용에 관한 사항을 전기통신사업법 및 동법 시행령, ‘개인정보처리방침’에서 정하는 바를 준수하고 약정하는 것을 그 목적으로 합니다.
-                                </li>
-                            </ol>  
-                        </div>
-                        <div class="agree-detail">
-                            <h4>제 3조 (목적)</h4>
-                            <ol>
-                                <li>
-                                    이 약관은 국가평생교육진흥원(이하 ‘NILE’)이 운영하는 평생교육이용권 지원 시스템(이하 “당 사이트“)이 제공하는 모든 회원정보 서비스
-                                    (이하 ‘서비스‘)를 이용하는 고객(이하＇회원‘)과 ‘당 사이트＇가 ‘서비스＇의 이용에 관한 사항을 전기통신사업법 및 동법 시행령, ‘개인정보처리방침’에서 정하는 바를 준수하고 약정하는 것을 그 목적으로 합니다.
-                                </li>
-                            </ol>  
-                        </div>
-                        <div class="agree-detail">
-                            <h4>제 4조 (목적)</h4>
-                            <ol>
-                                <li>
-                                    이 약관은 국가평생교육진흥원(이하 ‘NILE’)이 운영하는 평생교육이용권 지원 시스템(이하 “당 사이트“)이 제공하는 모든 회원정보 서비스
-                                    (이하 ‘서비스‘)를 이용하는 고객(이하＇회원‘)과 ‘당 사이트＇가 ‘서비스＇의 이용에 관한 사항을 전기통신사업법 및 동법 시행령, ‘개인정보처리방침’에서 정하는 바를 준수하고 약정하는 것을 그 목적으로 합니다.
-                                </li>
-                            </ol>  
-                        </div>
-                        <div class="agree-detail">
-                            <h4>제 17조 면책</h4>
-                            <ol>
-                                <li>‘NILE’이 천재지변 또는 불가피한 사정으로 ‘서비스’를 중단할 경우, ‘회원＇에게 발생되는 문제에 대해 책임을 지지 않습니다.</li>
-                            </ol>  
-                        </div>
-                        <div class="agree-detail">
-                            <h4>제 18조 (관할법원)</h4>
-                            <ol>
-                                <li>‘서비스’이용과 관련하여 소송이 제기될 경우 ‘NILE’의 소재지를 관할하는 법원 또는 대한민국의 민사소송법에 따른 법원을 관할법원으로 합니다. 본 약관의 해석과 적용 및 본 약관과 관련한 분쟁의 해결에는 대한민국법이 적용됩니다.</li>
-                            </ol>  
-                        </div>
-                        <div class="agree-detail">
-                            <h4>제 19조 (법원)</h4>
-                            <ol>
-                                <li>‘서비스’이용과 관련하여 소송이 제기될 경우 ‘NILE’의 소재지를 관할하는 법원 또는 대한민국의 민사소송법에 따른 법원을 관할법원으로 합니다. 본 약관의 해석과 적용 및 본 약관과 관련한 분쟁의 해결에는 대한민국법이 적용됩니다.</li>
-                            </ol>  
+                    <!-- 20250131 :: 구조 변경 -->
+                    <div class="layer-agree-box layer-scroll-box txt-indent-20">
+                        <div class="layer-agree-body">
+                            <div class="layer-agree-header">
+                                <h3>제 1장 총칙</h3>
+                            </div>
+                            <div class="agree-detail">
+                                <h4>제 1조 (목적)</h4>
+                                <ol>
+                                    <li>
+                                        이 약관은 국가평생교육진흥원(이하 'NILE')이 운영하는 평생교육바우처 지원 시스템(이하 ‘당 사이트’)이 
+                                        제공하는 모든 회원정보 서비스(이하 '서비스')를 이용하는 고객(이하 ‘회원’)과 ‘당 사이트’가 ‘서비스’의 
+                                        이용에 관한 사항을 전기통신사업법 및 동법 시행령, '개인정보처리방침'에서 정하는 바를 준수하고 약정하는 
+                                        것을 그 목적으로 합니다.
+                                    </li>
+                                </ol>  
+                            </div>
+                            <div class="agree-detail">
+                                <h4>제 2조 (약관의 효력과 변경)</h4>
+                                <ol>
+                                    <li>
+                                        이 약관은 국가평생교육진흥원(이하 ‘NILE’)이 운영하는 평생교육이용권 지원 시스템(이하 “당 사이트“)이 제공하는 모든 회원정보 서비스
+                                        (이하 ‘서비스‘)를 이용하는 고객(이하＇회원‘)과 ‘당 사이트＇가 ‘서비스＇의 이용에 관한 사항을 전기통신사업법 및 동법 시행령, ‘개인정보처리방침’에서 정하는 바를 준수하고 약정하는 것을 그 목적으로 합니다.
+                                    </li>
+                                </ol>  
+                            </div>
+                            <div class="agree-detail">
+                                <h4>제 3조 (목적)</h4>
+                                <ol>
+                                    <li>
+                                        이 약관은 국가평생교육진흥원(이하 ‘NILE’)이 운영하는 평생교육이용권 지원 시스템(이하 “당 사이트“)이 제공하는 모든 회원정보 서비스
+                                        (이하 ‘서비스‘)를 이용하는 고객(이하＇회원‘)과 ‘당 사이트＇가 ‘서비스＇의 이용에 관한 사항을 전기통신사업법 및 동법 시행령, ‘개인정보처리방침’에서 정하는 바를 준수하고 약정하는 것을 그 목적으로 합니다.
+                                    </li>
+                                </ol>  
+                            </div>
+                            <div class="agree-detail">
+                                <h4>제 4조 (목적)</h4>
+                                <ol>
+                                    <li>
+                                        이 약관은 국가평생교육진흥원(이하 ‘NILE’)이 운영하는 평생교육이용권 지원 시스템(이하 “당 사이트“)이 제공하는 모든 회원정보 서비스
+                                        (이하 ‘서비스‘)를 이용하는 고객(이하＇회원‘)과 ‘당 사이트＇가 ‘서비스＇의 이용에 관한 사항을 전기통신사업법 및 동법 시행령, ‘개인정보처리방침’에서 정하는 바를 준수하고 약정하는 것을 그 목적으로 합니다.
+                                    </li>
+                                </ol>  
+                            </div>
+                            <div class="agree-detail">
+                                <h4>제 17조 면책</h4>
+                                <ol>
+                                    <li>‘NILE’이 천재지변 또는 불가피한 사정으로 ‘서비스’를 중단할 경우, ‘회원＇에게 발생되는 문제에 대해 책임을 지지 않습니다.</li>
+                                </ol>  
+                            </div>
+                            <div class="agree-detail">
+                                <h4>제 18조 (관할법원)</h4>
+                                <ol>
+                                    <li>‘서비스’이용과 관련하여 소송이 제기될 경우 ‘NILE’의 소재지를 관할하는 법원 또는 대한민국의 민사소송법에 따른 법원을 관할법원으로 합니다. 본 약관의 해석과 적용 및 본 약관과 관련한 분쟁의 해결에는 대한민국법이 적용됩니다.</li>
+                                </ol>  
+                            </div>
+                            <div class="agree-detail">
+                                <h4>제 19조 (법원)</h4>
+                                <ol>
+                                    <li>‘서비스’이용과 관련하여 소송이 제기될 경우 ‘NILE’의 소재지를 관할하는 법원 또는 대한민국의 민사소송법에 따른 법원을 관할법원으로 합니다. 본 약관의 해석과 적용 및 본 약관과 관련한 분쟁의 해결에는 대한민국법이 적용됩니다.</li>
+                                </ol>  
+                            </div>
                         </div>
                     </div>
                     <div class="layer-btn-wrap">
@@ -291,6 +290,7 @@
         <div class="layer-content" style="--max-width: 840px">
             <div class="layer-scroll">
                 <span class="title">평생교육이용권 사용기관 신청을 위한 개인정보 수집 · 이용 동의(필수)</span>
+                <!-- 20250131 :: 구조 변경 -->
                 <div class="info-area">
                     <p class="desc">
                         평생교육이용권 홈페이지에서 제공하는 인터넷 관련 서비스를 원활하게 수행하기 위하여 개인정보의 수집,유출,오용,남용으로부터 사생활의 비밀 등을 보호하도록 한 
@@ -329,11 +329,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <ul class="bottom-info-group">
-                        <li>
-                            ※ 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있습니다. 그러나 필수 항목의 동의를 거부할 경우 평생교육이용권 사용기관 업무처리에 제한을 받을 수 있습니다.
-                        </li>
-                    </ul>
+                    <p class="bullet">개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있습니다. 그러나 필수 항목의 동의를 거부할 경우 평생교육이용권 사용기관 업무처리에 제한을 받을 수 있습니다.</p>
                     <div class="layer-btn-wrap">
                         <button class="btns" onclick="$('[data-pop=pop-2]').hide();">확인</button>
                     </div>
@@ -381,9 +377,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <ul class="bottom-info-group">
-                        <li> ※ 개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있습니다. 선택 항목의 동의를 거부하셔도 평생교육이용권 사용기관 업무처리에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</li>
-                    </ul>
+                    <p class="bullet">개인정보 수집 · 이용에 대한 동의를 거부할 권리가 있습니다. 선택 항목의 동의를 거부하셔도 평생교육이용권 사용기관 업무처리에는 제한이 없으나 부가서비스 제공은 제한을 받습니다.</p>
                     <div class="layer-btn-wrap">
                         <button class="btns" onclick="$('[data-pop=pop-3]').hide();">확인</button>
                     </div>
